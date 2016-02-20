@@ -39,9 +39,9 @@ SQL Server - Benchmarks
 | ------------------ | -------: | ---------: | ----------: |
 |**BulkSaveChanges** | 20 ms    | 200 ms     | 2,000 ms    |
 |**BulkInsert**      | 2 ms     | 6 ms       | 25 ms       |
-|**BulkUpdate**      | 27 ms    | 80 ms      | 575 ms      |
+|**BulkUpdate**      | 27 ms    | 50 ms      | 80 ms       |
 |**BulkDelete**      | 25 ms    | 45 ms      | 70 ms       |
-|**BulkMerge**       | 30 ms    | 160 ms     | 1,200 ms    |
+|**BulkMerge**       | 30 ms    | 65 ms      | 160 ms      |
 
 ##### Extensible
 Support Multiple SQL Providers:
