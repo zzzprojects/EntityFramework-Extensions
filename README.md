@@ -35,13 +35,13 @@ context.BulkMerge(customers, operation => {
 ##### Scalable
 SQL Server - Benchmarks
 
-| Operations | 1,000 Rows | 10,000 Rows | 100,000 Rows | 1,000,000 Rows |
-| ---------- | ---------: | ----------: | -----------: | -------------: |
-|**BulkSaveChanges**      | 6 ms   | 25 ms       | 200 ms       | 2,000 ms       |
-|**BulkInsert**      | 6 ms   | 25 ms       | 200 ms       | 2,000 ms       |
-|**BulkUpdate**      | 50 ms  | 80 ms       | 575 ms       | 6,500 ms       |
-|**BulkDelete**      | 45 ms  | 70 ms       | 625 ms       | 6,800 ms       |
-|**BulkMerge**       | 65 ms  | 160 ms      | 1,200 ms     | 12,000 ms      |
+| Operations         | 100 Rows | 1,000 Rows | 10,000 Rows |
+| ------------------ | -------: | ---------: | ----------: |
+|**BulkSaveChanges** | 20 ms    | 200 ms     | 2,000 ms    |
+|**BulkInsert**      | 2 ms     | 6 ms       | 25 ms       |
+|**BulkUpdate**      | 27 ms    | 80 ms      | 575 ms      |
+|**BulkDelete**      | 25 ms    | 45 ms      | 70 ms       |
+|**BulkMerge**       | 30 ms    | 160 ms     | 1,200 ms    |
 
 ##### Extensible
 Support Multiple SQL Providers:
