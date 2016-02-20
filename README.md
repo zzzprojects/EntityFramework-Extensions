@@ -94,7 +94,7 @@ BulkSaveChanges is as fast as SaveChanges with one entity and quickly become **1
 You need even more performance then BulkSaveChanges, save detached entities or save entities in a specific order.
 
 ##### Solution
-Use bulk operations such as bulk insert, update, delete and merge which perform operation on specified entities and bypass the change tracker to increase performance
+Use bulk operations such as bulk insert, update, delete and merge which perform operation on specified entities and bypass the change tracker to increase performance.
 
 ```csharp
 // Perform specific bulk operations on entities
