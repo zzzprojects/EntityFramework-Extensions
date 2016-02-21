@@ -154,16 +154,15 @@ Help us to make this library a **MUST-HAVE** by contributing
 ## More Projects
 
 **Entity Framework**
-- [EntityFramework Extensions](http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/)
-- [EntityFramework-Plus.NET](https://github.com/zzzprojects/EntityFramework-Plus)
+- [EntityFramework Extensions](http://entityframework-extensions.net/)
+- [EntityFramework Plus](http://entityframework-plus.net)
 
 **Bulk Operations**
-- [EntityFramework Extensions](http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/)
-- [Bulk-Operations.NET](http://www.zzzprojects.com/products/dotnet-development/bulk-operations/)
+- [Bulk Operations](http://bulk-operations.net/)
 
 **Expression Evaluator**
-- [Eval-SQL.NET](https://github.com/zzzprojects/Eval-SQL.NET)
-- [Eval-Expression.NET](https://github.com/zzzprojects/Eval-Expression.NET)
+- [Eval-SQL.NET](http://eval-sql.net/)
+- [Eval-Expression.NET](http://eval-expression.net/)
 
 **Others**
 - [Extension Methods Library](https://github.com/zzzprojects/Z.ExtensionMethods/)
