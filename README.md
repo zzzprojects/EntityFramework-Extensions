@@ -1,4 +1,4 @@
-## EntityFramework Extensions
+# Improve Entity Framework performance with Bulk SaveChanges and Bulk Operations
 
 Solve Entity Framework performance issue when saving with high performance bulk operations and hundred of flexibles feature.
  - BulkSaveChanges
