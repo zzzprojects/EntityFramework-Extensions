@@ -150,7 +150,7 @@ The best way to contribute is by **spreading the word** about the library:
  - Star it
  - Share it
  
-A **HUGE THANKS** for your help.
+A **HUGE thanks** for your help.
 
 ## More Projects
 
