@@ -141,15 +141,16 @@ Royalty-Free                | Yes
 Support & Upgrades (1 year) | Yes
 Learn more about the **[PRO Version](http://entityframework-extensions.net/#pro)**
 
-## Contribution
-
-Help us to make this library a **MUST-HAVE** by contributing
+## Contribute
+The best way to contribute is by **spreading the word** about the library:
 
  - Blog it
  - Comment it
  - Fork it
  - Star it
  - Share it
+ 
+A **HUGE THANK** for your help.
 
 ## More Projects
 
