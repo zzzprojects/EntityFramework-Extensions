@@ -52,8 +52,8 @@ Support Multiple SQL Providers:
 - SQLite
 
 ## Download
-<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank"><img src="http://entityframework-plus.net/images/nuget/entity-framework-extensions-v.svg" alt="download" /></a>
-<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank"><img src="http://entityframework-plus.net/images/nuget/entity-framework-extensions-d.svg" alt="" /></a>
+<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-v.svg" alt="download" /></a>
+<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-d.svg" alt="" /></a>
 
 ```
 PM> Install-Package Z.EntityFramework.Extensions
