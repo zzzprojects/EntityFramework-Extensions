@@ -50,6 +50,7 @@ Support Multiple SQL Providers:
 - SQL Compact
 - MySQL
 - SQLite
+- PostgreSQL
 - Oracle
 
 ## Download
