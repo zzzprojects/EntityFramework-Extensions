@@ -12,7 +12,7 @@ layout: post
 		<!-- seo !-->
 		<meta name="description" content="Dramatically Improve EF Performance with Bulk SaveChanges and Bulk Operations (SQLServer, SQLAzure, SQLCompact, MySQL, SQLite, .NET, ADO.NET, ASP.NET, C#, CSharp, MVC, MMVC, VB.NET)">
 		<meta name="keywords" content="EntityFramework, EF6, BulkSaveChanges, BulkInsert, BulkUpdate, BulkDelete, BulkMerge, Insert, Update, Delete, Merge, SQLServer, SQLAzure, SQLCompact, MySQL, SQLite, .NET, ADO.NET, ASP.NET, C#, CSharp, MVC, MMVC, VB.NET">
-		<title>EF BulkSaveChanges & Bulk Operations | Dramatically Improve EF Performance with Bulk SaveChanges and Bulk Operations.</title>
+		<title>EF BulkInsert, BulkSaveChanges, & Bulk Operations | Dramatically Improve EF Performance with Bulk SaveChanges and Bulk Operations.</title>
 		
 		<!-- icon/css !-->
 		<link rel="icon" type="image/png" href="http://entityframework-plus.net/images/logo.png">
