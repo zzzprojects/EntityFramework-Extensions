@@ -1,0 +1,8 @@
+highlighter: rouge
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      last_modified_at: "2017-02-01"
