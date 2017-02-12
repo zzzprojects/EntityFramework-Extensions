@@ -1,127 +1,83 @@
-{% if page.path contains "/api/" %}
+{% if page.path contains "/overview/" %}
 <div class="card">
 	<div class="card-header">
-		<h3>SqlBulkCopy - API</h3>
+		<h3>EF Extensions - Tutorials</h3>
 	</div>
 	<div class="card-block">
 	
 		<h4>Getting Started</h4>
 		<ul>
-			<li><a href="sqlbulkcopy">SqlBulkCopy</a></li>
+			<li><a href="overview">Overview</a></li>
+			<li><a href="requirements">Requirements</a></li>
+			<li><a href="installing">Installing</a></li>
+			<li><a href="upgrading">Upgrading</a></li>
+			<li><a href="licensing">Licensing</a></li>
+		</ul>
+		
+		<h4>Tutorials</h4>
+		<ul>
+			<li><a href="tutorial-introduction">introduction</a></li>
+			<li><a href="tutorial-bulk-savechanges">Bulk SaveChanges</a></li>
+			<li><a href="tutorial-bulk-operations">Bulk Operations</a></li>
+			<li><a href="tutorial-fromquery-operations">FromQuery Operations</a></li>
+		</ul>
+
+	</div>
+</div>
+
+{% elsif page.path contains "/api/" %}
+<div class="card">
+	<div class="card-header">
+		<h3>EF Extensions - API</h3>
+	</div>
+	<div class="card-block">
+	
+		<h4>Bulk Operations</h4>
+		<ul>
+			<li><a href="bulk-savechanges">Bulk SaveChanges</a></li>
+			<li><a href="bulk-insert">Bulk Insert</a></li>
+			<li><a href="bulk-update">BulkUpdate</a></li>
+			<li><a href="bulk-delete">Bulk Delete</a></li>
+			<li><a href="bulk-merge">Bulk Merge</a></li>
+		</ul>
+		
+		<h4>FromQuery Operations</h4>
+		<ul>
+			<li><a href="update-from-query">Update from Query</a></li>
+			<li><a href="delete-from-query">Delete from Query</a></li>
 		</ul>
 		
 		<h4>Options</h4>
 		<ul>
-			<li><a href="sqlbulkcopyoptions">SqlBulkCopyOptions</a></li>
+			<li><a href="audit">Audit</a></li>
+			<li><a href="batch">Batch</a></li>
+			<li><a href="execute-event">Execute Event</a></li>
+			<li><a href="log">Log</a></li>
+			<li><a href="temporary-table">Temporary Table</a></li>
+			<li><a href="transient-error">Transient Error</a></li>
+			<li><a href="sql-server">SQL Server</a></li>
 		</ul>
-		
-		<h4>Properties</h4>
-		<ul>
-			<li><a href="batchsize">BatchSize</a></li>
-			<li><a href="bulkcopytimeout">BulkCopyTimeout</a></li>
-			<li><a href="columnmappings">ColumnMappings</a></li>
-			<li><a href="destinationtablename">DestinationTableName</a></li>
-			<li><a href="enablestreaming">EnableStreaming</a></li>
-			<li><a href="notifyafter">NotifyAfter</a></li>
-		</ul>
-		
-		<h4>Methods</h4>
-		<ul>
-			<li><a href="writetoserver">WriteToServer</a></li>
-			<li><a href="writetoserverasync">WrtieToServerAsync</a></li>
-		</ul>
-		
-		<h4>Events</h4>
-		<ul>
-			<li><a href="sqlrowscopied">SqlRowsCopied</a></li>
-		</ul>
+
 	</div>
 </div>
 
-{% elsif page.path contains "/examples/" %}
+{% elsif page.path contains "/articles/" %}
 <div class="card">
 	<div class="card-header">
-		<h3>SqlBulkCopy - Examples</h3>
-	</div>
-	<div class="card-block">
-	</div>
-</div>
-<!--
-	<li class="list-group-item list-group-item-action"><a href="oracle">C# Examples</a></li>
-	<li class="list-group-item list-group-item-action"><a href="sql-compact">VB.NET Examples</a></li>
-	<li class="list-group-item list-group-item-info">Transaction</li>
-	<li class="list-group-item list-group-item-action"><a href="sqlite">TBD</a></li>
-!-->
-
-
-{% elsif page.path contains "/faq/" %}
-<div class="card">
-	<div class="card-header">
-		<h3>SqlBulkCopy - FAQ</h3>
-	</div>
-	<div class="card-block">
-	</div>
-</div>
-<!--
-	<li class="list-group-item list-group-item-info">API</li>
-	<li class="list-group-item list-group-item-action"><a href="bulk-update">BatchSize &amp; Performance</a></li>
-	<li class="list-group-item list-group-item-action"><a href="bulk-update">SqlBulkCopyOptions to use</a></li>
-	<li class="list-group-item list-group-item-info">Desired Features</li>
-	<li class="list-group-item list-group-item-action"><a href="bulk-update">Output Identity Column</a></li>
-	<li class="list-group-item list-group-item-info">General</li>
-	<li class="list-group-item list-group-item-action"><a href="bulk-update">Disadvantage</a></li>
-	<li class="list-group-item list-group-item-action"><a href="bulk-update">Delete before insert</a></li>	
-	<li class="list-group-item list-group-item-info">Bulk Action</li>
-	<li class="list-group-item list-group-item-action"><a href="bulk-update">Bulk Update</a></li>
-	<li class="list-group-item list-group-item-action"><a href="bulk-delete">Bulk Delete</a></li>
-	<li class="list-group-item list-group-item-action"><a href="bulk-merge">Bulk Merge</a></li>
-	<li class="list-group-item list-group-item-action"><a href="bulk-synchronize">Bulk Synchronize</a></li>
-	<li class="list-group-item list-group-item-info">Db Provider</li>
-	<li class="list-group-item list-group-item-action"><a href="oracle">Oracle</a></li>
-	<li class="list-group-item list-group-item-action"><a href="sql-compact">SQL Compact</a></li>
-	<li class="list-group-item list-group-item-action"><a href="mysql">MySQL</a></li>
-	<li class="list-group-item list-group-item-action"><a href="sqlite">SQLite</a></li>
-	<li class="list-group-item list-group-item-action"><a href="postgresql">PostgreSQL</a></li>
-	<li class="list-group-item list-group-item-info">ORM</li>
-	<li class="list-group-item list-group-item-action"><a href="oracle">Entity Framework</a></li>
-	<li class="list-group-item list-group-item-action"><a href="sql-compact">Dapper</a></li>
-!-->
-</ul>
-
-{% elsif page.path contains "/troubleshooting/" %}
-<div class="card">
-	<div class="card-header">
-		<h3>SqlBulkCopy - Troublshooting</h3>
+		<h3>EF Extensions - Articles</h3>
 	</div>
 	<div class="card-block">
 	
-		<h4>BatchTimeout</h4>
+		<h4>Articles</h4>
 		<ul>
-			<li><a href="timeout-expired">Timeout Expired</a></li>
+			<li><a href="benchmark">Make Benchmark</a></li>
+			<li><a href="improve-bulk-savechanges">Improve BulkSaveChanges</a></li>
+			<li><a href="custom-column">Use Custom Column</a></li>
+			<li><a href="custom-key">Use Custom Key</a></li>
+			<li><a href="soft-delete">Soft Delete</a></li>
+			<li><a href="concurrency">Concurrency</a></li>
 		</ul>
-		
-		<h4>ColumnMappings</h4>
-		<ul>
-			<li><a href="columnmapping-does-not-match">ColumnMappings doesn't match</a></li>
-		</ul>
-		
-		<h4>Connection</h4>
-		<ul>
-			<li><a href="writetoserver-requires-an-open-and-available-connection">Requires open and available Connection</a></li>
-		</ul>
-		
-		<h4>DataSource</h4>
-		<ul>
-			<li><a href="type-a-cannot-be-converted-to-type-b">Type A cannot be converted to Type B</a></li>
-		</ul>
-		
-		<h4>DestinationTableName</h4>
-		<ul>
-			<li><a href="cannot-access-destination-table">Cannot Access Destination Table</a></li>
-			<li><a href="the-destinationtablename-property-must-be-set-before-calling-this-method">Destination Table Name must be set</a></li>
-			<li><a href="value-cannot-be-null">Value cannot be null</a></li>
-		</ul>
-		
+
 	</div>
 </div>
 
