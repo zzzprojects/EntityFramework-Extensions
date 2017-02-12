@@ -149,19 +149,13 @@ header .navbar .active {
 	    {% endif %}
 	{% endfor %}
 
-<nav class="pagination row">
-    <div class="previous col flex-first">
-        <a href="{{ site.data.pages[prev_i].url }}" class="btn btn-primary" role="button">Previous</a>
-    </div>
-    <div class="next col flex-last text-right">
-        <a href="{{ site.data.pages[next_i].url }}" class="btn btn-primary" role="button">Next</a>
-    </div>
-</nav>	
+
 					
 {{ content }}
 					
 {% include template-related.html %}
 
+<br />
 <nav class="pagination row">
     <div class="previous col flex-first">
         <a href="{{ site.data.pages[prev_i].url }}" class="btn btn-primary" role="button">Previous</a>
