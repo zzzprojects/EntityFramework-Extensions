@@ -53,13 +53,21 @@
 {% endif %}
 						<a class="nav-link" href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
 					</li>
+{% if page.path contains "/tutorials/" %} 
+   <li class="nav-item active">
+{% else %}
+   <li class="nav-item">
+{% endif %}
+					
+						<a class="nav-link" href="tutorials">Tutorials</a>
+					</li>
 {% if page.path contains "/api/" %} 
    <li class="nav-item active">
 {% else %}
    <li class="nav-item">
 {% endif %}
 					
-						<a class="nav-link" href="sqlbulkcopy">API</a>
+						<a class="nav-link" href="api">API</a>
 					</li>
 {% if page.path contains "/examples/" %} 
    <li class="nav-item active">
@@ -74,13 +82,6 @@
    <li class="nav-item">
 {% endif %}
 						<a class="nav-link" href="faq">FAQ</a>
-					</li>
-{% if page.path contains "/limitations/" %} 
-   <li class="nav-item active">
-{% else %}
-   <li class="nav-item">
-{% endif %}
-						<a class="nav-link" href="limitations">Limitations</a>
 					</li>
 {% if page.path contains "/troubleshooting/" %} 
    <li class="nav-item active">
