@@ -33,5 +33,6 @@ SaveChanges makes one database round-trip for each entity to insert/update/delet
 Bulk Operations save entities in bulk to reduce the number of database round-trip required.
 
 ### Related Articles
-- [How to Benchmark?](https://github.com/zzzprojects/docs/blob/master/entity-framework-extensions/docs/how/benchmark.md)
-- [How to use Custom Key?](https://github.com/zzzprojects/docs/blob/master/entity-framework-extensions/docs/how/custom-key.md)
+
+- [How to Benchmark?](benchmark)
+- [How to use Custom Key?](custom-key)
