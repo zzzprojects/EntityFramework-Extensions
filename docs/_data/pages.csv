@@ -1,28 +1,37 @@
-title,url,category,tags
-SqlBulkCopy,sqlbulkcopy,api,
-SqlBulkCopy - SqlBulkCopyOptions,sqlbulkcopyoptions,api,
-SqlBulkCopy - BatchSize,batchsize,api,
-SqlBulkCopy - BulkCopyTimeout,bulkcopytimeout,api,
-SqlBulkCopy - ColumnMappings,columnmappings,api,
-SqlBulkCopy - DestinationTableName,destinationtablename,api,
-SqlBulkCopy - EnableStreaming,enablestreaming,api,
-SqlBulkCopy - NotifyAfter,notifyafter,api,
-SqlBulkCopy - WriteToServer,writetoserver,api,
-SqlBulkCopy - WriteToServerAsync,writetoserverasync,api,
-SqlBulkCopy - SqlRowsCopied,sqlrowscopied,api,
-SqlBulkCopy - Timeout Expired,timeout-expired,troubleshooting,
-SqlBulkCopy - Column Mapping...,columnmapping-does-not-match,troubleshooting,
-SqlBulkCopy - Examples,examples,examples,
-SqlBulkCopy - FAQ,faq,faq,
-SqlBulkCopy - How the default mapping work for SqlBulkCopy,how-default-mapping-work,faq,
-SqlBulkCopy - Recommended BatchSize,recommended-batchsize,faq,
-SqlBulkCopy - Recommended SqlBulkCopyOptions,recommended-sqlbulkcopyoptions,faq,
-SqlBulkCopy - Limitations,limitations,limitations,
-SqlBulkCopy - Troubleshooting,troubleshooting,troubleshooting,
-SqlBulkCopy - Execution Timeout Expired. The timeout period elapsed prior to completion of the operation or the server is not responding.,timeout-expired,troubleshooting,
-SqlBulkCopy - The given ColumnMapping does not match up with any column in the source or destination.,columnmapping-does-not-match,troubleshooting,
-SqlBulkCopy - WriteToServer requires an open and available Connection. The connection's current state is closed.,writetoserver-requires-an-open-and-available-connection,troubleshooting,
-SqlBulkCopy - The given value of type String from the data source cannot be converted to type int of the specified target column.,type-a-cannot-be-converted-to-type-b,troubleshooting,
-SqlBulkCopy - Cannot access destination table '[TheInvalidTableName]'.,cannot-access-destination-table,troubleshooting,
-SqlBulkCopy - The DestinationTableName property must be set before calling this method.,the-destinationtablename-property-must-be-set-before-calling-this-method,troubleshooting,
-SqlBulkCopy - Value cannot be null.,value-cannot-be-null,troubleshooting,
+title,url,category
+Entity Framework Extensions - Overview,overview,tutorials
+Entity Framework Extensions - Requirements,requirements,tutorials
+Entity Framework Extensions - Installing,installing,tutorials
+Entity Framework Extensions - Upgrading,upgrading,tutorials
+Entity Framework Extensions - Licensing,licensing,tutorials
+Entity Framework Extensions - Introduction,introduction,tutorials
+Entity Framework Extensions - Bulk SaveChanges,bulk-savechanges,tutorials
+Entity Framework Extensions - Bulk Operations,bulk-operations,tutorials
+Entity Framework Extensions - From Query Operations,from-query-operations,tutorials
+Entity Framework Extensions - API,api,api
+Entity Framework Extensions - Bulk SaveChanges,bulk-savechanges,api
+Entity Framework Extensions - Bulk Insert,bulk-insert,api
+Entity Framework Extensions - Bulk Update,bulk-update,api
+Entity Framework Extensions - Bulk Delete,bulk-delete,api
+Entity Framework Extensions - Bulk Merge,bulk-merge,api
+Entity Framework Extensions - Update from Query,update-from-query,api
+Entity Framework Extensions - Delete from Query,delete-from-query,api
+Entity Framework Extensions - Audit,audit,api
+Entity Framework Extensions - Batch,batch,api
+Entity Framework Extensions - Execute Event,execute-event,api
+Entity Framework Extensions - Log,log,api
+Entity Framework Extensions - Temporary Table,temporary-table,api
+Entity Framework Extensions - Transient Error,transient-error,api
+Entity Framework Extensions - SQL Server,sql-server,api
+Entity Framework Extensions - Benchmark,benchmark,articles
+Entity Framework Extensions - Improve BulkSaveChanges,improve-bulk-savechanges,articles
+Entity Framework Extensions - Use Custom Column,custom-column,articles
+Entity Framework Extensions - Use Custom Key,custom-key,articles
+Entity Framework Extensions - Soft Delete,soft-delete,articles
+Entity Framework Extensions - Concurrency,concurrency,articles
+Entity Framework Extensions - FAQ,faq,faq
+Entity Framework Extensions - Contact Us,contact-us,faq
+Entity Framework Extensions - Issue Tracker,issue-tracker,faq
+Entity Framework Extensions - General,faq-general,faq
+Entity Framework Extensions - Installation,faq-installation,faq
+Entity Framework Extensions - License,faq-license,faq
