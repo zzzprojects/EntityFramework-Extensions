@@ -47,6 +47,6 @@ Bulk Operations save entities in bulk to reduce the number of database round-tri
 
 ### Related Articles
 
-- [How to Benchmark?](https://github.com/zzzprojects/docs/blob/master/entity-framework-extensions/docs/how/benchmark.md)
-- [How to use Custom Column?](https://github.com/zzzprojects/docs/blob/master/entity-framework-extensions/docs/how/custom-column.md)
-- [How to use Custom Key?](https://github.com/zzzprojects/docs/blob/master/entity-framework-extensions/docs/how/custom-key.md)
+- [How to Benchmark?](benchmark)
+- [How to use Custom Column?](custom-column)
+- [How to use Custom Key?](custom-key)
