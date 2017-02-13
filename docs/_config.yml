@@ -1,8 +1,10 @@
 highlighter: rouge
+gems:
+  - jekyll-sitemap
 defaults:
   -
     scope:
       path: ""
       type: "pages"
     values:
-      last_modified_at: "2017-02-01"
+      last_modified_at: "2017-02-12"
