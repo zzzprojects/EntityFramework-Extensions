@@ -23,6 +23,7 @@ Entity Framework Extensions - Log,log,api
 Entity Framework Extensions - Temporary Table,temporary-table,api
 Entity Framework Extensions - Transient Error,transient-error,api
 Entity Framework Extensions - SQL Server,sql-server,api
+Entity Framework Extensions - Articles,articles,articles
 Entity Framework Extensions - Benchmark,benchmark,articles
 Entity Framework Extensions - Improve BulkSaveChanges,improve-bulk-savechanges,articles
 Entity Framework Extensions - Use Custom Column,custom-column,articles
