@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Entity Framework Extensions - Tutorial
-permalink: tutorial
+permalink: tutorials
 ---
 
 {% include template-h1.html %}
