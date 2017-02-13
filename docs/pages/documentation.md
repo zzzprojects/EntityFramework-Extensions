@@ -14,7 +14,7 @@ permalink: documentation
 			<hr class="my-4">
 			<p>Start learning about how to use Entity Framework Extensions with our tutorial.</p>
 			<p class="lead">
-				<a class="btn btn-primary btn-lg" href="tutorial" role="button">Learn more</a>
+				<a class="btn btn-primary btn-lg" href="overview" role="button">Learn more</a>
 			</p>
 		</div>
 	</div>
