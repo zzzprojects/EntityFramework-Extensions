@@ -82,6 +82,7 @@ context.Customers
 {% endhighlight %}
 
 ### Performance Comparisons
+
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
