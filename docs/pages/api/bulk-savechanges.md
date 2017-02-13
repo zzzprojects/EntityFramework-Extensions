@@ -42,7 +42,9 @@ SaveChanges makes one database round-trip for each entity to insert/update/delet
 BulkSaveChanges use bulk operations to reduce the number of database round-trip required.
 
 ### Support
+
 BulkSaveChanges support everything!
+
 - Association (One to One, One to Many, Many to Many, etc.)
 - Complex Type
 - Enum
@@ -52,5 +54,6 @@ BulkSaveChanges support everything!
 - Etc.
 
 ### Related Articles
-- [How to Benchmark?](https://github.com/zzzprojects/docs/blob/master/entity-framework-extensions/docs/how/benchmark.md)
-- [How to Improve Bulk SaveChanges Performances?](https://github.com/zzzprojects/docs/blob/master/entity-framework-extensions/docs/how/improve-bulk-savechanges.md)
+
+- [How to Benchmark?](benchmark)
+- [How to Improve Bulk SaveChanges Performances?](improve-bulk-savechanges)
