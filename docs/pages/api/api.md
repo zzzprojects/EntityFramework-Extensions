@@ -8,8 +8,6 @@ permalink: api
 
 ## Article
 
-_Under Construction! Examples will be available soon._
-
 <ul>
 {% for num in (0..site.data.permalink.size) %}	
 	{% if site.data.permalink[num].category == page.permalink %}
