@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Entity Framework Extensions - License
-permalink: license
+permalink: faq-license
 ---
 
 {% include template-h1.html %}
