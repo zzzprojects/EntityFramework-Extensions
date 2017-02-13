@@ -4,10 +4,10 @@ Entity Framework Extensions - Requirements,requirements,tutorials
 Entity Framework Extensions - Installing,installing,tutorials
 Entity Framework Extensions - Upgrading,upgrading,tutorials
 Entity Framework Extensions - Licensing,licensing,tutorials
-Entity Framework Extensions - Introduction,introduction,tutorials
-Entity Framework Extensions - Bulk SaveChanges,bulk-savechanges,tutorials
-Entity Framework Extensions - Bulk Operations,bulk-operations,tutorials
-Entity Framework Extensions - From Query Operations,from-query-operations,tutorials
+Entity Framework Extensions - Introduction,tutorial-introduction,tutorials
+Entity Framework Extensions - Bulk SaveChanges,tutorial-bulk-savechanges,tutorials
+Entity Framework Extensions - Bulk Operations,tutorial-bulk-operations,tutorials
+Entity Framework Extensions - From Query Operations,tutorial-from-query-operations,tutorials
 Entity Framework Extensions - API,api,api
 Entity Framework Extensions - Bulk SaveChanges,bulk-savechanges,api
 Entity Framework Extensions - Bulk Insert,bulk-insert,api
