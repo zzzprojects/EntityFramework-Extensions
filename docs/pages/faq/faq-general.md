@@ -24,8 +24,4 @@ We normally answer very fast, often within one hour.
 Most fixes is resolved within one business day.
 
 ## Do you support EF Core
-We do not yet. We are currently re-writing the library to support:
-
-- EF Core
-- EF5
-- EF4
+We do not yet. We are currently re-writing the library to support it.
