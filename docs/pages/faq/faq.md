@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SqlBulkCopy | FAQ
+title: Entity Framework Extensions | FAQ
 permalink: faq
 ---
 
