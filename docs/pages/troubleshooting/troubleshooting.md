@@ -6,14 +6,12 @@ permalink: troubleshooting
 
 {% include template-h1.html %}
 
-## Article
-
-_Section coming soon_
+## Troubleshooting
 
 <ul>
-{% for num in (0..site.data.permalink.size) %}	
-	{% if site.data.permalink[num].category == page.permalink %}
-		<li><a href="{{ site.data.permalink[num].permalink }}">{{ site.data.permalink[num].permalink }}</a></li>
+{% for num in (0..site.data.pages.size) %}	
+	{% if site.data.pages[num].category == page.permalink and site.data.pages[num].url != page.permalink %}
+		<li><a href="{{ site.data.pages[num].url }}">{{ site.data.pages[num].title }}</a></li>
 	{% endif %}
 {% endfor %}
 </ul>
