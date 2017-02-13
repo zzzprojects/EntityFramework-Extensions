@@ -8,6 +8,7 @@ permalink: faq-general
 
 ## Which Payment method do you support?
 We support the following payment method:
+
 - PayPal
 - Check
 - Bank Transfer
@@ -24,6 +25,7 @@ Most fixes is resolved within one business day.
 
 ## Do you support EF Core
 We do not yet. We are currently re-writing the library to support:
+
 - EF Core
 - EF5
 - EF4
