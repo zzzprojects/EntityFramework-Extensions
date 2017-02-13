@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Entity Framework Extensions - Installation
-permalink: installation
+permalink: faq-installation
 ---
 
 {% include template-h1.html %}
