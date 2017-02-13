@@ -55,11 +55,13 @@ The best way to find out if you still have access to early renewal discount is b
 
 ### Why should I renew?
 Renewing your support & upgrade give the following benefits:
+
 - Major version releases and new product features
 - Fast support by mail
 - Protection against price increases during the maintenance term
 
 ## Royalty Free
+
 ### Can I install Entity Framework Extensions on Client Machine?
 Yes, the product is royalty free.
 
@@ -73,5 +75,6 @@ This mean, you can develop a project and install it on thousands of clients.
 You paid for developer seat within your company.
 
 Some standard royalty free limitations:
+
 - You can sell a similar product and claim it's yours.
 - If your customer has access to your source code and develops using our API, they will have to purchase a license.
