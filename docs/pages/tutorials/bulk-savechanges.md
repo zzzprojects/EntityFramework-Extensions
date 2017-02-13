@@ -55,5 +55,5 @@ BulkSaveChanges support everything!
 
 ### Related Articles
 
-- [How to Benchmark?](https://github.com/zzzprojects/docs/blob/master/entity-framework-extensions/docs/how/benchmark.md)
-- [How to Improve Bulk SaveChanges Performances?](https://github.com/zzzprojects/docs/blob/master/entity-framework-extensions/docs/how/improve-bulk-savechanges.md)
+- [How to Benchmark?](benchmark)
+- [How to Improve Bulk SaveChanges Performances?](improve-bulk-savechanges)
