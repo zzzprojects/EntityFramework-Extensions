@@ -47,15 +47,17 @@ The validate method allow you to know whether your license is valid or not.
 {% include template-example.html %} 
 {% highlight csharp %}
 // CHECK for default provider (SQL Server)
-if(!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense())
+string licenseErrorMessage;
+if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErrorMessage))
 {
-   throw new Exception("Invalid License!");
+    throw new Exception(licenseErrorMessage);
 }
 
 // CHECK for a specific provider
-if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(ProviderType.MySql))
+string licenseErrorMessage;
+if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErrorMessage), ProviderType.MySql))
 {
-   throw new Exception("Invalid License!");
+   throw new Exception(licenseErrorMessage);
 }
 {% endhighlight %}
 
