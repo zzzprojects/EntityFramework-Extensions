@@ -55,7 +55,7 @@ if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErro
 
 // CHECK for a specific provider
 string licenseErrorMessage;
-if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErrorMessage), ProviderType.MySql))
+if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErrorMessage, ProviderType.MySql))
 {
    throw new Exception(licenseErrorMessage);
 }
