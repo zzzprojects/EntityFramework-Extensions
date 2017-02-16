@@ -594,7 +594,6 @@ context.Customers
 				<a href="https://www.facebook.com/zzzprojects" target="_blank"><i class="fa fa-facebook"></i></a>
 				<a href="https://twitter.com/zzzprojects" target="_blank"><i class="fa fa-twitter"></i></a>
 				<a href="https://plus.google.com/+Zzzprojects_NetSQL" target="_blank"><i class="fa fa-google-plus"></i></a>
-				<a href="http://www.zzzprojects.com/feed/" target="_blank"><i class="fa fa-rss"></i></a>
 				<a href="http://zzzprojects.us9.list-manage.com/subscribe?u=cecbc4775cf67bf1ff82018af&amp;id=4765ffa5f8" target="_blank"><i class="fa fa-newspaper-o"></i></a>
 			</div>
 		</div>
