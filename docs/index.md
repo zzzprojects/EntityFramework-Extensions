@@ -16,14 +16,88 @@ layout: post
 		
 		<!-- icon/css !-->
 		<link rel="icon" type="image/png" href="http://entityframework-plus.net/images/logo.png">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="http://entityframework-plus.net/css/github2.css">
 		<link rel="stylesheet" type="text/css" href="http://entityframework-plus.net/css/default.1.3.css">
 	</head>
 	
 	<body>
 		
+<style>
+.header * {
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+.header .fa-cloud-download {
+	font-family: FontAwesome;
+}
+
+.header {
+	background-color: #fff;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+.header nav {
+	min-height: 100px;
+}
+.header nav .navbar-brand {
+	font-size: 26px;
+	font-weight: 300;
+}
+.header nav .navbar-brand a {
+	color: #000;
+	text-decoration: none;
+}
+.header nav .nav-item {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.header nav .nav-item a.nav-link {
+	color: #000;
+	font-size: 18px;
+	font-weight: 300;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.header nav .nav-item-download {
+	padding-left: 60px;
+	padding-right: 0px;	
+}
+@media (min-width: 992px) {
+	.header a.nav-link {
+		position: relative;
+		text-decoration: none;
+	}
+	.header a.nav-link::after {
+		border-bottom: 2px solid #c00;
+		bottom: 0;
+		content: "";
+		left: 0;
+		position: absolute;
+		transition: all 0.5s ease 0s;
+		width: 0;
+	}
+	.header a.nav-link:hover::after {
+		width: 100%;
+	}
+}
+@media (max-width: 991px) {
+	.header nav .nav-item-download {
+		padding-left: 0px;
+		margin: auto;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	.header nav {
+		min-height: 60px;
+	}
+}
+@media (max-width: 575px) {
+	.header nav .navbar-brand {
+		font-size: 22px;
+	}
+}
+</style>
+
 		<!-- top-navbar !-->
 		<nav id="top-navbar" class="navbar hidden-md-down">
 			<div class="container-fluid">
@@ -133,55 +207,46 @@ layout: post
 						</ul>
 					</div>
 				</div>
+<!-- header !-->
+	<div class="header fixed-top">
+		<nav class="container navbar navbar-toggleable-md navbar-light">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="navbar-brand">
+				<a href="http://entityframework-extensions.net">
+					<img src="http://entityframework-plus.net/images/logo.png" />
+					Entity Framework
+					<span class="text-red">Extensions</span>
+				</a>
 			</div>
+			
+			<div class="navbar-collapse collapse justify-content-end" id="navbarSupportedContent">			
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="http://entityframework-extensions.net/#featured">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="http://entityframework-extensions.net/documentation">Tutorials</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="http://entityframework-extensions.net/#pricing">Buy</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="mailto:info@zzzprojects.com">Contact</a>
+					</li>
+					<li class="nav-item nav-item-download">
+						<a class="btn btn-success btn-lg" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><i class="fa fa-cloud-download"></i>&nbsp;NuGet Download</a>
+					</li>
+				</ul>
+			</div>	
 		</nav>
+	</div>
+	
+	<div style="height: 100px;">
+	</div>
 		
-		<div id="menu-mobile" class="collapse hidden-lg-up">
-			<div class="container">
-				<br />
-				<div class="row">
-					<div class="col-lg-3">			
-						<h3>Menu</h3>
-						<ul>
-							<li><a class="nav-link" href="documentation">Wiki</a></li>
-							<li><a class="nav-link" href="https://github.com/zzzprojects/EntityFramework-Extensions/issues" target="_blank">Forum</a></li>
-							<li><a class="nav-link" href="#pro">PRO Version</a></li>
-							<li><a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank" class="btn btn-success" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><span><i class="fa fa-cloud-download"></i>&nbsp;<span>Download</span></span></a></li>
-						</ul>
-					</div>
-					<div class="col-lg-3">
-						<h3>Entity Framework</h3>
-						<ul>
-							<li><a href="http://entityframework-extensions.net/" target="_blank">Entity Framework Extensions</a></li>
-							<li><a href="http://entityframework-plus.net/" target="_blank">Entity Framework Plus (EF+)</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-3">
-						<h3>Bulk Operations</h3>
-						<ul>
-							<li><a href="http://bulk-operations.net/" target="_blank">Bulk Operations</a></li>
-							<li><a href="http://dapper-plus.net/" target="_blank">Dapper Plus</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-3">
-						<h3>Expression Evaluator</h3>
-						<ul>
-							<li><a href="http://eval-expression.net/" target="_blank">Eval Expression.NET</a></li>
-							<li><a href="http://eval-sql.net/" target="_blank">Eval SQL.NET</a></li>								
-						</ul>
-					</div>
-					<div class="col-lg-3">
-						<h3>Others</h3>
-						<ul>
-							<li><a href="https://github.com/zzzprojects/Z.ExtensionMethods" target="_blank">Extension Methods</a></li>
-							<li><a href="https://github.com/zzzprojects/LINQ-Async" target="_blank">LINQ Async</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- header !-->
 		<header>
 			<div class="container">
 				<div class="row">
@@ -667,9 +732,10 @@ context.Customers
 			</div>
 		</footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="http://entityframework-plus.net/js/tether.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+ 
 	<script type="text/javascript">
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
