@@ -10,7 +10,7 @@ layout: post
 		<meta name="msvalidate.01" content="89359D9C492A475C0061398008D105FB" />
 		
 		<!-- seo !-->
-		<meta name="description" content="Dramatically Improve EF Performance with Bulk SaveChanges and Bulk Operations (SQLServer, SQLAzure, SQLCompact, MySQL, SQLite, .NET, ADO.NET, ASP.NET, C#, CSharp, MVC, MMVC, VB.NET)">
+		<meta name="description" content="Learn how to use Entity Framework Bulk Insert with Tutorials & Examples for Code First & Database First.">
 		<meta name="keywords" content="Entity Framework, Entity Framework Tutorial, Entity Framework Example, Entity Framework Code First, Entity Framework Database First, Entity Framework Bulk Insert, Entity Framework SaveChanges, Entity Framework Performance">
 		<title>Entity Framework Bulk Insert, Tutorials, and Examples. Support Entity Framework 6 Code First & Database First.</title>
 		
