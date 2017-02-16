@@ -578,44 +578,8 @@ context.Customers
 				</div>
 			</div>
 		</div>
-
-		<!-- other product !-->
-		<div id="product">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3">
-						<h3>Entity Framework</h3>
-						<ul>
-							<li><a href="http://entityframework-extensions.net/" target="_blank">Entity Framework Extensions</a></li>
-							<li><a href="http://entityframework-plus.net/" target="_blank">Entity Framework Plus (EF+)</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-3">
-						<h3>Bulk Operations</h3>
-						<ul>
-							<li><a href="http://bulk-operations.net/" target="_blank">Bulk Operations</a></li>
-							<li><a href="http://dapper-plus.net/" target="_blank">Dapper Plus</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-3">
-						<h3>Expression Evaluator</h3>
-						<ul>
-							<li><a href="http://eval-sql.net/" target="_blank">Eval SQL.NET</a></li>
-							<li><a href="http://eval-expression.net/" target="_blank">Eval Expression.NET</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-3">
-						<h3>Others</h3>
-						<ul>
-							<li><a href="https://github.com/zzzprojects/Z.ExtensionMethods" target="_blank">Extension Methods</a></li>
-							<li><a href="https://github.com/zzzprojects/LINQ-Async" target="_blank">LINQ Async</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>		
-		</div>
-		
-		<!-- footer !-->
+	
+<!-- footer !-->
 <footer>
 	<div class="container">
 		<div class="row">
