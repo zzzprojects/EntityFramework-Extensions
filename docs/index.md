@@ -11,7 +11,7 @@ layout: post
 		
 		<!-- seo !-->
 		<meta name="description" content="Dramatically Improve EF Performance with Bulk SaveChanges and Bulk Operations (SQLServer, SQLAzure, SQLCompact, MySQL, SQLite, .NET, ADO.NET, ASP.NET, C#, CSharp, MVC, MMVC, VB.NET)">
-		<meta name="keywords" content="EntityFramework, EF6, BulkSaveChanges, BulkInsert, BulkUpdate, BulkDelete, BulkMerge, Insert, Update, Delete, Merge, SQLServer, SQLAzure, SQLCompact, MySQL, SQLite, .NET, ADO.NET, ASP.NET, C#, CSharp, MVC, MMVC, VB.NET">
+		<meta name="keywords" content="Entity Framework, Entity Framework Tutorial, Entity Framework Examples, Entity Framework Code First, Entity Framework Database First, Entity Framework Bulk Insert, Entity Framework SaveChanges, Entity Framework Performance">
 		<title>Entity Framework Bulk Insert, Tutorials, and Examples. Support Entity Framework 6 Code First & Database First.</title>
 		
 		<!-- icon/css !-->
