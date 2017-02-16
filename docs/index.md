@@ -96,6 +96,13 @@ layout: post
 		font-size: 22px;
 	}
 }
+.text-red {
+	color: #c00;
+}
+
+.text-green {
+	color: #5cb85c;
+}
 </style>
 	
 <!-- header !-->
