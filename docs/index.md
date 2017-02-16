@@ -623,6 +623,7 @@ footer hr {
 }
 footer .footer-site-copyright {
     padding-top: 4px;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 footer .footer-site-social a {
     font-size: 24px;
