@@ -616,24 +616,60 @@ context.Customers
 		</div>
 		
 		<!-- footer !-->
-		<footer>
-			<div class="container text-center-md-down">
-				<div class="row">
-					<div class="col-lg-6">
-						Copyright © <a href="http://www.zzzprojects.com/" target="_blank" class="text-bold">ZZZ Projects Inc.</a> 2014 - 2017
-						<div class="hidden-lg-up"></div>
-						All rights reserved
-					</div>
-					<hr class="hidden-lg-up" />
-					<div class="col-lg-6 text-right-lg-up social">
-						<a href="https://www.facebook.com/zzzprojects" target="_blank"><i class="fa fa-facebook"></i></a>
-						<a href="https://twitter.com/zzzprojects" target="_blank"><i class="fa fa-twitter"></i></a>
-						<a href="https://plus.google.com/+Zzzprojects_NetSQL" target="_blank"><i class="fa fa-google-plus"></i></a>
-						<a href="http://zzzprojects.us9.list-manage.com/subscribe?u=cecbc4775cf67bf1ff82018af&id=4765ffa5f8" target="_blank"><i class="fa fa-newspaper-o"></i></a>
-					</div>
-				</div>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 footer-site-copyright text-center text-lg-left">
+				Copyright &copy; 2014 - 2017
+				<a href="http://www.zzzprojects.com/">ZZZ Projects Inc.</a> 
+				<div class="hidden-lg-up"></div>
+				All rights reserved
 			</div>
-		</footer>
+			<hr class="hidden-lg-up">
+			<div class="col-lg-6 footer-site-social text-center text-lg-right">
+				<a href="https://www.facebook.com/zzzprojects" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/zzzprojects" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://plus.google.com/+Zzzprojects_NetSQL" target="_blank"><i class="fa fa-google-plus"></i></a>
+				<a href="http://www.zzzprojects.com/feed/" target="_blank"><i class="fa fa-rss"></i></a>
+				<a href="http://zzzprojects.us9.list-manage.com/subscribe?u=cecbc4775cf67bf1ff82018af&amp;id=4765ffa5f8" target="_blank"><i class="fa fa-newspaper-o"></i></a>
+			</div>
+		</div>
+	</div>
+</footer>
+<style>
+footer {
+	background: rgba(0, 0, 0, 0) linear-gradient(to top, #000, #333) repeat scroll 0 0;
+	box-shadow: 0 -8px 8px 0 rgba(0, 0, 0, 0.2);
+	color: #666;
+	font-weight: 300;
+	min-height: 50px;	
+	padding: 5px 0;
+}
+footer a {
+    color: #666;
+}
+footer a:hover {
+    color: #666;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out 0s;
+}
+footer hr {
+    margin: 5px;
+}
+footer .footer-site-copyright {
+    padding-top: 4px;
+}
+footer .footer-site-social a {
+    font-size: 24px;
+    padding: 0 10px;
+}
+@media (max-width: 61em) {
+	footer {
+		padding: 20px 0;
+	}
+}
+</style>
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
