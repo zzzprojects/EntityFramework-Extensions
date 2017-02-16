@@ -93,7 +93,7 @@ layout: post
 }
 @media (max-width: 767px) {
 	.header nav .navbar-brand {
-		font-size: 22px;
+		font-size: 18px;
 	}
 }
 .text-red {
