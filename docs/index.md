@@ -604,16 +604,16 @@ context.Customers
 footer {
 	background: rgba(0, 0, 0, 0) linear-gradient(to top, #000, #333) repeat scroll 0 0;
 	box-shadow: 0 -8px 8px 0 rgba(0, 0, 0, 0.2);
-	color: #666;
+	color: #777;
 	font-weight: 300;
 	min-height: 50px;	
 	padding: 5px 0;
 }
 footer a {
-    color: #666;
+    color: #777;
 }
 footer a:hover {
-    color: #666;
+    color: #777;
     opacity: 0.7;
     text-decoration: none;
     transition: all 0.4s ease-in-out 0s;
