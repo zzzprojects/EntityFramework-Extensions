@@ -605,7 +605,7 @@ footer {
 	background: rgba(0, 0, 0, 0) linear-gradient(to top, #000, #333) repeat scroll 0 0;
 	box-shadow: 0 -8px 8px 0 rgba(0, 0, 0, 0.2);
 	color: #777;
-	font-weight: 300;
+	font-weight: 400;
 	min-height: 50px;	
 	padding: 5px 0;
 }
