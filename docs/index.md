@@ -147,7 +147,7 @@ layout: post
 		</nav>
 	</div>
 	
-	<div style="height: 100px;">
+	<div style="height: 120px;">
 	</div>
 		
 		<header>
