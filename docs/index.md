@@ -128,7 +128,7 @@ layout: post
 			<div class="navbar-collapse collapse justify-content-end" id="navbarSupportedContent">			
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="http://entityframework-extensions.net/#featured">Features</a>
+						<a class="nav-link" href="http://entityframework-extensions.net/#feature">Features</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="http://entityframework-extensions.net/documentation">Tutorials</a>
