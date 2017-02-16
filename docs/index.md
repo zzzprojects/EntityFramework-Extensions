@@ -91,7 +91,7 @@ layout: post
 		min-height: 60px;
 	}
 }
-@media (max-width: 575px) {
+@media (max-width: 767px) {
 	.header nav .navbar-brand {
 		font-size: 22px;
 	}
