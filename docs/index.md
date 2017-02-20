@@ -403,10 +403,10 @@ context.Customers
 							<div class="card-block">
 								<h4 class="card-title">Wiki</h4>
 							</div>
-							<a href="http://www.zzzprojects.com/entity-framework-extensions/docs" target="_blank" onclick="ga('send', 'event', { eventAction: 'github'});"><i class="fa fa-folder-open fa-5x"></i></a>
+							<a href="http://entityframework-extensions.net/documentation" target="_blank" onclick="ga('send', 'event', { eventAction: 'github'});"><i class="fa fa-folder-open fa-5x"></i></a>
 							<div class="card-block">
 								<p class="card-text">Consult our complete documentation to help you getting started.</p>
-								<a href="http://www.zzzprojects.com/entity-framework-extensions/docs" target="_blank" onclick="ga('send', 'event', { eventAction: 'github'});">Wiki</a>
+								<a href="http://entityframework-extensions.net/documentation" target="_blank" onclick="ga('send', 'event', { eventAction: 'github'});">Wiki</a>
 							</div>
 						</div>
 					</div>
