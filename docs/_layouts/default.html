@@ -183,6 +183,8 @@
 {% include template-related.html %}
 
 <br />
+{% if page.path contains "404" %}
+{% else %}
 <nav class="pagination row">
     <div class="previous col flex-first">
         <a href="{{ site.data.pages[prev_i].url }}" class="btn btn-primary" role="button">Previous</a>
@@ -191,6 +193,7 @@
         <a href="{{ site.data.pages[next_i].url }}" class="btn btn-primary" role="button">Next</a>
     </div>
 </nav>		
+{% endif %}
 			</article>
 		</div>
 			
