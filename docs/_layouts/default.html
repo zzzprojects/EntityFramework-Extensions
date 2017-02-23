@@ -70,22 +70,22 @@
 				<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
 					<div class="collapse navbar-collapse">
 						<ul class="navbar-nav">
-							<li class="nav-item">
+							{% if page.path == "index.md" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
 								<a class="nav-link" href="http://entityframework-extensions.net/"><i class="fa fa-home" aria-hidden="true"></i></a>
 							</li>	 
-							<li class="nav-item active">
+							{% if page.path contains "/tutorials/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
 								<a class="nav-link" href="http://entityframework-extensions.net/overview">Tutorials</a>
 							</li>
-							<li class="nav-item">						
+							{% if page.path contains "/api/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}					
 								<a class="nav-link" href="http://entityframework-extensions.net/api">API</a>
 							</li>
-							<li class="nav-item">
+							{% if page.path contains "/articles/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
 								<a class="nav-link" href="http://entityframework-extensions.net/articles">Articles</a>
 							</li>
-							<li class="nav-item">
+							{% if page.path contains "/faq/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
 								<a class="nav-link" href="http://entityframework-extensions.net/faq">FAQ</a>
 							</li>
-							<li class="nav-item">
+							{% if page.path contains "/troubleshooting/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
 								<a class="nav-link" href="http://entityframework-extensions.net/troubleshooting">Troubleshooting</a>
 							</li>
 						</ul>
