@@ -10,7 +10,7 @@
 	<!-- seo !-->
 	<meta name="description" content="TBD" />
 	<meta name="keywords" content="TBD" />
-    <title>{{ page.title }}</title>
+    	<title>{{ page.title }}</title>
     
 	<!-- icon/css !-->
 	<link rel="icon" type="image/png" href="http://entityframework-extensions.net/images/logo.png" />
@@ -19,114 +19,153 @@
 	<link rel="stylesheet" href="css/main_css_file.css">
  </head>
   <body>
-	<header>
+	  
+	<!-- header !-->
+	<header class="fixed-top">
 
-		<!-- header-brand !-->
-		<div class="container-fluid bg-gray">
-			<div class="header-brand row">
-				<div class="col-sm-8">
-					<a href="/" style="text-decoration: none; color: #000;">
-					   <img src="http://entityframework-extensions.net/images/logo.png" height="64" />
-					<span class="header-brand-color-1">
-						&nbsp;Entity Framework
-					</span>
-					<span class="header-brand-color-2" style="color:#c00;">
-						Extensions
-					</span>
-					</a>
-				</div>
-				<div class="col-sm-4 text-right text-warning hidden-md-down">
-					<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank" class="btn btn-success btn-left" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><span><i class="fa fa-cloud-download"></i>&nbsp;<span>Download</span></span></a>
-				</div>
+		<!-- header-lg-up !-->
+		<div class="header-lg-up hidden-md-down">
+			
+			<!-- header-site !-->
+			<div class="header-site">
+			
+				<nav class="navbar navbar-toggleable-md">
+				
+					<!-- navbar-brand !-->
+					<div class="navbar-brand">
+						<a href="http://entityframework-extensions.net">
+							<img src="http://entityframework-extensions.net/images/logo.png" />
+							Entity Framework
+							<span class="text-red">Extensions</span>
+						</a>
+					</div>
+					
+					<!-- navbar-menu !-->
+					<div class="navbar-menu navbar-collapse justify-content-end">			
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="http://entityframework-extensions.net/#feature">Features</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="http://entityframework-extensions.net/documentation">Tutorials</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="http://entityframework-extensions.net/#pricing">Buy</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="mailto:info@zzzprojects.com">Contact</a>
+							</li>
+							<li class="nav-item nav-item-download">
+								<a class="btn btn-success btn-lg" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><i class="fa fa-cloud-download"></i>&nbsp;NuGet Download</a>
+							</li>
+						</ul>
+					</div>					
+				</nav>
+			
 			</div>
+			
+			<!-- header-context !-->
+			<div class="header-context">
+			
+				<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="http://entityframework-extensions.net/"><i class="fa fa-home" aria-hidden="true"></i></a>
+							</li>	 
+							<li class="nav-item active">
+								<a class="nav-link" href="http://entityframework-extensions.net/overview">Tutorials</a>
+							</li>
+							<li class="nav-item">						
+								<a class="nav-link" href="http://entityframework-extensions.net/api">API</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="http://entityframework-extensions.net/articles">Articles</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="http://entityframework-extensions.net/faq">FAQ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="http://entityframework-extensions.net/troubleshooting">Troubleshooting</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				
+			</div>
+			
 		</div>
 		
-		<!-- navbar !-->
-		<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md" style="min-height: 40px;">
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			
-			<div id="navbarSupportedContent" class="collapse navbar-collapse">
-				<ul class="navbar-nav mr-auto">
-{% if page.path == "index.md" %} 
-   <li class="nav-item active">
-{% else %}
-   <li class="nav-item">
-{% endif %}
-						<a class="nav-link" href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
-					</li>
-{% if page.path contains "/tutorials/" %} 
-   <li class="nav-item active">
-{% else %}
-   <li class="nav-item">
-{% endif %}
-					
-						<a class="nav-link" href="overview">Tutorials</a>
-					</li>
-{% if page.path contains "/api/" %} 
-   <li class="nav-item active">
-{% else %}
-   <li class="nav-item">
-{% endif %}
-					
-						<a class="nav-link" href="api">API</a>
-					</li>
-{% if page.path contains "/articles/" %} 
-   <li class="nav-item active">
-{% else %}
-   <li class="nav-item">
-{% endif %}
-						<a class="nav-link" href="articles">Articles</a>
-					</li>
-{% if page.path contains "/faq/" %} 
-   <li class="nav-item active">
-{% else %}
-   <li class="nav-item">
-{% endif %}
-						<a class="nav-link" href="faq">FAQ</a>
-					</li>
-{% if page.path contains "/troubleshooting/" %} 
-   <li class="nav-item active">
-{% else %}
-   <li class="nav-item">
-{% endif %}
-						<a class="nav-link" href="troubleshooting">Troubleshooting</a>
-					</li>
-				</ul>
+		<!-- header-md-down !-->
+		<div class="header-md-down hidden-lg-up">
+		
+			<!-- header-brand !-->
+			<div class="header-brand">
+				<a href="http://entityframework-extensions.net">
+					<img src="http://entityframework-plus.net/images/logo.png" />
+					Entity Framework
+					<span class="text-red">Extensions</span>
+				</a>
 			</div>
-		</nav>
+			
+			<!-- header-navbar !-->
+			<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+			
+				<!-- nav-context !-->
+				<button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#nav-context" aria-controls="nav-context" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<!-- nav-site !-->
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-site" aria-controls="nav-site" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div id="nav-context" class="navbar-collapse collapse">			
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="http://entityframework-extensions.net/#feature">Features</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="http://entityframework-extensions.net/documentation">Tutorials</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="http://entityframework-extensions.net/#pricing">Buy</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="mailto:info@zzzprojects.com">Contact</a>
+						</li>
+						<li class="nav-item nav-item-download">
+							<a class="btn btn-success btn-lg" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><i class="fa fa-cloud-download"></i>&nbsp;NuGet Download</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div id="nav-site" class="navbar-collapse collapse">			
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="http://entityframework-extensions.net/#feature">Features2</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="http://entityframework-extensions.net/documentation">Tutorials2</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="http://entityframework-extensions.net/#pricing">Buy2</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="mailto:info@zzzprojects.com">Contact2</a>
+						</li>
+						<li class="nav-item nav-item-download">
+							<a class="btn btn-success btn-lg" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><i class="fa fa-cloud-download"></i>&nbsp;NuGet Download</a>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+	
+		</div>
 	</header>
-	
-<style>
-.bg-gray {
- background-color: #eceeef;
-}
-</style>
-
-<style>
-header .header-brand {
-	font-size: 36px;
-	padding-left: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-header .navbar {
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-header .navbar a .fa-home {
-	font-size: 24px;
-}
-header .navbar-nav .nav-link {
-	padding-left: 1rem !important;
-	padding-right: 1rem !important;
-}
-header .navbar .active {
-	background-color: #5cb85c;
-}
-</style>
-	
+	  
 	<div class="container-fluid">
 		<div class="row" style="min-height: 800px;">
 
