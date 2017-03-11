@@ -31,6 +31,7 @@ Following extension methods are automatically added to DbContext:
 - BulkUpdate
 - BulkDelete
 - BulkMerge
+- BulkSynchronize
 
 {% include template-example.html %} 
 {% highlight csharp %}
