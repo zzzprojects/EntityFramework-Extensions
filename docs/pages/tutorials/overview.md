@@ -7,11 +7,28 @@ permalink: overview
 {% include template-h1.html %}
 
 ## Overview
-Entity Framework Extensions allow you to improve dramatically your save operations performance.
+Entity Framework Extensions improve your performance dramatically.
 
-It's easy to use, and easy to customize.
+It’s easy to use, and easy to customize.
+
+{% highlight csharp %}
+// Easy to use
+ctx.BulkSaveChanges();
+
+// Easy to customize
+context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
+{% endhighlight %}
 
 ## Bulk SaveChanges
+The BulkSaveChanges method works like SaveChanges but way faster.
+
+Unlike SaveChanges who perform a database round-trip for every entity to save in the Database, BulkSaveChanges use Bulk Operations to save all entities in the Change Tracker efficiently.
+
+BulkSaveChanges support everything:
+
+- Complex Types
+- Inheritance (TPC, TPH, TPT)
+- Relationship (One to One, One to Many, Many to Many)
 
 ### Example
 {% include template-example.html %} 
