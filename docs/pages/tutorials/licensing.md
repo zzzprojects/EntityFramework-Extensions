@@ -60,9 +60,3 @@ if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErro
    throw new Exception(licenseErrorMessage);
 }
 {% endhighlight %}
-
-Another way to check if your license is valid is simply adding an invalid license instead.
-
-The following error should be raised:
-
-> ERROR_001: The provided license key is invalid or trial period is expired. Please buy a product license or go to http://www.zzzprojects.com and download the latest trial version. License Count: 1
