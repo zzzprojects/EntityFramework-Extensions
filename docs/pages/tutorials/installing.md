@@ -40,6 +40,7 @@ ctx.BulkInsert(list);
 ctx.BulkUpdate(list);
 ctx.BulkDelete(list);
 ctx.BulkMerge(list);
+ctx.BulkSynchronize(list);
 {% endhighlight %}
 
 Following extension methods are automatically added to IQueryable:
