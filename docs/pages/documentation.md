@@ -53,7 +53,7 @@ permalink: documentation
 	</div>
 	<div class="col-lg-6 col-xl-4">
 		<div class="jumbotron">
-			<h2 class="display-4">Troubleshooting</h2>
+			<h2 class="display-4">Exception</h2>
 			<p class="lead">Exception & Troubleshooting</p>
 			<hr class="my-4">
 			<p>Start learning how to fix and handle some exception and common troubleshooting error.</p>
