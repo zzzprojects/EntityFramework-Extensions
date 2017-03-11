@@ -12,6 +12,15 @@ Entity Framework Extensions allow you to improve dramatically your save operatio
 It's easy to use, and easy to customize.
 
 ## Bulk SaveChanges
+The BulkSaveChanges works like SaveChanges but way faster.
+
+BulkSaveChanges use Bulk Operations to save all entities in the Change Tracker efficiently instead of performing a database round-trip for every entity like SaveChanges does.
+
+BulkSaveChanges support everything:
+
+- Complex Types
+- Inheritance (TPC, TPH, TPT)
+- Relationship (One to One, One to Many, Many to Many)
 
 ### Example
 {% include template-example.html %} 
@@ -36,6 +45,16 @@ context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 | BulkSaveChanges | 90 ms          | 150 ms         | 350 ms         |
 
 ## Bulk Operations
+
+Bulk Operations method provide you some flexibility by allowing some customization and performance enhancement.
+
+All common methods are supported:
+
+- BulkInsert
+- BulkUpdate
+- BulkDelete
+- BulkMerge (UPSERT operation)
+- BulkSynchronize
 
 ### Example
 
@@ -65,6 +84,8 @@ context.BulkMerge(customers,
 | BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
 
 ## FromQuery Operations
+
+FromQuery method allows you to execute UPDATE or DELETE statements without loading entities in the context.
 
 ### Example
 
