@@ -13,6 +13,8 @@ The trial period stops at the end of the month. When you receive a license expir
 
 You can also purchase the library [here](http://entityframework-extensions.net/#pro)
 
+Upon purchase, you will receive a license name and a license key.
+
 ## Setup License from config file
 The license name and key can be directly be added in the app.config or web.config file in the appSettings section.
 
