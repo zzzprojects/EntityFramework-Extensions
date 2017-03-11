@@ -6,6 +6,8 @@ permalink: documentation
 
 {% include template-h1.html %}
 
+<br /><br />
+
 <div class="row">
 	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
