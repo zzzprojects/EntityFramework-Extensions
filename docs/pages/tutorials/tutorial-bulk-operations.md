@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Entity Framework Extensions - bulk-operations
+title: Entity Framework Extensions - Bulk Operations
 permalink: tutorial-bulk-operations
 ---
 
