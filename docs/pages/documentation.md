@@ -6,7 +6,7 @@ permalink: documentation
 
 {% include template-h1.html %}
 
-<br /><br />
+<br />
 
 <div class="row">
 	<div class="col-md-6 col-lg-4">
