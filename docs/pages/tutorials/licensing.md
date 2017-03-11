@@ -6,12 +6,12 @@ permalink: licensing
 
 {% include template-h1.html %}
 
-## Licensing
-Every month, a new monthly trial of the PRO Version is available to let you evaluate all its features without limitations.
+## Period Evaluation
+You can evaluate our library for several months before purchasing it.
 
-Learn more about the **[PRO Version](http://entityframework-extensions.net/#pro)**
+The trial period stops at the end of the month. When you receive a license expiration error, download the latest version which will automatically extend your trial period.
 
-The monthly trial allows you to evaluate the library for several months before making a purchase.
+You can also purchase the library [here]((http://entityframework-extensions.net/#pro))
 
 ## Setup License from config file
 The license name and key can be directly be added in the app.config or web.config file in the appSettings section.
