@@ -20,7 +20,7 @@ context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 {% endhighlight %}
 
 ## Bulk SaveChanges
-The BulkSaveChanges method works like SaveChanges but way faster.
+The BulkSaveChanges works like SaveChanges but way faster.
 
 Unlike SaveChanges who perform a database round-trip for every entity to save in the Database, BulkSaveChanges use Bulk Operations to save all entities in the Change Tracker efficiently.
 
