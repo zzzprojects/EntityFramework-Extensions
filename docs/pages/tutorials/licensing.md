@@ -6,7 +6,7 @@ permalink: licensing
 
 {% include template-h1.html %}
 
-## Period Evaluation
+## Evaluation Period
 You can evaluate our library for several months before purchasing it.
 
 The trial period stops at the end of the month. When you receive a license expiration error, download the latest version which will automatically extend your trial period.
@@ -40,7 +40,7 @@ Z.EntityFramework.Extensions.LicenseManager.AddLicense([licenseName], [licenseKe
 - **WinForm App:** Use the main thread method to activate your license.
 - **Win Service:** Use the OnStart method to activate your license
 
-> The AddLicense must always be set before the first call to the library. Otherwise, the monthly trial will start.
+> The AddLicense must always be set before the first call to the library. Otherwise, you will start the evaluation period
 
 ## How can I check if my license is valid?
 The validate method allow you to know whether your license is valid or not.
