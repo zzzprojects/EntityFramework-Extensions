@@ -7,7 +7,7 @@ permalink: documentation
 {% include template-h1.html %}
 
 <div class="row">
-	<div class="col-lg-6 col-xl-4">
+	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
 			<h2 class="display-4">Tutorial</h2>
 			<p class="lead">EFE Tutotrial</p>
@@ -18,7 +18,7 @@ permalink: documentation
 			</p>
 		</div>
 	</div>
-	<div class="col-lg-6 col-xl-4">
+	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
 			<h2 class="display-4">API</h2>
 			<p class="lead">Application Program Interface</p>
@@ -29,7 +29,7 @@ permalink: documentation
 			</p>
 		</div>
 	</div>
-	<div class="col-lg-6 col-xl-4">
+	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
 			<h2 class="display-4">Articles</h2>
 			<p class="lead">How/What/Why Articles</p>
@@ -40,7 +40,7 @@ permalink: documentation
 			</p>
 		</div>
 	</div>
-	<div class="col-lg-6 col-xl-4">
+	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
 			<h2 class="display-4">FAQ</h2>
 			<p class="lead">Freqently Answered Question</p>
@@ -51,7 +51,7 @@ permalink: documentation
 			</p>
 		</div>
 	</div>
-	<div class="col-lg-6 col-xl-4">
+	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
 			<h2 class="display-4">Exception</h2>
 			<p class="lead">Exception & Troubleshooting</p>
