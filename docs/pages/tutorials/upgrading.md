@@ -8,7 +8,7 @@ permalink: upgrading
 
 ## Upgrading
 
-Upgrading is very easy.
+All our release are normally backward compatible to make it very easy for you to upgrade.
 
 ## Step 1 - Before Upgrading
 Before upgrading:
