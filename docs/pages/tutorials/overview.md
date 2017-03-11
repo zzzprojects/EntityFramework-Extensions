@@ -93,6 +93,7 @@ context.BulkMerge(customers,
 | BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
 
 ## FromQuery Operations
+FromQuery method allows you to execute UPDATE or DELETE statements without loading entities in the context.
 
 ### Example
 
