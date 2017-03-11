@@ -27,13 +27,11 @@ The license name and key can be directly be added in the app.config or web.confi
 {% endhighlight %}
 
 ## Setup License from code
-Upon purchase completion, an email will be sent with your license key information.
+You can also set the license name and key directly in the code.
+
 {% include template-example.html %} 
 {% highlight csharp %}
-string licenseName = //... PRO license name
-string licenseKey = //... PRO license key
-
-Z.EntityFramework.Extensions.LicenseManager.AddLicense("[LicenseName]", "[LicenseKey]");
+Z.EntityFramework.Extensions.LicenseManager.AddLicense([licenseName], [licenseKey]);
 {% endhighlight %}
 
 ### Recommendation
