@@ -55,6 +55,16 @@ context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 
 ## Bulk Operations
 
+Bulk Operations method provide you some flexibility by allowing some customization and performance enhancement.
+
+All common methods are supported:
+
+- BulkInsert
+- BulkUpdate
+- BulkDelete
+- BulkMerge (UPSERT operation)
+- BulkSynchronize
+
 ### Example
 
 {% include template-example.html %} 
