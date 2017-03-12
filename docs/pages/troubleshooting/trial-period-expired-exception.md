@@ -16,20 +16,22 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 ### Cause
 
-- You are currently evaluating the library and the trial period is expired
-- You have purchased a library but didn't register the license correctly
+- You are currently evaluating the library and the trial period is expired.
+- You have purchased the license but didn't register it correctly.
 
 ### Fix
 
 #### Trial Period Expired
 
-You can extended indefinetly the trial period by downloading the latest version:
+You can extend your trial by downloading the latest version:
 
 http://entityframework-extensions.net/upgrading
 
+The latest version always contains a trial for the current month to allows a company to evaluate our library for several months.
+
 #### License Badly Registered
 
-Make sure to follow recommandation how to setup your license:
+Make sure to follow all recommendation about how to setup your license:
 http://entityframework-extensions.net/licensing
 
-Otherwise, contact us: info@zzzprojects.com
+Otherwise contact us: info@zzzprojects.com
