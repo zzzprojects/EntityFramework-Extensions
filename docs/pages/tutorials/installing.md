@@ -31,7 +31,7 @@ _Coming in 2017 Q2
 <a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-ef5-v.svg" alt="download" /></a>
 <a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-ef5-d.svg" alt="" /></a>
 
-> PM> Install-Package Z.EntityFramework.Extensions
+> PM> Install-Package Z.EntityFramework.Extensions.EF5
 
 ## Step 2 - Have Fun!
 
