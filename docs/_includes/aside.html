@@ -104,6 +104,32 @@
 	</div>
 </div>
 
+{% elsif page.path contains "/troubleshooting/" %}
+<div class="card">
+	<div class="card-header">
+		<h3>EF Extensions - Troubleshooting</h3>
+	</div>
+	<div class="card-block">
+	
+		<h4>License</h4>
+		<ul>
+			<li><a href="trial-period-expired-exception">Trial Period Expired</a></li>
+			<li><a href="md5-exception">MD5</a></li>
+		</ul>
+		
+		<h4>Concurrency</h4>
+		<ul>
+			<li><a href="dbupdateconcurrency-exception">DbUpdateConcurrency</a></li>
+			<li><a href="dbbulkoperationconcurrency-exception">DbBulkOperationConcurrency</a></li>
+		</ul>
+		
+		<h4>Type</h4>
+		<ul>
+			<li><a href="type-not-supported-exception">Type not supported</a></li>
+		</ul>
+	</div>
+</div>
+
 {% endif %}
 
 <style>
