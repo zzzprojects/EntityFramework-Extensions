@@ -36,4 +36,10 @@ Entity Framework Extensions - Issue Tracker,issue-tracker,faq
 Entity Framework Extensions - General,faq-general,faq
 Entity Framework Extensions - Installation,faq-installation,faq
 Entity Framework Extensions - License,faq-license,faq
+Entity Framework Extensions - Troubleshooting,troubleshooting,troubleshooting
+Trial Period Expired,trial-period-expired-exception,troubleshooting
+MD5,md5-exception,troubleshooting
+DbUpdateConcurrency,dbupdateconcurrency-exception,troubleshooting
+DbBulkOperationConcurrency,dbbulkoperationconcurrency-exception,troubleshooting
+Type not supported,type-not-supported-exception,troubleshooting
 Entity Framework Extensions,/,home
