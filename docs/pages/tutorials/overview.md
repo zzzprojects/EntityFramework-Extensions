@@ -13,9 +13,14 @@ This library allows you to improve your Entity Framework performance dramaticall
 It’s easy to use, and easy to customize.
 
 {% include template-example.html %} 
+
 {% highlight csharp %}
 // Easy to use
 ctx.BulkSaveChanges();
+
+// Easy to customize
+context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
+{% endhighlight %}
 
 ### Is it that simple?
 
