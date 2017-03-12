@@ -19,7 +19,6 @@ permalink: requirements
 - SQL Azure
 - SQL Compact
 - Oracle
-- Oracle DevArt
 - MySQL
 - PostgreSQL
 - SQLite
