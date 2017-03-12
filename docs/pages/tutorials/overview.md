@@ -8,7 +8,7 @@ permalink: overview
 
 ## What’s Entity Framework Extensions?
 
-This library allows you to improve your Entity Framework **performance dramatically**.
+This library allows you to improve your **Entity Framework Performance** dramatically.
 
 It’s easy to use, and easy to customize.
 
