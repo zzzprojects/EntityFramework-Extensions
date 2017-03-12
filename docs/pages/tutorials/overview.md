@@ -6,29 +6,45 @@ permalink: overview
 
 {% include template-h1.html %}
 
-## Overview
-Entity Framework Extensions improve your performance dramatically.
+## What’s Entity Framework Extensions?
+
+This library allows you to improve your Entity Framework performance dramatically.
 
 It’s easy to use, and easy to customize.
 
+{% include template-example.html %} 
 {% highlight csharp %}
 // Easy to use
 ctx.BulkSaveChanges();
 
-// Easy to customize
-context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
-{% endhighlight %}
+### Is it that simple?
+
+Yes,
+
+That’s why people feel in love so easily with our library.
+
+### Who use it?
+
+Already thousands of companies of all sizes and all kinds use it:
+
+- From start-up company with one developer
+- To fortune 100 companies with hundreds of developers
+
+Are you still not using it? Give it one try and you will understand why they choose our library.
 
 ## Bulk SaveChanges
-The BulkSaveChanges works like SaveChanges but way faster.
 
-BulkSaveChanges use Bulk Operations to save all entities in the Change Tracker efficiently instead of performing a database round-trip for every entity like SaveChanges does.
+The BulkSaveChanges methods replace the SaveChanges methods. They work similar, but BulkSaveChanges is way faster!
 
-BulkSaveChanges support everything:
+BulkSaveChanges supports everything:
 
-- Complex Types
+- Association (One to One, One to Many, Many to Many, etc.)
+- Complex Type
+- Enum
 - Inheritance (TPC, TPH, TPT)
-- Relationship (One to One, One to Many, Many to Many)
+- Navigation Property
+- Self-Hierarchy
+- Etc.
 
 ### Example
 {% include template-example.html %} 
@@ -53,11 +69,11 @@ context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkSaveChanges | 90 ms          | 150 ms         | 350 ms         |
 
-## Bulk Operations
+## Bulk Methods
 
-Bulk Operations method provide you some flexibility by allowing some customization and performance enhancement.
+Bulk methods give you additional flexibility by allowing to customize options such as primary key, columns and more.
 
-All common methods are supported:
+All methods your application could require is supported:
 
 - BulkInsert
 - BulkUpdate
@@ -93,7 +109,10 @@ context.BulkMerge(customers,
 | BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
 
 ## FromQuery Operations
+
 FromQuery method allows you to execute UPDATE or DELETE statements without loading entities in the context.
+
+Everything is executed on the database side, so nothing is faster than these methods.
 
 ### Example
 
