@@ -17,7 +17,7 @@ Don't worry. People love our library because it's so easy to use.
 Entity Framework Extensions is only available through NuGet
 
 ### EF Core
-_Coming in 2017 Q2
+_Coming in 2017 Q2_
 
 ### EF6
 
