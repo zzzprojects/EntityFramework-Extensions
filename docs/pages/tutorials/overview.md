@@ -30,7 +30,7 @@ That’s why people feel in love so easily with our library.
 
 ### Who use it?
 
-Already **thousands** of companies of all sizes and all kinds use it:
+Already **thousands** of companies of all sizes and kinds use it:
 
 - From start-up company with one developer
 - To fortune 100 companies with hundreds of developers
