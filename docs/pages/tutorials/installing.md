@@ -16,8 +16,20 @@ Don't worry. People love our library because it's so easy to use.
 
 Entity Framework Extensions is only available through NuGet
 
+### EF Core
+_Coming in 2017 Q2
+
+### EF6
+
 <a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-v.svg" alt="download" /></a>
 <a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-d.svg" alt="" /></a>
+
+> PM> Install-Package Z.EntityFramework.Extensions
+
+### EF5
+
+<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-ef5-v.svg" alt="download" /></a>
+<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-ef5-d.svg" alt="" /></a>
 
 > PM> Install-Package Z.EntityFramework.Extensions
 
