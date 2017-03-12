@@ -31,4 +31,4 @@ The latest version always contains a trial for the current month to allows a com
 
 Make sure to follow all recommendation about how to setup your license: [Licensing](http://entityframework-extensions.net/licensing)
 
-Otherwise contact us: info@zzzprojects.com
+Otherwise contact us: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>
