@@ -10,7 +10,7 @@ permalink: type-not-supported-exception
 
 You execute a method from the Entity Framework Extensions library, and the following error is thrown:
 
-{% include template-exception.html message='Type not supported yet (LazyType): [TypeName] %}
+{% include template-exception.html message='Type not supported yet (LazyType): [TypeName]' %}
 
 ## Solution
 
