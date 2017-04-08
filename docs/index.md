@@ -131,7 +131,7 @@ layout: post
 						<a class="nav-link" href="http://entityframework-extensions.net/#feature">Features</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="http://entityframework-extensions.net/documentation">Tutorials</a>
+						<a class="nav-link" href="http://entityframework-extensions.net/tutorials">Tutorials</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="http://entityframework-extensions.net/#pricing">Buy</a>
