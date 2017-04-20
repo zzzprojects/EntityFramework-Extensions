@@ -17,6 +17,8 @@ permalink: column-expression
 ## Column Input Expression
 Gets or sets columns to map with direction Input.
 
+> Always include the key for operation required one.
+
 ### Example
 {% highlight csharp %}
 // tbd
