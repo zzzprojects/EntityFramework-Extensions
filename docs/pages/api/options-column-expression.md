@@ -22,7 +22,7 @@ Gets or sets columns to map with direction Input.
 ### Example
 {% highlight csharp %}
 ctx.BulkMerge(parents, operation => 
-        operation.ColumnInputExpression = entity => new {entity.ParentID, entity.ColumnInt}; 
+        operation.ColumnInputExpression = entity => new {entity.ParentID, entity.ColumnInt}); 
 {% endhighlight %}
 
 ## Column Output Expression
@@ -30,7 +30,8 @@ Gets or sets columns to map with the direction output.
 
 ### Example
 {% highlight csharp %}
-operation.ColumnOutputExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}; 
+ctx.BulkMerge(parents, operation => 
+        operation.ColumnOutputExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}); 
 {% endhighlight %}
 
 ## Column Primary Key Expression
@@ -38,7 +39,8 @@ Gets or sets columns to map with the primary key option to true.
 
 ### Example
 {% highlight csharp %}
-operation.ColumnPrimaryKeyExpression = entity => new { entity.Name }; 
+ctx.BulkMerge(parents, operation => 
+        operation.ColumnPrimaryKeyExpression = entity => new { entity.Name }); 
 {% endhighlight %}
 
 ## Ignore On Merge Insert Expression
@@ -46,7 +48,8 @@ Gets or sets columns to skip when the merge execute the insert part.
 
 ### Example
 {% highlight csharp %}
-operation.IgnoreOnMergeUpdateExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}; 
+ctx.BulkMerge(parents, operation => 
+        operation.IgnoreOnMergeUpdateExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}); 
 {% endhighlight %}
 
 ## Ignore On Merge Update Expresssion
@@ -54,7 +57,8 @@ Gets or sets columns to skip when the merge execute the update part.
 
 ### Example
 {% highlight csharp %}
-operation.IgnoreOnMergeUpdateExpression = entity => new {entity.CreatedDate, entity.CreatedUser}; 
+ctx.BulkMerge(parents, operation => 
+        operation.IgnoreOnMergeUpdateExpression = entity => new {entity.CreatedDate, entity.CreatedUser}); 
 {% endhighlight %}
 
 ## Column Synchronize Delete Key Subset Expression
@@ -64,5 +68,6 @@ Gets or sets the key used to delete only rows matching the key and not existing 
 
 ### Example
 {% highlight csharp %}
-operation.ColumnPrimaryKeyExpression = entity => new { entity.Name }; 
+ctx.BulkMerge(parents, operation => 
+        operation.ColumnPrimaryKeyExpression = entity => new { entity.Name }); 
 {% endhighlight %}
