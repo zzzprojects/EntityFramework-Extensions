@@ -18,6 +18,7 @@ Entity Framework Extensions - Update from Query,update-from-query,api
 Entity Framework Extensions - Delete from Query,delete-from-query,api
 Entity Framework Extensions - Audit,audit,api
 Entity Framework Extensions - Batch,batch,api
+Entity Framework Extensions - Column Expression,column-expression,api
 Entity Framework Extensions - Execute Event,execute-event,api
 Entity Framework Extensions - Log,log,api
 Entity Framework Extensions - Temporary Table,temporary-table,api
