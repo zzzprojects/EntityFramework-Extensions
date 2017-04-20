@@ -52,7 +52,7 @@ ctx.BulkMerge(parents, operation =>
         operation.IgnoreOnMergeUpdateExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}); 
 {% endhighlight %}
 
-## Ignore On Merge Update Expresssion
+## Ignore On Merge Update Expression
 Gets or sets columns to skip when the merge execute the update part.
 
 ### Example
