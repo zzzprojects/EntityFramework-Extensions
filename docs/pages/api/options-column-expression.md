@@ -15,7 +15,7 @@ permalink: column-expression
 
 
 ## Column Input Expression
-Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkCopy is selected.
+Gets or sets columns to map with direction Input.
 
 ### Example
 {% highlight csharp %}
@@ -23,7 +23,7 @@ Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkC
 {% endhighlight %}
 
 ## Column Output Expression
-Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkCopy is selected.
+Gets or sets columns to map with the direction output.
 
 ### Example
 {% highlight csharp %}
@@ -31,7 +31,7 @@ Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkC
 {% endhighlight %}
 
 ## Column Primary Key Expression
-Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkCopy is selected.
+Gets or sets columns to map with the primary key option to true.
 
 ### Example
 {% highlight csharp %}
@@ -39,7 +39,7 @@ Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkC
 {% endhighlight %}
 
 ## Ignore On Merge Insert Expression
-Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkCopy is selected.
+Gets or sets columns to skip when the merge execute the insert part.
 
 ### Example
 {% highlight csharp %}
@@ -47,7 +47,7 @@ Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkC
 {% endhighlight %}
 
 ## Ignore On Merge Update Expresssion
-Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkCopy is selected.
+Gets or sets columns to skip when the merge execute the update part.
 
 ### Example
 {% highlight csharp %}
@@ -55,7 +55,9 @@ Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkC
 {% endhighlight %}
 
 ## Column Synchronize Delete Key Subset Expression
-Allow you to set the SqlBulkCopyOptions to use when a strategy with the SqlBulkCopy is selected.
+Gets or sets the key used to delete only rows matching the key and not existing in the source. 
+
+> Sorry for the name!
 
 ### Example
 {% highlight csharp %}
