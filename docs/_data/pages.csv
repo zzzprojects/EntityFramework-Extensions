@@ -42,5 +42,6 @@ Trial Period Expired,trial-period-expired-exception,troubleshooting
 MD5,md5-exception,troubleshooting
 DbUpdateConcurrency,dbupdateconcurrency-exception,troubleshooting
 DbBulkOperationConcurrency,dbbulkoperationconcurrency-exception,troubleshooting
+Foreign Key Constraint + AutoDectectChanges Disabled,foreign-key-constraint-autodetectchanges-disabled,troubleshooting
 Type not supported,type-not-supported-exception,troubleshooting
 Entity Framework Extensions,/,home
