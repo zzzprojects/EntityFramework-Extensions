@@ -39,5 +39,7 @@ In additional, there is no reason why this code should disable DetectChanges. Si
 
 ### Fix
 
-1.	ADD the line AutoDectectChangesEnabled = true; before BulkSaveChanges
-2.	REMOVE the line AutoDetectChangesEnabled = false;
+1. ADD the line AutoDectectChangesEnabled = true; before BulkSaveChanges
+2. CALL ctx.ChangeTracker.DetectChanges();
+3. REMOVE the line AutoDetectChangesEnabled = false;
+
