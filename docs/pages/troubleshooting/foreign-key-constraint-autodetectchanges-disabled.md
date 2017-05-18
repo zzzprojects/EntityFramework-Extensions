@@ -33,7 +33,7 @@ One cause could be simply a wrong save order provided by either Entity Framework
 ### Cause Source
 The main reason that could cause this issue is disabling AutoDetectChanges and not enabling it before the SaveChanges/BulkSaveChanges.
 
-When the AutoDetectChanges is disabled, there is no check about the relationship, and that could cause sometime the Item to be added before a new Category! Leading to the Foreign Key issue.
+When the AutoDetectChanges is disabled, there is no check about the relationship, and that could cause sometime the Item to be added before a new Category (Which should be added first)! Leading to the Foreign Key issue.
 
 In additional, there is no reason why this code should disable DetectChanges. Since the AddRange method is used, the “DetectChanges” method is called only once, so don't suffer from a performance issue.
 
