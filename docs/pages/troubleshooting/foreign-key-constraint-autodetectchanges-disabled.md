@@ -12,6 +12,8 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 {% include template-exception.html message='The MERGE statement conflicted with the FOREIGN KEY constraint "[FK_Name]". The conflict occurred in database "[Database_Name]", table "[Table_Name]", column \'[Column_Name]\'.' %}
 
+And you use a code similar to this:
+
 {% highlight csharp %}
 using (var ctx = new MyEntities())
 {
@@ -26,14 +28,14 @@ using (var ctx = new MyEntities())
 
 ### Cause
 
-One cause could be simply a wrong save order provided by either Entity Framework or our library.
+One cause could be simply a wrong save order provided by either Entity Framework or EFE Library.
 
 ### Cause Source
 The main reason that could cause this issue is disabling AutoDetectChanges and not enabling it before the SaveChanges/BulkSaveChanges.
 
-In your example you provided, there is no reason why you should disable DetectChanges. Since you use the AddRange method, the “DetectChanges” method is called only once, so you don’t suffer from performance issue from it (way less..).
+When the AutoDetectChanges is disabled, there is no check about the relationship, and that could cause sometime the Item to be added before a new Category! Leading to the Foreign Key issue.
 
-When the AutoDetectChanges is disabled, there is no check about the relationship, and that could cause sometime the ScenarioItem to be added before a new ScenarioCategory! That will obviously lead to cause the Foreign Key issue.
+In additional, there is no reason why this code should disable DetectChanges. Since the AddRange method is used, the “DetectChanges” method is called only once, so don't suffer from a performance issue.
 
 ### Fix
 
