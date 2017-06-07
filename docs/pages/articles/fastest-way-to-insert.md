@@ -36,7 +36,7 @@ With this library, only a few database round-trip will now be required when savi
 
 You can find the library documentation here: [EFE – Tutorials](http://entityframework-extensions.net/tutorials)
 
-Getting started with this library cannot be easier. You download it using [NuGet](https://www.nuget.org/packages/Z.EntityFramework.Extensions/), and all bulk method are automatically available from your context instance since methods extend the DbContext class.
+Getting started with this library cannot be easier. You download it using [NuGet](https://www.nuget.org/packages/Z.EntityFramework.Extensions/){:target="_blank"}, and all bulk method are automatically available from your context instance since methods extend the DbContext class.
 
 Without having to configure anything, all models and scenarios are supported such Code First, Database First, Inheritances (TPC, TPH, and TPT), Relationship, and everything else!
 
@@ -174,4 +174,3 @@ ZZZ Projects give back value to the .NET community by supporting some other free
 - [Extension Methods](https://github.com/zzzprojects/Z.ExtensionMethods){:target="_blank"}
 - [Dapper Tutorial](http://dapper-tutorial.net/){:target="_blank"}
 - Help to partners such [Entity Framework Tutorial](http://www.entityframeworktutorial.net/){:target="_blank"}
-- And more
