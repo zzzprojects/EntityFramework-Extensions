@@ -26,11 +26,11 @@ A very common mistake is believing the AddRange method perform a Bulk Insert. Us
 ### Solution
 To solve the performance problem, you need to reduce the number of database round-trip, and this is exactly what Entity Framework Extensions made by ZZZ Projects do by providing all kind of bulk operations:
 
--	BulkSaveChanges (#ef-bulksavechanges)
--	BulkInsert (#ef-bulkinsert)
--	BullUpdate (#ef-bulkupdate)
--	BulkDelete (#ef-bulkdelete)
--	BulkMerge (#ef-bulkmerge)
+-	[BulkSaveChanges](#ef-bulksavechanges)
+-	[BulkInsert](#ef-bulkinsert)
+-	[BullUpdate](#ef-bulkupdate)
+-	[BulkDelete](#ef-bulkdelete)
+-	[BulkMerge](#ef-bulkmerge)
 
 With this library, only a few database round-trip will now be required when saving 5000 entities which can lead to performance improvement by 50x time and more.
 
