@@ -173,4 +173,4 @@ ZZZ Projects give back value to the .NET community by supporting some other free
 - [Html Agility Pack](http://html-agility-pack.net/){:target="_blank"}
 - [Extension Methods](https://github.com/zzzprojects/Z.ExtensionMethods){:target="_blank"}
 - [Dapper Tutorial](http://dapper-tutorial.net/){:target="_blank"}
-- Help to partners such [Entity Framework Tutorial](http://www.entityframeworktutorial.net/){:target="_blank"}
+- Help partners such [Entity Framework Tutorial](http://www.entityframeworktutorial.net/){:target="_blank"}
