@@ -24,7 +24,7 @@ So if you have 5000 entities to insert, 5000 databases round trip will be execut
 A very common mistake is believing the AddRange method perform a Bulk Insert. Using the AddRange method greatly improve the performance because it calls the DetectChanges method only once after all entities are added to the change tracker. However, the SaveChanges method will still make one database round-trip per entity.
 
 ### Solution
-To solve the performance problem, you need to reduce the number of database round-trip, and this is exactly what Entity Framework Extensions made by ZZZ Projects do by providing all kind of bulk operations:
+To solve the performance problem, you need to reduce the number of database round-trip, and this is exactly what Entity Framework Extensions made by ZZZ Projects do by providing the BulkInsert method and all other bulk operations:
 
 -	[BulkSaveChanges](#ef-bulksavechanges)
 -	[BulkInsert](#ef-bulkinsert)
