@@ -169,9 +169,9 @@ One the negative side, this library is not free.
 
 ZZZ Projects give back value to the .NET community by supporting some other free libraries, tutorials and sponsoring project such as:
 
-- [Entity Framework Plus](http://entityframework-plus.net/)
-- [Html Agility Pack](http://html-agility-pack.net/)
-- [Extension Methods](https://github.com/zzzprojects/Z.ExtensionMethods)
-- [Dapper Tutorial](http://dapper-tutorial.net/)
-- Help to partners such [Entity Framework Tutorial](http://www.entityframeworktutorial.net/)
+- [Entity Framework Plus](http://entityframework-plus.net/){:target="_blank"}
+- [Html Agility Pack](http://html-agility-pack.net/){:target="_blank"}
+- [Extension Methods](https://github.com/zzzprojects/Z.ExtensionMethods){:target="_blank"}
+- [Dapper Tutorial](http://dapper-tutorial.net/){:target="_blank"}
+- Help to partners such [Entity Framework Tutorial](http://www.entityframeworktutorial.net/){:target="_blank"}
 - And more
