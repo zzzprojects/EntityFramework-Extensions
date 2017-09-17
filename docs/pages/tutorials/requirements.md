@@ -10,6 +10,7 @@ permalink: requirements
 
 ### Entity Framework Version
 
+- Entity Framework Core 2.x
 - Entity Framework 6.x
 - Entity Framework 5
 
@@ -25,5 +26,5 @@ permalink: requirements
 
 ### Note
 
-- Entity Framework Core is under development _(We hope to release a first version in 2017 Q2)_
+- Entity Framework Core doesn't support all provider yet
 - EF4 is under development
