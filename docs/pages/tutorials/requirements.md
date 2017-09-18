@@ -1,20 +1,20 @@
 ---
-layout: default
-title: Entity Framework Extensions - Requirements
+layout: dev
+title: Requirements
 permalink: requirements
 ---
 
 {% include template-h1.html %}
 
-## Requirements
+## Entity Framework Version
 
-### Entity Framework Version
+
 
 - Entity Framework Core 2.x
 - Entity Framework 6.x
 - Entity Framework 5
 
-### Database Provider
+## Database Provider
 
 - SQL Server 2008+
 - SQL Azure
@@ -24,7 +24,8 @@ permalink: requirements
 - PostgreSQL
 - SQLite
 
-### Note
+## Under Development
 
-- Entity Framework Core doesn't support all provider yet
-- EF4 is under development
+- Entity Framework Core currently only supports SQL Server 2008+, SQL Azure, PostgreSQL
+- Firebird Provider
+- Entity Framework 4

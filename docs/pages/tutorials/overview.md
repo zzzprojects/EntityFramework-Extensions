@@ -1,45 +1,47 @@
 ---
-layout: default
-title: Entity Framework Extensions - Overview
+layout: dev
+title: Overview
 permalink: overview
 ---
 
 {% include template-h1.html %}
 
-## What’s Entity Framework Extensions?
+## Definition
 
-This library allows you to improve your **Entity Framework Performance** dramatically.
+**Entity Framework Extensions** is a library that dramatically improves EF performances by using bulk and batch operations.
 
-It’s easy to use, and easy to customize.
+People using this library often report performance enhancement by 50x times and more!
+
+The library is installed through <a href="/installing">NuGet</a>. Extension methods are added automatically to your DbContext.
+
+It easy to use, easy to customize.
 
 {% include template-example.html %} 
 
 {% highlight csharp %}
 // Easy to use
-ctx.BulkSaveChanges();
+context.BulkSaveChanges();
+context.BulkInsert(list);
+context.BulkUpdate(list);
+context.BulkDelete(list);
+context.BulkMerge(list);
 
 // Easy to customize
-context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
+context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 {% endhighlight %}
 
-### Is it that simple?
+## Purpose
+Entity Framework is reputed to be very slow when saving multiple entities! The performance issue is mainly due to the **DetectChanges** method and the number of database round-trip.
 
-Yes,
+By example for SQL Server, for every entity you save, a database round-trip must be performed. So if you need to insert 10000 entities, then 10000 database round-trip will be performed which is **INSANELY** slow.
 
-That’s why people feel in love so easily with our library.
+Entity Framework Extensions in counterpart only requires a few database round-trip which greatly helps to improve the performance.
 
-### Who use it?
+## BulkSaveChanges Method
 
-Already **thousands** of companies of all sizes and kinds use it:
+**BulkSaveChanges** method is the upgraded version of **SaveChanges**.
 
-- From start-up company with one developer
-- To fortune 100 companies with hundreds of developers
-
-Are you still not using it? Give it one try and you will understand why they choose our library.
-
-## Bulk SaveChanges
-
-The BulkSaveChanges methods replace the SaveChanges methods. They work similar, but BulkSaveChanges is way faster!
+All changes made in the context are persisted in the database but way faster by reducing the number of database round-trip required!
 
 BulkSaveChanges supports everything:
 
@@ -51,17 +53,14 @@ BulkSaveChanges supports everything:
 - Self-Hierarchy
 - Etc.
 
-### Example
-{% include template-example.html %} 
+{% include template-example.html title='BulkSaveChanges Examples' %} 
 {% highlight csharp %}
-var ctx = new EntitiesContext();
-
-ctx.Customers.AddRange(listToAdd); // add
-ctx.Customers.RemoveRange(listToRemove); // remove
+context.Customers.AddRange(listToAdd); // add
+context.Customers.RemoveRange(listToRemove); // remove
 listToModify.ForEach(x => x.DateModified = DateTime.Now); // modify
 
 // Easy to use
-ctx.BulkSaveChanges();
+context.BulkSaveChanges();
 
 // Easy to customize
 context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
@@ -74,11 +73,13 @@ context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkSaveChanges | 90 ms          | 150 ms         | 350 ms         |
 
-## Bulk Methods
+## Bulk Operations Methods
 
-Bulk methods give you additional flexibility by allowing to customize options such as primary key, columns and more.
+Bulk operation methods give you additional flexibility by allowing to customize options such as primary key, columns, include childs entities and more.
 
-All methods your application could require is supported:
+They are also faster than **BulkSaveChanges** since they don't use the ChangeTracker and doesn't call the **DetectChanges** method.
+
+Bulk Operations Available:
 
 - BulkInsert
 - BulkUpdate
@@ -86,21 +87,16 @@ All methods your application could require is supported:
 - BulkMerge (UPSERT operation)
 - BulkSynchronize
 
-### Example
-
-{% include template-example.html %} 
+{% include template-example.html title='Bulk Operations Examples' %} 
 {% highlight csharp %}
-var ctx = new EntitiesContext();
-
 // Easy to use
-ctx.BulkInsert(list);
-ctx.BulkUpdate(list);
-ctx.BulkDelete(list);
-ctx.BulkMerge(list);
+context.BulkInsert(list);
+context.BulkUpdate(list);
+context.BulkDelete(list);
+context.BulkMerge(list);
 
 // Easy to customize
-context.BulkMerge(customers, 
-   bulk => bulk.ColumnPrimaryKeyExpression = customer => customer.Code; });
+context.BulkMerge(customers, bulk => bulk.ColumnPrimaryKeyExpression = customer => customer.Code; });
 {% endhighlight %}
 
 ### Performance Comparisons
@@ -113,15 +109,17 @@ context.BulkMerge(customers,
 | BulkDelete      | 45 ms          | 50 ms          | 60 ms          |
 | BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
 
-## FromQuery Operations
+## Batch Operations Methods
 
-FromQuery method allows you to execute UPDATE or DELETE statements without loading entities in the context.
+Batch Operations method allow to perform **UPDATE** or **DELETE** operation directly in the database using a LINQ Query without loading entities in the context.
 
-Everything is executed on the database side, so nothing is faster than these methods.
+Everything is executed on the database side to let you get the best performance available.
 
-### Example
+Batch Operations Available:
+- DeleteFromQuery
+- UpdateFromQuery
 
-{% include template-example.html %} 
+{% include template-example.html title='Batch Operations Examples' %} 
 {% highlight csharp %}
 // DELETE all customers that are inactive for more than two years
 context.Customers
