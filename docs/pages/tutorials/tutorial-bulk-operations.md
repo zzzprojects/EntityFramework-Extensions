@@ -1,37 +1,44 @@
 ---
-layout: default
-title: Entity Framework Extensions - Bulk Operations
+layout: dev
+title: Bulk Operations
 permalink: tutorial-bulk-operations
 ---
 
 {% include template-h1.html %}
 
-## Introduction
-Bulk Operations allow you to perform operations directly (insert, update, delete, or merge) on a list without using the ChangeTracker.
+## Definition
+Bulk operation methods give you additional flexibility by allowing to customize options such as primary key, columns, include childs entities and more.
 
-The following methods is available:
-- BulkInsert
-- BulkUpdate
-- BulkDelete
-- BulkMerge
+They are also faster than BulkSaveChanges since they don’t use the ChangeTracker and doesn’t call the DetectChanges method.
 
-### Example
-{% include template-example.html %} 
+Bulk Operations Available:
+- [BulkInsert](/bulk-insert)
+- [BulkUpdate](/bulk-update)
+- [BulkDelete](/bulk-delete)
+- [BulkMerge](/bulk-merge) (UPSERT operation)
+- [BulkSynchronize](/bulk-synchronize)
+
+{% include template-example.html title='Bulk Operations Examples' %} 
 {% highlight csharp %}
-var ctx = new EntitiesContext();
-
 // Easy to use
-ctx.BulkInsert(list);
-ctx.BulkUpdate(list);
-ctx.BulkDelete(list);
-ctx.BulkMerge(list);
+context.BulkInsert(list);
+context.BulkUpdate(list);
+context.BulkDelete(list);
+context.BulkMerge(list);
 
 // Easy to customize
-context.BulkMerge(customers, 
-   bulk => bulk.ColumnPrimaryKeyExpression = customer => customer.Code; });
+context.BulkMerge(customers, bulk => bulk.ColumnPrimaryKeyExpression = customer => customer.Code; });
 {% endhighlight %}
 
-### Performance Comparisons
+## Purpose
+Using the ChangeTracker to detect and persist change automatically is great! However, almost every application has some particular scenario which requires some customization and better performance.
+
+By example:
+- Inserting thousands of hundreds of data with child entities
+- Updating only some particular fields
+- Merging a list of customers using the code instead of the key
+
+## Performance Comparisons
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
@@ -40,10 +47,6 @@ context.BulkMerge(customers,
 | BulkUpdate      | 50 ms          | 55 ms          | 65 ms          |
 | BulkDelete      | 45 ms          | 50 ms          | 60 ms          |
 | BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
-
-SaveChanges makes one database round-trip for each entity to insert/update/delete. So if you want to save (add, modify or remove) 10,000 entities, 10,000 databases round trip will be required which are **INSANELY** slow.
-
-Bulk Operations save entities in bulk to reduce the number of database round-trip required.
 
 ### Related Articles
 

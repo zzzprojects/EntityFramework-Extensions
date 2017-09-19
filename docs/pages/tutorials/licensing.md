@@ -7,16 +7,23 @@ permalink: licensing
 {% include template-h1.html %}
 
 ## Evaluation Period
-You can evaluate our library for several months before purchasing it.
+You can evaluate the library for several months before purchasing it.
 
-The trial period stops at the end of the month. When you receive a license expiration error, download the latest version which will automatically extend your trial period.
+The latest version always contains a trial that expires at the **end of the month**. 
 
-You can also purchase the library [here](http://entityframework-extensions.net/#pro)
+You can extend your trial for several months by downloading the latest version at the start of every month.
 
-Upon purchase, you will receive a license name and a license key.
+If you want to use the library for personal use or educational purpose, it's possible by downloading the latest version once per month.
+
+## How can I purchase the library?
+You can purchase the library [here](http://entityframework-extensions.net/#pro)
+
+Upon purchase, you will receive an email with a license name and a license key.
+
+Make sure to check your **SPAM** folder if you don't receive the license within 24h.
 
 ## Setup License from config file
-The license name and key can be directly be added in the app.config or web.config file in the appSettings section.
+The license name and key can be added directly in the app.config or web.config file in the appSettings section.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -27,35 +34,35 @@ The license name and key can be directly be added in the app.config or web.confi
 {% endhighlight %}
 
 ## Setup License from code
-You can also set the license name and key directly in the code.
+The license can be added directly in the code of your application. Make sure to follow recommendations about where to add this code.
 
 {% include template-example.html %} 
 {% highlight csharp %}
 Z.EntityFramework.Extensions.LicenseManager.AddLicense([licenseName], [licenseKey]);
 {% endhighlight %}
 
-### Recommendation
-- Use the config file to store your license name and license key.
+### Recommendations
 - **Web App:** Use Application_Start in global.asax to activate your license.
 - **WinForm App:** Use the main thread method to activate your license.
 - **Win Service:** Use the OnStart method to activate your license
 
-> The AddLicense must always be set before the first call to the library. Otherwise, you will start the evaluation period
+> Add the license before the first call to the library. Otherwise, the library will be enabled using the evaluation period.
 
 ## How can I check if my license is valid?
-The validate method allow you to know whether your license is valid or not.
+You can use the **ValidateLicense** method to check if the current license is valid or not.
+
 {% include template-example.html %} 
 {% highlight csharp %}
-// CHECK for default provider (SQL Server)
+// CHECK if the license if valid for the default provider (SQL Server)
 string licenseErrorMessage;
 if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErrorMessage))
 {
     throw new Exception(licenseErrorMessage);
 }
 
-// CHECK for a specific provider
+// CHECK if the license if valid for a specific provider
 string licenseErrorMessage;
-if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErrorMessage, ProviderType.MySql))
+if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErrorMessage, ProviderType.SqlServer))
 {
    throw new Exception(licenseErrorMessage);
 }

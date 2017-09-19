@@ -81,11 +81,11 @@ They are also faster than **BulkSaveChanges** since they don't use the ChangeTra
 
 Bulk Operations Available:
 
-- BulkInsert
-- BulkUpdate
-- BulkDelete
-- BulkMerge (UPSERT operation)
-- BulkSynchronize
+- [BulkInsert](/bulk-insert)
+- [BulkUpdate](/bulk-update)
+- [BulkDelete](/bulk-delete)
+- [BulkMerge](/bulk-merge) (UPSERT operation)
+- [BulkSynchronize](/bulk-synchronize)
 
 {% include template-example.html title='Bulk Operations Examples' %} 
 {% highlight csharp %}
@@ -116,8 +116,8 @@ Batch Operations method allow to perform **UPDATE** or **DELETE** operation dire
 Everything is executed on the database side to let you get the best performance available.
 
 Batch Operations Available:
-- DeleteFromQuery
-- UpdateFromQuery
+- [DeleteFromQuery](delete-from-query)
+- [UpdateFromQuery](update-from-query)
 
 {% include template-example.html title='Batch Operations Examples' %} 
 {% highlight csharp %}

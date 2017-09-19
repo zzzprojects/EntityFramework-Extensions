@@ -44,13 +44,13 @@
 					<div class="navbar-menu navbar-collapse justify-content-end">			
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link" href="http://entityframework-extensions.net/#feature">Features</a>
+								<a class="nav-link" href="{{ site.github.url }}/#feature">Features</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="http://entityframework-extensions.net/tutorials">Tutorials</a>
+								<a class="nav-link" href="{{ site.github.url }}/tutorials">Tutorials</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="http://entityframework-extensions.net/#pricing">Buy</a>
+								<a class="nav-link" href="{{ site.github.url }}/#pricing">Buy</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="mailto:info@zzzprojects.com">Contact</a>
@@ -71,22 +71,22 @@
 					<div class="collapse navbar-collapse">
 						<ul class="navbar-nav">
 							{% if page.path == "index.md" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
-								<a class="nav-link" href="http://entityframework-extensions.net/"><i class="fa fa-home" aria-hidden="true"></i></a>
+								<a class="nav-link" href="{{ site.github.url }}/"><i class="fa fa-home" aria-hidden="true"></i></a>
 							</li>	 
 							{% if page.path contains "/tutorials/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
-								<a class="nav-link" href="http://entityframework-extensions.net/overview">Tutorials</a>
+								<a class="nav-link" href="{{ site.github.url }}/overview">Tutorials</a>
 							</li>
 							{% if page.path contains "/api/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}					
-								<a class="nav-link" href="http://entityframework-extensions.net/api">API</a>
+								<a class="nav-link" href="{{ site.github.url }}/api">API</a>
 							</li>
 							{% if page.path contains "/articles/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
-								<a class="nav-link" href="http://entityframework-extensions.net/articles">Articles</a>
+								<a class="nav-link" href="{{ site.github.url }}/articles">Articles</a>
 							</li>
 							{% if page.path contains "/faq/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
-								<a class="nav-link" href="http://entityframework-extensions.net/faq">FAQ</a>
+								<a class="nav-link" href="{{ site.github.url }}/faq">FAQ</a>
 							</li>
 							{% if page.path contains "/troubleshooting/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
-								<a class="nav-link" href="http://entityframework-extensions.net/troubleshooting">Troubleshooting</a>
+								<a class="nav-link" href="{{ site.github.url }}/troubleshooting">Troubleshooting</a>
 							</li>
 						</ul>
 					</div>

@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions - BulkSaveChanges
+layout: dev
+title: BulkSaveChanges
 permalink: tutorial-bulk-savechanges
 ---
 
