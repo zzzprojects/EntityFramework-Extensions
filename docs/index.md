@@ -1,4 +1,5 @@
 ---
+layout: post
 ---
 
 <html lang="en">
