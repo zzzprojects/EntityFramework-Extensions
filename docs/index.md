@@ -1,5 +1,4 @@
 ---
-layout: post
 ---
 
 <html lang="en">
@@ -128,13 +127,13 @@ layout: post
 			<div class="navbar-collapse collapse justify-content-end" id="navbarSupportedContent">			
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="http://entityframework-extensions.net/#feature">Features</a>
+						<a class="nav-link" href="{{ site.github.url }}/#feature">Features</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="http://entityframework-extensions.net/tutorials">Tutorials</a>
+						<a class="nav-link" href="{{ site.github.url }}/tutorials">Tutorials</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="http://entityframework-extensions.net/#pricing">Buy</a>
+						<a class="nav-link" href="{{ site.github.url }}/#pricing">Buy</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="mailto:info@zzzprojects.com">Contact</a>
