@@ -56,8 +56,8 @@ Support Multiple SQL Providers:
 ## Download
 
 ### Entity Framework Core (EF Core)
-<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-EFCore-v.svg" alt="download" /></a>
-<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-EFCore-d.svg" alt="" /></a>
+<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-efcore-v.svg" alt="download" /></a>
+<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-efcore-d.svg" alt="" /></a>
 
 ```
 PM> Install-Package Z.EntityFramework.Extensions.EFCore
@@ -72,8 +72,8 @@ PM> Install-Package Z.EntityFramework.Extensions
 ```
 
 ### Entity Framework 5 (EF5)
-<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-EF5-v.svg" alt="download" /></a>
-<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-EF5-d.svg" alt="" /></a>
+<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-ef5-v.svg" alt="download" /></a>
+<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-ef5-d.svg" alt="" /></a>
 
 ```
 PM> Install-Package Z.EntityFramework.Extensions.EF5
