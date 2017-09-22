@@ -21,7 +21,7 @@ Contact us directly: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com<
 
 - If you want a more personal answer
 - If your question is not suited for Stack Overflow
-- If you message contains private information
+- If your message contains private information
 
 ## I think I've found a bug! What should I do?
 The best way to report an issue is using the [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues)
@@ -30,7 +30,7 @@ Contact us directly: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com<
 
 - If you want a more personal answer
 - If your question is not suited for the Issue Tracker
-- If you message contains private information
+- If your message contains private information
 
 ## I think I've found a new feature! What should I do?
 The best way to request a new feature is using the [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues)
@@ -39,7 +39,7 @@ Contact us directly: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com<
 
 - If you want a more personal answer
 - If your question is not suited for the Issue Tracker
-- If you message contains private information
+- If your message contains private information
 
 ## I think you forget about my request! What should I do?
 Just contact us back again, and we will make sure we don't miss it again!
