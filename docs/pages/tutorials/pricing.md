@@ -134,6 +134,8 @@ Yes, we support the following payment method:
 - Cheque
 - Wire Transfer
 
+Contact us: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>
+
 ### I need more than 19 seats, what can I do?
 Contact us: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>
 
