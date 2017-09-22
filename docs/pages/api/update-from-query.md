@@ -1,13 +1,15 @@
 ---
-layout: default
-title: Entity Framework Extensions - Update from Query
+layout: dev
+title: Update from Query
 permalink: update-from-query
 ---
 
 {% include template-h1.html %}
 
-## Update FromQuery
-Allow you to execute to UPDATE multiples records in a database from a LINQ Query without loading entities in the context
+## Definition
+`UPDATE` all rows from the database using a LINQ Query without loading entities in the context.
+
+A `UPDATE` statement is built using the LINQ expression and directly executed in the database.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -15,21 +17,27 @@ Allow you to execute to UPDATE multiples records in a database from a LINQ Query
 context.Customers
     .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
     .UpdateFromQuery(x => new Customer {Actif = false});
+	
+// UPDATE customers by id
+context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Actif = false});
 {% endhighlight %}
 
-### Performance Comparisons
+## Purpose
+`Updating` entities using `SaveChanges` normally require to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
+
+`UpdateFromQuery` give you access to directly execute a `UPDATE` statement in the database and provide a **HUGE** performance improvement.
+
+## Performance Comparisons
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | UpdateFromQuery | 1 ms           | 1 ms           | 1 ms           |
 
-SaveChanges makes one database round-trip for each entity to insert/update/delete. So if you want to save (add, modify or remove) 10,000 entities, 10,000 databases round trip will be required which are **INSANELY** slow.
+## FAQ
 
-FromQuery operations directly execute the SQL statements on the target database.
+### Why UpdateFromQuery is faster than SaveChanges, BulkSaveChanges, and BulkUpdate?
 
-### Support
-- SQL Server 2008+
-- SQL Azure
+`UpdateFromQuery` execute a statement directly in SQL such as `UPDATE [TableName] SET [SetColumnsAndValues] WHERE [Key]`. 
 
-_More provider will be available on next major version_
+Other operations normally require one or multiple database round-trips which make the performance slower.

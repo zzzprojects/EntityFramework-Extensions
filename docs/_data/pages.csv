@@ -1,43 +1,43 @@
 title,url,category
-Entity Framework Extensions - Overview,overview,tutorials
-Entity Framework Extensions - Requirements,requirements,tutorials
-Entity Framework Extensions - Installing,installing,tutorials
-Entity Framework Extensions - Upgrading,upgrading,tutorials
-Entity Framework Extensions - Licensing,licensing,tutorials
-Entity Framework Extensions - Introduction,tutorial-introduction,tutorials
-Entity Framework Extensions - Bulk SaveChanges,tutorial-bulk-savechanges,tutorials
-Entity Framework Extensions - Bulk Operations,tutorial-bulk-operations,tutorials
-Entity Framework Extensions - From Query Operations,tutorial-from-query-operations,tutorials
-Entity Framework Extensions - API,api,api
-Entity Framework Extensions - Bulk SaveChanges,bulk-savechanges,api
-Entity Framework Extensions - Bulk Insert,bulk-insert,api
-Entity Framework Extensions - Bulk Update,bulk-update,api
-Entity Framework Extensions - Bulk Delete,bulk-delete,api
-Entity Framework Extensions - Bulk Merge,bulk-merge,api
-Entity Framework Extensions - Update from Query,update-from-query,api
-Entity Framework Extensions - Delete from Query,delete-from-query,api
-Entity Framework Extensions - Audit,audit,api
-Entity Framework Extensions - Batch,batch,api
-Entity Framework Extensions - Column Expression,column-expression,api
-Entity Framework Extensions - Execute Event,execute-event,api
-Entity Framework Extensions - Log,log,api
-Entity Framework Extensions - Temporary Table,temporary-table,api
-Entity Framework Extensions - Transient Error,transient-error,api
-Entity Framework Extensions - SQL Server,sql-server,api
-Entity Framework Extensions - Articles,articles,articles
-Entity Framework Extensions - Benchmark,benchmark,articles
-Entity Framework Extensions - Improve BulkSaveChanges,improve-bulk-savechanges,articles
-Entity Framework Extensions - Use Custom Column,custom-column,articles
-Entity Framework Extensions - Use Custom Key,custom-key,articles
-Entity Framework Extensions - Soft Delete,soft-delete,articles
-Entity Framework Extensions - Concurrency,concurrency,articles
-Entity Framework Extensions - FAQ,faq,faq
-Entity Framework Extensions - Contact Us,contact-us,faq
-Entity Framework Extensions - Issue Tracker,issue-tracker,faq
-Entity Framework Extensions - General,faq-general,faq
-Entity Framework Extensions - Installation,faq-installation,faq
-Entity Framework Extensions - License,faq-license,faq
-Entity Framework Extensions - Troubleshooting,troubleshooting,troubleshooting
+Overview,overview,tutorials
+Requirements,requirements,tutorials
+Installing,installing,tutorials
+Upgrading,upgrading,tutorials
+Licensing,licensing,tutorials
+Introduction,tutorial-introduction,tutorials
+Bulk SaveChanges,tutorial-bulk-savechanges,tutorials
+Bulk Operations,tutorial-bulk-operations,tutorials
+From Query Operations,tutorial-from-query-operations,tutorials
+API,api,api
+Bulk SaveChanges,bulk-savechanges,api
+Bulk Insert,bulk-insert,api
+Bulk Update,bulk-update,api
+Bulk Delete,bulk-delete,api
+Bulk Merge,bulk-merge,api
+Update from Query,update-from-query,api
+Delete from Query,delete-from-query,api
+Audit,audit,api
+Batch,batch,api
+Column Expression,column-expression,api
+Execute Event,execute-event,api
+Log,log,api
+Temporary Table,temporary-table,api
+Transient Error,transient-error,api
+SQL Server,sql-server,api
+Articles,articles,articles
+Benchmark,benchmark,articles
+Improve BulkSaveChanges,improve-bulk-savechanges,articles
+Use Custom Column,custom-column,articles
+Use Custom Key,custom-key,articles
+Soft Delete,soft-delete,articles
+Concurrency,concurrency,articles
+FAQ,faq,faq
+Contact Us,contact-us,faq
+Issue Tracker,issue-tracker,faq
+General,faq-general,faq
+Installation,faq-installation,faq
+License,faq-license,faq
+Troubleshooting,troubleshooting,troubleshooting
 Trial Period Expired,trial-period-expired-exception,troubleshooting
 MD5,md5-exception,troubleshooting
 DbUpdateConcurrency,dbupdateconcurrency-exception,troubleshooting

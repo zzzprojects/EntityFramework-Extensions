@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions - SQL Server
+layout: dev
+title: SQL Server
 permalink: sql-server
 ---
 

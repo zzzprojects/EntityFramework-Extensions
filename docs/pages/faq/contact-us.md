@@ -1,27 +1,45 @@
 ---
-layout: default
-title: Entity Framework Extensions - Contact us
+layout: dev
+title: Contact us
 permalink: contact-us
 ---
 
 {% include template-h1.html %}
 
-## I have a question! What should I do?
-Contact us directly with your questions: info@zzzprojects.com _(recommended)_ 
+## Test our `Outstanding` Support
+We usually answer within the next business day, hour, or minutes!
 
-You can also use the [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues).
+In case of doubt, contact us directly: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>.
+
+We love to hear from you!
+
+## I have a question! What should I do?
+
+The best way to ask us questions and check existing answer is on [Stack Overflow](https://stackoverflow.com/questions/tagged/entity-framework-extensions) using the `entity-framework-extensions` tag: 
+
+Contact us directly: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>:
+
+- If you want a more personal answer
+- If your question is not suited for Stack Overflow
+- If you message contains private information
 
 ## I think I've found a bug! What should I do?
-Contact us directly with your bug: info@zzzprojects.com _(recommended)_ 
+The best way to report an issue is using the [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues)
 
-You can also use the [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues).
+Contact us directly: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>:
 
-## I think I've found a feature! What should I do?
-Contact us directly with your feature: info@zzzprojects.com _(recommended)_ 
+- If you want a more personal answer
+- If your question is not suited for the Issue Tracker
+- If you message contains private information
 
-You can also use the project [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues).
+## I think I've found a new feature! What should I do?
+The best way to request a new feature is using the [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues)
+
+Contact us directly: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>:
+
+- If you want a more personal answer
+- If your question is not suited for the Issue Tracker
+- If you message contains private information
 
 ## I think you forget about my request! What should I do?
-We usually get/answer over 20 requests by day. Unfortunately, it's happen!
-
-Just contact us back again, and we will make sure we don't miss it a second time!
+Just contact us back again, and we will make sure we don't miss it again!

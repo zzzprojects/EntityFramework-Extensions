@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions - Column Expression
+layout: dev
+title: Column Expression
 permalink: column-expression
 ---
 

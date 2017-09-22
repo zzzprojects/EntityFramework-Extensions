@@ -137,7 +137,7 @@ layout: post
 						<a class="nav-link" href="{{ site.github.url }}/#pricing">Buy</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="mailto:info@zzzprojects.com">Contact</a>
+						<a class="nav-link" href="{{ site.github.url }}/contact-us">Contact</a>
 					</li>
 					<li class="nav-item nav-item-download">
 						<a class="btn btn-success btn-lg" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><i class="fa fa-cloud-download"></i>&nbsp;NuGet Download</a>

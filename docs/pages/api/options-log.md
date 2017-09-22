@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions - Log
+layout: dev
+title: Log
 permalink: log
 ---
 

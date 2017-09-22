@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: dev
 title: Foreign Key Constraint + AutoDectectChanges Disabled
 permalink: foreign-key-constraint-autodetectchanges-disabled
 ---

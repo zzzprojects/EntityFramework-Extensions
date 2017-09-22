@@ -1,35 +1,41 @@
 ---
-layout: default
-title: Entity Framework Extensions - Delete from Query
+layout: dev
+title: Delete from Query
 permalink: delete-from-query
 ---
 
 {% include template-h1.html %}
 
-## Delete FromQuery
-Allow you to execute to DELETE multiples records in a database from a LINQ Query without loading entities in the context
+## Definition
+`DELETE` all rows from the database using a LINQ Query without loading entities in the context.
+
+A `DELETE` statement is built using the LINQ expression and directly executed in the database.
 
 {% include template-example.html %} 
 {% highlight csharp %}
-// DELETE all customers that are inactive for more than two years
-context.Customers
-    .Where(x => x.LastLogin < DateTime.Now.AddYears(-2))
-    .DeleteFromQuery();
+// DELETE all customers that are inactive
+context.Customers.Where(x => !x.IsActif).DeleteFromQuery();
+
+// DELETE customers by id
+context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
 {% endhighlight %}
 
-### Performance Comparisons
+## Purpose
+`Deleting` entities using `SaveChanges` normally require to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
+
+`DeleteFromQuery` give you access to directly execute a `DELETE` statement in the database and provide a **HUGE** performance improvement.
+
+## Performance Comparisons
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | DeleteFromQuery | 1 ms           | 1 ms           | 1 ms           |
 
-SaveChanges makes one database round-trip for each entity to insert/update/delete. So if you want to save (add, modify or remove) 10,000 entities, 10,000 databases round trip will be required which are **INSANELY** slow.
+## FAQ
 
-FromQuery operations directly execute the SQL statements on the target database.
+### Why DeleteFromQuery is faster than SaveChanges, BulkSaveChanges, and BulkDelete?
 
-### Support
-- SQL Server 2008+
-- SQL Azure
+`DeleteFromQuery` execute a statement directly in SQL such as `DELETE FROM [TableName] WHERE [Key]`. 
 
-_More provider will be available on next major version_
+Other operations normally require one or multiple database round-trips which make the performance slower.

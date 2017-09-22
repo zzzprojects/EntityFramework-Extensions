@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework - Fastest Way to Insert
+layout: dev
+title: Fastest Way to Insert
 permalink: fastest-way-to-insert
 ---
 

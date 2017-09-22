@@ -53,7 +53,7 @@
 								<a class="nav-link" href="{{ site.github.url }}/#pricing">Buy</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="mailto:info@zzzprojects.com">Contact</a>
+								<a class="nav-link" href="{{ site.github.url }}/contact-us">Contact</a>
 							</li>
 							<li class="nav-item nav-item-download">
 								<a class="btn btn-success btn-lg" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><i class="fa fa-cloud-download"></i>&nbsp;NuGet Download</a>
@@ -137,7 +137,7 @@
 							<a class="nav-link" href="http://entityframework-extensions.net/#pricing">Buy</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="mailto:info@zzzprojects.com">Contact</a>
+							<a class="nav-link" href="{{ site.github.url }}/contact-us">Contact</a>
 						</li>
 						<li class="nav-item nav-item-download">
 							<a class="btn btn-success btn-lg" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><i class="fa fa-cloud-download"></i>&nbsp;NuGet Download</a>
@@ -385,6 +385,38 @@ $(function() {
 	});
 });
 </script>
-	  
+
+{% if page.path == "pages/tutorials/pricing.md" %}
+<script type="text/javascript">
+	function purchase_validate() {
+		if($("#agree_agreement").prop('checked')) {
+			return true;
+	}
+
+	$("#error_validation").modal('show')
+		return false;
+	}
+
+  function selectProduct() {
+	if($("#provider_type").val() == "TSCGQDC4YR2MQ") {
+		$("#seat1").html("Entity Framework Extensions $799 (1 developer seat)");
+		$("#seat2_4").html("Entity Framework Extensions $999 (2-4 developer seats)");
+		$("#seat5_9").html("Entity Framework Extensions $1199 (5-9 developer seats)");
+		$("#seat10_14").html("Entity Framework Extensions $1399 (10-14 developer seats)");
+		$("#seat15_19").html("Entity Framework Extensions $1599 (15-19 developer seats)");
+	}
+	else {
+		$("#seat1").html("Entity Framework Extensions $599 (1 developer seat)");
+		$("#seat2_4").html("Entity Framework Extensions $799 (2-4 developer seats)");
+		$("#seat5_9").html("Entity Framework Extensions $999 (5-9 developer seats)");
+		$("#seat10_14").html("Entity Framework Extensions $1199 (10-14 developer seats)");
+		$("#seat15_19").html("Entity Framework Extensions $1399 (15-19 developer seats)");
+	}
+  }
+  
+  selectProduct();
+</script>
+{% endif %}
+
 </body>
 </html>

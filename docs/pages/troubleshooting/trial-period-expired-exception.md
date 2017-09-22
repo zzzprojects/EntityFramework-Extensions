@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: dev
 title: Trial Period Expired Exception
 permalink: trial-period-expired-exception
 ---

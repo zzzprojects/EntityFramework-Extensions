@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions - Benchmark
+layout: dev
+title: Benchmark
 permalink: benchmark
 ---
 

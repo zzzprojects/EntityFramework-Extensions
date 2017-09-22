@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions | Troubleshooting
+layout: dev
+title: Troubleshooting
 permalink: troubleshooting
 ---
 

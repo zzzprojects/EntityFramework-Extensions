@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions - Concurrency
+layout: dev
+title: Concurrency
 permalink: concurrency
 ---
 

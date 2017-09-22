@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions - Custom Key
+layout: dev
+title: Custom Key
 permalink: custom-key
 ---
 

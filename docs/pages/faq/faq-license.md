@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions - License
+layout: dev
+title: License
 permalink: faq-license
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: dev
 title: Type not supported Exception
 permalink: type-not-supported-exception
 ---

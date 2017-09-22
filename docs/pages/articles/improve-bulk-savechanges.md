@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions - Improve BulkSaveChanges
+layout: dev
+title: Improve BulkSaveChanges
 permalink: improve-bulk-savechanges
 ---
 

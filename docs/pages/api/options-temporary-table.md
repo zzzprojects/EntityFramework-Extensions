@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Entity Framework Extensions - Temporary Table
+layout: dev
+title: Temporary Table
 permalink: temporary-table
 ---
 
