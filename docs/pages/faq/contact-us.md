@@ -26,6 +26,11 @@ Contact us directly: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com<
 ## I think I've found a bug! What should I do?
 The best way to report an issue is using the [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues)
 
+Make sure to include:
+- Entity Framework Version
+- Entity Framework Extensions Version
+- Database Provider
+
 Contact us directly: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>:
 
 - If you want a more personal answer
