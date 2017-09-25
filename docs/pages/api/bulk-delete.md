@@ -76,15 +76,15 @@ context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = cu
 ### How can I include child entities (Entity Graph)?
 You cannot. Due to the risk of mistake, we preferred our offering this options and make sure every entity you wish to `delete` is specified.
 
-### Why BulkDelete is faster than BulkSaveChanges?
-The major difference between both methods is `BulkSaveChanges` use the `ChangeTracker` but not the `BulkDelete` method.
-
-By skipping the `ChangeTracker`, some methods like `DetectChanges` are no longer required which greatly helps to improve the performance.
-
 ### Why BulkDelete doesn't use the ChangeTracker?
 To provide the best performance as possible!
 
 Since using the `ChangeTracker` can greatly reduce performance, we choose to let `BulkSaveChanges` method to handle scenario with `ChangeTracker` and `BulkDelete` scenario without it.
+
+### Why BulkDelete is faster than BulkSaveChanges?
+The major difference between both methods is `BulkSaveChanges` use the `ChangeTracker` but not the `BulkDelete` method.
+
+By skipping the `ChangeTracker`, some methods like `DetectChanges` are no longer required which greatly helps to improve the performance.
 
 ## Related Articles
 

@@ -93,15 +93,15 @@ Read more: [IncludeGraph](/include-graph)
 context.BulkUpdate(list, options => options.IncludeGraph = true);
 {% endhighlight %}
 
-### Why BulkUpdate is faster than BulkSaveChanges?
-The major difference between both methods is `BulkSaveChanges` use the `ChangeTracker` but not the `BulkUpdate` method.
-
-By skipping the `ChangeTracker`, some methods like `DetectChanges` are no longer required which greatly helps to improve the performance.
-
 ### Why BulkUpdate doesn't use the ChangeTracker?
 To provide the best performance as possible!
 
 Since using the `ChangeTracker` can greatly reduce performance, we choose to let `BulkSaveChanges` method to handle scenario with `ChangeTracker` and `BulkUpdate` scenario without it.
+
+### Why BulkUpdate is faster than BulkSaveChanges?
+The major difference between both methods is `BulkSaveChanges` use the `ChangeTracker` but not the `BulkUpdate` method.
+
+By skipping the `ChangeTracker`, some methods like `DetectChanges` are no longer required which greatly helps to improve the performance.
 
 ## Related Articles
 
