@@ -11,12 +11,12 @@ Gets or sets if `INSERTED` and `DELETED` data from the database should be return
 
 {% include template-example.html %} 
 {% highlight csharp %}
-List<AuditEntry> auditEntries;
+List<AuditEntry> auditEntries = new List<AuditEntry>();
 
 context.BulkSaveChanges(list, options =>
 {
 	options.UseAudit = true;
-	options.BulkOperationExecuted = bulkOperation => auditEntries = bulkOperation.AuditEntries;
+	options.BulkOperationExecuted = bulkOperation => auditEntries.AddRange(bulkOperation.AuditEntries);
 });
 {% endhighlight %}
 

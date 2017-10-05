@@ -11,12 +11,12 @@ Gets `INSERTED` and `DELETED` data when `UseAudit` option is enabled.
 
 {% include template-example.html %} 
 {% highlight csharp %}
-List<AuditEntry> auditEntries;
+List<AuditEntry> auditEntries = new List<AuditEntry>();
 
 context.BulkSaveChanges(list, options =>
 {
 	options.UseAudit = true;
-	options.BulkOperationExecuted = bulkOperation => auditEntries = bulkOperation.AuditEntries;
+	options.BulkOperationExecuted = bulkOperation => auditEntries.AddRange(bulkOperation.AuditEntries);
 });
 
 foreach (var entry in auditEntries)
