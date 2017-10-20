@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Entity Framework Extensions - Documentation
 permalink: documentation
 ---
