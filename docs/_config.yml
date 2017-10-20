@@ -5,6 +5,11 @@ defaults:
   -
     scope:
       path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
       type: "pages"
     values:
       last_modified_at: "2017-09-24"
