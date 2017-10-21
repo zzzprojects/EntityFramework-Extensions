@@ -343,7 +343,7 @@ context.Customers
 		
 		<!-- more-feature !-->
 		<div class="more">
-			<a href="{{ site.github.url }}tutorials" class="btn btn-z btn-xl" role="button">
+			<a href="{{ site.github.url }}/tutorials" class="btn btn-z btn-xl" role="button">
 				<i class="fa fa-book"></i>&nbsp;Read Tutorials
 			</a>
 		</div>
