@@ -93,6 +93,14 @@
 		left: 150%;
 	}
 }
+@media (max-width: 575px) {
+	.header-angle .top-triangle {
+		display: none;
+	}
+	.header-angle .bottom-triangle {
+		display: none;
+	}
+}
 
 
 .layout-angle {
@@ -142,6 +150,15 @@
 		left: 150%;
 	}
 }
+@media (max-width: 575px) {
+	.layout-angle .top-triangle {
+		display: none;
+	}
+	.layout-angle .bottom-triangle {
+		display: none;
+	}
+}
+
 
 
 .text-z {

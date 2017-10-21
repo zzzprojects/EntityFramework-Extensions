@@ -32,3 +32,8 @@
 	padding: 20px 0;
   }
 }
+@media (max-width: 575px) {
+  .site-footer {
+	display: none;
+  }
+}

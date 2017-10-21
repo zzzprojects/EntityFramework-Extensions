@@ -201,15 +201,15 @@ context.BulkMerge(customers,
 	<div class="container">
 		<h2>Amazing <span class="text-z">performance</span>, outstanding <span class="text-z">support</span>!</h2>
 		
-		<blockquote class="blockquote text-center">
+		<blockquote class="blockquote text-center wow slideInLeft">
 			<p class="mb-0">We were very, very pleased with the customer support. There was no question, problem or wish that was not answered AND solved within days! We think that’s very unique!</p>
 			<footer class="blockquote-footer">Klemens Stelzmüller, <a href="http://www.beka-software.at/" target="_blank">Beka-software</a></footer>
 		</blockquote>
-		<blockquote class="blockquote text-center">
+		<blockquote class="blockquote text-center wow slideInRight">
 			<p class="mb-0">I’d definitely recommend it as it is a great product with a great performance and reliability.</p>
 			<footer class="blockquote-footer">Eric Rey, <a href="http://www.transturcarrental.com/" target="_blank">Transtur</a></footer>
 		</blockquote>
-		<blockquote class="blockquote text-center">
+		<blockquote class="blockquote text-center wow slideInLeft">
 			<p class="mb-0">It’s great. It took me 5 minutes to implement it and makes my application 100x more responsive for certain database operations.</p>
 			<footer class="blockquote-footer">Dave Weisberg</footer>
 		</blockquote>
@@ -231,10 +231,10 @@ context.BulkMerge(customers,
 	<div class="container">
 		
 		<!-- Bulk SaveChanges !-->
-		<h2>Bulk SaveChanges</h2>
+		<h2 class="wow slideInUp">Bulk SaveChanges</h2>
 		<div class="row">
-			<div class="col-lg-5">
-				<p class="feature-tagline">Improving your applications performance couldn’t have been made <span class="text-bold-red">easier</span>!</p>
+			<div class="col-lg-5 wow slideInLeft">
+				<p class="feature-tagline">Add 4 letters <span class="text-z">Bulk</span> to make your application <span class="text-z">10-50 times</span> faster and more responsive.</p>
 				<ul>
 					<li>Easy to use</li>
 					<li>Easy to customize</li>
@@ -247,7 +247,7 @@ context.BulkMerge(customers,
 					</a>
 				</div>	
 			</div>
-			<div class="col-lg-7">
+			<div class="col-lg-7 wow slideInRight">
 				<div class="card card-code card-code-light">
 					<div class="card-header">Bulk SaveChanges Examples</div>
 					<div class="card-body">
@@ -256,7 +256,7 @@ context.BulkMerge(customers,
 context.BulkSaveChanges();
 
 // Easy to customize
-context.BulkSaveChanges(operation => operation.BatchSize = 1000);
+context.BulkSaveChanges(options => options.BatchSize = 1000);
 {% endhighlight %}
 					</div>
 				</div>
@@ -266,14 +266,16 @@ context.BulkSaveChanges(operation => operation.BatchSize = 1000);
 		<hr class="m-y-md" />
 		
 		<!-- Bulk Operations !-->
-		<h2>Bulk Operations</h2>
+		<h2 class="wow slideInUp">Bulk Operations</h2>
 		<div class="row">
-			<div class="col-lg-5">
-				<p class="feature-tagline">Use <span class="text-bold-red">flexible</span> features to overcome Entity Framework limitations</p>
+			<div class="col-lg-5 wow slideInLeft">
+				<p class="feature-tagline">Add the maximum <span class="text-z">flexibility</span> to cover every scenario.</p>
 				<ul>
-					<li>Choose batch size</li>
-					<li>Choose columns</li>
-					<li>Choose primary key</li>
+					<li>Bulk Insert</li>
+					<li>Bulk Update</li>
+					<li>Bulk Delete</li>
+					<li>Bulk Merge</li>
+					<li>Bulk Synchronize</li>
 				</ul>
 				<div class="more-info">
 					<a href="{{ site.github.url }}/tutorial-bulk-operations" class="btn btn-lg btn-z" role="button">
@@ -282,20 +284,21 @@ context.BulkSaveChanges(operation => operation.BatchSize = 1000);
 					</a>
 				</div>	
 			</div>
-			<div class="col-lg-7">
+			<div class="col-lg-7 wow slideInRight">
 				<div class="card card-code card-code-light">
 					<div class="card-header">Bulk Operations Examples</div>
 					<div class="card-body">
 {% highlight csharp %}
-// Use all kind of bulk operations
-context.BulkInsert(customers);
-context.BulkUpdate(customers);
-context.BulkDelete(customers);
 
-// Customize your operation
-context.BulkMerge(customers, operation => {
-   operation.BatchSize = 1000;
-   operation.ColumnPrimaryKeyExpression = customer => customer.Code;
+// Allow custom key	
+context.BulkMerge(customers, options => {
+   options.ColumnPrimaryKeyExpression = 
+        customer => customer.Code;
+});
+
+// Allow child entities
+context.BulkMerge(customers, 
+	options => options.IncludeGraph = true);
 });
 {% endhighlight %}	
 					</div>
@@ -306,9 +309,9 @@ context.BulkMerge(customers, operation => {
 		<hr class="m-y-md" />
 		
 		<!-- Batch Operations !-->
-		<h2>Batch Operations</h2>
+		<h2 class="wow slideInUp">Batch Operations</h2>
 		<div class="row">
-			<div class="col-lg-5">
+			<div class="col-lg-5 wow slideInLeft">
 				<p class="feature-tagline">Perform bulk operations from LINQ Query without loading entities in the context.</p>
 				<ul>
 					<li>DeleteFromQuery</li>
@@ -321,20 +324,19 @@ context.BulkMerge(customers, operation => {
 					</a>
 				</div>	
 			</div>
-			<div class="col-lg-7">
+			<div class="col-lg-7 wow slideInRight">
 				<div class="card card-code card-code-light">
 					<div class="card-header">Batch Operations Examples</div>
 					<div class="card-body">
 {% highlight csharp %}
-// DELETE all customers that are inactive for more than 2 years
-context.Customers
-    .Where(x => x.LastLogin < DateTime.Now.AddYears(-2))
-    .DeleteFromQuery(operation => operation.BatchSize = 10000);
- 
-// UPDATE all customers that are inactive for more than 2 years
-context.Customers
-    .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
-    .UpdateFromQuery(x => new Customer {Actif = false});
+// DELETE all inactive customers 
+context.Customers.Where(x => !x.IsActif)
+       .DeleteFromQuery();
+	   
+// UPDATE all inactive customers
+context.Customers.Where(x => !x.IsActif)
+       .UpdateFromQuery(x => 
+            new Customer {IsActif = true});
 {% endhighlight %}	
 					</div>
 				</div>
