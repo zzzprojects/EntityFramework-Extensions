@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Bulk Insert
 permalink: bulk-insert
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 `INSERT` all entities in the database.

@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: BatchDelayInterval
 permalink: batch-delay-interval
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets a delay in milliseconds to wait between batch.

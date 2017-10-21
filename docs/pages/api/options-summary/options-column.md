@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Column
 permalink: column
 ---
-
-{% include template-h1.html %}
 
 - [Column Input](#column-input)
 - [Column Output](#column-output)

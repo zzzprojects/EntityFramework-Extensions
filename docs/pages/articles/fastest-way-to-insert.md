@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Fastest Way to Insert
 permalink: fastest-way-to-insert
 ---
-
-{% include template-h1.html %}
 
 ## What’s the FASTEST way to insert in Entity Framework?
 

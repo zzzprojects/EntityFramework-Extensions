@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Delete from Query
 permalink: delete-from-query
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 `DELETE` all rows from the database using a LINQ Query without loading entities in the context.

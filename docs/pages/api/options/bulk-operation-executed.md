@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: BulkOperationExecuted
 permalink: bulk-operation-executed
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets an action to execute `after` the bulk operation is executed.

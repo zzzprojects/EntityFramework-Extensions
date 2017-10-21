@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Custom Key
 permalink: custom-key
 ---
-
-{% include template-h1.html %}
 
 ## Problem
 You want to perform a Bulk Operations (BulkUpdate, BulkDelete, or BulkMerge) but using a different key than the one specifying.

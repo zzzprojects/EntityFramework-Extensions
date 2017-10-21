@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: LogDump
 permalink: log-dump
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets all `logged` database event when `UseLogDump` is enabled.

@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Custom Column
 permalink: custom-column
 ---
-
-{% include template-h1.html %}
 
 ## Problem
 You want to perform a Bulk Operations (BulkInsert, BulkUpdate, BulkDelete, or BulkMerge) but only on some specific column.

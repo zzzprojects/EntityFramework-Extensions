@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: ColumnInputOutputExpression
 permalink: column-input-output-expression
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets columns to map with the direction `InputOutput`.

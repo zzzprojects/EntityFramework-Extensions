@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Logging
 permalink: logging
 ---
-
-{% include template-h1.html %}
 
 - [Log](#log)
 - [UseLogDump](#uselogdump)

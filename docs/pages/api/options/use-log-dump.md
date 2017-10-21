@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: UseLogDump
 permalink: use-log-dump
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets if all `log` related to database event should be stored in a `LogDump` properties.

@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Key
 permalink: key
 ---
-
-{% include template-h1.html %}
 
 - [AllowDuplicateKeys](#allowduplicatekeys)
 - [AllowUpdatePrimaryKeys](#allowupdateprimarykeys)

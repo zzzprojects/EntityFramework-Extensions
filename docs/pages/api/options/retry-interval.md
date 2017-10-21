@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: RetryInterval
 permalink: retry-interval
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets the interval to wait before retrying an operation when a transient error occurs.

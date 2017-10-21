@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Issue Tracker
 permalink: issue-tracker
 ---
-
-{% include template-h1.html %}
 
 ## Where is your Issue Tracker?
 

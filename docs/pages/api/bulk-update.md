@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Bulk Update
 permalink: bulk-update
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 `UPDATE` all entities in the database.

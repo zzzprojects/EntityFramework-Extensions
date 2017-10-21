@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: SynchronizeKeepIdentity
 permalink: synchronize-keep-identity
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets if the source identity value should be preserved on `Synchronize`. When not specified, identity values are assigned by the destination.

@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Concurrency
 permalink: concurrency
 ---
-
-{% include template-h1.html %}
 
 ## Problem
 Your model have concurrency entity and you must resolve optimistic concurrency using a pattern.

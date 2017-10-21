@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Licensing
 permalink: licensing
 ---
-
-{% include template-h1.html %}
 
 ## Evaluation Period
 - You can evaluate the library for several months before purchasing it.

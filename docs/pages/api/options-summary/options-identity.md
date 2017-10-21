@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Identity
 permalink: identity
 ---
-
-{% include template-h1.html %}
 
 - [InsertKeepIdentity](#insertkeepidentity)
 - [MergeKeepIdentity](#mergekeepidentity)

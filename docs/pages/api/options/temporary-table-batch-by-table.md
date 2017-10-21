@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: TemporaryTableBatchByTable
 permalink: temporary-table-batch-by-table
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets the number of batches a temporary table can contain. This option may create multiple temporary tables when the number of batches to execute exceed the limit specified.

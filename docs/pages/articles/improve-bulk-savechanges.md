@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Improve BulkSaveChanges
 permalink: improve-bulk-savechanges
 ---
-
-{% include template-h1.html %}
 
 ## Introduction
 BulkSaveChanges is already very fast. But you can make it even faster by simply turning off the "EntityFrameworkPropagation" options.

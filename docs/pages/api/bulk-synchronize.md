@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Bulk Synchronize
 permalink: bulk-synchronize
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 `SYNCHRONIZE` all entities from the database.

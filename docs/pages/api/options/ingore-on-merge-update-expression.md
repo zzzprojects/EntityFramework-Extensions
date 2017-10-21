@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: IgnoreOnMergeUpdate
 permalink: ignore-on-merge-update-expression
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets columns to ignore when the `BulkMerge` method execute the `update` statement.

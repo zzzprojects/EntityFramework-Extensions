@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: SQL Server
 permalink: sql-server
 ---
-
-{% include template-h1.html %}
 
 - [SqlBulkCopyOptions](#sqlbulkcopyoptions)
 

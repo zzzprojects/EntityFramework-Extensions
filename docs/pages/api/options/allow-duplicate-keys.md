@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: AllowDuplicateKeys
 permalink: allow-duplicate-keys
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets if a duplicate key is possible in the source.

@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Soft Delete
 permalink: soft-delete
 ---
-
-{% include template-h1.html %}
 
 ## Problem
 You want to soft delete some entities currently in deleted state with BulkSaveChanges.

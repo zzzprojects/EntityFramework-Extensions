@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: AllowUpdatePrimaryKeys
 permalink: allow-update-primary-keys
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets of the key must also be included in columns to `UPDATE`.

@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Log
 permalink: log
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets an action to `log` all database event as soon as they happen.

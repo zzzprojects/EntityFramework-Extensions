@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: BulkOperationExecuting
 permalink: bulk-operation-executing
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets an action to execute `before` the bulk operation is executed.

@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Transient Error
 permalink: transient-error
 ---
-
-{% include template-h1.html %}
 
 - [RetryCount](#retrycount)
 - [RetryInterval](#retryinterval)

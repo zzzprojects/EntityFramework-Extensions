@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Batch Size
 permalink: batch-size
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets the number of records to use in a batch.

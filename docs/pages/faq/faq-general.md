@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: FAQ General
 permalink: faq-general
 ---
-
-{% include template-h1.html %}
 
 ## Which Payment method do you support?
 We support the following payment method:

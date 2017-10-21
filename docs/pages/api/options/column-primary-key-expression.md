@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: ColumnPrimaryKeyExpression
 permalink: column-primary-key-expression
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets columns to use as the `key` for the operation.

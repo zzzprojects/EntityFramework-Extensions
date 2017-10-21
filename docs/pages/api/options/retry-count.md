@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: RetryCount
 permalink: retry-count
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets the maximum number of operation retry when a transient error occurs.

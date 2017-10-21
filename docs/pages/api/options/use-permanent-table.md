@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: UsePermanentTable
 permalink: use-permanent-table
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets if the library should `create` and `drop` a permanent table instead of using a temporary table.

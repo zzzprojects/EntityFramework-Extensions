@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Overview
 permalink: overview
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 

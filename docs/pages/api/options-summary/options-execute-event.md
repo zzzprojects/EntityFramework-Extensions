@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Execute Event
 permalink: execute-event
 ---
-
-{% include template-h1.html %}
 
 - [BulkOperationExecuting](#bulkoperationexecuting)
 - [BulkOperationExecuted](#bulkoperationexecuted)

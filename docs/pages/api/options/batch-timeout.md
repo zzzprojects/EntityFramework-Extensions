@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: BatchTimeout
 permalink: batch-timeout
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets the maximum of time in seconds to wait for a batch before the command throws a timeout exception. 

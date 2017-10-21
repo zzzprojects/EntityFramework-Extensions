@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Bulk Merge
 permalink: bulk-merge
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 `MERGE` all entities from the database.

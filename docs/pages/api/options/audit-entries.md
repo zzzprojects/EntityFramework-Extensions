@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: AuditEntries
 permalink: audit-entries
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets `INSERTED` and `DELETED` data when `UseAudit` option is enabled.

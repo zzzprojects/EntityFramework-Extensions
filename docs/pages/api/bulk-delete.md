@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Bulk Delete
 permalink: bulk-delete
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 `DELETE` all entities from the database.

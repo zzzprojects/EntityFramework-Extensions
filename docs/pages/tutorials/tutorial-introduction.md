@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Introduction
 permalink: tutorial-introduction
 ---
-
-{% include template-h1.html %}
 
 ## Introduction
 Entity Framework Extensions allow you to improve dramatically your save operations performance.

@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Batch
 permalink: batch
 ---
-
-{% include template-h1.html %}
 
 - [BatchSize](#batchsize)
 - [BatchTimeout](#batchtimeout)

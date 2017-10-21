@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: TemporaryTableUseTableLock
 permalink: temporary-table-use-table-lock
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets if the temporary table must be locked when inserting records into it.

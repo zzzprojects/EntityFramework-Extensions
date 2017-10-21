@@ -1,11 +1,9 @@
 ---
-layout: dev
-title: Contact us
 permalink: contact-us
 ---
 
-{% include template-h1.html %}
-
+<div class="container" style="margin-top: 60px;">
+	<div markdown="1">
 ## Test our `Outstanding` Support
 We usually answer within the next business day, hour, or minutes!
 
@@ -48,3 +46,5 @@ Contact us directly: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com<
 
 ## I think you forget about my request! What should I do?
 Just contact us back again, and we will make sure we don't miss it again!
+</div>
+</div>

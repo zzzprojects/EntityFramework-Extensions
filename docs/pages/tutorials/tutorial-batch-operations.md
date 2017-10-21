@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Batch Operations
 permalink: tutorial-batch-operations
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Batch Operations method allow to perform `UPDATE` or `DELETE` operation directly in the database using a LINQ Query without loading entities in the context.

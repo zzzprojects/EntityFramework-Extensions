@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Bulk Operations
 permalink: tutorial-bulk-operations
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Bulk operation methods give you additional flexibility by allowing to customize options such as primary key, columns, include childs entities and more.

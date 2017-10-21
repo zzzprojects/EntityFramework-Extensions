@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: UseAudit
 permalink: use-audit
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets if `INSERTED` and `DELETED` data from the database should be returned as `AuditEntries`.

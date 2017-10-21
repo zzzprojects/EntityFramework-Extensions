@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: TemporaryTableMinRecord
 permalink: temporary-table-min-record
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 Gets or sets the minimum number of records to use a temporary table instead of using SQL derived table.

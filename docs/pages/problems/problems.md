@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Troubleshooting
-permalink: troubleshooting
+permalink: problems
 ---
-
-{% include template-h1.html %}
 
 ## Troubleshooting
 

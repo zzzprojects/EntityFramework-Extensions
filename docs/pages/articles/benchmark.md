@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Benchmark
 permalink: benchmark
 ---
-
-{% include template-h1.html %}
 
 ## Problem
 You perform benchmark test for a method like BulkSaveChanges, but you get very bad performance result.

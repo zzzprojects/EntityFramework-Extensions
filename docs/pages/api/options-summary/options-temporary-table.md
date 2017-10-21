@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Temporary Table
 permalink: temporary-table
 ---
-
-{% include template-h1.html %}
 
 - [TemporaryTableBatchByTable](#temporarytablebatchbytable)
 - [TemporaryTableInsertBatchSize](#temporarytableinsertbatchsize)

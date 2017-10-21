@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Update from Query
 permalink: update-from-query
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 `UPDATE` all rows from the database using a LINQ Query without loading entities in the context.

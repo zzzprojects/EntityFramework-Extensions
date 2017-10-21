@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: BulkSaveChanges
 permalink: bulk-savechanges
 ---
-
-{% include template-h1.html %}
 
 ## Definition
 

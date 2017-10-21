@@ -1,10 +1,6 @@
 ---
-layout: dev
-title: Foreign Key Constraint + AutoDectectChanges Disabled
 permalink: foreign-key-constraint-autodetectchanges-disabled
 ---
-
-{% include template-h1.html %}
 
 ## Problem
 
