@@ -11,7 +11,8 @@ permalink: download
 						<h3>Entity Framework 6 (EF6)</h3>
 					</div>
 					<div class="card-body wow slideInUp">
-						<a class="btn btn-lg btn-z" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" onclick="ga('send', 'event', { eventAction: 'download'});" style="visibility: visible; animation-name: pulse;">
+						<a class="btn btn-lg btn-z" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" 
+								onclick="ga('send', 'event', { eventAction: 'download-ef6'});">
 							<i class="fa fa-cloud-download" aria-hidden="true"></i>
 							NuGet Download
 						</a>
@@ -26,7 +27,8 @@ permalink: download
 						<h3>Entity Framework Core (EF Core)</h3>
 					</div>
 					<div class="card-body wow slideInUp">
-						<a class="btn btn-lg btn-z" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/" onclick="ga('send', 'event', { eventAction: 'download'});" style="visibility: visible; animation-name: pulse;">
+						<a class="btn btn-lg btn-z" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/"
+								onclick="ga('send', 'event', { eventAction: 'download-efcore'});">
 							<i class="fa fa-cloud-download" aria-hidden="true"></i>
 							NuGet Download							
 						</a>
@@ -44,7 +46,8 @@ permalink: download
 						<h3>Entity Framework 5 (EF5)</h3>
 					</div>
 					<div class="card-body wow slideInUp">
-						<a class="btn btn-lg btn-z" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" onclick="ga('send', 'event', { eventAction: 'download'});" style="visibility: visible; animation-name: pulse;">
+						<a class="btn btn-lg btn-z" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/"
+								onclick="ga('send', 'event', { eventAction: 'download-ef5'});">
 							<i class="fa fa-cloud-download" aria-hidden="true"></i>
 							NuGet Download							
 						</a>
@@ -56,73 +59,6 @@ permalink: download
 		</div>
 	</div>
 </div>
-<!--
-<div class="page-download-nuget">
-	<div class="container">
-
-		
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="card">
-					<div class="card-header">
-						<h3>Entity Framework 6 (EF6)</h3>
-					</div>
-					<div class="card-body">
-						<a class="btn btn-lg btn-primary" role="button" href="/download" onclick="ga('send', 'event', { eventAction: 'download'});" style="visibility: visible; animation-name: pulse;">
-							<i class="fa fa-cloud-download" aria-hidden="true"></i>
-							NuGet Download
-						</a>
-						<div>Download Count:</div>
-						<div class="download-count"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-big-d.svg"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="card">
-					<div class="card-header">
-						<h3>Entity Framework Core (EF Core)</h3>
-					</div>
-					<div class="card-body">
-						<a class="btn btn-lg btn-primary" role="button" href="/download" onclick="ga('send', 'event', { eventAction: 'download'});" style="visibility: visible; animation-name: pulse;">
-							<i class="fa fa-cloud-download" aria-hidden="true"></i>
-							NuGet Download							
-						</a>
-						<div>Download Count:</div>
-						<div class="download-count"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-efcore-big-d.svg"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="card">
-					<div class="card-header">
-						<h3>Entity Framework 5 (EF5)</h3>
-					</div>
-					<div class="card-body">
-						<a class="btn btn-lg btn-primary" role="button" href="/download" onclick="ga('send', 'event', { eventAction: 'download'});" style="visibility: visible; animation-name: pulse;">
-							<i class="fa fa-cloud-download" aria-hidden="true"></i>
-							NuGet Download							
-						</a>
-						<div>Download Count:</div>
-						<div class="download-count"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-ef5-big-d.svg"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="card">
-					<div class="card-header">
-						<h3>Entity Framework 4 (EF4)</h3>
-					</div>
-					<div class="card-body">
-						<p>Bla bla bla</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-->
 
 <div class="container section-faq wow slideInUp">
 	<div markdown="1">

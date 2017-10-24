@@ -4,10 +4,8 @@ permalink: faq
 
 ## FAQ
 
-<ul>
-{% for num in (0..site.data.pages.size) %}	
-	{% if site.data.pages[num].category == page.permalink and site.data.pages[num].url != page.permalink %}
-		<li><a href="{{ site.data.pages[num].url }}">{{ site.data.pages[num].title }}</a></li>
-	{% endif %}
-{% endfor %}
-</ul>
+- [Contact Us](contact-us)
+- [Issue Tracker](issue-tracker)
+- [General](faq-general)
+- [Installation](faq-installation)
+- [License](faq-license)

@@ -61,7 +61,9 @@ permalink: pricing
 					</label>
 				</div>
 				<br />
-				<button type="submit" class="btn btn-z btn-lg"><i class="fa fa-shopping-cart"></i>&nbsp;BUY NOW</button>
+				<button type="submit" class="btn btn-z btn-lg" onclick="ga('send', 'event', { eventAction: 'buy-now'});">
+					<i class="fa fa-shopping-cart"></i>&nbsp;BUY NOW
+				</button>
 				
 				<div class="more-option">*&nbsp;Read the FAQ below for alternative payment method.</div>				
 			</form>

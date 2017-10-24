@@ -19,7 +19,8 @@ permalink: index
 				</h1>
 				
 				<div class="wow zoomIn">
-					<a class="btn btn-xl btn-z" href="{{ site.github.url }}/download" target="_blank">
+					<a class="btn btn-xl btn-z" href="{{ site.github.url }}/download"
+							onclick="ga('send', 'event', { eventAction: 'download'});">
 						<i class="fa fa-cloud-download" aria-hidden="true"></i>
 						NuGet Download
 						<i class="fa fa-angle-right"></i>
@@ -215,7 +216,8 @@ context.BulkMerge(customers,
 		</blockquote>
 
 		<div class="more">
-			<a href="http://www.zzzprojects.com/testimonials/" target="_blank" class="btn btn-lg btn-z" role="button">
+			<a href="http://www.zzzprojects.com/testimonials/" target="_blank" class="btn btn-lg btn-z" role="button"
+					onclick="ga('send', 'event', { eventAction: 'testimonials'});">
 				<i class="fa fa-comments"></i>&nbsp;
 				Read More Testimonials
 			</a>
