@@ -103,7 +103,7 @@ permalink: pricing
 	</div>
 </div>
 
-<div class="container section-faq-z">
+<div class="container section-faq wow slideInUp">
 	<div markdown="1">
 ---
 ## FAQ
@@ -130,7 +130,7 @@ The `5-9` developer seats mean you can use the license with up 9 developers.
 You only pay for developer seats. You can use our library with an unlimited amount of application, environment, server, and client machine.
 
 ### I need more than `19 seats`, what can I do?
-Please contact us with the number of sites required. We offer some additional great discount or enterprise license.
+Please contact us with the number of seats required. We offer some additional great discount or enterprise license.
 
 Email: <a href="mailto:sales@zzzprojects.com">sales@zzzprojects.com</a>
 
