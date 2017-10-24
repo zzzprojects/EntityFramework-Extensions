@@ -47,8 +47,8 @@
 	position: relative;
 	text-align: center;
 	vertical-align: middle;
-	height: 225px;
-	line-height: 225px;
+	height: 175px;
+	line-height: 175px;
 	margin-bottom: 0px;
 }
 .header-angle h2 {
@@ -94,6 +94,9 @@
 	}
 }
 @media (max-width: 575px) {
+	.header-angle h1 {
+		font-size: 3rem;
+	}
 	.header-angle .top-triangle {
 		display: none;
 	}
@@ -151,6 +154,9 @@
 	}
 }
 @media (max-width: 575px) {
+	.layout-angle h1 {
+		font-size: 3rem;
+	}
 	.layout-angle .top-triangle {
 		display: none;
 	}
