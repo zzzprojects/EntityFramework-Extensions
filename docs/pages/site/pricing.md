@@ -109,7 +109,7 @@ permalink: pricing
 ## FAQ
 
 ### Which payment alternative method are accepted?
-We accept `Cheque` and `Wire Transfer`.
+We accept `PayPal`, `Cheque` and `Wire Transfer`.
 
 We **DO NOT** accept bitcoin  and credit card.
 
