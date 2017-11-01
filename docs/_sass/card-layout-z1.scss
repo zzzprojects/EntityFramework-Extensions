@@ -20,6 +20,9 @@
 .card-layout-z1 h2 {
 	padding: 5px 0;
 }
+.card-layout-z1 h3:not(:first-child) {
+	margin-top: 15px;
+}
 .card-layout-z1 ul {
 	padding-left: 20px;
 }
