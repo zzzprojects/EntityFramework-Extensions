@@ -32,7 +32,9 @@
 			{% include site-header-nav-site.html %}
 		</div>
 	</header>
-	 
+	
+	{% include site-products.html %}
+	
 	<div class="main">
 	{{ content }}
 	</div>
@@ -42,7 +44,8 @@
 			{% include site-header-nav-site.html %}
 		</div>
 	</header>
-	 
+	
+	 {% include site-products.html %}	 
 	 {% include template-h1.html %}
 	<div class="main">
 	{{ content }}
@@ -56,7 +59,8 @@
 		</div>		
 	</header>
 	 
-	 {% include template-h1.html %}
+	{% include site-products.html %}
+	{% include template-h1.html %}
 	<div class="main container">
 	{{ content }}
 	</div>
@@ -70,6 +74,7 @@
 		</div>		
 	</header>
 	 
+	{% include site-products.html %}	 
 	{% include template-h1.html %}
 	<div class="container">			
 		<div class="row">			
