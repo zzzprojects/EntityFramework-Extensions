@@ -45,7 +45,7 @@ permalink: tutorials
 			<hr class="my-4">
 			<p>Start learning how to fix and handle some exception and common troubleshooting error.</p>
 			<p class="lead">
-				<a class="btn btn-primary btn-z" href="troubleshooting" role="button">Learn more</a>
+				<a class="btn btn-primary btn-z" href="problems" role="button">Learn more</a>
 			</p>
 		</div>
 	</div>
