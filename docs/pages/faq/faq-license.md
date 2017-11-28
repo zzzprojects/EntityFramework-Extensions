@@ -72,5 +72,5 @@ You paid for developer seat within your company.
 
 Some standard royalty free limitations:
 
-- You can sell a similar product and claim it's yours.
+- You can't sell a similar product and claim it's yours.
 - If your customer has access to your source code and develops using our API, they will have to purchase a license.
