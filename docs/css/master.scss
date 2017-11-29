@@ -13,7 +13,11 @@
 @import "card-layout-z2"; 
 @import "page-index";
 @import "hero";
+@import "scroll-to-top";
 
+body {
+    overflow-x: hidden;
+}
 /* theme: z */
 .fa-check-square-o {
     color: #449d44;

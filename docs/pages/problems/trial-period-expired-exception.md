@@ -14,6 +14,7 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 - You are currently evaluating the library and the trial period is expired.
 - You have purchased the license but didn't register it correctly.
+- You called some method from the library before registering the license.
 
 ### Fix
 
@@ -27,4 +28,8 @@ The latest version always contains a trial for the current month to allows a com
 
 Make sure to follow all recommendation about how to setup your license: [Licensing](http://entityframework-extensions.net/licensing)
 
-Otherwise contact us: {% include infozzzprojects-email.html %}
+#### Method called before registering
+
+Make sure to register your license before calling any other methods from our library. Otherwise, you could enable the trial period instead.
+
+Make sure to follow all recommendation about how to setup your license: [Licensing](http://entityframework-extensions.net/licensing)

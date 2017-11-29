@@ -23,7 +23,8 @@ context.BulkDelete(list);
 context.BulkMerge(list);
 
 // Easy to customize
-context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
+context.BulkMerge(customers, options => 
+	options.ColumnPrimaryKeyExpression = customer => customer.Code);
 {% endhighlight %}
 
 ## Purpose
@@ -92,7 +93,8 @@ context.BulkDelete(list);
 context.BulkMerge(list);
 
 // Easy to customize
-context.BulkMerge(customers, bulk => bulk.ColumnPrimaryKeyExpression = customer => customer.Code; });
+context.BulkMerge(customers, options => 
+	options.ColumnPrimaryKeyExpression = customer => customer.Code; });
 {% endhighlight %}
 
 ### Performance Comparisons
