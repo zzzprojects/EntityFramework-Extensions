@@ -117,7 +117,7 @@
 		$("thead").addClass("thead-dark");
 
 		$('aside a').each(function() {
-			if ($(this).attr('href') == '/{{page.permalink}}')
+			if ($(this).attr('href') == '/{{page.permalink}}' || $(this).attr('href') == '{{ site.github.url }}/{{page.permalink}}')
 			{
 				$(this).addClass('font-weight-bold');
 			}

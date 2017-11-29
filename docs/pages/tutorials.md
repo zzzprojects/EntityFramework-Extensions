@@ -7,10 +7,10 @@ permalink: tutorials
 <div class="row">
 	<div class="col-md-6 col-lg-6">
 		<div class="jumbotron">
-			<h2 class="display-4">Tutorial</h2>
-			<p class="lead">EFE Tutotrial</p>
+			<h2 class="display-4">Getting Started</h2>
+			<p class="lead">Learn the Basics</p>
 			<hr class="my-4">
-			<p>Start learning about how to use Entity Framework Extensions with our tutorial.</p>
+			<p>Start learning about how to use Entity Framework Extensions with our getting started tutorial.</p>
 			<p class="lead">
 				<a class="btn btn-lg btn-z" href="overview" role="button">Learn more</a>
 			</p>
