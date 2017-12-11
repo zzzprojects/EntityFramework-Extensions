@@ -21,9 +21,9 @@ context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = cu
 
 Despite the `ChangeTracker` being outstanding to track what's modified, it lacks in term of scalability and flexibility.
 
-`SaveChanges` require one database round-trip for every entity to `delete`. So if you need to `delete` 10000 entities, then 10000 database round-trip will be performed which is **INSANELY** slow.
+`SaveChanges` requires one database round-trip for every entity to `delete`. So if you need to `delete` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
 
-`BulkDelete` in counterpart offer great customization and require the minimum database round-trip as possible.
+`BulkDelete` in counterpart offers great customization and requires the minimum database round-trips as possible.
 
 ## Performance Comparisons
 
@@ -70,15 +70,15 @@ context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = cu
 {% endhighlight %}
 
 ### How can I include child entities (Entity Graph)?
-You cannot. Due to the risk of mistake, we preferred our offering this options and make sure every entity you wish to `delete` is specified.
+You cannot. Due to the risk of mistakes, we preferred not to offer this option and make sure every entity you wish to `delete` is specified.
 
 ### Why BulkDelete doesn't use the ChangeTracker?
-To provide the best performance as possible!
+To provide the best performance possible!
 
-Since using the `ChangeTracker` can greatly reduce performance, we choose to let `BulkSaveChanges` method to handle scenario with `ChangeTracker` and `BulkDelete` scenario without it.
+Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle scenarios with `ChangeTracker` and `BulkDelete`, scenarios without it.
 
 ### Why BulkDelete is faster than BulkSaveChanges?
-The major difference between both methods is `BulkSaveChanges` use the `ChangeTracker` but not the `BulkDelete` method.
+The major difference between both methods is `BulkSaveChanges` uses the `ChangeTracker` but not the `BulkDelete` method.
 
 By skipping the `ChangeTracker`, some methods like `DetectChanges` are no longer required which greatly helps to improve the performance.
 

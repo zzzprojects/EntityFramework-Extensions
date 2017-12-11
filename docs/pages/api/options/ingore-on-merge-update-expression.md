@@ -3,7 +3,7 @@ permalink: ignore-on-merge-update-expression
 ---
 
 ## Definition
-Gets or sets columns to ignore when the `BulkMerge` method execute the `update` statement.
+Gets or sets columns to ignore when the `BulkMerge` method executes the `update` statement.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -13,13 +13,13 @@ context.BulkMerge(list, options =>
 {% endhighlight %}
 
 ## Purpose
-The `IgnoreOnMergeUpdateExpression` option let you to ignore some column that should be only `insert.
+The `IgnoreOnMergeUpdateExpression` option lets you ignore some columns that should be only `insert.
 
-By example, when may when to `insert` the CreatedDate and CreatedDate but not `update` value.
+By example, when you need to `insert` the CreatedDate and CreatedDate but not `update` the value.
 
 ## Limitations
 Database Provider Supported:
 - SQL Server
 - SQL Azure
 
-_Ask to our support team if you need this option for another provider_
+_Ask our support team if you need this option for another provider_

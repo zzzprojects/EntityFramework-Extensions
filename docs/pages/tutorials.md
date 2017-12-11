@@ -10,7 +10,7 @@ permalink: tutorials
 			<h2 class="display-4">Getting Started</h2>
 			<p class="lead">Learn the Basics</p>
 			<hr class="my-4">
-			<p>Start learning about how to use Entity Framework Extensions with our getting started tutorial.</p>
+			<p>Start using Entity Framework Extensions with our quick getting started tutorial.</p>
 			<p class="lead">
 				<a class="btn btn-lg btn-z" href="overview" role="button">Learn more</a>
 			</p>
@@ -32,7 +32,7 @@ permalink: tutorials
 			<h2 class="display-4">FAQ</h2>
 			<p class="lead">Freqently Answered Question</p>
 			<hr class="my-4">
-			<p>Start learning Entity Framework Extensions best practices and solution to the common problem you may encounter.</p>
+			<p>Discover Entity Framework Extensions best practices and solution to the common problem you may encounter.</p>
 			<p class="lead">
 				<a class="btn btn-primary btn-z" href="faq" role="button">Learn more</a>
 			</p>
@@ -43,7 +43,7 @@ permalink: tutorials
 			<h2 class="display-4">Problems</h2>
 			<p class="lead">Exception & Troubleshooting</p>
 			<hr class="my-4">
-			<p>Start learning how to fix and handle some exception and common troubleshooting error.</p>
+			<p>Learn how to fix and handle some exception and common troubleshooting error.</p>
 			<p class="lead">
 				<a class="btn btn-primary btn-z" href="problems" role="button">Learn more</a>
 			</p>

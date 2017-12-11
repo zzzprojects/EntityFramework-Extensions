@@ -14,11 +14,11 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 ### Cause
 
-Another thread have already performed the operation.
+Another thread already performed the operation.
 
 ### Fix
 
-There is three possible resolution:
+There are three possible resolutions:
 
 - Database Win
 - Client Win

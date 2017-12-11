@@ -15,9 +15,9 @@ EntityFrameworkManager.BulkOperationBuilder = builder => builder.BatchSize = 100
 {% endhighlight %}
 
 ## Purpose
-Having access to modify the `BatchSize` default value may be useful in some occasion which the performance is very affected.
+Having access to modify the `BatchSize` default value may be useful in some occasions where the performance is very affected.
 
-Don't try to optimize it if your application is not affected by some performance problem.
+Don't try to optimize it if your application is not affected by performance problem.
 
 ## FAQ
 
@@ -26,11 +26,11 @@ Not too low, not too high!
 
 Unfortunately, there is no magic value.
 
-If you set it to low, the library will make to many round-trips may decrease the overall performance.
+If you set it too low, the library will perform too many round-trips and it may decreases the overall performance.
 
-If you set it to high, the library will make fewer round-trips but could take must time to write on the server which may decrease the overall performance.
+If you set it too high, the library will make fewer round-trips but it could take more time to write on the server which may decrease the overall performance.
 
-The is no perfect number since there is to many factors such as:
+There is no perfect number since there is too many factors such as:
 - Column Size
 - Index
 - Latency

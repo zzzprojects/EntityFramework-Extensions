@@ -14,4 +14,4 @@ context.BulkSaveChanges(options =>
 {% endhighlight %}
 
 ## Purpose
-This option can be useful when for some rare reason, you don't have access to the `tempdb` database.
+This option can be useful when for some rare reasons, you don't have access to the `tempdb` database.

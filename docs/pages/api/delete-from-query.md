@@ -17,9 +17,9 @@ context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
 {% endhighlight %}
 
 ## Purpose
-`Deleting` entities using `SaveChanges` normally require to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
+`Deleting` entities using `SaveChanges` normally requires to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
 
-`DeleteFromQuery` give you access to directly execute a `DELETE` statement in the database and provide a **HUGE** performance improvement.
+`DeleteFromQuery` gives you access to directly execute a `DELETE` statement in the database and provide a **HUGE** performance improvement.
 
 ## Performance Comparisons
 
@@ -32,6 +32,6 @@ context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
 
 ### Why DeleteFromQuery is faster than SaveChanges, BulkSaveChanges, and BulkDelete?
 
-`DeleteFromQuery` execute a statement directly in SQL such as `DELETE FROM [TableName] WHERE [Key]`. 
+`DeleteFromQuery` executes a statement directly in SQL such as `DELETE FROM [TableName] WHERE [Key]`. 
 
-Other operations normally require one or multiple database round-trips which make the performance slower.
+Other operations normally require one or multiple database round-trips which makes the performance slower.

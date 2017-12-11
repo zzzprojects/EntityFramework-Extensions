@@ -3,7 +3,7 @@ permalink: temporary-table-batch-by-table
 ---
 
 ## Definition
-Gets or sets the number of batches a temporary table can contain. This option may create multiple temporary tables when the number of batches to execute exceed the limit specified.
+Gets or sets the number of batches a temporary table can contain. This option may create multiple temporary tables when the number of batches to execute exceeds the limit specified.
 
 {% include template-example.html %} 
 {% highlight csharp %}

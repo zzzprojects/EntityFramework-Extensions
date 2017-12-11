@@ -36,7 +36,7 @@ Using the `ChangeTracker` to detect and persist change automatically is great! H
 
 `SaveChanges` method makes a database round-trip for every change. So if you need to insert 10000 entities, then 10000 database round-trip will be performed which is INSANELY slow.
 
-`BulkSaveChanges` work exactly like `SaveChanges` but reduce the number of database round-trips required to greatly helps to improve the performance.
+`BulkSaveChanges` works exactly like `SaveChanges` but reduces the number of database round-trips required to greatly help to improve the performance.
 
 ## Performance Comparisons
 

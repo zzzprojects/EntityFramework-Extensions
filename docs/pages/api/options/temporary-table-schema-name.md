@@ -14,4 +14,4 @@ context.BulkSaveChanges(options =>
 {% endhighlight %}
 
 ## Purpose
-In a very rare occasion, you may need to specify a schema name. By example, when also using `UsePermanentTable` option.
+In very rare occasions, you may need to specify a schema name. By example, when also using `UsePermanentTable` option.

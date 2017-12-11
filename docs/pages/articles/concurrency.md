@@ -5,14 +5,14 @@ permalink: concurrency
 ## Problem
 Your model have concurrency entity and you must resolve optimistic concurrency using a pattern.
 
-Concurrency exception normally happen on:
+Concurrency exceptions normally happen on:
 - BulkSaveChanges
 - BulkUpdate
 
 ## Solution - BulkSaveChanges
-When an concurrency error happen, only the first entry in error is returned (exactly like SaveChanges).
+When a concurrency error happens, only the first entry in error is returned (exactly like SaveChanges).
 
-There is three possible scenario:
+There are three possible scenarios:
 - Database Wins (You keep database values)
 - Client Wins (You keep current entity values)
 - Custom Resolution (You merge properties from database and client entity)
@@ -119,7 +119,7 @@ public void BulkSaveChanges_CustomResolution(CurrentContext ctx)
                 // ... merge all columns...
 
                 // Update the original values with the database values and 
-                // the current values with whatever the user choose. 
+                // the current values with whatever the user chooses. 
                 entry.OriginalValues.SetValues(databaseValues);
                 entry.CurrentValues.SetValues(resolvedEntity);
             }
@@ -130,9 +130,9 @@ public void BulkSaveChanges_CustomResolution(CurrentContext ctx)
 {% endhighlight %}
 
 ## Solution - BulkUpdate
-When an concurrency error happen, BulkUpdate return a **DbBulkOperationConcurrencyException** which contains all entries in error.
+When a concurrency error happens, BulkUpdate returns a **DbBulkOperationConcurrencyException** which contains all entries in error.
 
-There is three possible scenario:
+There are three possible scenarios:
 - Database Wins (You keep database values)
 - Client Wins (You keep current entity values)
 - Custom Resolution (You merge properties from database and client entity)

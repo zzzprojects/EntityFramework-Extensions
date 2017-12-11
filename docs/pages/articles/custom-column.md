@@ -3,7 +3,7 @@ permalink: custom-column
 ---
 
 ## Problem
-You want to perform a Bulk Operations (BulkInsert, BulkUpdate, BulkDelete, or BulkMerge) but only on some specific column.
+You want to perform a Bulk Operations (BulkInsert, BulkUpdate, BulkDelete, or BulkMerge) but only on some specific columns.
 
 By example, you want to perform a BulkUpdate on a customer list but only UPDATE the name and email property.
 
@@ -31,7 +31,7 @@ ctx.BulkMerge(customers, operation => operation.ColumnInputExpression =
 
 ### INSERT + Destination mapped more than once error
 You receive the following error:
-> One of your column has a destination mapped more than once. See the inner exception for details.
+> One of your columns has a destination mapped more than once. See the inner exception for details.
 
 Make sure the key has not been added to the ColumnInputExpression.
 

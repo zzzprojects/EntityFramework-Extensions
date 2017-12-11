@@ -17,9 +17,9 @@ context.BulkSaveChanges(list, options =>
 {% endhighlight %}
 
 ## Purpose
-Logging old value and new value is often useful to keep a history of change in the database or file.
+Logging old values and new values is often useful to keep history of changes in the database or file.
 
 ## FAQ
 
-### Why enabling this option decrease the performance?
+### Why enabling this option decreases the performance?
 Enabling this option will require additional data to be returned from the database.

@@ -125,7 +125,7 @@ context.BulkMerge(customers,
 		<div class="row">
 			<div class="col-lg-5 left wow slideInLeft">
 				<p>
-					Make your save operations <span class="text-z">10 to 50 times</span> faster.
+					Perform save operations <span class="text-z">10 to 50 times</span> faster.
 				</p>
 				<p>
 					Support all major providers:
@@ -236,7 +236,7 @@ context.BulkMerge(customers,
 		<h2 class="wow slideInUp">Bulk SaveChanges</h2>
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
-				<p class="feature-tagline">Add 4 letters <span class="text-z">Bulk</span> to make your application <span class="text-z">10-50 times</span> faster and more responsive.</p>
+				<p class="feature-tagline">Add the 4 letters word <span class="text-z">Bulk</span> to make your application <span class="text-z">10-50 times</span> faster and more responsive.</p>
 				<ul>
 					<li>Easy to use</li>
 					<li>Easy to customize</li>

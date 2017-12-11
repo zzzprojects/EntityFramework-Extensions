@@ -36,7 +36,7 @@ Contact us directly:
 - If your question is not suited for the Issue Tracker
 - If your message contains private information
 
-## I think I've found a new feature! What should I do?
+## I think I've found a lacking feature! What should I do?
 The best way to request a new feature is using our [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues){:target="_blank"}
 
 Contact us directly:
@@ -45,8 +45,8 @@ Contact us directly:
 - If your question is not suited for the Issue Tracker
 - If your message contains private information
 
-## I think you forget about my request! What should I do?
-Just contact us back again, and we will make sure we don't miss it again!
+## I think you forgot about my request! What should I do?
+Just contact us back again, and we will make sure we won't miss it again!
 </div>
 </div>
 		<div class="col-lg-4 order-1 order-lg-2">

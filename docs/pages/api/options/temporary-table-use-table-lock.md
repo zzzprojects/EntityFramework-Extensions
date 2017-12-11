@@ -14,4 +14,4 @@ context.BulkSaveChanges(options =>
 {% endhighlight %}
 
 ## Purpose
-Using table lock increase the overall performance when inserting into a temporary table. This option should not be disabled.
+Using table lock increases the overall performance when inserting into a temporary table. This option should not be disabled.

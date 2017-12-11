@@ -3,7 +3,7 @@ permalink: use-log-dump
 ---
 
 ## Definition
-Gets or sets if all `log` related to database event should be stored in a `LogDump` properties.
+Gets or sets if all `log` related to database event should be stored in a `LogDump` property.
 
 {% include template-example.html %} 
 {% highlight csharp %}

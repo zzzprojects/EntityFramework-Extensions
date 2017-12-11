@@ -3,10 +3,10 @@ permalink: benchmark
 ---
 
 ## Problem
-You perform benchmark test for a method like BulkSaveChanges, but you get very bad performance result.
+You perform benchmark tests for a method like BulkSaveChanges, but you get very bad performance results.
 
 ### Solution
-The performance issue may be caused by some common mistake:
+The performance issue may be caused by some common mistakes:
 
 - Forget to JIT compile the library
 - Include method not related to the test
@@ -16,17 +16,17 @@ The performance issue may be caused by some common mistake:
 ## Forget to JIT compile the library
 In C#, the code is compiled into IL by the compiler. Then when needed, the IL is compiled just-in-time (JIT) into the native assembly language of the host machine.
 
-Additionally, some library like Entity Framework requires some extra work like creating/reading the model. Some people report the first load taking several second!
+Additionally, some libraries like Entity Framework require some extra work like creating/reading the model. Some people report the first load taking several seconds!
 
-Entity Framework Extensions also take some time to be compiled. It can take around 100ms the first time you use a method! So if you include this time, your benchmark time is currently way higher at it should.
+Entity Framework Extensions also takes some time to be compiled. It can take around 100ms the first time you use a method! So if you include it this time, your benchmark time is currently way higher than it should.
 
 ### Solution
-Invoke the method once before performing the benchmark test
+Invoke the method once before performing the benchmark tests
 
 ## Include method not related to the test
-Someone once reported us a performance issue and though our BulkSaveChanges method was slow. We discovered he was including the time to Add every entity to the context.
+Someone once reported a performance issue and thought our BulkSaveChanges method was slow. We discovered he was including the time to Add every entity to the context.
 
-The Add method was taken 99,9% of the total time while BulkSaveChanges only 0,1%.
+The Add method was taking 99,9% of the total time while BulkSaveChanges only 0,1%.
 
 
 | Operations | 100 Entities | 1,000 Entities | 10,000 Entities |
@@ -43,7 +43,7 @@ The Add method doesn't affect much the performance when adding 100 entities, but
 Include only the method you want to benchmark.
 
 ## Good Example
-Here is an example how we normally do all our benchmarks tests
+Here is an example of how we normally do all our benchmarks tests
 
 ### Example
 {% include template-example.html %} 

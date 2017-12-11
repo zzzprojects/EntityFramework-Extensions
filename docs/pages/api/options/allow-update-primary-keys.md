@@ -3,7 +3,7 @@ permalink: allow-update-primary-keys
 ---
 
 ## Definition
-Gets or sets of the key must also be included in columns to `UPDATE`.
+Gets or sets if the key must also be included in columns to `UPDATE`.
 
 {% include template-example.html %} 
 {% highlight csharp %}

@@ -19,11 +19,11 @@ context.BulkInsert(list, options => options.BatchSize = 100);
 ## Purpose
 `Inserting` thousand of entities for an initial load or a file importation is a typical scenario.
 
-`SaveChanges` methods make quite impossible to handle this kind of situation directly from Entity Framework due to the number of database round-trips required.
+`SaveChanges` method makes it quite impossible to handle this kind of situation directly from Entity Framework due to the number of database round-trips required.
 
-`SaveChanges` require one database round-trip for every entity to `insert`. So if you need to `insert` 10000 entities, then 10000 database round-trip will be performed which is **INSANELY** slow.
+`SaveChanges` requires one database round-trip for every entity to `insert`. So if you need to `insert` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
 
-`BulkInsert` in counterpart require the minimum database round-trip as possible. By example under the hood for SQL Server, a simple`SqlBulkCopy` could be performed.
+`BulkInsert` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a simple`SqlBulkCopy` could be performed.
 
 ## Performance Comparisons
 
@@ -76,12 +76,12 @@ context.BulkInsert(list, options => options.IncludeGraph = true);
 {% endhighlight %}
 
 ### Why BulkInsert doesn't use the ChangeTracker?
-To provide the best performance as possible!
+To provide the best performance possible!
 
-Since using the `ChangeTracker` can greatly reduce performance, we choose to let `BulkSaveChanges` method to handle scenario with `ChangeTracker` and `BulkInsert` scenario without it.
+Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle the scenarios with `ChangeTracker` and `BulkInsert` the scenarios without it.
 
 ### Why BulkInsert is faster than BulkSaveChanges?
-The major difference between both methods is `BulkSaveChanges` use the `ChangeTracker` but not the `BulkInsert` method.
+The major difference between both methods is `BulkSaveChanges` uses the `ChangeTracker` but not the `BulkInsert` method.
 
 By skipping the `ChangeTracker`, some methods like `Add`, `AddRange`, `DetectChanges` are no longer required which greatly helps to improve the performance.
 

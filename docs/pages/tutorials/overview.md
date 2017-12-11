@@ -30,9 +30,9 @@ context.BulkMerge(customers, options =>
 ## Purpose
 Entity Framework is reputed to be very slow when saving multiple entities! The performance issue is mainly due to the **DetectChanges** method and the number of database round-trip.
 
-By example for SQL Server, for every entity you save, a database round-trip must be performed. So if you need to insert 10000 entities, then 10000 database round-trip will be performed which is **INSANELY** slow.
+By example for SQL Server, for every entity you save, a database round-trip must be performed. So if you need to insert 10000 entities, then 10000 database round-trips will be performed which makes the process **INSANELY** slow.
 
-Entity Framework Extensions in counterpart only requires a few database round-trip which greatly helps to improve the performance.
+Entity Framework Extensions in counterpart only requires a few database round-trips which greatly helps to improve the performance.
 
 ## BulkSaveChanges Method
 

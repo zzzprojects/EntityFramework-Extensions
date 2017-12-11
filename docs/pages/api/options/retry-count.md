@@ -3,7 +3,7 @@ permalink: retry-count
 ---
 
 ## Definition
-Gets or sets the maximum number of operation retry when a transient error occurs.
+Gets or sets the maximum number of operations retry when a transient error occurs.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -13,17 +13,17 @@ context.BulkSaveChanges(options => {
 {% endhighlight %}
 
 ## Purpose
-A transient error is a temporary error that is likely to disappear soon. That rarely happens may they may occur!
+A transient error is a temporary error that is likely to disappear soon. That rarely happens but they might occur!
 
-These options allow reducing a bulk operations fail by making them retry it when a transient error occurs.
+These options allow to reduce a bulk operations fail by making them retry when a transient error occurs.
 
 ## FAQ
 
-### What are transient error code supported?
-You can find a list of transient error here: [Transient fault error codes](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-develop-error-messages#transient-fault-error-codes)
+### What are transient error codes supported?
+You can find a list of transient errors here: [Transient fault error codes](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-develop-error-messages#transient-fault-error-codes)
 
-Which include common error such as:
+Which includes the most common errors such as:
 - Cannot open database
 - The service is currently busy
 - Database is not currently available
-- Not enough resource to process request
+- Not enough resources to process request

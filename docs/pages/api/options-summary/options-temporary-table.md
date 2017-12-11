@@ -12,7 +12,7 @@ permalink: temporary-table
 ---
 
 ## TemporaryTableBatchByTable
-Gets or sets the number of batches a temporary table can contain. This option may create multiple temporary tables when the number of batches to execute exceed the limit specified.
+Gets or sets the number of batches a temporary table can contain. This option may create multiple temporary tables when the number of batches to execute exceeds the specified limit.
 
 Read more: [TemporaryTableBatchByTable](temporary-table-batch-by-table)
 

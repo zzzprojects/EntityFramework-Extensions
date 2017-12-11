@@ -5,7 +5,7 @@ permalink: bulk-synchronize
 ## Definition
 `SYNCHRONIZE` all entities from the database.
 
-A synchronize is a mirror operation from the data source to the database. All rows that match the entity key are `UPDATED`, non-matching row that exists from the source are `INSERTED`, non-matching row that exists in the database are `DELETED`.
+A synchronize is a mirror operation from the data source to the database. All rows that match the entity key are `UPDATED`, non-matching rows that exist from the source are `INSERTED`, non-matching rows that exist in the database are `DELETED`.
 
 The database table becomes a mirror of the entity list provided.
 
@@ -64,7 +64,7 @@ context.BulkSynchronize(list, options => options.ColumnInputExpression = c => ne
 {% endhighlight %}
 
 ### How can I specify custom keys to use?
-You can specify custom key using the `ColumnPrimaryKeyExpression` option.
+You can specify custom keys using the `ColumnPrimaryKeyExpression` option.
 
 Read more: [ColumnPrimaryKeyExpression](/column-primary-key-expression)
 

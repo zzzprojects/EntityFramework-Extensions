@@ -2,8 +2,8 @@
 permalink: faq-installation
 ---
 
-## How to I Install your product?
-It simple, you download it from NuGet and add it to your project.
+## How to install your product?
+It is simple, you download it from NuGet and add it to your project.
 
 More Info: [Tutorials - Installing](installing)
 

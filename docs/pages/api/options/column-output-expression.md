@@ -13,4 +13,4 @@ context.BulkMerge(list, options =>
 {% endhighlight %}
 
 ## Purpose
-The `ColumnOutputExpression` option let you choose specific properties in which you want to get retrieve data from the database.
+The `ColumnOutputExpression` option lets you choose specific properties in which you want to retrieve data from the database.

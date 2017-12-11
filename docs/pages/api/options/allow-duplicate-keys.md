@@ -13,7 +13,7 @@ context.BulkMerge(list, options => options.AllowDuplicateKeys = true);
 ## Purpose
 In a rare scenario such as importing a file, a key may be used in multiple rows.
 
-In some provider such as SQL Server, the statement created by our library (`Merge`) make it impossible to use it with some duplicate keys.
+In some provider such as SQL Server, the statement created by our library (`Merge`) makes it impossible to use with some duplicate keys.
 
 By enabling this option, only the latest key is used instead.
 

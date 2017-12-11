@@ -11,6 +11,6 @@ context.BulkMerge(options => options.MergeKeepIdentity = true);
 {% endhighlight %}
 
 ## Purpose
-The `MergeKeepIdentity` option let you keep the source identity value when `merging`.
+The `MergeKeepIdentity` option lets you keep the source identity value when `merging`.
 
-By example, when importing a file, you may want to keep the value specified.
+By example, when importing a file, you may want to keep the specified value.

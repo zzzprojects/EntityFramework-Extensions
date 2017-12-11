@@ -8,7 +8,7 @@ permalink: transient-error
 ---
 
 ## RetryCount
-Gets or sets the maximum number of operation retry when a transient error occurs.
+Gets or sets the maximum number of operations retry when a transient error occurs.
 
 Read more: [RetryCount](retry-count)
 

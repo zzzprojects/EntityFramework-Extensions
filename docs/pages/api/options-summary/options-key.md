@@ -20,7 +20,7 @@ context.BulkSaveChanges(options => options.AllowDuplicateKeys = true);
 ---
 
 ## AllowUpdatePrimaryKeys
-Gets or sets of the key must also be included in columns to `UPDATE`.
+Gets or sets if the key must also be included in columns to `UPDATE`.
 
 Read more: [AllowUpdatePrimaryKeys](allow-update-primary-keys)
 

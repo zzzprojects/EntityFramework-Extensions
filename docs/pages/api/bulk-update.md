@@ -21,9 +21,9 @@ context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = cu
 
 Despite the `ChangeTracker` being outstanding to track what's modified, it lacks in term of scalability and flexibility.
 
-`SaveChanges` require one database round-trip for every entity to `update`. So if you need to `update` 10000 entities, then 10000 database round-trip will be performed which is **INSANELY** slow.
+`SaveChanges` requires one database round-trip for every entity to `update`. So if you need to `update` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
 
-`BulkUpdate` in counterpart offer great customization and require the minimum database round-trip as possible.
+`BulkUpdate` in counterpart offers great customization and requires the minimum database round-trips possible.
 
 ## Performance Comparisons
 
@@ -90,12 +90,12 @@ context.BulkUpdate(list, options => options.IncludeGraph = true);
 {% endhighlight %}
 
 ### Why BulkUpdate doesn't use the ChangeTracker?
-To provide the best performance as possible!
+To provide the best performance possible!
 
-Since using the `ChangeTracker` can greatly reduce performance, we choose to let `BulkSaveChanges` method to handle scenario with `ChangeTracker` and `BulkUpdate` scenario without it.
+Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle scenarios with `ChangeTracker` and `BulkUpdate`, scenarios without it.
 
 ### Why BulkUpdate is faster than BulkSaveChanges?
-The major difference between both methods is `BulkSaveChanges` use the `ChangeTracker` but not the `BulkUpdate` method.
+The major difference between both methods is `BulkSaveChanges` uses the `ChangeTracker` but not the `BulkUpdate` method.
 
 By skipping the `ChangeTracker`, some methods like `DetectChanges` are no longer required which greatly helps to improve the performance.
 

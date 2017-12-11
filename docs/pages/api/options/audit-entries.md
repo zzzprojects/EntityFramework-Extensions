@@ -3,7 +3,7 @@ permalink: audit-entries
 ---
 
 ## Definition
-Gets `INSERTED` and `DELETED` data when `UseAudit` option is enabled.
+Get `INSERTED` and `DELETED` data when `UseAudit` option is enabled.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -26,9 +26,9 @@ foreach (var entry in auditEntries)
 {% endhighlight %}
 
 ## Purpose
-Logging old value and new value is often useful to keep a history of change in the database or file.
+Logging old value and new value is often useful to keep a history of changes in the database or file.
 
 ## FAQ
 
-### Why enabling this option decrease the performance?
+### Why enabling this option decreases the performance?
 Enabling this option will require additional data to be returned from the database.

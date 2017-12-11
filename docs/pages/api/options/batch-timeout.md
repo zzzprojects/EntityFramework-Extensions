@@ -15,7 +15,7 @@ EntityFrameworkManager.BulkOperationBuilder = builder => builder.BatchTimeout = 
 {% endhighlight %}
 
 ## Purpose
-Having access to change the `BatchTimeout` give you the flexibility required when some operation is too slow to complete due to several reasons such as:
+Having access to change the `BatchTimeout` gives you the flexibility required when some operations are too slow to complete due to several reasons such as:
 - Batch Size
 - Column Size
 - Latency

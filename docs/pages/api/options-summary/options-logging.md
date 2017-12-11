@@ -9,7 +9,7 @@ permalink: logging
 ---
 
 ## Log
-Gets or sets an action to `log` all database event as soon as they happen.
+Gets or sets an action to `log` all database events as soon as they happen.
 
 Read more: [Log](log)
 

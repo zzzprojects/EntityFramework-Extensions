@@ -5,7 +5,7 @@ permalink: update-from-query
 ## Definition
 `UPDATE` all rows from the database using a LINQ Query without loading entities in the context.
 
-A `UPDATE` statement is built using the LINQ expression and directly executed in the database.
+An `UPDATE` statement is built using the LINQ expression and directly executed in the database.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -19,9 +19,9 @@ context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {
 {% endhighlight %}
 
 ## Purpose
-`Updating` entities using `SaveChanges` normally require to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
+`Updating` entities using `SaveChanges` normally requires to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
 
-`UpdateFromQuery` give you access to directly execute a `UPDATE` statement in the database and provide a **HUGE** performance improvement.
+`UpdateFromQuery` gives you access to directly execute an `UPDATE` statement in the database and provide a **HUGE** performance improvement.
 
 ## Performance Comparisons
 
@@ -34,6 +34,6 @@ context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {
 
 ### Why UpdateFromQuery is faster than SaveChanges, BulkSaveChanges, and BulkUpdate?
 
-`UpdateFromQuery` execute a statement directly in SQL such as `UPDATE [TableName] SET [SetColumnsAndValues] WHERE [Key]`. 
+`UpdateFromQuery` executes a statement directly in SQL such as `UPDATE [TableName] SET [SetColumnsAndValues] WHERE [Key]`. 
 
-Other operations normally require one or multiple database round-trips which make the performance slower.
+Other operations normally require one or multiple database round-trips which makes the performance slower.

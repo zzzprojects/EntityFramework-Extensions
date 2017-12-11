@@ -32,11 +32,11 @@ context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 {% endhighlight %}
 
 ## Purpose
-Using the `ChangeTracker` to detect and persist change automatically is great! However, it leads very fast to some problem when multiples entities need to be saved.
+Using the `ChangeTracker` to detect and persist changes automatically is great! However, it leads very fast to some problems when multiple entities need to be saved.
 
-`SaveChanges` method makes a database round-trip for every change. So if you need to insert 10000 entities, then 10000 database round-trip will be performed which is INSANELY slow.
+`SaveChanges` method makes a database round-trip for every change. So if you need to insert 10000 entities, then 10000 database round-trips will be performed which is INSANELY slow.
 
-`BulkSaveChanges` work exactly like `SaveChanges` but reduce the number of database round-trips required to greatly helps to improve the performance.
+`BulkSaveChanges` works exactly like `SaveChanges` but reduces the number of database round-trips required to greatly help improve the performance.
 
 ## Performance Comparisons
 

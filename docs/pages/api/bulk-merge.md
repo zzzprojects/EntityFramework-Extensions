@@ -21,9 +21,9 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = cus
 
 Despite the `ChangeTracker` being outstanding to track what's modified, it lacks in term of scalability and flexibility.
 
-`SaveChanges` require one database round-trip for every entity to `insert` or `update`. So if you need to `insert` or `update` 10000 entities, then 10000 database round-trip will be performed which is **INSANELY** slow.
+`SaveChanges` requires one database round-trip for every entity to `insert` or `update`. So if you need to `insert` or `update` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
 
-`BulkMerge` in counterpart offer great customization and require the minimum database round-trip as possible.
+`BulkMerge` in counterpart offers great customization and requires the minimum database round-trips as possible.
 
 ## Performance Comparisons
 
@@ -82,7 +82,7 @@ context.BulkMerge(list, options =>
 {% endhighlight %}
 
 ### How can I specify custom keys to use?
-You can specify custom key using the `ColumnPrimaryKeyExpression` option.
+You can specify custom keys using the `ColumnPrimaryKeyExpression` option.
 
 Read more: [ColumnPrimaryKeyExpression](/column-primary-key-expression)
 
@@ -106,9 +106,9 @@ context.BulkMerge(list, options => options.IncludeGraph = true);
 {% endhighlight %}
 
 ### Why BulkMerge doesn't use the ChangeTracker?
-To provide the best performance as possible!
+To provide the best performance possible!
 
-Since using the `ChangeTracker` can greatly reduce performance, we choose to let `BulkSaveChanges` method to handle scenario with `ChangeTracker` and `BulkMerge` scenario without it.
+Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle scenarios with `ChangeTracker` and `BulkMerge`, scenarios without it.
 
 ## Related Articles
 - [How to Benchmark?](benchmark)

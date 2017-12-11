@@ -5,9 +5,9 @@ permalink: improve-bulk-savechanges
 ## Introduction
 BulkSaveChanges is already very fast. But you can make it even faster by simply turning off the "EntityFrameworkPropagation" options.
 
-While the performance will be significantly increased, this option works with  99,9% of models. Unfortunately, we cannot turn this options by default for backward compatibility until we make it work with all models
+While the performance will be significantly increased, this option works with  99,9% of models. Unfortunately, we cannot turn this option on by default for backward compatibility until we make it work with all models
 
-We are currently working on the next major version which will have performance even better!
+We are currently working on the next major version which will have even better performances!
 
 [Learn - Why turning off Entity Framework Propagation is faster](#why-turning-off-entity-framework-propagation-is-faster)
 
@@ -38,7 +38,7 @@ ctx.BulkSaveChanges(false);
 | BulkSaveChanges()      | 90 ms          | 150 ms         | 350 ms         |
 | BulkSaveChanges(false) | 60 ms          | 70 ms          | 140 ms         |
 
-For SQL Server, performance improvment is around 2x faster.
+For SQL Server, performance improvement is around 2x faster.
 
 For some provider like SQLite, performance improvement can be as high as 10x faster.
 
@@ -50,6 +50,6 @@ For some provider like SQLite, performance improvement can be as high as 10x fas
 > These limitations will be fixed in the next major version.
 
 ## Why turning off Entity Framework Propagation is faster
-Unfortunately, Entity Framework is very slow at generating commands to be executed. For some provider, it takes more time to generate these queries than executing them!
+Unfortunately, Entity Framework is very slow at generating commands to be executed. For some providers, it takes more time to generate these queries than executing them!
 
-When turning off, the library does not longer use the method from Entity Framework but internal method from our library.
+When turning off, the library does no longer use the methods from Entity Framework but internal methods from our library.

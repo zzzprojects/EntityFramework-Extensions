@@ -64,7 +64,7 @@ context.BulkMerge(list, options =>
 {% endhighlight %}
 
 ## Ignore On Merge Insert
-Gets or sets columns to ignore when the `BulkMerge` method execute the `insert` statement.
+Gets or sets columns to ignore when the `BulkMerge` method executes the `insert` statement.
 
 Read more: [Column Ignore on Merge Insert](ignore-on-merge-update-expression)
 
@@ -76,7 +76,7 @@ context.BulkMerge(list, options =>
 {% endhighlight %}
 
 ## Ignore On Merge Update
-Gets or sets columns to ignore when the `BulkMerge` method execute the `update` statement.
+Gets or sets columns to ignore when the `BulkMerge` method executes the `update` statement.
 
 Read more: [Column Ignore on Merge Update](ignore-on-merge-update-expression)
 

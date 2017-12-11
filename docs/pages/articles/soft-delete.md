@@ -19,7 +19,7 @@ using (var ctx = new CurrentContext())
 {% endhighlight %}
 
 ### Solution
-You can use the **EntityFrameworkManager.PreBulkSaveChanges** property to change state & value from entities prior the BulkSaveChanges get executed
+You can use the **EntityFrameworkManager.PreBulkSaveChanges** property to change state & value from entities prior to the BulkSaveChanges execution
 
 ### Example
 
@@ -62,7 +62,7 @@ using (var ctx = new CurrentContext())
 {% endhighlight %}
 
 ### Solution
-Unfortunately, there is no way to SoftDelete using BulkDelete. Since BulkDelete doesn't use ChangeTracker for optimization reason, you will have to implement yourself an extension method to handle this scenario.
+Unfortunately, there is no way to SoftDelete using BulkDelete. Since BulkDelete doesn't use ChangeTracker for optimization reasons, you will have to implement yourself an extension method to handle this scenario.
 
 ### Example
 

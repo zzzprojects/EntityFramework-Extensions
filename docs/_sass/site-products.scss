@@ -3,9 +3,7 @@
 	text-align: center;
 }
 .site-products h3 {
-    color: #000;
-    font-size: 2.5rem;
-    text-decoration: underline;
+	color: #fff;
 }
 .site-products ul {
     list-style-type: none;
@@ -14,8 +12,24 @@
 .site-products ul li {
     padding: 7px 0;
 }
-.site-products a {
+.site-products  a {
 	color: #c00;
+}
+.site-products .modal-body {
+	background: #333;
+	background: -webkit-radial-gradient(circle, #333, #111);
+	background: -o-radial-gradient(circle, #333, #111);
+	background: -moz-radial-gradient(circle, #333, #111);
+	background: radial-gradient(circle, #333, #111);
+}
+.site-products .modal-body h3 {
+	color: #fff;
+	fong-size: 700;
+	background: #777;
+	padding: 10px;
+}
+.site-products .modal-body a {
+	color: #fff;
 }
 @media (max-width: 991px) {
 	.site-products .breadcrumb  {

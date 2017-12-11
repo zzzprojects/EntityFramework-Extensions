@@ -18,7 +18,7 @@ Another thread have already performed the operation.
 
 ### Fix
 
-There is three possible resolution:
+There are three possible resolutions:
 
 - Database Win
 - Client Win
@@ -115,7 +115,7 @@ public void BulkSaveChanges_CustomResolution(CurrentContext ctx)
                 // ... merge all columns...
 
                 // Update the original values with the database values and 
-                // the current values with whatever the user choose. 
+                // the current values with whatever the user chooses. 
                 entry.OriginalValues.SetValues(databaseValues);
                 entry.CurrentValues.SetValues(resolvedEntity);
             }

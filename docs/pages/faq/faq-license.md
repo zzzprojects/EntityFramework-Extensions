@@ -9,12 +9,12 @@ A developer seat is a developer working for your company and developing code dir
 
 You don't have to purchase developer seat for front-end developer or back-end developer which doesn't use our product API.
 
-Since you buy developer seat, you can develop an unlimited amount of project within your company.
+Since you buy developer seats, you can develop an unlimited amount of projects within your company.
 
-### What's the cost for additional developer seat?
-The cost for additional developer seat is usually extremely low. We want to make sure our library is accessible for small and large company.
+### What's the cost for additional developer seats?
+The cost for additional developer seats is usually extremely low. We want to make sure our library is accessible for small and large company.
 
-### Do developer seat are transferable?
+### Are developer seats transferable?
 Yes, a developer seat can be transferred to any employee within your company.
 
 ## Perpertual License
@@ -27,30 +27,30 @@ Yes.
 
 ## Support & Upgdrade
 
-### My support & upgrade have expired! What will happen?
-Don't worry. Your product continue to work forever!
+### My support & upgrade period is expired! What will happen?
+Don't worry. Your product keeps on working forever!
 
 You can still download and use any version released before the support & upgrade expiration date.
 
-You will need to renew to use version released after the support & upgrade expiration date.
+You will need to renew your license to use version released after the support & upgrade expiration date.
 
 ### How do I renew my License?
-We usually start to send renewal mail two months before the support & upgrade expiration date.
+We usually start to send renewal mails two months before the support & upgrade expiry date.
 
 If you didn't receive such email, you could contact us directly: info@zzzprojects.com
 
-### Can I have renewal discount?
-We provide a 25% discount to early renewal. So anyone renewing before the support & upgrade expiration date automatically get a renewal discount.
+### Can I have a renewal discount?
+We provide a 25% discount to early renewal. Anyone renewing before the support & upgrade expiration date automatically gets a renewal discount.
 
 ### I'm too late for early renewal discount! What can I do?
-If you are few day late, we still provide early renewal discount.
+If you are few days late, we still provide early renewal discount.
 
 However, if you have few months late, you will need to purchase the library again.
 
 The best way to find out if you still have access to early renewal discount is by contacting us: info@zzzprojects.com
 
 ### Why should I renew?
-Renewing your support & upgrade give the following benefits:
+Renewing your support & upgrade gives the following benefits:
 
 - Major version releases and new product features
 - Fast support by mail
@@ -61,7 +61,7 @@ Renewing your support & upgrade give the following benefits:
 ### Can I install Entity Framework Extensions on Client Machine?
 Yes, the product is royalty free.
 
-That mean, you paid for developer seat, but customer using your product doesn't have to pay.
+That means, you paid for developer seat, but customers using your product don't have to pay us.
 
 ### Is Entity Framework Extensions Royalty Free?
 Yes, the product is royalty free.

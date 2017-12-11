@@ -108,38 +108,38 @@ permalink: pricing
 ---
 ## FAQ
 
-### Which payment alternative method are accepted?
+### Which payment alternative methods are accepted?
 We accept `PayPal`, `Cheque` and `Wire Transfer`.
 
-We **DO NOT** accept bitcoin  and credit card.
+We **DO NOT** accept bitcoins and credit cards.
 
 Please contact us for more information.
 
 Email: <a href="mailto:sales@zzzprojects.com">sales@zzzprojects.com</a>
 
-### Do you accept reseller?
+### Do you accept resellers?
 Yes contact us if you are a reseller or seeking for a reseller.
 
 Email: <a href="mailto:sales@zzzprojects.com">sales@zzzprojects.com</a>
 
 ### What `2-4` developer seats mean?
-It mean that you can use the license with up 4 developers inside your team.
+It mean that you can use the license with up to 4 developers inside your team.
 
 The `5-9` developer seats mean you can use the license with up 9 developers.
 
-You only pay for developer seats. You can use our library with an unlimited amount of application, environment, server, and client machine.
+You only pay for developer seats. You can use our library with an unlimited amount of applications, environments, servers, and client machines.
 
 ### I need more than `19 seats`, what can I do?
-Please contact us with the number of seats required. We offer some additional great discount or enterprise license.
+Please contact us with the number of seats required. We offer some additional discounts or enterprise licenses.
 
 Email: <a href="mailto:sales@zzzprojects.com">sales@zzzprojects.com</a>
 
 ### Is the license perpetual?
-The product comes with a one year of support & upgrade but the license is perpetual (indefinitely use). So you are not forced to renew every year or renew at all.
+The product comes with one year of support & upgrades but the license is perpetual (indefinitely useable). So you are not obligated to renew every year or renew at all.
 
-Renewing come with a lot of benefits such as a 25%/35%/50% discount on purchase price, discounted or free product, etc.
+Renewing comes with a lot of benefits such as a 25%/35%/50% discount on purchased price, discounted or free products, etc.
 
-### Why this library is not free and open source?
+### Why isn't this library free and open source?
 `ZZZ Projects` mission is focused on adding value to the `.NET Community` and supporting a lot of `free and open source` libraries.
 
 However, this mission cannot be successful without being able to pay our developers for the time they pass to support & develop features for free and paid libraries.

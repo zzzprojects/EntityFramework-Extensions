@@ -17,11 +17,11 @@ EntityFrameworkManager.BulkOperationBuilder = builder => builder.BatchDelayInter
 {% endhighlight %}
 
 ## Purpose
-Having access to add a delay interval between batch may help to let to responsivity to other applications by giving them a chance to insert data during the delay time.
+Having access to add a delay interval between batches may help to give responsivity to other applications by giving them a chance to insert data during the delay time.
 
 ## FAQ
 
-### Why should I not use this options with transaction?
+### Why should I not use this option with transaction?
 You should not because if may often lead to lock and deadlock.
 
-A transaction must be a short as possible and completed as soon as possible.
+A transaction must be as short as possible and completed as soon as possible.

@@ -14,13 +14,13 @@ Most common solutions usually involve:
 - Disabling Change Validation
 - Disabling Proxy
 
-Some of these solutions are good, some lead to side impact and none of them fix the main issue: One database round-trip is made for every entity you save!
-So if you have 5000 entities to insert, 5000 databases round trip will be executed which are **INSANELY** slow.
+Some of these solutions are good, some lead to side impacts and none of them fix the main issue: One database round-trip is made for every entity you save!
+So if you have 5000 entities to insert, 5000 databases round trips will be executed which is **INSANELY** slow.
 
 A very common mistake is believing the AddRange method perform a Bulk Insert. Using the AddRange method greatly improve the performance because it calls the DetectChanges method only once after all entities are added to the change tracker. However, the SaveChanges method will still make one database round-trip per entity.
 
 ### Solution
-To solve the performance problem, you need to reduce the number of database round-trip, and this is exactly what Entity Framework Extensions made by ZZZ Projects do by providing the BulkInsert method and all other bulk operations:
+To solve the performance problem, you need to reduce the number of database round-trips, and this is exactly what Entity Framework Extensions made by ZZZ Projects do by providing the BulkInsert method and all other bulk operations:
 
 -	[BulkSaveChanges](#ef-bulksavechanges)
 -	[BulkInsert](#ef-bulkinsert)
@@ -28,23 +28,23 @@ To solve the performance problem, you need to reduce the number of database roun
 -	[BulkDelete](#ef-bulkdelete)
 -	[BulkMerge](#ef-bulkmerge)
 
-With this library, only a few database round-trip will now be required when saving 5000 entities which can lead to performance improvement by 50x time and more.
+With this library, only a few database round-trips will now be required when saving 5000 entities which can lead to performance improvement by 50x times and more.
 
 You can find the library documentation here: [EFE – Tutorials](http://entityframework-extensions.net/tutorials)
 
-Getting started with this library cannot be easier. You download it using [NuGet](https://www.nuget.org/packages/Z.EntityFramework.Extensions/){:target="_blank"}, and all bulk method are automatically available from your context instance since methods extend the DbContext class.
+Getting started with this library could not be easier. You download it using [NuGet](https://www.nuget.org/packages/Z.EntityFramework.Extensions/){:target="_blank"}, and all bulk methods are automatically available from your context instance since methods extend the DbContext class.
 
-Without having to configure anything, all models and scenarios are supported such Code First, Database First, Inheritances (TPC, TPH, and TPT), Relationship, and everything else!
+Without having to configure anything, all models and scenarios are supported such as Code First, Database First, Inheritances (TPC, TPH, and TPT), Relationship, and everything else!
 
 ## EF BulkSaveChanges
-BulkSaveChanges method works like SaveChanges but perform save operations (INSERT, UPDATE, and DELETE) way faster.
-There are multiple options available such:
+BulkSaveChanges method works like SaveChanges but performs save operations (INSERT, UPDATE, and DELETE) way faster.
+There are multiple options available such as:
 
 - Disable Concurrency Check
 - Disable Entity Framework Propagation for better performance
 - Update Modified values only
 
-This method is normally recommended over bulk method such as Bulk Insert since it acts like SaveChanges by using the Change Tracker and propagating the value.
+This method is normally recommended over bulk methoda such as Bulk Insert since it acts like SaveChanges by using the Change Tracker and propagating the value.
 
 Tutorial: [EFE – Bulk SaveChanges](http://entityframework-extensions.net/bulk-savechanges)
 
@@ -63,7 +63,7 @@ ctx.BulkSaveChanges(options =>
 
 ## EF BulkInsert
 BulkInsert method performs an INSERT operation and outputs the identity value.
-There are multiple options available such:
+There are multiple options available such as:
 
 -	Custom Column
 -	Disabled output value for better performance
@@ -111,7 +111,7 @@ ctx.BulkUpdate(customers, options =>
 ## EF BulkDelete
 BulkDelete method performs a DELETE operation.
 
-There are multiple options available such:
+There are multiple options available such as:
 
 - Custom Key
 -	Disable Concurrency Check
@@ -132,7 +132,7 @@ ctx.BulkDelete(list, options =>
 ## EF BulkMerge
 BulkMerge method performs an UPSERT operation and outputs the identity value. Existing entities matching the key are updated, and newly entities are inserted.
 
-There are multiple options available such:
+There are multiple options available such as:
 
 -	Custom Column
 -	Custom Column (Insert Only)
@@ -161,9 +161,9 @@ ctx.BulkMerge(list, options =>
 ## Conclusion
 Entity Framework Extensions is well tested with over 10k unit tests and currently used by thousands of company all around the world. Without a doubt, it is the ultimate library to improve your performance with Entity Framework.
 
-One the negative side, this library is not free.
+On the negative side, this library is not free.
 
-ZZZ Projects give back value to the .NET community by supporting some other free libraries, tutorials and sponsoring project such as:
+ZZZ Projects gives back value to the .NET community by supporting some other free libraries, tutorials and sponsoring project such as:
 
 - [Entity Framework Plus](http://entityframework-plus.net/){:target="_blank"}
 - [Html Agility Pack](http://html-agility-pack.net/){:target="_blank"}
