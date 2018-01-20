@@ -10,58 +10,13 @@ The latest version always contains a trial that expires at the end of the month.
 
 ## Step 1 - NuGet Download
 
-Choose the Entity Framework version and the Package Manager you want to use to download **Entity Framework Extensions**.
+Go to the download page and choose the right Entity Framework version for your project.
 
-<div class="row">
-	<div class="col-lg-6">
-		<div class="card card-layout-z2 wow slideInLeft">
-			<div class="card-header wow slideInDown">
-				<h3>Entity Framework 6 (EF6)</h3>
-			</div>
-			<div class="card-body wow slideInUp">
-				<a class="btn btn-lg btn-z" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" onclick="ga('send', 'event', { eventAction: 'download'});" style="visibility: visible; animation-name: pulse;">
-					<i class="fa fa-cloud-download" aria-hidden="true"></i>
-					NuGet Download
-				</a>
-				<div>Download Count:</div>
-				<div class="download-count2"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-big-d.svg"></div>
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-6">
-		<div class="card card-layout-z2 wow slideInRight">
-			<div class="card-header wow slideInDown">
-				<h3>Entity Framework Core (EF Core)</h3>
-			</div>
-			<div class="card-body wow slideInUp">
-				<a class="btn btn-lg btn-z" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/" onclick="ga('send', 'event', { eventAction: 'download'});" style="visibility: visible; animation-name: pulse;">
-					<i class="fa fa-cloud-download" aria-hidden="true"></i>
-					NuGet Download							
-				</a>
-				<div>Download Count:</div>
-				<div class="download-count2"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-efcore-big-d.svg"></div>
-			</div>
-		</div>
-	</div>
-</div>
-<br /><br /><br />
-<div class="row">
-	<div class="col-lg-6">
-		<div class="card card-layout-z2 wow slideInLeft">
-			<div class="card-header wow slideInDown">
-				<h3>Entity Framework 5 (EF5)</h3>
-			</div>
-			<div class="card-body wow slideInUp">
-				<a class="btn btn-lg btn-z" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" onclick="ga('send', 'event', { eventAction: 'download'});" style="visibility: visible; animation-name: pulse;">
-					<i class="fa fa-cloud-download" aria-hidden="true"></i>
-					NuGet Download							
-				</a>
-				<div>Download Count:</div>
-				<div class="download-count2"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-ef5-big-d.svg"></div>
-			</div>
-		</div>
-	</div>
-</div>
+<a class="btn btn-lg btn-z" role="button" href="/download" onclick="ga('send', 'event', { eventAction: 'download'});">
+	<i class="fa fa-cloud-download" aria-hidden="true"></i>
+	Download
+	<i class="fa fa-angle-right"></i>
+</a>
 
 ## Step 2 - Done
 

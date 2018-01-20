@@ -2,11 +2,12 @@
 permalink: download
 ---
 
-<div class="page-download-nuget">
-	<div class="container">
+<div class="row">
+	<div class="col-lg-8 order-2 order-lg-1 wow slideInLeft">
+
 		<div class="row">
 			<div class="col-lg-6">
-				<div class="card card-layout-z2 wow slideInLeft">
+				<div class="card card-box card-box-dark wow slideInLeft">
 					<div class="card-header wow slideInDown">
 						<h3>
 							<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank"
@@ -15,8 +16,8 @@ permalink: download
 							</a>
 						</h3>						
 					</div>
-					<div class="card-body wow slideInUp">
-						<a class="btn btn-xl btn-z wow zoomIn" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank"
+					<div class="card-body text-center wow slideInUp">
+						<a class="btn btn-lg btn-z wow zoomIn" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank"
 								onclick="ga('send', 'event', { eventAction: 'download-ef6'});">
 							<i class="fa fa-cloud-download" aria-hidden="true"></i>
 							NuGet Download
@@ -32,17 +33,17 @@ permalink: download
 				</div>
 			</div>
 			<div class="col-lg-6">
-				<div class="card card-layout-z2 wow slideInRight">
+				<div class="card card-box card-box-dark wow slideInRight">
 					<div class="card-header wow slideInDown">
 						<h3>
 							<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/" target="_blank"
 									onclick="ga('send', 'event', { eventAction: 'download-efcore'});">
-								Entity Framework Core (EF Core)
+								Entity Framework Core
 							</a>
 						</h3>
 					</div>
-					<div class="card-body wow slideInUp">
-						<a class="btn btn-xl btn-z wow zoomIn" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/" target="_blank"
+					<div class="card-body text-center wow slideInUp">
+						<a class="btn btn-lg btn-z wow zoomIn" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/" target="_blank"
 								onclick="ga('send', 'event', { eventAction: 'download-efcore'});">
 							<i class="fa fa-cloud-download" aria-hidden="true"></i>
 							NuGet Download							
@@ -60,7 +61,7 @@ permalink: download
 		</div>
 		<div class="row">
 			<div class="col-lg-6">
-				<div class="card card-layout-z2 wow slideInLeft">
+				<div class="card card-box card-box-dark wow slideInLeft">
 					<div class="card-header wow slideInDown">
 						<h3>
 							<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"
@@ -69,8 +70,8 @@ permalink: download
 							</a>
 						</h3>
 					</div>
-					<div class="card-body wow slideInUp">
-						<a class="btn btn-xl btn-z wow zoomIn" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"
+					<div class="card-body text-center wow slideInUp">
+						<a class="btn btn-lg btn-z wow zoomIn" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"
 								onclick="ga('send', 'event', { eventAction: 'download-ef5'});">
 							<i class="fa fa-cloud-download" aria-hidden="true"></i>
 							NuGet Download							
@@ -85,7 +86,50 @@ permalink: download
 					</div>
 				</div>
 			</div>
+			<div class="col-lg-6">
+				<div class="card card-box card-box-dark wow slideInLeft">
+					<div class="card-header wow slideInDown">
+						<h3>
+							<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF4/" target="_blank"
+									onclick="ga('send', 'event', { eventAction: 'download-ef4'});">
+								Entity Framework 4 (EF4)
+							</a>
+						</h3>
+					</div>
+					<div class="card-body text-center wow slideInUp">
+						<a class="btn btn-lg btn-z wow zoomIn" role="button" href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF4/" target="_blank"
+								onclick="ga('send', 'event', { eventAction: 'download-ef4'});">
+							<i class="fa fa-cloud-download" aria-hidden="true"></i>
+							NuGet Download							
+						</a>
+						<div class="download-count-text">Download Count:</div>
+						<div class="download-count wow lightSpeedIn">
+							<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF4/" target="_blank"
+									onclick="ga('send', 'event', { eventAction: 'download-ef4'});">
+								<img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-ef4-big-d.svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
+	<div class="col-lg-4 order-1 order-lg-2">
+		<div class="card card-box card-box-light wow slideInRight">
+			<div class="card-header">
+				<h2>Contact Us</h2>
+			</div>
+			<div class="card-body">
+				<ul>
+					<li>Got a question?</li>
+					<li>Need help?</li>
+					<li>Performance not as good as expected?</li>
+				</ul>
+				Make sure to contact us, we are always here to help you.
+				<a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>
+			</div>
+		</div>
+		<br /><br />
 	</div>
 </div>
 
@@ -123,24 +167,27 @@ By contributing on paid libraries, you are also helping in keeping other librari
 </div>
 
 <style>
-.page-download-nuget {
+.page-download {
 	margin-top: 150px;
 }
-.page-download-nuget .btn-z {
+.page-download .btn-z {
 	margin-bottom: 50px;
 }
-.page-download-nuget .download-count-text {
+.page-download .download-count-text {
 	color: #888;
 	font-size: 1.25rem;
 }
-.page-download-nuget .row .col-lg-6 {
+.page-download .row .col-lg-6 {
 	margin-bottom: 60px;
 }
+.page-download .download-count img {
+	width: 250px;
+}
 @media (max-width: 575px) {
-	.page-download-nuget .card-layout-z2 img {
+	.page-download .card-layout-z2 img {
 		width: 90%;
 	}
-	.page-download-nuget .btn-z {
+	.page-download .btn-z {
 		font-size: 1.5rem;
 	}
 }

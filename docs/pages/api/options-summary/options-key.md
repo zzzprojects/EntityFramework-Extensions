@@ -2,11 +2,6 @@
 permalink: key
 ---
 
-- [AllowDuplicateKeys](#allowduplicatekeys)
-- [AllowUpdatePrimaryKeys](#allowupdateprimarykeys)
-
----
-
 ## AllowDuplicateKeys
 Gets or sets if a duplicate key is possible in the source.
 

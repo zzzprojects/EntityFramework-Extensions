@@ -2,15 +2,6 @@
 permalink: column
 ---
 
-- [Column Input](#column-input)
-- [Column Output](#column-output)
-- [Column InputOutput](#column-inputoutput)
-- [Column Primary Key](#column-primary-key)
-- [Column Ignore On Merge Insert](#ignore-on-merge-insert)
-- [Column Ignore On Merge Update](#ignore-on-merge-update)
-
---- 
-
 ## Column Input
 Gets or sets columns to map with the direction `Input`.
 

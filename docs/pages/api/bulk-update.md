@@ -32,6 +32,7 @@ Despite the `ChangeTracker` being outstanding to track what's modified, it lacks
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkUpdate      | 50 ms          | 55 ms          | 65 ms          |
 
+{% include section-faq-begin.html %}
 ## FAQ
 
 ### How can I specify more than one option?
@@ -98,6 +99,7 @@ Since using the `ChangeTracker` can greatly reduce performance, we chose to let 
 The major difference between both methods is `BulkSaveChanges` uses the `ChangeTracker` but not the `BulkUpdate` method.
 
 By skipping the `ChangeTracker`, some methods like `DetectChanges` are no longer required which greatly helps to improve the performance.
+{% include section-faq-end.html %}
 
 ## Related Articles
 

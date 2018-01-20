@@ -13,7 +13,7 @@ permalink: pricing
 				You must read and agree to the License Agreement.
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-z" data-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
@@ -23,25 +23,25 @@ permalink: pricing
 <div class="container">
 
 	<div class="row">
-		<div class="col-lg-7 purchasing-step wow slideInUp">
-
+		<div class="col-lg-7 purchasing-step wow slideInLeft">
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" onsubmit="return purchase_validate()">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="currency_code" value="USD">
 				<input type="hidden" name="on0" value="Seats">
 				
 				<h2>Step 1 - Choose License</h2>
-				<div style="width: 450px;">
+				<div class="step-1">
 					<div class="form-group">
 						<label class="form-label form-label-lg">Provider:</label> 
 						<select id="provider_type" name="hosted_button_id" class="form-control" onchange="selectProduct()">
-							<option value="GS977QXB98R2C">SQL Server & SQL Azure</option>							
+									<option value="TSCGQDC4YR2MQ">ALL Providers</option>	
+							<option value="GS977QXB98R2C" selected>SQL Server & SQL Azure</option>		
+											
 							<option value="32JM43GUXW4ZW">MySQL</option>
 							<option value="27ML36DSMHEQA">Oracle</option>
 							<option value="TSCZ2KCM9QBVY">PostgreSQL</option>
 							<option value="55WDUT7ENJBKU">SQLite</option>
-							<option value="5WVPWVNDGRHH6">SQL Compact</option>							
-							<option value="TSCGQDC4YR2MQ">ALL Providers</option>
+							<option value="5WVPWVNDGRHH6">SQL Compact</option>				
 						</select> 
 					</div>
 					<label class="form-label form-label-lg">Seat:</label> 
@@ -72,40 +72,35 @@ permalink: pricing
 	
 		<div class="col-lg-5">
 		
-			<div class="card card-layout-z1 wow slideInRight">
+			<div class="card card-box card-box-light wow slideInRight">
 				<div class="card-header">
-					<h2>What is included?</h2>
+					<h2>Not ready yet?</h2>
 				</div>
 				<div class="card-body">
-					<h3>Bulk Operations</h3>
-					<ul>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Bulk SaveChanges</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Bulk Insert</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Bulk Update</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Bulk Delete</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Bulk Merge</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Bulk Synchronize</li>
-					</ul>
-					<h3>Batch Operations</h3>
-					<ul>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Delete from Query</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Update from Query</li>
-					</ul>
+					<h3>Free trial</h3>
+					<p>Download our <a href="http://localhost:4000/download">monthly trial</a></p>
+					<p>Extend your trial for several months by downloading the latest version at the begining of every month.</p>
 					<h3>License</h3>
-					<ul>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Commercial License</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Royalty-Free</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;Support & Upgrades (1 year)</li>
+					The license include:
+					<ul class="list-checked">
+						<li>All bulk extensions methods</li>
+						<li>Commercial License</li>
+						<li>Royalty-Free</li>
+						<li>Support & Upgrades (1 year)</li>
 					</ul>
+					<h3>Question</h3>
+					<p>Contact us: {% include mail-sales.html %}</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container section-faq wow slideInUp">
-	<div markdown="1">
 ---
+
+<div class="container section-faq wow slideInLeft">
+{% include section-faq-begin.html %}
+
 ## FAQ
 
 ### Which payment alternative methods are accepted?
@@ -161,32 +156,8 @@ However, this mission cannot be successful without being able to pay our develop
 
 By contributing on paid libraries, you are also helping in keeping other libraries and website FREE.
 
+{% include section-faq-end.html %}
 </div>
-</div>
-
-<style>
-.purchasing-step {
-	margin-top: 60px;
-}
-.purchasing-step h2 {
-	padding-bottom: 5px;
-	margin-bottom: 20px;
-	margin-top: 40px;
-	font-size: 2.5rem;
-	border-bottom: 1px solid #ddd;
-}
-.purchasing-step .more-option {
-	font-style: italic;
-	margin-top: 40px;
-	margin-bottom: 40px;
-}
-
-
-
-
-
-
-</style>
 
 <script>
 function purchase_validate() {

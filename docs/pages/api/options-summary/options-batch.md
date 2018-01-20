@@ -2,12 +2,6 @@
 permalink: batch
 ---
 
-- [BatchSize](#batchsize)
-- [BatchTimeout](#batchtimeout)
-- [BatchDelayInterval](#batchDelayInterval)
-
----
-
 ### BatchSize
 Gets or sets the number of records to use in a batch.
 

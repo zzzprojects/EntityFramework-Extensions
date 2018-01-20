@@ -1,77 +1,77 @@
-permalink,title,meta-description,meta-keywords,h1,h2,nagivation,template
-index,Learn how to use Entity Framework Bulk Insert with Tutorials & Examples for Code First & Database First.,Learn how to use Entity Framework Bulk Insert with Tutorials & Examples for Code First & Database First.,,,,,full
-/404.html,Page Moved,Page Moved,,Page Moved,,,container-h1
-download,Download,Download,,Download,,no,full-h1
-pricing,Purchase,Purchase,,Purchase,,no,full-h1
-contact-us,Contact Us,Contact Us,,Contact Us,,no,full-h1
-tutorials,Tutorials,Tutorials,,Tutorials,,,container-h1
-overview,Overview,Overview,,Overview,,,
-requirements,Requirements,Requirements,,Requirements,,,
-installing,Installing,Installing,,Installing,,,
-upgrading,Upgrading,Upgrading,,Upgrading,,,
-licensing,Licensing,Licensing,,Licensing,,,
-tutorial-bulk-savechanges,Bulk SaveChanges,Bulk SaveChanges,,Bulk SaveChanges,,,
-tutorial-bulk-operations,Bulk Operations,Bulk Operations,,Bulk Operations,,,
-tutorial-batch-operations,Batch Operations,Batch Operations,,Batch Operations,,,
-api,API,API,,API,,,
-bulk-savechanges,Bulk SaveChanges,Bulk SaveChanges,,Bulk SaveChanges,,,
-bulk-insert,Bulk Insert,Bulk Insert,,Bulk Insert,,,
-bulk-update,Bulk Update,Bulk Update,,Bulk Update,,,
-bulk-delete,Bulk Delete,Bulk Delete,,Bulk Delete,,,
-bulk-merge,Bulk Merge,Bulk Merge,,Bulk Merge,,,
-bulk-synchronize,Bulk Synchronize,Bulk Synchronize,,Bulk Synchronize,,,
-update-from-query,Update from Query,Update from Query,,Update from Query,,,
-delete-from-query,Delete from Query,Delete from Query,,Delete from Query,,,
-audit,Audit,Audit,,Audit,,,
-batch,Batch,Batch,,Batch,,,
-column,Column,Column,,Column,,,
-execute-event,Execute Event,Execute Event,,Execute Event,,,
-identity,Identity,Identity,,Identity,,,
-key,Key,Key,,Key,,,
-logging,Logging,Logging,,Logging,,,
-temporary-table,Temporary Table,Temporary Table,,Temporary Table,,,
-transient-error,Transient Error,Transient Error,,Transient Error,,,
-sql-server,SQL Server,SQL Server,,SQL Server,,,
-faq,FAQ,FAQ,,FAQ,,,
-issue-tracker,Issue Tracker,Issue Tracker,,Issue Tracker,,,
-faq-general,FAQ - General,FAQ - General,,FAQ - General,,,
-faq-installation,FAQ - Installation,FAQ - Installation,,FAQ - Installation,,,
-faq-license,FAQ - License,FAQ - License,,FAQ - License,,,
-problems,Problems,Problems,,Problems,,,
-trial-period-expired-exception,Trial Expired,Trial Expired,,Trial Expired,,,
-md5-exception,MD5 Exception,MD5 Exception,,MD5 Exception,,,
-dbupdateconcurrency-exception,DbUpdateConcurrency,DbUpdateConcurrency,,DbUpdateConcurrency,,,
-dbbulkoperationconcurrency-exception,DbBulkOperationConcurrency,DbBulkOperationConcurrency,,DbBulkOperationConcurrency,,,
-foreign-key-constraint-autodetectchanges-disabled,Foreign Key Constraint,Foreign Key Constraint,,Foreign Key Constraint,,,
-type-not-supported-exception,Type not Supported,Type not Supported,,Type not Supported,,,
-allow-concurrency,allow-concurrency,allow-concurrency,,allow-concurrency,,no,
-allow-duplicate-keys,allow-duplicate-keys,allow-duplicate-keys,,allow-duplicate-keys,,no,
-allow-update-primary-keys,allow-update-primary-keys,allow-update-primary-keys,,allow-update-primary-keys,,no,
-audit-entries,audit-entries,audit-entries,,audit-entries,,no,
-batch-delay-interval,batch-delay-interval,batch-delay-interval,,batch-delay-interval,,no,
-batch-size,batch-size,batch-size,,batch-size,,no,
-batch-timeout,batch-timeout,batch-timeout,,batch-timeout,,no,
-bulk-operation-executed,bulk-operation-executed,bulk-operation-executed,,bulk-operation-executed,,no,
-bulk-operation-executing,bulk-operation-executing,bulk-operation-executing,,bulk-operation-executing,,no,
-column-input-expression,column-input-expression,column-input-expression,,column-input-expression,,no,
-column-output-expression,column-output-expression,column-output-expression,,column-output-expression,,no,
-column-primary-key-expression,column-primary-key-expression,column-primary-key-expression,,column-primary-key-expression,,no,
-include-graph,include-graph,include-graph,,include-graph,,no,
-ignore-on-merge-insert-expression,ignore-on-merge-insert-expression,ignore-on-merge-insert-expression,,ignore-on-merge-insert-expression,,no,
-ignore-on-merge-update-expression,ignore-on-merge-update-expression,ignore-on-merge-update-expression,,ignore-on-merge-update-expression,,no,
-insert-keep-identity,insert-keep-identity,insert-keep-identity,,insert-keep-identity,,no,
-log,log,log,,log,,no,
-log-dump,log-dump,log-dump,,log-dump,,no,
-merge-keep-identity,merge-keep-identity,merge-keep-identity,,merge-keep-identity,,no,
-retry-count,retry-count,retry-count,,retry-count,,no,
-retry-interval,retry-interval,retry-interval,,retry-interval,,no,
-sql-bulk-copy-options,sql-bulk-copy-options,sql-bulk-copy-options,,sql-bulk-copy-options,,no,
-synchronize-keep-identity,synchronize-keep-identity,synchronize-keep-identity,,synchronize-keep-identity,,no,
-temporary-table-batch-by-table,temporary-table-batch-by-table,temporary-table-batch-by-table,,temporary-table-batch-by-table,,no,
-temporary-table-insert-batch-size,temporary-table-insert-batch-size,temporary-table-insert-batch-size,,temporary-table-insert-batch-size,,no,
-temporary-table-min-record,temporary-table-min-record,temporary-table-min-record,,temporary-table-min-record,,no,
-temporary-table-schema-name,temporary-table-schema-name,temporary-table-schema-name,,temporary-table-schema-name,,no,
-temporary-table-use-table-lock,temporary-table-use-table-lock,temporary-table-use-table-lock,,temporary-table-use-table-lock,,no,
-use-audit,use-audit,use-audit,,use-audit,,no,
-use-log-dump,use-log-dump,use-log-dump,,use-log-dump,,no,
-use-permanent-table,use-permanent-table,use-permanent-table,,use-permanent-table,,no,
+permalink,title,meta-description,meta-keywords,h1,h2,h3,nagivation,template,css
+index,Learn how to use Entity Framework Bulk Insert with Tutorials & Examples for Code First & Database First.,Learn how to use Entity Framework Bulk Insert with Tutorials & Examples for Code First & Database First.,,,,,,full,
+/404.html,Page Moved,Page Moved,,Page Moved,,,,container-h1,section-article
+download,Download,Download,,Download,Free monthly trial available,,no,container,section-article
+pricing,Purchase,Purchase,,Purchase,"Unlock better performance, be more responsive!",,no,container,section-article
+contact-us,Contact Us,Contact Us,,Test our oustanding support,"We usually answer within the next business day, hour, or minutes!",,no,container,section-article
+tutorials,Tutorials,Tutorials,,Tutorials,,,,container,section-article
+overview,Overview,Overview,,Overview,,,,container-sidebar,section-article
+requirements,Requirements,Requirements,,Requirements,,,,container-sidebar,section-article
+installing,Installing,Installing,,Installing,,,,container-sidebar,section-article
+upgrading,Upgrading,Upgrading,,Upgrading,,,,container-sidebar,section-article
+licensing,Licensing,Licensing,,Licensing,,,,container-sidebar,section-article
+tutorial-bulk-savechanges,Bulk SaveChanges,Bulk SaveChanges,,Bulk SaveChanges,,,,container-sidebar,section-article
+tutorial-bulk-operations,Bulk Operations,Bulk Operations,,Bulk Operations,,,,container-sidebar,section-article
+tutorial-batch-operations,Batch Operations,Batch Operations,,Batch Operations,,,,container-sidebar,section-article
+api,API,API,,API,,,,container-sidebar,section-article
+bulk-savechanges,Bulk SaveChanges,Bulk SaveChanges,,Bulk SaveChanges,,,,container-sidebar,section-article
+bulk-insert,Bulk Insert,Bulk Insert,,Bulk Insert,,,,container-sidebar,section-article
+bulk-update,Bulk Update,Bulk Update,,Bulk Update,,,,container-sidebar,section-article
+bulk-delete,Bulk Delete,Bulk Delete,,Bulk Delete,,,,container-sidebar,section-article
+bulk-merge,Bulk Merge,Bulk Merge,,Bulk Merge,,,,container-sidebar,section-article
+bulk-synchronize,Bulk Synchronize,Bulk Synchronize,,Bulk Synchronize,,,,container-sidebar,section-article
+update-from-query,Update from Query,Update from Query,,Update from Query,,,,container-sidebar,section-article
+delete-from-query,Delete from Query,Delete from Query,,Delete from Query,,,,container-sidebar,section-article
+audit,Audit,Audit,,Audit,,,,container-sidebar,section-article
+batch,Batch,Batch,,Batch,,,,container-sidebar,section-article
+column,Column,Column,,Column,,,,container-sidebar,section-article
+execute-event,Execute Event,Execute Event,,Execute Event,,,,container-sidebar,section-article
+identity,Identity,Identity,,Identity,,,,container-sidebar,section-article
+key,Key,Key,,Key,,,,container-sidebar,section-article
+logging,Logging,Logging,,Logging,,,,container-sidebar,section-article
+temporary-table,Temporary Table,Temporary Table,,Temporary Table,,,,container-sidebar,section-article
+transient-error,Transient Error,Transient Error,,Transient Error,,,,container-sidebar,section-article
+sql-server,SQL Server,SQL Server,,SQL Server,,,,container-sidebar,section-article
+faq,FAQ,FAQ,,FAQ,,,,container-sidebar,section-article
+issue-tracker,Issue Tracker,Issue Tracker,,Issue Tracker,,,,container-sidebar,section-article
+faq-general,FAQ - General,FAQ - General,,FAQ - General,,,,container-sidebar,section-article
+faq-installation,FAQ - Installation,FAQ - Installation,,FAQ - Installation,,,,container-sidebar,section-article
+faq-license,FAQ - License,FAQ - License,,FAQ - License,,,,container-sidebar,section-article
+problems,Problems,Problems,,Problems,,,,container-sidebar,section-article
+trial-period-expired-exception,Trial Expired,Trial Expired,,Trial Expired,,,,container-sidebar,section-article
+md5-exception,MD5 Exception,MD5 Exception,,MD5 Exception,,,,container-sidebar,section-article
+dbupdateconcurrency-exception,DbUpdateConcurrency,DbUpdateConcurrency,,DbUpdateConcurrency,,,,container-sidebar,section-article
+dbbulkoperationconcurrency-exception,DbBulkOperationConcurrency,DbBulkOperationConcurrency,,DbBulkOperationConcurrency,,,,container-sidebar,section-article
+foreign-key-constraint-autodetectchanges-disabled,Foreign Key Constraint,Foreign Key Constraint,,Foreign Key Constraint,,,,container-sidebar,section-article
+type-not-supported-exception,Type not Supported,Type not Supported,,Type not Supported,,,,container-sidebar,section-article
+allow-concurrency,allow-concurrency,allow-concurrency,,allow-concurrency,,,no,container-sidebar,section-article
+allow-duplicate-keys,allow-duplicate-keys,allow-duplicate-keys,,allow-duplicate-keys,,,no,container-sidebar,section-article
+allow-update-primary-keys,allow-update-primary-keys,allow-update-primary-keys,,allow-update-primary-keys,,,no,container-sidebar,section-article
+audit-entries,audit-entries,audit-entries,,audit-entries,,,no,container-sidebar,section-article
+batch-delay-interval,batch-delay-interval,batch-delay-interval,,batch-delay-interval,,,no,container-sidebar,section-article
+batch-size,batch-size,batch-size,,batch-size,,,no,container-sidebar,section-article
+batch-timeout,batch-timeout,batch-timeout,,batch-timeout,,,no,container-sidebar,section-article
+bulk-operation-executed,bulk-operation-executed,bulk-operation-executed,,bulk-operation-executed,,,no,container-sidebar,section-article
+bulk-operation-executing,bulk-operation-executing,bulk-operation-executing,,bulk-operation-executing,,,no,container-sidebar,section-article
+column-input-expression,column-input-expression,column-input-expression,,column-input-expression,,,no,container-sidebar,section-article
+column-output-expression,column-output-expression,column-output-expression,,column-output-expression,,,no,container-sidebar,section-article
+column-primary-key-expression,column-primary-key-expression,column-primary-key-expression,,column-primary-key-expression,,,no,container-sidebar,section-article
+include-graph,include-graph,include-graph,,include-graph,,,no,container-sidebar,section-article
+ignore-on-merge-insert-expression,ignore-on-merge-insert-expression,ignore-on-merge-insert-expression,,ignore-on-merge-insert-expression,,,no,container-sidebar,section-article
+ignore-on-merge-update-expression,ignore-on-merge-update-expression,ignore-on-merge-update-expression,,ignore-on-merge-update-expression,,,no,container-sidebar,section-article
+insert-keep-identity,insert-keep-identity,insert-keep-identity,,insert-keep-identity,,,no,container-sidebar,section-article
+log,log,log,,log,,,no,container-sidebar,section-article
+log-dump,log-dump,log-dump,,log-dump,,,no,container-sidebar,section-article
+merge-keep-identity,merge-keep-identity,merge-keep-identity,,merge-keep-identity,,,no,container-sidebar,section-article
+retry-count,retry-count,retry-count,,retry-count,,,no,container-sidebar,section-article
+retry-interval,retry-interval,retry-interval,,retry-interval,,,no,container-sidebar,section-article
+sql-bulk-copy-options,sql-bulk-copy-options,sql-bulk-copy-options,,sql-bulk-copy-options,,,no,container-sidebar,section-article
+synchronize-keep-identity,synchronize-keep-identity,synchronize-keep-identity,,synchronize-keep-identity,,,no,container-sidebar,section-article
+temporary-table-batch-by-table,temporary-table-batch-by-table,temporary-table-batch-by-table,,temporary-table-batch-by-table,,,no,container-sidebar,section-article
+temporary-table-insert-batch-size,temporary-table-insert-batch-size,temporary-table-insert-batch-size,,temporary-table-insert-batch-size,,,no,container-sidebar,section-article
+temporary-table-min-record,temporary-table-min-record,temporary-table-min-record,,temporary-table-min-record,,,no,container-sidebar,section-article
+temporary-table-schema-name,temporary-table-schema-name,temporary-table-schema-name,,temporary-table-schema-name,,,no,container-sidebar,section-article
+temporary-table-use-table-lock,temporary-table-use-table-lock,temporary-table-use-table-lock,,temporary-table-use-table-lock,,,no,container-sidebar,section-article
+use-audit,use-audit,use-audit,,use-audit,,,no,container-sidebar,section-article
+use-log-dump,use-log-dump,use-log-dump,,use-log-dump,,,no,container-sidebar,section-article
+use-permanent-table,use-permanent-table,use-permanent-table,,use-permanent-table,,,no,container-sidebar,section-article

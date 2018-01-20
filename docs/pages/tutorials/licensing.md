@@ -9,7 +9,7 @@ permalink: licensing
 - If you want to use the library for personal use or educational purpose, it's possible by downloading the latest version once a month.
 
 ## How can I purchase the library?
-- You can purchase the library [here](http://entityframework-extensions.net/#pro)
+- You can purchase the library [here](pricing)
 - Upon purchase, you will receive an email with a license name and a license key.
 - Make sure to check your **SPAM** folder if you don't receive the license within 24h.
 

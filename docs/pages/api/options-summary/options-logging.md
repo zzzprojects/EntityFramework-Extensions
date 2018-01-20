@@ -2,12 +2,6 @@
 permalink: logging
 ---
 
-- [Log](#log)
-- [UseLogDump](#uselogdump)
-- [LogDump](#logdump)
-
----
-
 ## Log
 Gets or sets an action to `log` all database events as soon as they happen.
 

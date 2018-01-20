@@ -1,0 +1,31 @@
+.purchasing-step {
+	margin-top: 60px;
+}
+.purchasing-step h2 {
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	margin-top: 40px;
+	font-size: 2.5rem;
+	border-bottom: 1px solid #ddd;
+}
+.purchasing-step .more-option {
+	font-style: italic;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.purchasing-step a {
+	color: #c00;
+}
+
+.page-pricing .bg-danger {
+	@include background-red;
+	color: #fff;
+}
+.page-pricing .step-1 {
+	width: 450px;
+}
+@media (max-width: 575px) {
+	.page-pricing .step-1 {
+		width: 350px;
+	}
+}

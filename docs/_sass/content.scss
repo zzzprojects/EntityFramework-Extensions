@@ -1,0 +1,12 @@
+//
+// list-checked
+//
+ul.list-checked {
+	margin: 20px 0;
+}
+.list-checked li {
+	background: rgba(0, 0, 0, 0) url("../images/list-checked.png") no-repeat scroll 0 center;
+	line-height: 30px;
+	list-style: outside none none;
+	padding-left: 30px;
+}

@@ -1,0 +1,38 @@
+.btn-z {
+	background: rgb(204, 0, 0);
+	background: -webkit-radial-gradient(circle, rgb(204, 0, 0), rgb(170, 0, 0), rgb(154, 0, 0));
+	background: -o-radial-gradient(circle, rgb(204, 0, 0), rgb(170, 0, 0), rgb(154, 0, 0));
+	background: -moz-radial-gradient(circle, rgb(204, 0, 0), rgb(170, 0, 0), rgb(154, 0, 0));
+	background: radial-gradient(circle, rgb(204, 0, 0), rgb(170, 0, 0), rgb(154, 0, 0));
+    border-color: rgb(154, 0, 0);
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.48);
+    color: #fff;
+    font-weight: 600;
+	text-shadow: 2px -1px rgba(0, 0, 0, 0.7);
+}
+.btn-z:hover {
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid $color-z;
+    color: $color-z;
+    text-shadow: 2px -1px transparent;
+}
+.btn-xl {
+	border-radius: 0.3rem;
+    font-size: 2rem;
+    line-height: 1.75;
+    padding: 0.5rem 1rem;
+}
+.btn-sm {
+	font-size: 1rem;
+	padding: 5px 15px;
+}
+span.text-z {
+	color: $color-z;
+}
+
+.list-underline li {
+	text-decoration: underline;
+}
+.list-light li a {
+	color: $color-light;
+}

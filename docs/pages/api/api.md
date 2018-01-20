@@ -4,7 +4,7 @@ permalink: api
 
 <div class="card-group">
 	
-		<div class="card">
+		<div class="card card-box card-box-light">
 			<div class="card-header">
 				<h2>Methods</h2>
 			</div>
@@ -32,7 +32,7 @@ permalink: api
 		</div>
 	
 
-		<div class="card">
+		<div class="card card-box card-box-light">
 			<div class="card-header">
 				<h2>Options</h2>
 			</div>

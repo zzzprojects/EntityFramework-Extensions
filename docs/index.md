@@ -4,9 +4,7 @@ permalink: index
 ---
 
 <!-- hero !-->
-<div class="layout-angle">
-	<div class="top-triangle wow slideInRight" data-wow-duration="1.5s"></div>
-	<div class="layout-angle-inner">
+{% include component-rotator-dark-begin.html %}
 <div class="hero">
 	<div class="container">
 		<div class="row">
@@ -27,29 +25,33 @@ permalink: index
 					</a>
 				</div>
 				
+				<div class="text-muted font-italic">
+					*Free monthly trial available
+				</div>
+				
 				<div class="download-count">
 					<div class="item-text">Download Count:</div>
-					<div class="item-image wow lightSpeedIn"><img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-big-d.svg" /></div>
+					<div class="item-image wow lightSpeedIn">
+						<img src="https://zzzprojects.github.io/images/nuget/entity-framework-extensions-big-d.svg" />
+					</div>
 				</div>
 
-				
 			</div>
 			
 			<div class="col-lg-7 hero-examples">
 			
 				<div class="row hero-examples-1">
 				
-				
 					<div class="col-lg-3 wow slideInUp"> 
-						<h5 class="wow rollIn">EASY TO<br />USE</h5>
+						<h3 class="wow rollIn">Save<br />10x to 50x<br />Faster</h3>
 						<div class="hero-arrow hero-arrow-ltr">
-							<img src="images/arrow-down1.png">
+							<img src="images/arrow.png">
 						</div>
 					</div>
 
 					<div class="col-lg-9 wow slideInRight">
-						<div class="card card-code card-code-dark-inverse">
-							<div class="card-header">Extend Entity Framework DbContext</div>
+						<div class="card card-code card-code-light">
+							<div class="card-header"><h5>Zero configuration required</h5></div>
 							<div class="card-body">
 {% highlight csharp %}
 // Bulk Operations
@@ -69,30 +71,32 @@ context.Customers.Where(x => !x.IsActif)
 							</div>
 						</div>
 					</div>
+					
 				</div>
 				
 				<div class="row hero-examples-2">
 				
 					<div class="col-lg-3 order-lg-2 wow slideInDown">
-						<h5 class="wow rollIn">EASY TO<br />CUSTOMIZE</h5>
+						<h3 class="wow rollIn">Overcome<br />EF<br />Limitations</h3>
 						<div class="hero-arrow hero-arrow-rtl">
-							<img src="images/arrow-down1.png">
+							<img src="images/arrow.png">
 						</div>
 					</div>
 					
 					<div class="col-lg-9 order-lg-1 wow slideInLeft">
-						<div class="card card-code card-code-dark-inverse">
-							<div class="card-header">Flexible and feature-rich API</div>
+						<div class="card card-code card-code-light">
+							<div class="card-header"><h5>Over 100 customizations available</h5></div>
 							<div class="card-body">
-{% highlight csharp %}// Allow custom key	
+{% highlight csharp %}
+// Include childs entities
+context.BulkMerge(customers, 
+	options => options.IncludeGraph = true);
+});
+
+// Use custom key
 context.BulkMerge(customers, options => {
    options.ColumnPrimaryKeyExpression = 
         customer => customer.Code;
-});
-
-// Allow child entities
-context.BulkMerge(customers, 
-	options => options.IncludeGraph = true);
 });
 {% endhighlight %}
 							</div>
@@ -105,22 +109,12 @@ context.BulkMerge(customers,
 		</div>
 	</div>	
 </div>
-	</div>
-	<div class="bottom-triangle-outer">
-		<div class="bottom-triangle wow slideInLeft" data-wow-duration="1.5s"></div>
-	</div>
-</div>
-<style>
-.hero {
-	background: transparent;
-}
-</style>
+{% include component-rotator-dark-end.html %}
 
 <!-- featured !-->
 <div class="featured">
 	<div class="container">
-	
-		<!-- Improve Performance !-->
+
 		<h2 class="wow slideInUp">Improve SaveChanges <span class="text-z">Performance</span></h2>
 		<div class="row">
 			<div class="col-lg-5 left wow slideInLeft">
@@ -128,17 +122,16 @@ context.BulkMerge(customers,
 					Perform save operations <span class="text-z">10 to 50 times</span> faster.
 				</p>
 				<p>
-					Support all major providers:
-				</p>
-				
-				<ul class="featured-list-sm">
-					<li><i class="fa fa-check-square-o"></i>&nbsp;SQL Server 2008+</li>
-					<li><i class="fa fa-check-square-o"></i>&nbsp;SQL Azure</li>
-					<li><i class="fa fa-check-square-o"></i>&nbsp;SQL Compact</li>
-					<li><i class="fa fa-check-square-o"></i>&nbsp;MySQL</li>					
-					<li><i class="fa fa-check-square-o"></i>&nbsp;Oracle</li>
-					<li><i class="fa fa-check-square-o"></i>&nbsp;PostgreSQL</li>
-					<li><i class="fa fa-check-square-o"></i>&nbsp;SQLite</li>					
+					All major providers supported:
+				</p>				
+				<ul class="list-checked">
+					<li>SQL Server 2008+</li>
+					<li>SQL Azure</li>
+					<li>SQL Compact</li>
+					<li>MySQL</li>					
+					<li>Oracle</li>
+					<li>PostgreSQL</li>
+					<li>SQLite</li>					
 				</ul>	
 			</div>
 			<div class="col-lg-7 right wow slideInRight">
@@ -192,52 +185,71 @@ context.BulkMerge(customers,
 				</table>
 
 				<p class="text-muted">* Benchmark for SQL Server</p>
+
 			</div>
 		</div>
 	</div>
 </div>
 
 <div class="testimonials">
-{% include layout-angle-begin.html %}
+{% include component-rotator-dark-begin.html %}
 	<div class="container">
-		<h2>Amazing <span class="text-z">performance</span>, outstanding <span class="text-z">support</span>!</h2>
+		<h2>Trusted by thousands around the world!</h2>
 		
-		<blockquote class="blockquote text-center wow slideInLeft">
-			<p class="mb-0">We were very, very pleased with the customer support. There was no question, problem or wish that was not answered AND solved within days! We think that’s very unique!</p>
-			<footer class="blockquote-footer">Klemens Stelzmüller, <a href="http://www.beka-software.at/" target="_blank">Beka-software</a></footer>
-		</blockquote>
-		<blockquote class="blockquote text-center wow slideInRight">
-			<p class="mb-0">I’d definitely recommend it as it is a great product with a great performance and reliability.</p>
-			<footer class="blockquote-footer">Eric Rey, <a href="http://www.transturcarrental.com/" target="_blank">Transtur</a></footer>
-		</blockquote>
-		<blockquote class="blockquote text-center wow slideInLeft">
-			<p class="mb-0">It’s great. It took me 5 minutes to implement it and makes my application 100x more responsive for certain database operations.</p>
-			<footer class="blockquote-footer">Dave Weisberg</footer>
-		</blockquote>
+		<div class="row">
+			<div>
+				<h3 class="text-center">More than <span class="text-z">2000</span> satisfied customers spreaded across over <span class="text-z">75</span> countries </h3>
+				
+				<hr />
+				
+				<blockquote class="blockquote text-center" style="visibility: visible; animation-name: slideInLeft;">
+					<p class="mb-0 wow slideInLeft">We had a particularly large (500,000 entities) EF save operations that was taking 12 minutes, this is now down to 30 seconds.</p>
+					<footer class="blockquote-footer wow slideInRight" style="visibility: visible; animation-name: slideInRight;">
+						Stewart Menday, Australia, New South Wales
+						<div><a href="https://www.hvccc.com.au/" target="_blank">HVCCC</a></div>
+					</footer>
+				</blockquote>
+				
+				<blockquote class="blockquote text-center" style="visibility: visible; animation-name: slideInLeft;">
+					<p class="mb-0 wow slideInLeft">That's really cool! I didn't actually expect you to build a new release in just a day, to be honest, but this is really awesome</p>
+					<footer class="blockquote-footer wow slideInRight" style="visibility: visible; animation-name: slideInRight;">
+						Kimwan Ogot, USA, Minneapolis
+						<div><a href="https://magenic.com/" target="_blank">Magenic</a></div>
+					</footer>
+				</blockquote>
+				
+				<blockquote class="blockquote text-center" style="visibility: visible; animation-name: slideInLeft;">
+					<p class="mb-0 wow slideInLeft">I would absolutely recommend your product. It is  simple, cheap, effective.</p>
+					<footer class="blockquote-footer wow slideInRight" style="visibility: visible; animation-name: slideInRight;">
+						Marc Zabal, USA, Arkansas
+						<div><a href="http://instanext.com/" target="_blank">InstaNext Inc.</a></div>
+					</footer>
+				</blockquote>			
 
-		<div class="more">
-			<a href="http://www.zzzprojects.com/testimonials/" target="_blank" class="btn btn-lg btn-z" role="button"
-					onclick="ga('send', 'event', { eventAction: 'testimonials'});">
-				<i class="fa fa-comments"></i>&nbsp;
-				Read More Testimonials
-			</a>
+				<div class="more">
+					<a href="http://www.zzzprojects.com/testimonials/" target="_blank" class="btn btn-lg btn-z" role="button"
+							onclick="ga('send', 'event', { eventAction: 'testimonials'});">
+						<i class="fa fa-comments"></i>&nbsp;
+						Read More Testimonials
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
-{% include layout-angle-end.html %}
+{% include component-rotator-dark-end.html %}
 </div>
-
 
 <!-- features !-->
 <div class="features">
 
 	<div class="container">
-		
-		<!-- Bulk SaveChanges !-->
-		<h2 class="wow slideInUp">Bulk SaveChanges</h2>
+
+		<!-- Bulk SaveChanges  !-->
+		<h2 class="wow slideInUp"><span class="text-z">Bulk</span> SaveChanges</h2>
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
-				<p class="feature-tagline">Add the 4 letters word <span class="text-z">Bulk</span> to make your application <span class="text-z">10-50 times</span> faster and more responsive.</p>
-				<ul>
+				<p class="feature-tagline">Make your applications 10x to 50x times more <span class="text-z">scalable</span> without any configuration and effort.</p>
+				<ul class="list-checked">
 					<li>Easy to use</li>
 					<li>Easy to customize</li>
 					<li>Easy to maintain</li>
@@ -250,8 +262,8 @@ context.BulkMerge(customers,
 				</div>	
 			</div>
 			<div class="col-lg-7 wow slideInRight">
-				<div class="card card-code card-code-light">
-					<div class="card-header">Bulk SaveChanges Examples</div>
+				<div class="card card-code card-code-dark">
+					<div class="card-header"><h5>Bulk SaveChanges Examples</h5></div>
 					<div class="card-body">
 {% highlight csharp %}
 // Easy to use
@@ -267,12 +279,12 @@ context.BulkSaveChanges(options => options.BatchSize = 1000);
 
 		<hr class="m-y-md" />
 		
-		<!-- Bulk Operations !-->
-		<h2 class="wow slideInUp">Bulk Operations</h2>
+		<!-- Bulk Operations  !-->
+		<h2 class="wow slideInUp"><span class="text-z">Bulk</span> Operations</h2>
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
-				<p class="feature-tagline">Add the maximum <span class="text-z">flexibility</span> to cover every scenario.</p>
-				<ul>
+				<p class="feature-tagline">Add <span class="text-z">flexibility</span> to your toolbox to cover your scenarios with the best performance.</p>
+				<ul class="list-checked">
 					<li>Bulk Insert</li>
 					<li>Bulk Update</li>
 					<li>Bulk Delete</li>
@@ -287,20 +299,19 @@ context.BulkSaveChanges(options => options.BatchSize = 1000);
 				</div>	
 			</div>
 			<div class="col-lg-7 wow slideInRight">
-				<div class="card card-code card-code-light">
-					<div class="card-header">Bulk Operations Examples</div>
+				<div class="card card-code card-code-dark">
+					<div class="card-header"><h5>Bulk Operations Examples</h5></div>
 					<div class="card-body">
 {% highlight csharp %}
+// Include childs entities
+context.BulkMerge(customers, 
+	options => options.IncludeGraph = true);
+});
 
-// Allow custom key	
+// Use custom key
 context.BulkMerge(customers, options => {
    options.ColumnPrimaryKeyExpression = 
         customer => customer.Code;
-});
-
-// Allow child entities
-context.BulkMerge(customers, 
-	options => options.IncludeGraph = true);
 });
 {% endhighlight %}	
 					</div>
@@ -311,11 +322,11 @@ context.BulkMerge(customers,
 		<hr class="m-y-md" />
 		
 		<!-- Batch Operations !-->
-		<h2 class="wow slideInUp">Batch Operations</h2>
+		<h2 class="wow slideInUp"><span class="text-z">Batch</span> Operations</h2>
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
-				<p class="feature-tagline">Perform bulk operations from LINQ Query without loading entities in the context.</p>
-				<ul>
+				<p class="feature-tagline">Perform your operations from LINQ Query without loading entities in the context.</p>
+				<ul class="list-checked">
 					<li>DeleteFromQuery</li>
 					<li>UpdateFromQuery</li>
 				</ul>
@@ -327,8 +338,8 @@ context.BulkMerge(customers,
 				</div>	
 			</div>
 			<div class="col-lg-7 wow slideInRight">
-				<div class="card card-code card-code-light">
-					<div class="card-header">Batch Operations Examples</div>
+				<div class="card card-code card-code-dark">
+					<div class="card-header"><h5>Batch Operations Examples</h5></div>
 					<div class="card-body">
 {% highlight csharp %}
 // DELETE all inactive customers 
@@ -337,20 +348,82 @@ context.Customers.Where(x => !x.IsActif)
 	   
 // UPDATE all inactive customers
 context.Customers.Where(x => !x.IsActif)
-       .UpdateFromQuery(x => 
-            new Customer {IsActif = true});
+       .UpdateFromQuery(x => new Customer {IsActif = true});
 {% endhighlight %}	
 					</div>
 				</div>
 			</div>
 		</div>
 		
-		<!-- more-feature !-->
+		<!-- more-feature  
 		<div class="more">
 			<a href="{{ site.github.url }}/tutorials" class="btn btn-z btn-xl" role="button">
 				<i class="fa fa-book"></i>&nbsp;Read Tutorials
 			</a>
 		</div>
-		
+		!-->
 	</div>
+</div>
+
+<div class="testimonials about-us">
+{% include component-rotator-dark-begin.html %}
+	<div class="container">
+		<h2>About ZZZ Projects</h2>
+		<hr />
+<!--
+We are different
+	- Free and open source
+	- Prime ->  redonner
+	- Customer service
+
+<!--
+		<p class="text-center">
+			ZZZ Projects is a new kind of company
+		</p>!-->
+		<p class="text-center">
+			Our mission is to <span class="text-z">add value</span> to the <span class="text-z2">.NET Community</span> by supporting some of the most popular free & open source libraries.
+		</p>
+		<p class="text-center">
+			Hundreds of thousands of people visit us every month, and we count over <span class="text-z">10 million</span> downloads.
+		</p>
+		<hr />
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-4">
+				<h3>Summary</h3>
+				<ul>
+					<li>Founded: 2014</li>
+					<li>Founder: Jonathan Magnan</li>
+					<li>Customers: 2000+</li>
+					<li>Countries: 75+</li>
+					<li>Closed Request: 3000+</li>
+					<li>Projects: 20+</li>
+				</ul>
+				
+			</div>
+			<div class="col-lg-5">
+				<h3>Free Projects</h3>
+				<ul class="list-underline list-light">
+					<li><a href="http://entityframework-plus.net/">Entity Framework Plus</a></li>
+					<li><a href="http://entityframework-dynamicfilters.net/">Entity Framework Dynamic Filters</a></li>
+					<li><a href="http://entityframework-effort.net/">Entity Framework Effort</a></li>	
+					<li><a href="https://github.com/zzzprojects/EntityFramework.Extended">Entity Framework Extended</a></li>
+					<li><a href="http://entityframework-faq.net/">Entity Framework FAQ</a></li>	
+					<li><a href="https://github.com/zzzprojects/GraphDiff">Entity Framework GraphDiff</a></li>
+					<li><a href="http://www.zzzprojects.com/">View More...</a></li>
+				</ul>
+			</div>			
+		</div>
+		<!--
+		<div style="padding-left: 450px; padding-top: 60px;padding-bottom: 60px;">
+			<a href="http://www.zzzprojects.com/testimonials/" target="_blank" class="btn btn-lg btn-z" role="button"
+					onclick="ga('send', 'event', { eventAction: 'testimonials'});">
+				<i class="fa fa-comments"></i>&nbsp;
+				More Projects
+			</a>
+		</div>
+		!-->
+
+	</div>
+{% include component-rotator-dark-end.html %}
 </div>

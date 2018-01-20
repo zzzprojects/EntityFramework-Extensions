@@ -32,6 +32,7 @@ context.BulkInsert(list, options => options.BatchSize = 100);
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkInsert      | 6 ms           | 10 ms          | 15 ms          |
 
+{% include section-faq-begin.html %}
 ## FAQ
 
 ### How can I specify more than one option?
@@ -84,10 +85,9 @@ Since using the `ChangeTracker` can greatly reduce performance, we chose to let 
 The major difference between both methods is `BulkSaveChanges` uses the `ChangeTracker` but not the `BulkInsert` method.
 
 By skipping the `ChangeTracker`, some methods like `Add`, `AddRange`, `DetectChanges` are no longer required which greatly helps to improve the performance.
+{% include section-faq-end.html %}
 
 ## Related Articles
 
 - [How to Benchmark?](benchmark)
 - [How to use Custom Column?](custom-column)
-
-

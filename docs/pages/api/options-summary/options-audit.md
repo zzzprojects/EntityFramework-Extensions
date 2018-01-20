@@ -2,11 +2,6 @@
 permalink: audit
 ---
 
-- [UseAudit](#useaudit)
-- [AuditEntries](#auditentries)
-
---- 
-
 ## UseAudit
 Gets or sets if `INSERTED` and `DELETED` data from the database should be returned as `AuditEntries`.
 

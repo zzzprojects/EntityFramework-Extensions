@@ -30,6 +30,7 @@ context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkSynchronize | 55 ms          | 65 ms          | 85 ms          |
 
+{% include section-faq-begin.html %}
 ## FAQ
 
 ### How can I specify more than one option?
@@ -76,6 +77,7 @@ context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression
 // Surrogate Key
 context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
 {% endhighlight %}
+{% include section-faq-end.html %}
 
 ## Related Articles
 - [How to Benchmark?](benchmark)

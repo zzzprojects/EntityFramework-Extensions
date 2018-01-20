@@ -28,6 +28,7 @@ context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | DeleteFromQuery | 1 ms           | 1 ms           | 1 ms           |
 
+{% include section-faq-begin.html %}
 ## FAQ
 
 ### Why DeleteFromQuery is faster than SaveChanges, BulkSaveChanges, and BulkDelete?
@@ -35,3 +36,4 @@ context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
 `DeleteFromQuery` executes a statement directly in SQL such as `DELETE FROM [TableName] WHERE [Key]`. 
 
 Other operations normally require one or multiple database round-trips which makes the performance slower.
+{% include section-faq-end.html %}

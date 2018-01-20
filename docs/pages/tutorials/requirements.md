@@ -9,6 +9,7 @@ permalink: requirements
 - Entity Framework Core 2.x
 - Entity Framework 6.x
 - Entity Framework 5
+- Entity Framework 4
 
 ## Database Provider
 
@@ -19,9 +20,3 @@ permalink: requirements
 - MySQL
 - PostgreSQL
 - SQLite
-
-## Under Development
-
-- Entity Framework Core currently only supports SQL Server 2008+, SQL Azure, PostgreSQL
-- Firebird Provider
-- Entity Framework 4

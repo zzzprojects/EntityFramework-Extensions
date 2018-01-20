@@ -4,7 +4,7 @@ permalink: bulk-savechanges
 
 ## Definition
 
-[BulkSaveChanges](bulk-savechanges) method is the upgraded version of `SaveChanges`.
+BulkSaveChanges method is the upgraded version of `SaveChanges`.
 
 All changes made in the context are persisted in the database but way faster by reducing the number of database round-trip required!
 
@@ -45,6 +45,7 @@ Using the `ChangeTracker` to detect and persist changes automatically is great! 
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkSaveChanges | 90 ms          | 150 ms         | 350 ms         |
 
+{% include section-faq-begin.html %}
 ## FAQ
 
 ### How can I specify more than one option?
@@ -77,6 +78,7 @@ Read more: [AllowConcurrency](/allow-concurrency)
 {% highlight csharp %}
 context.BulkSaveChanges(options => options.AllowConcurrency = false);
 {% endhighlight %}
+{% include section-faq-end.html %}
 
 ## Related Articles
 

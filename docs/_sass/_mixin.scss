@@ -1,0 +1,67 @@
+$color-z: #c00;
+
+$color-light: #fff;
+$color-dark: #000;
+
+
+$box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+$box-shadow-dark: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+$link-color: #c00;
+
+$font-size-xl: 1.5rem;
+$font-size-lg: 1.25rem;
+$font-size-md: 1.125rem;
+$font-weight-light: 300;
+$margin-section: 60px;
+$padding-section: 60px;
+$margin-header-bottom: 20px;
+$margin-section-sm: 20px;
+$padding-md: 5px;
+
+$font-size-home-h2: 3rem;
+$background-black-transparent: rgba(0, 0, 0, 0.7);
+$background-black-transparent-hover: rgba(0, 0, 0, 0.9);
+$border-dark: 1px solid #000;
+$box-shadow-dark: 10px 10px #333;
+$box-shadow-light: 10px 10px #999;
+$text-shadow-lg: 2px -1px rgba(0, 0, 0, 0.7);
+$text-shadow-xl: 2px -1px rgba(0, 0, 0, 0.7);
+$margin-bottom-header: 30px;
+
+@mixin background-black { 
+	background: #222;
+	background: -moz-radial-gradient(circle, #333, #111);
+    background: -webkit-radial-gradient(circle, #333, #111);
+    background: -ms-radial-gradient(circle, #333, #111);
+    background: -o-radial-gradient(circle, #333, #111);
+    background: radial-gradient(circle, #333, #111);
+}
+
+@mixin background-black-light { 
+	background: #333;
+}
+
+@mixin background-red { 
+	background: rgb(204, 0, 0);
+	background: -webkit-radial-gradient(circle, rgb(204, 0, 0), rgb(170, 0, 0), rgb(154, 0, 0));
+	background: -o-radial-gradient(circle, rgb(204, 0, 0), rgb(170, 0, 0), rgb(154, 0, 0));
+	background: -moz-radial-gradient(circle, rgb(204, 0, 0), rgb(170, 0, 0), rgb(154, 0, 0));
+	background: radial-gradient(circle, rgb(204, 0, 0), rgb(170, 0, 0), rgb(154, 0, 0));
+}
+
+@mixin background-light {
+	background: #fff;
+	background: -webkit-radial-gradient(circle, #fff, #fff, #ccc);
+	background: -o-radial-gradient(circle, #fff, #fff, #ccc);
+	background: -moz-radial-gradient(circle, #fff, #fff, #ccc);
+	background: radial-gradient(circle, #fff, #fff, #ccc);
+}
+
+	
+@mixin transition_ease_slow { 
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}

@@ -2,11 +2,6 @@
 permalink: execute-event
 ---
 
-- [BulkOperationExecuting](#bulkoperationexecuting)
-- [BulkOperationExecuted](#bulkoperationexecuted)
-
----
-
 ## BulkOperationExecuting
 Gets or sets an action to execute `before` the bulk operation is executed.
 

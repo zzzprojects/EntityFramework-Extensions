@@ -32,6 +32,7 @@ Despite the `ChangeTracker` being outstanding to track what's modified, it lacks
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
 
+{% include section-faq-begin.html %}
 ## FAQ
 
 ### How can I specify more than one option?
@@ -109,6 +110,7 @@ context.BulkMerge(list, options => options.IncludeGraph = true);
 To provide the best performance possible!
 
 Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle scenarios with `ChangeTracker` and `BulkMerge`, scenarios without it.
+{% include section-faq-end.html %}
 
 ## Related Articles
 - [How to Benchmark?](benchmark)

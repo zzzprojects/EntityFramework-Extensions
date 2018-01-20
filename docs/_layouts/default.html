@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="msvalidate.01" content="89359D9C492A475C0061398008D105FB" />
 
-		{% include _global_variable.html %}
+		{% include custom/_global_variable.html %}
 		
 		<!-- seo !-->
 		<title>{{ site.data.meta[meta_index].title }}</title>
@@ -17,84 +17,70 @@
 		<link rel="icon" type="image/png" href="{{ site.github.url }}/images/logo.png">
 		
 		<!-- css !-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 		<link rel="stylesheet" type="text/css" href="{{ site.github.url }}/css/master.css">
 	</head>
 	
 	<body>
-	  
-{% if site.data.meta[meta_index].template == "full" %} 
-
-	<header class="site-header page">
-		<div class="site-header-inner">
-			{% include site-header-nav-site.html %}
-		</div>
-	</header>
-
-	<div class="main">
-	{{ content }}
-	</div>
-{% elsif site.data.meta[meta_index].template == "full-h1"  %}
-	<header class="site-header page">
-		<div class="site-header-inner">
-			{% include site-header-nav-site.html %}
-		</div>
-	</header>
 	
-	 {% include template-h1.html %}
-	<div class="main">
-	{{ content }}
-	</div>
-{% elsif site.data.meta[meta_index].template == "container-h1"  %}
-	<header class="site-header post">
-		<div class="site-header-inner">
-			{% include site-header-nav-site.html %}
-			{% include site-header-nav-context.html %}
-			{% include site-header-nav-md.html %}
-		</div>		
-	</header>
-	 
-	{% include template-h1.html %}
-	<div class="main container">
-	{{ content }}
-	</div>
-{% else %}
+		{% include custom/site-header.html %}
 
-	<header class="site-header post">
-		<div class="site-header-inner">
-			{% include site-header-nav-site.html %}
-			{% include site-header-nav-context.html %}
-			{% include site-header-nav-md.html %}
-		</div>		
-	</header>
-	  
-	{% include template-h1.html %}
-	<div class="container">			
-		<div class="row">			
-			<div class="col-lg-9">
-				<article style="padding-top: 60px;">
-					{{ content }}
-				</article>
+{% if site.data.meta[meta_index].template == "container-sidebar" %}
+	<div class="nav-site">
+		<nav class="container navbar navbar-light navbar-expand-lg hidden-lg-up">
+			<a class="nav-brand"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-sidebar" 
+					aria-controls="nav-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="navbar-collapse collapse justify-content-end" id="nav-sidebar">		
+				<br />
+				{% include custom/section-sidebar.html %}
+				<br /><br />
 			</div>
-			<div class="col-lg-3">
-				<aside>
-					{% include aside.html %}
-				</aside>
-			</div>
-		</div>		
+		</nav>
 	</div>
-
 {% endif %}
-		
-{% include site-footer.html %}
 
-	<div id="scroll-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+		{% include section-header.html %}
+		
+<div class="page-{{ site.data.meta[meta_index].permalink }}">
+{% if site.data.meta[meta_index].template == "full" %}
+		<article class="{{ site.data.meta[meta_index].css }}">
+			{{ content }}
+		</article>
+{% elsif site.data.meta[meta_index].template == "container"  %}
+		<div class="container">
+			<article class="{{ site.data.meta[meta_index].css }}">
+				{{ content }}
+			</article>
+		</div>
+{% else if site.data.meta[meta_index].template == "container-sidebar" %}
+		<div class="container">
+			<div class="row">			
+				<div class="col-lg-9">
+					<article class="{{ site.data.meta[meta_index].css }}">
+						{{ content }}
+					</article>
+				</div>
+				<div class="col-lg-3 section-sidebar hidden-md-down">
+					{% include custom/section-sidebar.html %}
+				</div>
+			</div>
+		</div>
+{% endif %}
+</div>
+
+		{% include custom/site-footer.html %}
+
+		{% include component-scroll-to-top.html %}
 	
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
 	<script type="text/javascript">
@@ -113,7 +99,7 @@
 		$("table").addClass("table table-bordered table-hover table-responsive-sm table-striped");
 		$("thead").addClass("thead-dark");
 
-		$('aside a').each(function() {
+		$('.section-sidebar a').each(function() {
 			if ($(this).attr('href') == '/{{page.permalink}}' || $(this).attr('href') == '{{ site.github.url }}/{{page.permalink}}')
 			{
 				$(this).addClass('font-weight-bold');
@@ -121,7 +107,14 @@
 		});
 	});
 	</script>
-	
+<script type="text/javascript">
+$(document).ready(function () {
+	$('#sidebarCollapse').on('click', function () {
+		$('#sidebar').toggleClass('active');
+		$(this).toggleClass('active');
+	});
+});
+</script>
 <script>
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 600) {
@@ -134,6 +127,104 @@ $('#scroll-to-top').click(function() {
     $('body,html').animate({
         scrollTop : 0
     }, 500);
+});
+</script>
+<script>
+/*
+$("#site-brand").hover(
+ function() {
+    $('#site-products').collapse('show');
+  }, function() {
+    $('#site-products').collapse('hide');
+  }
+);*/
+</script>
+<script>
+$(document).ready(function () {
+	var childrens = $(".section-faq > div").children();
+	var h3sLength = $(".section-faq > div > h3").length;
+	
+	var beforeHtml = '';
+	var h3s = [h3sLength];
+	var divs = [h3sLength];
+	var shows = [h3sLength];
+
+	var h3sI = -1;
+	for (i = 0, len = childrens.length; i < len; i++) {
+		var child = childrens[i];
+
+		if(child.tagName == "H3") {
+			h3sI++;
+			h3s[h3sI] = child.innerHTML;
+			divs[h3sI] = '';
+			shows[h3sI] = $(child).hasClass("show");
+		}
+		else if(h3sI == -1) {
+			beforeHtml += child.outerHTML;
+		}
+		else {
+			divs[h3sI] += child.outerHTML;
+		}
+	}
+
+
+	var s = beforeHtml + '\
+<div id="accordion" role="tablist">';
+	
+	for (i = 0, len = h3s.length, text = ""; i < len; i++) {
+		var h3 = h3s[i];
+		var div = divs[i];
+		var show = shows[i];
+		var showCss = show ? "show" : "";
+		var expanded = show ? "true" : "false";
+		s += '\
+<div class="card">\
+	<div class="card-header" role="tab" id="heading-'+i+'">\
+		<h3 class="mb-0">\
+			<a class="collapsed" data-toggle="collapse" href="#collapse-'+i+'" role="button" aria-expanded="'+expanded+'" aria-controls="collapseOne">\
+			  <span>' + h3 + '</span>\
+			</a>\
+		</h3>\
+    </div>\
+	<div id="collapse-'+i+'" class="collapse '+showCss+'" role="tabpanel">\
+		<div class="card-body">\
+			' + div + '\
+		</div>\
+    </div>\
+</div>';
+	}
+	
+	s += '\
+</div>';
+
+	h3s = $(".section-faq > div").html(s);
+	
+});
+	</script>
+<script>
+$(document).ready(function () {
+	var codeHeaders = $("h5.code");
+	
+	for (i = 0, len = codeHeaders.length; i < len; i++) {
+		var codeHeader = $(codeHeaders[i]);
+		
+		var codeHighlight = codeHeader.next();
+		
+		s = '\
+<div class="card card-code card-code-dark">\
+	<div class="card-header">\
+		<h5>\
+			' + codeHeader.html() + '\
+		</h5>\
+    </div>\
+	<div class="card-body">\
+		'+ codeHighlight.html() +'\
+    </div>\
+</div>';
+		
+		codeHeader.replaceWith(s);
+		codeHighlight.hide();
+	}
 });
 </script>
 	</body>

@@ -1,0 +1,39 @@
+//
+// section-article
+//
+.section-article h2 {
+	margin-bottom: 10px;
+}
+.section-article .card-code {
+	margin-bottom: 30px;
+}
+
+//
+// section-faq
+//
+.section-faq h2 {
+	margin-bottom: $margin-header-bottom;
+}
+.section-faq .card {
+	margin-bottom: $margin-section-sm;
+}
+.section-faq .card .card-header h3 {
+	font-size: $font-size-lg;
+}
+.section-faq .card .card-header h3 a {
+	display: block;
+	position: relative;
+}
+.section-faq .card .card-header h3 a span {
+	margin-right: 20px;
+}
+.section-faq .card .card-header h3 a:after {
+	content: "\f078";
+	font-family: 'FontAwesome';
+	position: absolute;
+	right: 0;
+}
+.section-faq .card .card-header h3 a[aria-expanded="true"]:after {
+	content: "\f077";
+}
+
