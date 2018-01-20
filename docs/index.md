@@ -408,7 +408,7 @@ We are different
 					<li><a href="http://entityframework-dynamicfilters.net/">Entity Framework Dynamic Filters</a></li>
 					<li><a href="http://entityframework-effort.net/">Entity Framework Effort</a></li>	
 					<li><a href="https://github.com/zzzprojects/EntityFramework.Extended">Entity Framework Extended</a></li>
-					<li><a href="http://entityframework-faq.net/">Entity Framework FAQ</a></li>	
+					<li><a href="http://entityframework.net/">Entity Framework FAQ</a></li>	
 					<li><a href="https://github.com/zzzprojects/GraphDiff">Entity Framework GraphDiff</a></li>
 					<li><a href="http://www.zzzprojects.com/">View More...</a></li>
 				</ul>
