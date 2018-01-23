@@ -86,6 +86,7 @@ permalink: pricing
 						<li>All bulk extensions methods</li>
 						<li>Commercial License</li>
 						<li>Royalty-Free</li>
+						<li>Perpetual Licenses</li>
 						<li>Support & Upgrades (1 year)</li>
 					</ul>
 					<h3>Question</h3>
