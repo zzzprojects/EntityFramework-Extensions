@@ -1,0 +1,97 @@
+//
+// section-nav
+//
+.section-nav {
+	@include background-toright-dark;
+	border-right: 3px solid $color-z;
+	box-shadow: $box-shadow-right;
+}
+
+.section-nav .card {
+	background: transparent;
+	color: #fff;
+}
+
+.section-nav .card a {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.section-nav a.active {
+	color: rgba(255, 255, 255, 1);
+	font-weight: 700;
+}
+
+//
+// section-aside: TODO
+//
+
+//
+//
+// section-main
+//
+.section-main {
+	padding-left: 40px;
+	padding-top: 40px;
+	min-height: 1000px;
+	padding-bottom: 100px;
+}
+
+.section-main h1 {
+	font-size: 4rem;
+	margin-bottom: 30px;
+}
+
+//
+// section-article
+//
+.section-article h2 {
+	margin-bottom: 10px;
+}
+.section-article .card-code {
+	margin-bottom: 30px;
+}
+
+//
+// section-faq
+//
+.section-faq h2 {
+	margin-bottom: $margin-header-bottom;
+}
+.section-faq .card {
+	margin-bottom: $margin-section-sm;
+}
+.section-faq .card .card-header h3 {
+	font-size: $font-size-lg;
+}
+.section-faq .card .card-header h3 a {
+	display: block;
+	position: relative;
+}
+.section-faq .card .card-header h3 a span {
+	margin-right: 20px;
+}
+.section-faq .card .card-header h3 a:after {
+	content: "\f078";
+	font-family: 'FontAwesome';
+	position: absolute;
+	right: 0;
+}
+.section-faq .card .card-header h3 a[aria-expanded="true"]:after {
+	content: "\f077";
+}
+
+//
+// section-header
+//
+.section-header {
+	min-height: 200px;
+	text-align: center;
+}
+.section-header h1 {
+	font-size: 5rem;	
+	text-align: center;
+	padding-top: 50px;
+}
+.section-header .h2-outer {
+	padding-bottom: 40px;
+}

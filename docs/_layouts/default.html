@@ -17,19 +17,32 @@
 		<link rel="icon" type="image/png" href="{{ site.github.url }}/images/logo.png">
 		
 		<!-- css !-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-		<link rel="stylesheet" type="text/css" href="{{ site.github.url }}/css/master.css?v=2">
+		<link rel="stylesheet" type="text/css" href="{{ site.github.url }}/css/master.css?v=3">
 	</head>
 	
 	<body>
 	
 		{% include custom/site-header.html %}
 
-{% if site.data.meta[meta_index].template == "container-sidebar" %}
-	<div class="nav-site">
-		<nav class="container navbar navbar-light navbar-expand-lg hidden-lg-up">
+
+{% if site.data.meta[meta_index].template == "container-none"  %}
+	<div class="side-body container-none page-{{ site.data.meta[meta_index].permalink }} {{ site.data.meta[meta_index].css }}">
+		{{ content }}
+	</div>
+{% elsif site.data.meta[meta_index].template == "container-page"  %}
+	<div class="side-body container-page page-{{ site.data.meta[meta_index].permalink }} {{ site.data.meta[meta_index].css }}">
+		{% include section-header.html %}
+		<div class="container">
+			{{ content }}
+		</div>
+	</div>
+{% elsif site.data.meta[meta_index].template == "container-doc"  %}
+	<div>
+		<br />
+		<nav class="container-fluid navbar navbar-light navbar-expand-lg hidden-lg-up">
 			<a class="nav-brand"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-sidebar" 
 					aria-controls="nav-sidebar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,42 +50,27 @@
 			</button>
 			
 			<div class="navbar-collapse collapse justify-content-end" id="nav-sidebar">		
-				<br />
-				{% include custom/section-sidebar.html %}
 				<br /><br />
+				{% include custom/section-sidebar.html %}
 			</div>
 		</nav>
 	</div>
-{% endif %}
-
-		{% include section-header.html %}
-		
-<div class="page-{{ site.data.meta[meta_index].permalink }}">
-{% if site.data.meta[meta_index].template == "full" %}
-		<article class="{{ site.data.meta[meta_index].css }}">
-			{{ content }}
-		</article>
-{% elsif site.data.meta[meta_index].template == "container"  %}
-		<div class="container">
-			<article class="{{ site.data.meta[meta_index].css }}">
-				{{ content }}
-			</article>
-		</div>
-{% else if site.data.meta[meta_index].template == "container-sidebar" %}
-		<div class="container">
-			<div class="row">			
-				<div class="col-lg-9">
-					<article class="{{ site.data.meta[meta_index].css }}">
-						{{ content }}
-					</article>
-				</div>
-				<div class="col-lg-3 section-sidebar hidden-md-down">
+	<div class="side-body container-doc page-{{ site.data.meta[meta_index].permalink }} {{ site.data.meta[meta_index].css }}">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-3 col-xl-2 section-nav hidden-md-down">
 					{% include custom/section-sidebar.html %}
+				</div>
+				<div class="col-lg-7 col-xl-8 section-main">
+					<h1>{{site.data.meta[meta_index].h1}}</h1>
+					{{ content }}
+				</div>
+				<div class="col-lg-2 col-xl-2 section-aside hidden-md-down">
 				</div>
 			</div>
 		</div>
+	</div>
 {% endif %}
-</div>
 
 		{% include custom/site-footer.html %}
 
@@ -80,7 +78,7 @@
 	
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
 	<script type="text/javascript">
@@ -99,10 +97,10 @@
 		$("table").addClass("table table-bordered table-hover table-responsive-sm table-striped");
 		$("thead").addClass("thead-dark");
 
-		$('.section-sidebar a').each(function() {
+		$('.section-nav a').each(function() {
 			if ($(this).attr('href') == '/{{page.permalink}}' || $(this).attr('href') == '{{ site.github.url }}/{{page.permalink}}')
 			{
-				$(this).addClass('font-weight-bold');
+				$(this).addClass('active');
 			}
 		});
 	});
