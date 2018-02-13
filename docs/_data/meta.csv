@@ -76,3 +76,10 @@ temporary-table-use-table-lock,temporary-table-use-table-lock,temporary-table-us
 use-audit,use-audit,use-audit,,use-audit,,,no,container-doc,section-article
 use-log-dump,use-log-dump,use-log-dump,,use-log-dump,,,no,container-doc,section-article
 use-permanent-table,use-permanent-table,use-permanent-table,,use-permanent-table,,,no,container-doc,section-article
+benchmark,benchmark,benchmark,benchmark,Benchmark,,,no,container-doc,section-article
+concurrency,concurrency,concurrency,concurrency,Concurrency,,,no,container-doc,section-article
+custom-column,custom-column,custom-column,custom-column,Custom Column,,,no,container-doc,section-article
+custom-key,custom-key,custom-key,custom-key,Custom key,,,no,container-doc,section-article
+fastest-way-to-insert,fastest-way-to-insert,fastest-way-to-insert,fastest-way-to-insert,Fastest Way to Insert,,,no,container-doc,section-article
+improve-bulk-savechanges,improve-bulk-savechanges,improve-bulk-savechanges,improve-bulk-savechanges,Improve BulkSaveChanges,,,no,container-doc,section-article
+soft-delete,soft-delete,soft-delete,soft-delete,Soft Delete,,,no,container-doc,section-article

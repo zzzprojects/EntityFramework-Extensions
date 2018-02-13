@@ -25,6 +25,7 @@ There are three possible resolutions:
 - Custom Resolution
 
 #### Database Win
+{% include template-example.html %} 
 {% highlight csharp %}
 public void BulkSaveChanges_DatabaseWins(DbContext ctx)
 {
@@ -51,6 +52,7 @@ public void BulkSaveChanges_DatabaseWins(DbContext ctx)
 {% endhighlight %}
 
 #### Client Win
+{% include template-example.html %} 
 {% highlight csharp %}
 public void BulkSaveChanges_ClientWins(DbContext ctx)
 {
@@ -78,6 +80,7 @@ public void BulkSaveChanges_ClientWins(DbContext ctx)
 {% endhighlight %}
 
 #### Custom Resolution
+{% include template-example.html %} 
 {% highlight csharp %}
 public void BulkSaveChanges_CustomResolution(CurrentContext ctx)
 {

@@ -93,8 +93,6 @@ We will do our best to accommodate you.
 					<a href="mailto:sales@zzzprojects.com">sales@zzzprojects.com</a>
 					<h3>Issues & Requests</h3>
 					<a href="https://github.com/zzzprojects/EntityFramework-Extensions/issues" target="_blank">Issues Tracker</a>
-					<h3>Community Help</h3>
-					<a href="https://stackoverflow.com/questions/tagged/entity-framework-extensions" target="_blank">Stack Overflow</a>
 				</div>
 			</div>
 			<br /><br />

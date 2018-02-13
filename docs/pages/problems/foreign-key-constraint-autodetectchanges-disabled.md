@@ -10,6 +10,7 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 And you use a code similar to this:
 
+{% include template-example.html %} 
 {% highlight csharp %}
 using (var ctx = new MyEntities())
 {

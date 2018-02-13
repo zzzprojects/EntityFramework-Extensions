@@ -9,9 +9,14 @@
 
 .section-nav .card {
 	background: transparent;
+	border: 0;
 	color: #fff;
 }
 
+.section-nav .card .card-body {
+	padding-left: 0;
+	padding-right: 0;
+}
 .section-nav .card a {
 	color: rgba(255, 255, 255, 0.5);
 }
@@ -20,6 +25,8 @@
 	color: rgba(255, 255, 255, 1);
 	font-weight: 700;
 }
+
+
 
 //
 // section-aside: TODO
@@ -37,7 +44,7 @@
 }
 
 .section-main h1 {
-	font-size: 4rem;
+	font-size: 3.5rem;
 	margin-bottom: 30px;
 }
 

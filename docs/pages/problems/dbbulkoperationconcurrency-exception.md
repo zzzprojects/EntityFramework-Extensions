@@ -25,6 +25,7 @@ There are three possible resolutions:
 - Custom Resolution
 
 #### Database Win
+{% include template-example.html %} 
 {% highlight csharp %}
 public void BulkUpdate_DatabaseWins<T>(CurrentContext ctx, List<T> list) where T : class
 {
@@ -40,6 +41,7 @@ public void BulkUpdate_DatabaseWins<T>(CurrentContext ctx, List<T> list) where T
 {% endhighlight %}
 
 #### Client Win
+{% include template-example.html %} 
 {% highlight csharp %}
 public void BulkUpdate_StoreWins<T>(CurrentContext ctx, List<T> list) where T : class
 {
@@ -56,6 +58,7 @@ public void BulkUpdate_StoreWins<T>(CurrentContext ctx, List<T> list) where T : 
 {% endhighlight %}
 
 #### Custom Resolution
+{% include template-example.html %} 
 {% highlight csharp %}
 public void BulkUpdate_CustomResolution<T>(CurrentContext ctx, List<T> list) where T : class
 {
