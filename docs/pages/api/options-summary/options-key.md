@@ -5,8 +5,6 @@ permalink: key
 ## AllowDuplicateKeys
 Gets or sets if a duplicate key is possible in the source.
 
-Read more: [AllowDuplicateKeys](allow-duplicate-keys)
-
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkSaveChanges(options => options.AllowDuplicateKeys = true);
@@ -16,8 +14,6 @@ context.BulkSaveChanges(options => options.AllowDuplicateKeys = true);
 
 ## AllowUpdatePrimaryKeys
 Gets or sets if the key must also be included in columns to `UPDATE`.
-
-Read more: [AllowUpdatePrimaryKeys](allow-update-primary-keys)
 
 {% include template-example.html %} 
 {% highlight csharp %}

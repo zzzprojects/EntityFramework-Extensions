@@ -5,8 +5,6 @@ permalink: execute-event
 ## BulkOperationExecuting
 Gets or sets an action to execute `before` the bulk operation is executed.
 
-Read more: [BulkOperationExecuting](bulk-operation-executing)
-
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkSaveChanges(options => {
@@ -18,8 +16,6 @@ context.BulkSaveChanges(options => {
 
 ## BulkOperationExecuted
 Gets or sets an action to execute `after` the bulk operation is executed.
-
-Read more: [BulkOperationExecuted](bulk-operation-executed)
 
 {% include template-example.html %} 
 {% highlight csharp %}

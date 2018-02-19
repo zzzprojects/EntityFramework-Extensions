@@ -9,7 +9,7 @@ Gets or sets if `INSERTED` and `DELETED` data from the database should be return
 {% highlight csharp %}
 List<AuditEntry> auditEntries = new List<AuditEntry>();
 
-context.BulkSaveChanges(list, options =>
+context.BulkSaveChanges(options =>
 {
 	options.UseAudit = true;
 	options.BulkOperationExecuted = bulkOperation => auditEntries.AddRange(bulkOperation.AuditEntries);

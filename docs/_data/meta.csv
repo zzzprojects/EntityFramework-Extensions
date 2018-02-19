@@ -32,6 +32,7 @@ include-graph,Include Graph,Include Graph,,Include Graph,,,,container-doc,sectio
 key,Key,Key,,Key,,,,container-doc,section-article
 logging,Logging,Logging,,Logging,,,,container-doc,section-article
 temporary-table,Temporary Table,Temporary Table,,Temporary Table,,,,container-doc,section-article
+transaction,Transaction,Transaction,,Transaction,,,,container-doc,section-article
 transient-error,Transient Error,Transient Error,,Transient Error,,,,container-doc,section-article
 sql-server,SQL Server,SQL Server,,SQL Server,,,,container-doc,section-article
 faq,FAQ,FAQ,,FAQ,,,,container-doc,section-article

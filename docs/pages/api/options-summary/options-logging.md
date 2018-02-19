@@ -5,8 +5,6 @@ permalink: logging
 ## Log
 Gets or sets an action to `log` all database events as soon as they happen.
 
-Read more: [Log](log)
-
 {% include template-example.html %} 
 {% highlight csharp %}
 StringBuilder logger = new StringBuilder();
@@ -21,8 +19,6 @@ context.BulkSaveChanges(options =>
 
 ## UseLogDump
 Gets or sets if all `log` related to database event should be stored in a `LogDump` properties.
-
-Read more: [UseLogDump](use-log-dump)
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -39,8 +35,6 @@ context.BulkSaveChanges(options =>
 
 ## LogDump
 Gets all `logged` database event when `UseLogDump` is enabled.
-
-Read more: [LogDump](log-dump)
 
 {% include template-example.html %} 
 {% highlight csharp %}

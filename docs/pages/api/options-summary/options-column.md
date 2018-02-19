@@ -7,8 +7,6 @@ Gets or sets columns to map with the direction `Input`.
 
 The key is required for operation such as `BulkUpdate` and `BulkMerge`.
 
-Read more: [Column Input](column-input-expression)
-
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkMerge(list, options => 
@@ -18,8 +16,6 @@ context.BulkMerge(list, options =>
 
 ## Column Output
 Gets or sets columns to map with the direction `Output`.
-
-Read more: [Column Output](column-output-expression)
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -33,8 +29,6 @@ Gets or sets columns to map with the direction `InputOutput`.
 
 The key is required for operation such as `BulkUpdate` and `BulkMerge`.
 
-Read more: [Column InputOutput](column-input-output-expression)
-
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkMerge(list, options => 
@@ -44,8 +38,6 @@ context.BulkMerge(list, options =>
 
 ## Column Primary Key
 Gets or sets columns to use as the `key` for the operation.
-
-Read more: [Column Primary Key](column-primary-key-expression)
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -57,8 +49,6 @@ context.BulkMerge(list, options =>
 ## Ignore On Merge Insert
 Gets or sets columns to ignore when the `BulkMerge` method executes the `insert` statement.
 
-Read more: [Column Ignore on Merge Insert](ignore-on-merge-update-expression)
-
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkMerge(list, options => 
@@ -68,8 +58,6 @@ context.BulkMerge(list, options =>
 
 ## Ignore On Merge Update
 Gets or sets columns to ignore when the `BulkMerge` method executes the `update` statement.
-
-Read more: [Column Ignore on Merge Update](ignore-on-merge-update-expression)
 
 {% include template-example.html %} 
 {% highlight csharp %}
