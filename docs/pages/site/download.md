@@ -9,10 +9,10 @@ permalink: download
 			<div class="col-lg-6">
 				<div class="card card-box card-box-dark wow slideInLeft">
 					<div class="card-header wow slideInDown">
-						<h3>
+						<h3 class="text-center">
 							<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions/" target="_blank"
 									onclick="ga('send', 'event', { eventAction: 'download-ef6'});">
-								Entity Framework 6 (EF6)
+								EF6
 							</a>
 						</h3>						
 					</div>
@@ -35,10 +35,10 @@ permalink: download
 			<div class="col-lg-6">
 				<div class="card card-box card-box-dark wow slideInRight">
 					<div class="card-header wow slideInDown">
-						<h3>
+						<h3 class="text-center">
 							<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/" target="_blank"
 									onclick="ga('send', 'event', { eventAction: 'download-efcore'});">
-								Entity Framework Core
+								EF Core
 							</a>
 						</h3>
 					</div>
@@ -63,10 +63,10 @@ permalink: download
 			<div class="col-lg-6">
 				<div class="card card-box card-box-dark wow slideInLeft">
 					<div class="card-header wow slideInDown">
-						<h3>
+						<h3 class="text-center">
 							<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF5/" target="_blank"
 									onclick="ga('send', 'event', { eventAction: 'download-ef5'});">
-								Entity Framework 5 (EF5)
+								EF5
 							</a>
 						</h3>
 					</div>
@@ -89,10 +89,10 @@ permalink: download
 			<div class="col-lg-6">
 				<div class="card card-box card-box-dark wow slideInLeft">
 					<div class="card-header wow slideInDown">
-						<h3>
+						<h3 class="text-center">
 							<a href="https://www.nuget.org/packages/Z.EntityFramework.Extensions.EF4/" target="_blank"
 									onclick="ga('send', 'event', { eventAction: 'download-ef4'});">
-								Entity Framework 4 (EF4)
+								EF4
 							</a>
 						</h3>
 					</div>

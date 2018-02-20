@@ -11,6 +11,7 @@
 @media (min-width: 992px) {
 	.rotator .rotator-header {
 		transform: rotate(4deg);
+		position: relative;
 		z-index: 1;
 	}
 	.rotator .rotator-header-inner {

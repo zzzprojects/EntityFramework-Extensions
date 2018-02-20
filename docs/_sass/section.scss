@@ -29,8 +29,14 @@
 
 
 //
-// section-aside: TODO
+// section-aside
 //
+.section-aside {
+	position: relative;
+}
+.section-aside-inner {
+	position: fixed;
+}
 
 //
 //

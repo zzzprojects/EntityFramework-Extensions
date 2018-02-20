@@ -118,14 +118,14 @@ Yes contact us if you are a reseller or seeking for a reseller.
 
 Email: <a href="mailto:sales@zzzprojects.com">sales@zzzprojects.com</a>
 
-### What `2-4` developer seats mean?
+### What 2-4 developer seats mean?
 It mean that you can use the license with up to 4 developers inside your team.
 
 The `5-9` developer seats mean you can use the license with up 9 developers.
 
 You only pay for developer seats. You can use our library with an unlimited amount of applications, environments, servers, and client machines.
 
-### I need more than `19 seats`, what can I do?
+### I need more than 19 seats, what can I do?
 Please contact us with the number of seats required. We offer some additional discounts or enterprise licenses.
 
 Email: <a href="mailto:sales@zzzprojects.com">sales@zzzprojects.com</a>
