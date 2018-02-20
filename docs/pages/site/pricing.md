@@ -78,7 +78,7 @@ permalink: pricing
 				</div>
 				<div class="card-body">
 					<h3>Free trial</h3>
-					<p>Download our <a href="http://localhost:4000/download">monthly trial</a></p>
+					<p>Download our <a href="/download">monthly trial</a></p>
 					<p>Extend your trial for several months by downloading the latest version at the begining of every month.</p>
 					<h3>License</h3>
 					The license include:
