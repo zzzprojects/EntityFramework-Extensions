@@ -2,11 +2,8 @@
 permalink: problems
 ---
 
-## Troubleshooting
+You got a problem or a question you didn’t find an answer here?
 
-- [Trial Period Expired](trial-period-expired-exception)
-- [MD5](md5-exception)
-- [DbUpdateConcurrency](dbupdateconcurrency-exception)
-- [DbBulkOperationConcurrency](dbbulkoperationconcurrency-exception)
-- [Foreign Key Constraint](foreign-key-constraint-autodetectchanges-disabled)
-- [Type not supported](type-not-supported-exception)
+Contact us: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>
+
+We usually answer within the next business day, hour, or minutes!

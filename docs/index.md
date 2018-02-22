@@ -25,7 +25,7 @@ permalink: index
 					</a>
 				</div>
 				
-				<div class="text-muted font-italic">
+				<div class="font-italic">
 					*Free monthly trial available
 				</div>
 				

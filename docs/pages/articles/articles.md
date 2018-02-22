@@ -2,12 +2,11 @@
 permalink: articles
 ---
 
-## Articles
+You got some articles idea you will want we write?
 
-<ul>
-{% for num in (0..site.data.pages.size) %}	
-	{% if site.data.pages[num].category == page.permalink and site.data.pages[num].url != page.permalink %}
-		<li><a href="{{ site.data.pages[num].url }}">{{ site.data.pages[num].title }}</a></li>
-	{% endif %}
-{% endfor %}
-</ul>
+Contact us: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>
+
+Tell us about your daily problem or your performance issue.
+
+We will be happy to help you and share the solution to make developer code better and faster!
+

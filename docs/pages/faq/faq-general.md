@@ -18,6 +18,3 @@ We try to provide an outstanding support service.
 We normally answer very fast, often within one hour.
 
 Most fixes are resolved within one business day.
-
-## Do you support EF Core
-We do not yet. We are currently re-writing the library to support it.
