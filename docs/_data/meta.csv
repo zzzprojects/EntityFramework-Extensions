@@ -86,3 +86,4 @@ improve-bulk-savechanges,improve-bulk-savechanges,improve-bulk-savechanges,impro
 soft-delete,soft-delete,soft-delete,soft-delete,Soft Delete,,,no,container-doc,section-article
 bulk-insert-vs-bulk-savechanges,BulkInsert vs BulkSaveChanges,BulkInsert vs BulkSaveChanges,,BulkInsert vs BulkSaveChanges,,,no,container-doc,section-article
 articles,Articles,Articles,,Articles,,,no,container-doc,section-article
+trial,Trial,Trial,,Trial,,,no,container-doc,section-article
