@@ -87,3 +87,5 @@ soft-delete,soft-delete,soft-delete,soft-delete,Soft Delete,,,no,container-doc,s
 bulk-insert-vs-bulk-savechanges,BulkInsert vs BulkSaveChanges,BulkInsert vs BulkSaveChanges,,BulkInsert vs BulkSaveChanges,,,no,container-doc,section-article
 articles,Articles,Articles,,Articles,,,no,container-doc,section-article
 trial,Trial,Trial,,Trial,,,no,container-doc,section-article
+edmx,Edmx,Edmx,,Edmx,,,no,container-doc,section-article
+out-of-memory,Out of memory,Out of memory,,Out of memory,,,no,container-doc,section-article
