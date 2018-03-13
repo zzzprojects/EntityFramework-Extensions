@@ -2,10 +2,11 @@
 // default
 //
 a {
-	color: $link-color;
+    color: $link-color;
 }
 a:hover {
-	color: $link-color;
+    color: $link-color;
+    text-decoration:none;
 }
 body {
     overflow-x: hidden;

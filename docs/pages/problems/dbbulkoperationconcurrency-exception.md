@@ -10,13 +10,11 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 {% include template-exception.html message='A concurrency exception has occured. Entities may have been modified or deleted since entities were loaded.' %}
 
-## Solution
-
 ### Cause
 
 Another thread already performed the operation.
 
-### Fix
+### Solution
 
 There are three possible resolutions:
 

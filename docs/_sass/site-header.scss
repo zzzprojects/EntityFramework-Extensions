@@ -6,7 +6,6 @@
 }
 .site-header {
 	background-color: white;
-	box-shadow: $box-shadow;
 }
 @media print {
     .site-header {
@@ -108,7 +107,6 @@
 }
 .site-header .nav-context nav li {
 	font-size: $font-size-lg;
-	text-transform:uppercase
 }
 .site-header .nav-context nav li.active {
 	@include background-red;

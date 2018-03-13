@@ -13,7 +13,7 @@ That error is caused when the library consumes too much memory.
 
 Most of the time, this error is caused by some methods used from `Entity Framework` for command generations that will be used later by our library.
 
-### Fix
+### Solution
 Turning off Entity Framework Propagation
 
 This solution work with around 99% of model. By turning off this options, our library doesn’t longer use several methods from Entity Framework that consume high memory such as the command generations.

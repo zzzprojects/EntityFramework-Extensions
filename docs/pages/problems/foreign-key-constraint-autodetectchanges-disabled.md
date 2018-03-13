@@ -21,8 +21,6 @@ using (var ctx = new MyEntities())
 }
 {% endhighlight %}
 
-## Solution
-
 ### Cause
 
 One cause could be simply a wrong save order provided by either Entity Framework or EFE Library.
@@ -34,7 +32,7 @@ When the AutoDetectChanges is disabled, there is no check about the relationship
 
 In additional, there is no reason why this code should disable DetectChanges. Since the AddRange method is used, the “DetectChanges” method is called only once per AddRange call, so don't suffer from a performance issue.
 
-### Fix
+### Solution
 
 1. ADD the line AutoDectectChangesEnabled = true; before BulkSaveChanges
 2. CALL ctx.ChangeTracker.DetectChanges();

@@ -8,13 +8,11 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 {% include template-exception.html message='This implementation is not part of the Windows Platform FIPS validated cryptographic algorithms.' %}
 
-## Solution
-
 ### Cause
 
 The default algorithm to validate the license key & name is not supported with FIPS enabled.
 
-### Fix
+### Solution
 
 #### Ask for a compatible key
 
