@@ -11,6 +11,20 @@
 	}
 }
 
+.section_trial{
+	color:#676565;
+	.boxes{
+		border:1px solid #d8d8d8;
+		padding:15px;
+		margin-bottom:15px;
+		background-color: white;
+	}
+	.btn-z{
+		margin:10px auto;
+		font-size:20px;
+	}
+}
+
 .section-nav .card {
 	background: transparent;
 	border: 0;
@@ -70,7 +84,6 @@
 
 .section-main h1 {
 	font-size: 3.5rem;
-	margin-bottom: 10px;
 }
 
 //
@@ -126,4 +139,22 @@
 }
 .section-header .h2-outer {
 	padding-bottom: 40px;
+}
+.section-free, .section-premium{
+	h4{
+		margin:15px auto;
+	}
+}
+.section-free{
+	a{
+		display:block;
+		color:white;
+		font-size:14px;
+	}
+	.col-2{
+		padding:10px 0;
+		border-top:1px solid #676565;
+		border-bottom:1px solid #676565;
+		margin:0 10px;
+	}
 }

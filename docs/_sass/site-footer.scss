@@ -5,10 +5,18 @@
 	@include background-black;
 	color: $color-light;
 	font-size: $font-size-xl;
-	margin-top: 60px;
-	padding-top: 5px;
 	padding-bottom: 5px;
 }
 .site-footer input {
 	margin: 0 15px;
+}
+
+.site-footer{
+	.section-free{
+		padding-bottom:15px;
+	}
+	.section-premium{
+		padding-bottom:15px;
+		background-color:#3c3c3c;
+	}
 }

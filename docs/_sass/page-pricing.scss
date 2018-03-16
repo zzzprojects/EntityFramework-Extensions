@@ -1,10 +1,40 @@
+
+h1{
+	padding-top:15px!important;
+}
 .purchasing-step h2 {
 	padding-bottom: 5px;
 	margin-bottom: 20px;
-	font-size: 2.5rem;
-	border-bottom: 1px solid #ddd;
-	margin-top: 40px;
+	font-size: 2rem;
+	color:#676565;
 }
+#other_options{
+	display:block;
+	margin-bottom:10px;
+}
+a#other_options[aria-expanded="true"]{
+	.fa-angle-down{
+		transform: rotate(180deg);
+	}
+}
+.price{
+	color: #c00;
+	font-weight:bold;
+	margin-bottom:-10px;
+	.text{
+		font-size:72px!important;
+	}
+}
+
+.btn-paypal{
+	background-color:#009edf;
+	color:#fff;
+	&:hover{
+		background-color:#02318c;
+		color:#fff;
+	}
+}
+
 .purchasing-step .more-option {
 	font-style: italic;
 	margin-top: 40px;
