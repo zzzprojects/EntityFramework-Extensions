@@ -7,7 +7,7 @@ Gets or sets if the source identity value should be preserved on `Insert`. When 
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.Insert(options => options.InsertKeepIdentity = true);
+context.BulkInsert(list, options => options.InsertKeepIdentity = true);
 {% endhighlight %}
 
 ---
@@ -17,7 +17,7 @@ Gets or sets if the source identity value should be preserved on `Merge`. When n
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkMerge(options => options.MergeKeepIdentity = true);
+context.BulkMerge(list, options => options.MergeKeepIdentity = true);
 {% endhighlight %}
 
 ---
@@ -27,5 +27,5 @@ Gets or sets if the source identity value should be preserved on `Synchronize`. 
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSynchronize(options => options.SynchronizeKeepIdentity = true);
+context.BulkSynchronize(list, options => options.SynchronizeKeepIdentity = true);
 {% endhighlight %}
