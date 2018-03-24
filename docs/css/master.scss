@@ -1,19 +1,20 @@
 ---
 ---
+@import "variables";
 @import "mixin";
-
-@import "site-default";
-
-@import "component-card-box";
-@import "component-card-code";
-@import "component-rotator-dark";
-@import "component-scroll-to-top";
+@import "reboot";
 @import "utilities";
 
-@import "site-footer";
-@import "site-header";
+@import "components/card-box";
+@import "components/card-code";
+@import "components/rotator-dark";
+@import "components/scroll-to-top";
 
-@import "section";
+@import "skeletons/site-footer";
+@import "skeletons/site-header";
+@import "skeletons/article";
+@import "skeletons/aside";
+@import "skeletons/sidebar";
 
-@import "page-index";
-@import "page-pricing";
+@import "pages/index";
+@import "pages/pricing";
