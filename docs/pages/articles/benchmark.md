@@ -60,8 +60,8 @@ public Benchmark()
     var list = GenerateData(nbRecord);
 
     // BENCHMARK: JIT compile library first
-    Test1(list, null);
-    Test2(list, null);
+    Test1(list, new Stopwatch());
+    Test2(list, new Stopwatch());
     
     for (var i = 0; i < nbTry; i++)
     {

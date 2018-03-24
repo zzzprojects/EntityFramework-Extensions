@@ -204,11 +204,11 @@ permalink: pricing
 			<div class="boxes">
 				The license include:
 				<ul class="list-checked">
-					<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> All bulk extensions methods</li>
-					<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Commercial License</li>
-					<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Royalty-Free</li>
-					<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Perpetual Licenses</li>
-					<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Support & Upgrades (1 year)</li>
+					<li> All bulk extensions methods</li>
+					<li> Commercial License</li>
+					<li> Royalty-Free</li>
+					<li> Perpetual Licenses</li>
+					<li> Support & Upgrades (1 year)</li>
 				</ul>
 			</div>
 			<div class="boxes">

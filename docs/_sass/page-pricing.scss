@@ -1,58 +1,81 @@
-
-h1{
-	padding-top:15px!important;
+h1 {
+    padding-top: 15px !important;
 }
+
 .purchasing-step h2 {
-	padding-bottom: 5px;
-	margin-bottom: 20px;
-	font-size: 2rem;
-	color:#676565;
-}
-#other_options{
-	display:block;
-	margin-bottom:10px;
-}
-a#other_options[aria-expanded="true"]{
-	.fa-angle-down{
-		transform: rotate(180deg);
-	}
-}
-.price{
-	color: #c00;
-	font-weight:bold;
-	margin-bottom:-10px;
-	.text{
-		font-size:72px!important;
-	}
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #676565;
 }
 
-.btn-paypal{
-	background-color:#009edf;
-	color:#fff;
-	&:hover{
-		background-color:#02318c;
-		color:#fff;
-	}
+#other_options {
+    display: block;
+    margin-bottom: 10px;
+}
+
+a#other_options[aria-expanded="true"] {
+    .fa-angle-down {
+        transform: rotate(180deg);
+    }
+}
+
+.price {
+    color: #c00;
+    font-weight: bold;
+    margin-bottom: -10px;
+
+    .text {
+        font-size: 72px !important;
+    }
+}
+
+.btn-paypal {
+    background-color: #009edf;
+    color: #fff;
+
+    &:hover {
+        background-color: #02318c;
+        color: #fff;
+    }
 }
 
 .purchasing-step .more-option {
-	font-style: italic;
-	margin-top: 40px;
-	margin-bottom: 40px;
+    font-style: italic;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
+
 .purchasing-step a {
-	color: #c00;
+    color: #c00;
 }
 
 .page-pricing .bg-danger {
-	@include background-red;
-	color: #fff;
+    @include background-red;
+
+    color: #fff;
 }
+
 .page-pricing .step-1 {
-	width: 450px;
+    width: 450px;
 }
+
 @media (max-width: 575px) {
-	.page-pricing .step-1 {
-		width: 350px;
-	}
+    .page-pricing .step-1 {
+        width: 350px;
+    }
+}
+
+@media (max-width: 990px) {
+    .page-pricing {
+        .container {
+            .container {
+                padding: 0;
+            }
+        }
+
+        .step-1 {
+            width: 100%;
+        }
+    }
 }

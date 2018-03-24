@@ -25,7 +25,6 @@
 </head>
 
 <body>
-
 	{% include custom/site-header.html %} {% if site.data.meta[meta_index].template == "container-none" %}
 	<div class="side-body container-none page-{{ site.data.meta[meta_index].permalink }} {{ site.data.meta[meta_index].css }}">
 		{{ content }}
@@ -38,96 +37,97 @@
 		</div>
 	</div>
 	{% elsif site.data.meta[meta_index].template == "container-doc" %}
-	<div>
-		<nav class="container-fluid navbar navbar-light navbar-expand-lg hidden-lg-up">
-			<a class="nav-brand"></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-sidebar" aria-controls="nav-sidebar"
-			 aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+	<div id="main-container-z">
+		<div>
+			<nav class="container-fluid navbar navbar-dark bg-dark navbar-expand-lg hidden-lg-up">
+				<a class="nav-brand"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-sidebar" aria-controls="nav-sidebar"
+				 aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-			<div class="navbar-collapse collapse justify-content-end" id="nav-sidebar">
-				<br />
-				<br /> {% include custom/section-sidebar.html %}
-			</div>
-		</nav>
-	</div>
-	<div class="side-body container-doc page-{{ site.data.meta[meta_index].permalink }} {{ site.data.meta[meta_index].css }}">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-3 col-xl-2 section-nav hidden-md-down">
-					{% include custom/section-sidebar.html %}
+				<div class="navbar-collapse collapse justify-content-end" id="nav-sidebar">
+					<br />
+					<br /> {% include custom/section-sidebar.html %}
 				</div>
-				<div class="col-lg-7 col-xl-8 section-main">
-					<h1>{{site.data.meta[meta_index].h1}}</h1>
-					{{ content }}
-				</div>
-				<div class="col-lg-2 col-xl-2 section-aside hidden-md-down">
-					<div class="section-aside-inner">
-						{% include custom/section-aside.html %}
+			</nav>
+		</div>
+		<div class="side-body container-doc page-{{ site.data.meta[meta_index].permalink }} {{ site.data.meta[meta_index].css }}">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-3 col-xl-2 section-nav hidden-md-down">
+						{% include custom/section-sidebar.html %}
+					</div>
+					<div class="col-lg-7 col-xl-8 section-main">
+						<h1>{{site.data.meta[meta_index].h1}}</h1>
+						{{ content }}
+					</div>
+					<div class="col-lg-2 col-xl-2 section-aside hidden-md-down">
+						<div class="section-aside-inner">
+							{% include custom/section-aside.html %}
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	{% endif %} {% include custom/site-footer.html %} {% include component-scroll-to-top.html %}
+		{% endif %} {% include custom/site-footer.html %} {% include component-scroll-to-top.html %}
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	 crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	 crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-	 crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		 crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		 crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		 crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
-	<script type="text/javascript">
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date(); a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		<script type="text/javascript">
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date(); a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-		ga('create', '{{site.ga}}', 'auto');
-		ga('send', 'pageview');
-	</script>
+			ga('create', '{{site.ga}}', 'auto');
+			ga('send', 'pageview');
+		</script>
 
-	<script>
-		new WOW().init();
-		$(function () {
-			$("table").addClass("table table-bordered table-hover table-responsive-sm table-striped");
-			$("thead").addClass("thead-dark");
+		<script>
+			new WOW().init();
+			$(function () {
+				$("table").addClass("table table-bordered table-hover table-responsive-sm table-striped");
+				$("thead").addClass("thead-dark");
 
-			$('.section-nav a').each(function () {
-				if ($(this).attr('href') == '/{{page.permalink}}' || $(this).attr('href') == '{{ site.github.url }}/{{page.permalink}}') {
-					$(this).addClass('active');
+				$('.section-nav a').each(function () {
+					if ($(this).attr('href') == '/{{page.permalink}}' || $(this).attr('href') == '{{ site.github.url }}/{{page.permalink}}') {
+						$(this).addClass('active');
+					}
+				});
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#sidebarCollapse').on('click', function () {
+					$('#sidebar').toggleClass('active');
+					$(this).toggleClass('active');
+				});
+			});
+		</script>
+		<script>
+			$(window).scroll(function () {
+				if ($(this).scrollTop() >= 600) {
+					$('#scroll-to-top').fadeIn(200);
+				} else {
+					$('#scroll-to-top').fadeOut(200);
 				}
 			});
-		});
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#sidebarCollapse').on('click', function () {
-				$('#sidebar').toggleClass('active');
-				$(this).toggleClass('active');
+			$('#scroll-to-top').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 500);
 			});
-		});
-	</script>
-	<script>
-		$(window).scroll(function () {
-			if ($(this).scrollTop() >= 600) {
-				$('#scroll-to-top').fadeIn(200);
-			} else {
-				$('#scroll-to-top').fadeOut(200);
-			}
-		});
-		$('#scroll-to-top').click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 500);
-		});
-	</script>
-	<script>
+		</script>
+		<script>
 /*
 $("#site-brand").hover(
  function() {
@@ -136,46 +136,46 @@ $("#site-brand").hover(
     $('#site-products').collapse('hide');
   }
 );*/
-	</script>
-	<script>
-		$(document).ready(function () {
-			var childrens = $(".section-faq > div").children();
-			var h3sLength = $(".section-faq > div > h3").length;
+		</script>
+		<script>
+			$(document).ready(function () {
+				var childrens = $(".section-faq > div").children();
+				var h3sLength = $(".section-faq > div > h3").length;
 
-			var beforeHtml = '';
-			var h3s = [h3sLength];
-			var divs = [h3sLength];
-			var shows = [h3sLength];
+				var beforeHtml = '';
+				var h3s = [h3sLength];
+				var divs = [h3sLength];
+				var shows = [h3sLength];
 
-			var h3sI = -1;
-			for (i = 0, len = childrens.length; i < len; i++) {
-				var child = childrens[i];
+				var h3sI = -1;
+				for (i = 0, len = childrens.length; i < len; i++) {
+					var child = childrens[i];
 
-				if (child.tagName == "H3") {
-					h3sI++;
-					h3s[h3sI] = child.innerHTML;
-					divs[h3sI] = '';
-					shows[h3sI] = $(child).hasClass("show");
+					if (child.tagName == "H3") {
+						h3sI++;
+						h3s[h3sI] = child.innerHTML;
+						divs[h3sI] = '';
+						shows[h3sI] = $(child).hasClass("show");
+					}
+					else if (h3sI == -1) {
+						beforeHtml += child.outerHTML;
+					}
+					else {
+						divs[h3sI] += child.outerHTML;
+					}
 				}
-				else if (h3sI == -1) {
-					beforeHtml += child.outerHTML;
-				}
-				else {
-					divs[h3sI] += child.outerHTML;
-				}
-			}
 
 
-			var s = beforeHtml + '\
+				var s = beforeHtml + '\
 <div id="accordion" role="tablist">';
 
-			for (i = 0, len = h3s.length, text = ""; i < len; i++) {
-				var h3 = h3s[i];
-				var div = divs[i];
-				var show = shows[i];
-				var showCss = show ? "show" : "";
-				var expanded = show ? "true" : "false";
-				s += '\
+				for (i = 0, len = h3s.length, text = ""; i < len; i++) {
+					var h3 = h3s[i];
+					var div = divs[i];
+					var show = shows[i];
+					var showCss = show ? "show" : "";
+					var expanded = show ? "true" : "false";
+					s += '\
 <div class="card">\
 	<div class="card-header" role="tab" id="heading-'+ i + '">\
 		<h3 class="mb-0">\
@@ -190,25 +190,25 @@ $("#site-brand").hover(
 		</div>\
     </div>\
 </div>';
-			}
+				}
 
-			s += '\
+				s += '\
 </div>';
 
-			h3s = $(".section-faq > div").html(s);
+				h3s = $(".section-faq > div").html(s);
 
-		});
-	</script>
-	<script>
-		$(document).ready(function () {
-			var codeHeaders = $("h5.code");
+			});
+		</script>
+		<script>
+			$(document).ready(function () {
+				var codeHeaders = $("h5.code");
 
-			for (i = 0, len = codeHeaders.length; i < len; i++) {
-				var codeHeader = $(codeHeaders[i]);
+				for (i = 0, len = codeHeaders.length; i < len; i++) {
+					var codeHeader = $(codeHeaders[i]);
 
-				var codeHighlight = codeHeader.next();
+					var codeHighlight = codeHeader.next();
 
-				s = '\
+					s = '\
 <div class="card card-code card-code-dark">\
 	<div class="card-header">\
 		<h5>\
@@ -220,11 +220,12 @@ $("#site-brand").hover(
     </div>\
 </div>';
 
-				codeHeader.replaceWith(s);
-				codeHighlight.hide();
-			}
-		});
-	</script>
+					codeHeader.replaceWith(s);
+					codeHighlight.hide();
+				}
+			});
+		</script>
+	</div>
 </body>
 
 </html>
