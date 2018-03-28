@@ -7,38 +7,61 @@
     border-color: rgb(154, 0, 0);
     color: #fff;
     font-weight: 600;
-}
-
-.btn-z-prime {
-    background-color: #cc0000;
-    color: #fff;
-    padding: 6px 16px;
-    border-radius: 0;
+    border-radius: 0!important;
     border: 3px solid transparent;
-
+    padding: 6px 16px;
     &:hover {
-        background-color: #fff;
-        color: #e22222;
         border: 3px solid #e22222;
+    } // &.accent{
+    //     background:none;
+    //     background-color:$color-accent1!important;
+    //     &:hover{
+    //         color:$color-accent1!important;
+    //         background-color:white!important;
+    //         border:3px solid $color-accent1!important;
+    //     }
+    // }
+    // &.accent{
+    //     background:none;
+    //     background-color:$color-accent2!important;
+    //     &:hover{
+    //         color:$color-accent2!important;
+    //         background-color:white!important;
+    //         border:3px solid $color-accent2!important;
+    //     }
+    // }
+    // &.accent{
+    //     background:none;
+    //     background-color:$color-accent3!important;
+    //     &:hover{
+    //         color:$color-accent3!important;
+    //         background-color:white!important;
+    //         border:3px solid $color-accent3!important;
+    //     }
+    // }
+    &.accent {
+        background: none;
+        background-color: $color-accent!important;
+        &:hover {
+            color: $color-accent!important;
+            background-color: white!important;
+            border: 3px solid $color-accent!important;
+        }
     }
 }
 
 .btn-square {
-    text-align: left;
     color: white;
     margin: 0 10px;
-
     .fa-angle-right {
         transition: all 0.3s ease-in-out;
     }
-
     .number {
         font-size: 24px;
         text-align: left;
         border-bottom: 2px solid red;
         font-weight: bold;
     }
-
     &:hover {
         .fa-angle-right {
             margin-left: 5px;
@@ -48,7 +71,6 @@
 
 .btn-z:hover {
     background: transparent none repeat scroll 0 0;
-    border: 1px solid $color-z;
     color: $color-z;
     text-shadow: 2px -1px transparent;
 }
@@ -89,12 +111,12 @@ ul.list-checked {
     position: relative;
     line-height: 30px;
     list-style: outside none none;
-
     &:before {
-        content: ""; /* this is your text. You can also use UTF-8 character codes as I do here */
+        content: "";
+        /* this is your text. You can also use UTF-8 character codes as I do here */
         left: -21px;
         position: absolute;
-        top: 5px;
+        top: 8px;
         width: 16px;
         height: 16px;
         background: url(/images/list-checked.png) no-repeat 0 0;
@@ -104,7 +126,6 @@ ul.list-checked {
 .form-group {
     &.container {
         padding: 0;
-
         .row {
             padding: 0 15px;
         }
@@ -115,7 +136,6 @@ ul.list-checked {
     position: relative;
     margin: 10px 0;
     text-align: center;
-
     .text {
         position: relative;
         z-index: 999;
@@ -124,7 +144,6 @@ ul.list-checked {
         font-size: 20px;
         color: #676565;
     }
-
     .line {
         position: absolute;
         z-index: 1;
@@ -138,58 +157,48 @@ ul.list-checked {
 
 .container_radio {
     position: relative;
-
     input {
         position: absolute;
         opacity: 0;
         cursor: pointer;
     }
-
     .btn-main-provider {
         padding: 55px 0;
         width: 100%;
         font-size: 30px;
         border: 2px solid #676565;
-
         &.sql_only {
             padding: 66px 0;
         }
     }
-
-    .btn-main-provider, .btn-secondary-provider {
+    .btn-main-provider,
+    .btn-secondary-provider {
         color: #676565;
     }
-
     .btn-secondary-provider {
         padding: 10px 5px;
         width: 100%;
         border: 1px solid #676565;
-
         .icon_people {
             * {
                 border: 1px solid white;
                 margin: 0 -3px;
-
                 &.bigger {
                     font-size: 20px;
                 }
-
                 &.smaller {
                     font-size: 12px;
                 }
             }
         }
     }
-
     &.col {
         padding-left: 3px;
         padding-right: 3px;
     }
-
     .small_caract {
         font-size: 14px;
     }
-
     .icon_check {
         position: absolute;
         top: -11px;
@@ -203,7 +212,6 @@ ul.list-checked {
         background-color: white;
         opacity: 0;
         border-radius: 50%;
-
         &.small {
             top: -8px;
             left: -8px;
@@ -215,21 +223,24 @@ ul.list-checked {
     }
 }
 
-.container_radio:hover input ~ .checkmark {
+.container_radio:hover input~.checkmark {
     background-color: white;
     border-color: red;
     color: red;
     cursor: pointer;
 }
 
-.container_radio input:checked ~ .checkmark {
+.container_radio input:checked~.checkmark {
     background-color: white;
     border-color: red;
     color: red;
-
     .icon_check {
         opacity: 1;
     }
+}
+
+code {
+    color: #29b0da;
 }
 
 @media (max-width: 990px) {
@@ -240,7 +251,6 @@ ul.list-checked {
                 color: white;
                 border: 0;
                 margin-top: -25px;
-
                 .card-body {
                     padding: 0;
                 }

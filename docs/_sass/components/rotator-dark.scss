@@ -1,6 +1,11 @@
 //
 // rotator
 //
+.rotator{
+    h2{
+        color:white!important;
+    }
+}
 @media (max-width: 991px) {
     .rotator {
         @include background-black;

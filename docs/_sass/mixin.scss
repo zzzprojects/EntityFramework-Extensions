@@ -1,15 +1,15 @@
 @mixin background-toright-dark {
     background: #222;
-    background: linear-gradient(to right, #333, #111);
+    background: linear-gradient(to right, #333, #292929);
 }
 
 @mixin background-black { 
 	background: #222;
-	background: -moz-radial-gradient(circle, #333, #111);
-    background: -webkit-radial-gradient(circle, #333, #111);
-    background: -ms-radial-gradient(circle, #333, #111);
-    background: -o-radial-gradient(circle, #333, #111);
-    background: radial-gradient(circle, #333, #111);
+	background: -moz-radial-gradient(circle, #333, #292929);
+    background: -webkit-radial-gradient(circle, #333, #292929);
+    background: -ms-radial-gradient(circle, #333, #292929);
+    background: -o-radial-gradient(circle, #333, #292929);
+    background: radial-gradient(circle, #333, #292929);
 }
 
 @mixin background-black-light { 

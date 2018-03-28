@@ -27,6 +27,7 @@ permalink: pricing
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="currency_code" value="USD">
 				<input type="hidden" name="on0" value="Seats">
+				<input type="hidden" name="landing_page" value="billing">
 				
 				<div class="hidden-lg-up">
 					<h2>Step 1 - Choose License</h2>
@@ -181,7 +182,9 @@ permalink: pricing
 						<div class="price separator">
 							<span class="text"><span id="productPrice">799</span><sup>$</sup></span>
 							<span class="line"></span>
+							
 						</div>
+						<br>
 					</div>
 
 				</div>
@@ -190,10 +193,18 @@ permalink: pricing
 						<input id="agree_agreement" type="checkbox">&nbsp;I have read and agree to the <a href="http://www.zzzprojects.com/license-agreement/" target="_blank">License Agreement</a>
 					</label>
 				</div>
-				<br />
-				<button type="submit" class="btn btn-paypal btn-lg w-100" onclick="ga('send', 'event', { eventAction: 'buy-now'});">
-					<i class="fa fa-paypal" aria-hidden="true"></i> BUY NOW
-				</button>
+				<div class="row">
+					<button type="submit" class="col btn btn-paypal btn-lg align-right" onclick="$('input[name=landing_page]').val('');ga('send', 'event', { eventAction: 'buy-now'});">
+						<i class="fa fa-paypal" aria-hidden="true"></i>
+						PayPal
+						<span>(Require PayPal account)</span>
+					</button>
+					<button type="submit" class="col btn btn-paypal credit btn-lg align-right" onclick="$('input[name=landing_page]').val('billing');ga('send', 'event', { eventAction: 'buy-now'});">
+						<i class="fa fa-credit-card" aria-hidden="true"></i>
+						Credit Card
+						<span>(Doesn't require PayPal account)</span>
+					</button>
+				</div>
 				<div class="more-option">*&nbsp;Read the FAQ below for alternative payment method.</div>				
 			</form>
 		</div>
@@ -227,9 +238,7 @@ permalink: pricing
 ## FAQ
 
 ### Which payment alternative methods are accepted?
-We accept `PayPal`, `Cheque` and `Wire Transfer`.
-
-We **DO NOT** accept bitcoins and credit cards.
+We accept `PayPal` (guest payment with Credit Card available), `Cheque` and `Wire Transfer`.
 
 Please contact us for more information.
 

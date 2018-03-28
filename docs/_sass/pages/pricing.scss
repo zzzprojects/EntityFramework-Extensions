@@ -24,18 +24,35 @@ a#other_options[aria-expanded="true"] {
     color: #c00;
     font-weight: bold;
     margin-bottom: -10px;
-
     .text {
         font-size: 72px !important;
     }
 }
 
 .btn-paypal {
+    border-radius: 0;
+    margin: 0 7px;
+    padding: 20px 0;
     background-color: #009edf;
+    border: 1px solid #009edf;
     color: #fff;
-
+    &.credit {
+        background-color: #fff;
+        border: 1px solid #a8a8a8;
+        color: #a8a8a8;
+    }
+    .fa {
+        display: block;
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    span {
+        display: block;
+        font-size: 14px;
+    }
     &:hover {
-        background-color: #02318c;
+        background-color: #009edf;
+        border: 1px solid #009edf;
         color: #fff;
     }
 }
@@ -52,7 +69,6 @@ a#other_options[aria-expanded="true"] {
 
 .page-pricing .bg-danger {
     @include background-red;
-
     color: #fff;
 }
 
@@ -73,7 +89,6 @@ a#other_options[aria-expanded="true"] {
                 padding: 0;
             }
         }
-
         .step-1 {
             width: 100%;
         }
