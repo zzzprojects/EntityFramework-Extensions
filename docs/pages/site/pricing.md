@@ -44,7 +44,7 @@ permalink: pricing
 								<option value="5WVPWVNDGRHH6">SQL Compact</option>				
 							</select> 
 						</div>
-						<label class="form-label form-label-lg">For how many developpers?:</label> 
+						<label class="form-label form-label-lg">For how many developers?:</label> 
 						<select id="product_option" name="os0" class="form-control">
 							<option id="seat1" value="1 seat">Entity Framework Extensions $599 (1 developer seat)</option>
 							<option id="seat2_4" value="2-4 seats" selected>Entity Framework Extensions $799 (2-4 developer seats)</option>
@@ -118,7 +118,7 @@ permalink: pricing
 								</label>
 							</div>
 						</div>
-						<h2 class="mt-4">For how many developpers?</h2>
+						<h2 class="mt-4">For how many developers?</h2>
 						<div class="row">
 							<label class="container_radio col ">
 								<input type="radio" name="seat" value="1 seat" onclick="calculatePrice()">
