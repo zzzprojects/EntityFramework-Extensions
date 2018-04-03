@@ -2,9 +2,9 @@
 // section-nav
 //
 .section_trial {
-    color: #676565;
+    color: $color-gray-darker;
     .boxes {
-        border: 1px solid #d8d8d8;
+        border: 1px solid $color-gray-lighter;
         padding: 15px;
         margin-bottom: 15px;
         background-color: white;
@@ -38,7 +38,7 @@
     font-weight: 700;
     &:after {
         content: "";
-        background: #4d4e54;
+        background: $color-gray-darkest;
         position: absolute;
         bottom: -1px;
         left: 0px;
@@ -52,7 +52,7 @@
 //
 .section-article h2 {
     margin-bottom: 10px;
-    color: #635a5a;
+    color: $color-gray-darker;
 }
 
 .section-article .card-code {
@@ -127,8 +127,8 @@
     }
     .col-2 {
         padding: 10px 0;
-        border-top: 1px solid #676565;
-        border-bottom: 1px solid #676565;
+        border-top: 1px solid $color-gray-darker;
+        border-bottom: 1px solid $color-gray-darker;
         margin: 0 10px;
     }
 }

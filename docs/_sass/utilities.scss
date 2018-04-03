@@ -11,7 +11,7 @@
     border: 3px solid transparent;
     padding: 6px 16px;
     &:hover {
-        border: 3px solid #e22222;
+        border: 3px solid $color-z;
     } // &.accent{
     //     background:none;
     //     background-color:$color-accent1!important;
@@ -59,7 +59,7 @@
     .number {
         font-size: 24px;
         text-align: left;
-        border-bottom: 2px solid red;
+        border-bottom: 2px solid $color-z;
         font-weight: bold;
     }
     &:hover {
@@ -142,7 +142,7 @@ ul.list-checked {
         background-color: white;
         padding: 0 10px;
         font-size: 20px;
-        color: #676565;
+        color: $color-gray-darker;
     }
     .line {
         position: absolute;
@@ -151,7 +151,7 @@ ul.list-checked {
         left: 0;
         width: 100%;
         height: 1px;
-        background-color: #f00;
+        background-color: $color-z;
     }
 }
 
@@ -166,19 +166,19 @@ ul.list-checked {
         padding: 55px 0;
         width: 100%;
         font-size: 30px;
-        border: 2px solid #676565;
+        border: 2px solid $color-gray-darker;
         &.sql_only {
             padding: 66px 0;
         }
     }
     .btn-main-provider,
     .btn-secondary-provider {
-        color: #676565;
+        color: $color-gray-darker;
     }
     .btn-secondary-provider {
         padding: 10px 5px;
         width: 100%;
-        border: 1px solid #676565;
+        border: 1px solid $color-gray-darker;
         .icon_people {
             * {
                 border: 1px solid white;
@@ -208,7 +208,7 @@ ul.list-checked {
         width: 40px;
         height: 40px;
         text-align: center;
-        color: #f00;
+        color: $color-z;
         background-color: white;
         opacity: 0;
         border-radius: 50%;
@@ -225,15 +225,15 @@ ul.list-checked {
 
 .container_radio:hover input~.checkmark {
     background-color: white;
-    border-color: red;
-    color: red;
+    border-color: $color-z;
+    color: $color-z;
     cursor: pointer;
 }
 
 .container_radio input:checked~.checkmark {
     background-color: white;
-    border-color: red;
-    color: red;
+    border-color: $color-z;
+    color: $color-z;
     .icon_check {
         opacity: 1;
     }
