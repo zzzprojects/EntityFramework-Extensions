@@ -49,7 +49,17 @@
         }
     }
 }
-
+.card{
+    ul{
+        li{
+            a{
+                &:hover{
+                    color:$color-gray-darkest;
+                }
+            }
+        }
+    }
+}
 .btn-square {
     color: white;
     margin: 0 10px;
