@@ -21,7 +21,7 @@ a#other_options[aria-expanded="true"] {
 }
 
 .price {
-    color: #c00;
+    color: $color-z;
     font-weight: bold;
     margin-bottom: -10px;
     .text {
@@ -32,28 +32,38 @@ a#other_options[aria-expanded="true"] {
 .btn-paypal {
     border-radius: 0;
     margin: 0 7px;
-    padding: 20px 0;
-    background-color: #009edf;
-    border: 1px solid #009edf;
+    padding: 10px 0;
+    background-color: #fff;
+    border: 1px solid $color-accent;
+    color: $color-accent;
+    background-color: $color-accent;
+    border: 1px solid $color-accent;
     color: #fff;
-    &.credit {
-        background-color: #fff;
-        border: 1px solid #a8a8a8;
-        color: #a8a8a8;
-    }
+    display:flex;
     .fa {
-        display: block;
         font-size: 32px;
-        margin-bottom: 10px;
+        transition:all ease 0.3s;
+    }
+    .in-button-text{
+        margin:0 15px;
+        transition:all ease 0.3s;
+    }
+    &.credit{
+        background-color: #fff;
+        border: 1px solid $color-gray-dark;
+        color: $color-gray-dark;
     }
     span {
         display: block;
         font-size: 14px;
     }
     &:hover {
-        background-color: #009edf;
-        border: 1px solid #009edf;
-        color: #fff;
+        background-color: #fff;
+        border: 1px solid $color-accent;
+        color: $color-accent;
+        .in-button-text{
+            margin:0 20px 0 15px;
+        }
     }
 }
 
