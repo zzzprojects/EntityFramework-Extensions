@@ -194,15 +194,29 @@ permalink: pricing
 					</label>
 				</div>
 				<div class="row">
-					<button type="submit" class="col btn btn-paypal btn-lg align-right" onclick="$('input[name=landing_page]').val('');ga('send', 'event', { eventAction: 'buy-now'});">
+					<button type="submit" class="col btn btn-paypal btn-lg d-flex justify-content-center align-items-center" onclick="$('input[name=landing_page]').val('');ga('send', 'event', { eventAction: 'buy-now'});">
+						<div>
 						<i class="fa fa-paypal" aria-hidden="true"></i>
+						</div>
+						<div class="in-button-text text-left">
 						PayPal
 						<span>(Require PayPal account)</span>
+						</div>
+						<div>
+						<i class="fa fa-angle-right"></i>
+						</div>
 					</button>
-					<button type="submit" class="col btn btn-paypal credit btn-lg align-right" onclick="$('input[name=landing_page]').val('billing');ga('send', 'event', { eventAction: 'buy-now'});">
+					<button type="submit" class="col btn btn-paypal credit btn-lg d-flex justify-content-center align-items-center" onclick="$('input[name=landing_page]').val('billing');ga('send', 'event', { eventAction: 'buy-now'});">
+						<div>
 						<i class="fa fa-credit-card" aria-hidden="true"></i>
+						</div>
+						<div class="in-button-text text-left">
 						Credit Card
 						<span>(Doesn't require PayPal account)</span>
+						</div>
+						<div>
+						<i class="fa fa-angle-right"></i>
+						</div>
 					</button>
 				</div>
 				<div class="more-option">*&nbsp;Read the FAQ below for alternative payment method.</div>				
