@@ -17,9 +17,4 @@ The `IgnoreOnMergeInsertExpression` option lets you ignore some columns that sho
 
 By example, when to `update` the ModifiedData and ModifiedUser but not `insert` value.
 
-## Limitations
-Database Provider Supported:
-- SQL Server
-- SQL Azure
-
 _Ask our support team if you need this option for another provider_
