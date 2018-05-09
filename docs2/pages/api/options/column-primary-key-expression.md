@@ -1,6 +1,4 @@
----
-permalink: column-primary-key-expression
----
+# ColumnPrimaryKeyExpression
 
 ## Definition
 Gets or sets columns to use as the `key` for the operation.

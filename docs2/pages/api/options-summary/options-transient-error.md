@@ -1,6 +1,4 @@
----
-permalink: transient-error
----
+# Transient Error
 
 ## RetryCount
 Gets or sets the maximum number of operations retry when a transient error occurs.

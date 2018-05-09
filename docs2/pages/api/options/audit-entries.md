@@ -1,6 +1,4 @@
----
-permalink: audit-entries
----
+# AuditEntries
 
 ## Definition
 Get `INSERTED` and `DELETED` data when `UseAudit` option is enabled.

@@ -1,6 +1,4 @@
----
-permalink: faq-installation
----
+# FAQ - Installation
 
 ## How to install your product?
 It is simple, you download it from NuGet and add it to your project.

@@ -1,6 +1,4 @@
----
-permalink: log-dump
----
+# LogDump
 
 ## Definition
 Gets all `logged` database event when `UseLogDump` is enabled.

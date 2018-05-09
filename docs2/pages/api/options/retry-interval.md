@@ -1,6 +1,4 @@
----
-permalink: retry-interval
----
+# RetryInterval
 
 ## Definition
 Gets or sets the interval to wait before retrying an operation when a transient error occurs.

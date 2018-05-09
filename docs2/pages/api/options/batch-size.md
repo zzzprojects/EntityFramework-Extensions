@@ -1,6 +1,4 @@
----
-permalink: batch-size
----
+# Batch-size
 
 ## Definition
 Gets or sets the number of records to use in a batch.

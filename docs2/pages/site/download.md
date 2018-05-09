@@ -1,6 +1,4 @@
----
-permalink: download
----
+# Download
 
 <div class="row">
 	<div class="col-lg-8 order-2 order-lg-1 wow slideInLeft">

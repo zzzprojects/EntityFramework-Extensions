@@ -1,6 +1,4 @@
----
-permalink: bulk-insert
----
+# Bulk Insert
 
 ## Definition
 `INSERT` all entities in the database.

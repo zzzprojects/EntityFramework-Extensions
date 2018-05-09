@@ -1,6 +1,4 @@
----
-permalink: batch
----
+# Batch
 
 ### BatchSize
 Gets or sets the number of records to use in a batch.

@@ -1,6 +1,4 @@
----
-permalink: bulk-delete
----
+# Bulk Delete
 
 ## Definition
 `DELETE` all entities from the database.

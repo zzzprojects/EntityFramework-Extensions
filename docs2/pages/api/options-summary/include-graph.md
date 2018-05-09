@@ -1,6 +1,4 @@
----
-permalink: include-graph
----
+# Include Graph
 
 The IncludeGraph options allow to INSERT/UPDATE/MERGE entities by including the child entities graph.
 By example, if you use BulkInsert using a list of Invoice with the options IncludeGraph, all invoices items will also be inserted.

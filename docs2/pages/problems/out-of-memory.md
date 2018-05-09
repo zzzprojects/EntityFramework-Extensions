@@ -1,6 +1,4 @@
----
-permalink: out-of-memory
----
+# Out of memory
 
 ## Problem
 

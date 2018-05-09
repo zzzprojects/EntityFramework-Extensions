@@ -1,6 +1,4 @@
----
-permalink: allow-update-primary-keys
----
+# AllowUpdatePrimaryKeys
 
 ## Definition
 Gets or sets if the key must also be included in columns to `UPDATE`.

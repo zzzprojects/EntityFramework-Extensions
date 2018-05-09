@@ -1,6 +1,4 @@
----
-permalink: bulk-operation-executed
----
+# BulkOperationExecuted
 
 ## Definition
 Gets or sets an action to execute `after` the bulk operation is executed.

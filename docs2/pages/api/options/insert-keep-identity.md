@@ -1,6 +1,4 @@
----
-permalink: insert-keep-identity
----
+# InsertKeepIdentity
 
 ## Definition
 Gets or sets if the source identity value should be preserved on `Insert`. When not specified, identity values are assigned by the destination.

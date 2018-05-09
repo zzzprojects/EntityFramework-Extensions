@@ -1,6 +1,4 @@
----
-permalink: bulk-synchronize
----
+# Bulk Synchronize
 
 ## Definition
 `SYNCHRONIZE` all entities from the database.

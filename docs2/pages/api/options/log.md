@@ -1,6 +1,4 @@
----
-permalink: log
----
+# Log
 
 ## Definition
 Gets or sets an action to `log` all database events as soon as they happen.

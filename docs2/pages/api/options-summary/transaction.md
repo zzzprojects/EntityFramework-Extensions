@@ -1,6 +1,4 @@
----
-permalink: transaction
----
+# Transaction
 
 ## BulkSaveChanges
 As SaveChanges, BulkSaveChanges already save all entities within an internal transaction. So by default, there is nothing to do.

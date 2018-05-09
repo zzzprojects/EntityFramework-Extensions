@@ -1,6 +1,4 @@
----
-permalink: bulk-savechanges
----
+# Bulk SaveChanges
 
 ## Definition
 

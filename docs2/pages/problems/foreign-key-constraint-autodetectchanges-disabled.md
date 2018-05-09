@@ -1,6 +1,4 @@
----
-permalink: foreign-key-constraint-autodetectchanges-disabled
----
+# Foreign Key Constraint
 
 ## Problem
 

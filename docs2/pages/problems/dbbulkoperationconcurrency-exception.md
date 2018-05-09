@@ -1,6 +1,4 @@
----
-permalink: dbbulkoperationconcurrency-exception
----
+# DbBulkOperationConcurrency
 
 ## Problem
 

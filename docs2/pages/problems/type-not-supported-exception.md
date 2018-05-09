@@ -1,6 +1,4 @@
----
-permalink: type-not-supported-exception
----
+# Type not Supported
 
 ## Problem
 

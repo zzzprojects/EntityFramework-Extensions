@@ -1,6 +1,4 @@
----
-permalink: column
----
+# Column
 
 ## Column Input
 Gets or sets columns to map with the direction `Input`.

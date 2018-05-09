@@ -1,6 +1,4 @@
----
-permalink: use-log-dump
----
+# UseLogDump
 
 ## Definition
 Gets or sets if all `log` related to database event should be stored in a `LogDump` property.

@@ -1,6 +1,4 @@
----
-permalink: temporary-table
----
+# Temporary Table
 
 ## TemporaryTableBatchByTable
 Gets or sets the number of batches a temporary table can contain. This option may create multiple temporary tables when the number of batches to execute exceeds the specified limit.

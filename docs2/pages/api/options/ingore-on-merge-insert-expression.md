@@ -1,6 +1,4 @@
----
-permalink: ignore-on-merge-insert-expression
----
+# IgnoreOnMergeUpdateExpression
 
 ## Definition
 Gets or sets columns to ignore when the `BulkMerge` method executes the `insert` statement.

@@ -1,7 +1,4 @@
----
-permalink: temporary-table-schema-name
----
-
+# TemporaryTableSchemaName
 ## Definition
 Gets or sets the schema name to use for the temporary table.
 

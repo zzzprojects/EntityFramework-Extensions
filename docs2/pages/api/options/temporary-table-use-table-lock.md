@@ -1,6 +1,4 @@
----
-permalink: temporary-table-use-table-lock
----
+# TemporaryTableUseTableLock
 
 ## Definition
 Gets or sets if the temporary table must be locked when inserting records into it.

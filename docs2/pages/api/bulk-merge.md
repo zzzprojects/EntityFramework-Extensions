@@ -1,6 +1,4 @@
----
-permalink: bulk-merge
----
+# Bulk Merge
 
 ## Definition
 `MERGE` all entities from the database.

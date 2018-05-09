@@ -1,6 +1,4 @@
----
-permalink: tutorial-bulk-savechanges
----
+# Bulk SaveChanges
 
 ## Definition
 

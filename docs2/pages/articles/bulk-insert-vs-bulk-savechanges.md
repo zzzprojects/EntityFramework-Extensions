@@ -1,6 +1,4 @@
----
-permalink: bulk-insert-vs-bulk-savechanges
----
+# BulkInsert vs BulkSaveChanges
 
 ## What’s the difference between BulkInsert and BulkSaveChanges?
 BulkInsert will always be a lot faster than BulkSaveChanges.

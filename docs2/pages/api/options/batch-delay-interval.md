@@ -1,6 +1,4 @@
----
-permalink: batch-delay-interval
----
+# BatchDelayInterval
 
 ## Definition
 Gets or sets a delay in milliseconds to wait between batch.

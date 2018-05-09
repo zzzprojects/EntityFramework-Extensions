@@ -1,5 +1,3 @@
----
-permalink: allow-concurrency
----
+# AllowConcurrency
 
 {% include under-construction.html %}

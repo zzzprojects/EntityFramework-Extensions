@@ -1,6 +1,4 @@
----
-permalink: retry-count
----
+# RetryCount
 
 ## Definition
 Gets or sets the maximum number of operations retry when a transient error occurs.

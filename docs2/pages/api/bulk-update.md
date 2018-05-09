@@ -1,6 +1,4 @@
----
-permalink: bulk-update
----
+# Bulk Update
 
 ## Definition
 `UPDATE` all entities in the database.

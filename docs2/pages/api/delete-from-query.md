@@ -1,6 +1,4 @@
----
-permalink: delete-from-query
----
+# Delete from Query
 
 ## Definition
 `DELETE` all rows from the database using a LINQ Query without loading entities in the context.

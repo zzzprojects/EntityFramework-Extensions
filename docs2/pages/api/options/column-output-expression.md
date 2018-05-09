@@ -1,6 +1,4 @@
----
-permalink: column-output-expression
----
+# ColumnOutputExpression
 
 ## Definition
 Gets or sets columns to map with the direction `Output`.

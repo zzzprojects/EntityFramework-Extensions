@@ -1,6 +1,4 @@
----
-permalink: synchronize-keep-identity
----
+# SynchronizeKeepIdentity
 
 ## Definition
 Gets or sets if the source identity value should be preserved on `Synchronize`. When not specified, identity values are assigned by the destination.

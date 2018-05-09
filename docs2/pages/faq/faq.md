@@ -1,6 +1,4 @@
----
-permalink: faq
----
+# FAQ
 
 - [General](faq-general)
 - [Installation](faq-installation)

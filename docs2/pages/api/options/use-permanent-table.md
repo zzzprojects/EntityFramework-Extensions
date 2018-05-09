@@ -1,6 +1,4 @@
----
-permalink: use-permanent-table
----
+# UsePermanentTable
 
 ## Definition
 Gets or sets if the library should `create` and `drop` a permanent table instead of using a temporary table.

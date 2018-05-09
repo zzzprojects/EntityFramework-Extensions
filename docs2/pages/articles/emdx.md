@@ -1,6 +1,4 @@
----
-permalink: edmx
----
+# Edmx
 
 In a rare occasion, your model might not still compatible yet with our model reader. If that's your case and we ask you for your model, you can use one of the following methods to provide the required information:
 

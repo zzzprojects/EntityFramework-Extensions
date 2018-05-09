@@ -1,6 +1,4 @@
----
-permalink: temporary-table-insert-batch-size
----
+# TemporaryTableInsertBatchSize
 
 ## Definition
 Gets or sets the number of records to use in a batch when inserting in a temporary table. This number is recommended to be high.

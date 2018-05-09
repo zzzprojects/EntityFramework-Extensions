@@ -1,6 +1,4 @@
----
-permalink: articles
----
+# Articles
 
 You got some articles idea you will want we write?
 

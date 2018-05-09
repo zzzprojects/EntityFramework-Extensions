@@ -1,6 +1,4 @@
----
-permalink: merge-keep-identity
----
+# MergeKeepIdentity
 
 ## Definition
 Gets or sets if the source identity value should be preserved on `Merge`. When not specified, identity values are assigned by the destination.

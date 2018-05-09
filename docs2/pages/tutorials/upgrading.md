@@ -1,6 +1,4 @@
----
-permalink: upgrading
----
+# Upgrading
 
 ## Step 1 - Before Upgrading
 Before upgrading:
