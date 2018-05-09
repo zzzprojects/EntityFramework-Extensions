@@ -19,8 +19,8 @@ BulkSaveChanges support everything:
 - Relationship (One to One, One to Many, Many to Many)
 
 ### Example
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 var ctx = new EntitiesContext();
 
 ctx.Customers.AddRange(listToAdd); // add
@@ -32,7 +32,7 @@ ctx.BulkSaveChanges();
 
 // Easy to customize
 context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
-{% endhighlight %}
+```
 ### Performance Comparisons
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
@@ -54,8 +54,8 @@ All common methods are supported:
 
 ### Example
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 var ctx = new EntitiesContext();
 
 // Easy to use
@@ -67,7 +67,7 @@ ctx.BulkMerge(list);
 // Easy to customize
 context.BulkMerge(customers, 
    bulk => bulk.ColumnPrimaryKeyExpression = customer => customer.Code; });
-{% endhighlight %}
+```
 
 ### Performance Comparisons
 
@@ -85,8 +85,8 @@ FromQuery method allows you to execute UPDATE or DELETE statements without loadi
 
 ### Example
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 // DELETE all customers that are inactive for more than two years
 context.Customers
     .Where(x => x.LastLogin < DateTime.Now.AddYears(-2))
@@ -96,7 +96,7 @@ context.Customers
 context.Customers
     .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
     .UpdateFromQuery(x => new Customer {Actif = false});
-{% endhighlight %}
+```
 
 ### Performance Comparisons
 

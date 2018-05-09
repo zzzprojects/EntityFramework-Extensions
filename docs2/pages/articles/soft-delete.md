@@ -5,8 +5,8 @@ permalink: soft-delete
 ## Problem
 You want to soft delete some entities currently in deleted state with BulkSaveChanges.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 using (var ctx = new CurrentContext())
 {
     var lastLogin = DateTime.Now.AddYears(-2);
@@ -16,15 +16,15 @@ using (var ctx = new CurrentContext())
     // HOW to automatically handle soft delete?
     ctx.BulkSaveChanges();
 }
-{% endhighlight %}
+```
 
 ### Solution
 You can use the **EntityFrameworkManager.PreBulkSaveChanges** property to change state & value from entities prior to the BulkSaveChanges execution
 
 ### Example
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 EntityFrameworkManager.PreBulkSaveChanges = context =>
 {
     foreach (var entry in context.ChangeTracker.Entries())
@@ -44,13 +44,13 @@ using (var ctx = new CurrentContext())
     ctx.Customers.RemoveRange(list);
     ctx.BulkSaveChanges();
 }
-{% endhighlight %}
+```
 
 ## Problem
 You want to soft delete some entities currently in deleted state with BulkDelete.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 using (var ctx = new CurrentContext())
 {
     var lastLogin = DateTime.Now.AddYears(-2);
@@ -59,15 +59,15 @@ using (var ctx = new CurrentContext())
     // HOW to automatically handle soft delete?
     ctx.BulkDelete(list);
 }
-{% endhighlight %}
+```
 
 ### Solution
 Unfortunately, there is no way to SoftDelete using BulkDelete. Since BulkDelete doesn't use ChangeTracker for optimization reasons, you will have to implement yourself an extension method to handle this scenario.
 
 ### Example
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public static class Extensions
 {
     public static void BulkHardOrSoftDelete<T>(this DbContext ctx, IEnumerable<T> items) where T : class
@@ -107,5 +107,5 @@ using (var ctx = new CurrentContext())
 
 	ctx.BulkHardOrSoftDelete(list);
 }
-{% endhighlight %}
+```
 

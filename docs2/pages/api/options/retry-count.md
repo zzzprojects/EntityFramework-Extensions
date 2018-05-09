@@ -5,12 +5,12 @@ permalink: retry-count
 ## Definition
 Gets or sets the maximum number of operations retry when a transient error occurs.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkSaveChanges(options => {
 	options.RetryCount = 3;
 });
-{% endhighlight %}
+```
 
 ## Purpose
 A transient error is a temporary error that is likely to disappear soon. That rarely happens but they might occur!

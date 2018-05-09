@@ -7,14 +7,14 @@ permalink: delete-from-query
 
 A `DELETE` statement is built using the LINQ expression and directly executed in the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 // DELETE all customers that are inactive
 context.Customers.Where(x => !x.IsActif).DeleteFromQuery();
 
 // DELETE customers by id
 context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
-{% endhighlight %}
+```
 
 ## Purpose
 `Deleting` entities using `SaveChanges` normally requires to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.

@@ -16,8 +16,8 @@ Having a default context constructor or specifying a context factory is always r
 The context factory is a function `Func<DbContext, DbContext>` that provide the current DbContext as a parameter and require to return a new DbContext.
 The current DbContext is passed in a parameter in case you need to create a working context that depends on the current context configuration or type.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 // Using the default constructor
 EntityFrameworkManager.ContextFactory = context => new CurrentContext();
 
@@ -44,13 +44,13 @@ EntityFrameworkManager.ContextFactory = context =>
 		return new ElseContext();
 	}
 };
-{% endhighlight %}
+```
 
 ## Default Constructor
 If your context has a default constructor, you might now need to specify a context factory.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public class EntitiesContext : DbContext
 {
 	public EntitiesContext() : base("CodeFirstEntities")
@@ -60,6 +60,6 @@ public class EntitiesContext : DbContext
 	
 	// ...code...
 }
-{% endhighlight %}
+```
 
 

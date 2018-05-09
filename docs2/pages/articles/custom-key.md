@@ -12,8 +12,8 @@ You can specify the column to use for the key with the **ColumnPrimaryKeyExpress
 
 ### Example
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 // Single Key
 ctx.BulkUpdate(customers, operation => operation.ColumnPrimaryKeyExpression =
     customer => customer.Code);
@@ -21,7 +21,7 @@ ctx.BulkUpdate(customers, operation => operation.ColumnPrimaryKeyExpression =
 // Surrogate Key (with anonymous type)
 ctx.BulkUpdate(customers, operation => operation.ColumnPrimaryKeyExpression =
     customer => new { customer.Code1, customer.Code2, customer.Code3 });
-{% endhighlight %}
+```
 
 ## Troubleshooting
 
@@ -43,11 +43,11 @@ The code "001" is here more than once with a different name.
 
 You can allow duplicate key with the **AllowDuplicateKeys** options
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 ctx.BulkUpdate(customers, operation =>
 {
     operation.AllowDuplicateKeys = true;
     operation.ColumnPrimaryKeyExpression = customer => customer.Code;
 });
-{% endhighlight %}
+```

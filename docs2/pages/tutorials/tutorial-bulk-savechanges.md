@@ -19,7 +19,7 @@ BulkSaveChanges supports everything:
 - Etc.
 
 {% include template-example.html title='BulkSaveChanges Examples' %} 
-{% highlight csharp %}
+```csharp
 context.Customers.AddRange(listToAdd); // add
 context.Customers.RemoveRange(listToRemove); // remove
 listToModify.ForEach(x => x.DateModified = DateTime.Now); // modify
@@ -29,7 +29,7 @@ context.BulkSaveChanges();
 
 // Easy to customize
 context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
-{% endhighlight %}
+```
 
 ## Purpose
 Using the `ChangeTracker` to detect and persist change automatically is great! However, it leads very fast to some problem when multiples entities need to be saved.

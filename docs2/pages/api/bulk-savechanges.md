@@ -19,7 +19,7 @@ BulkSaveChanges supports everything:
 - Etc.
 
 {% include template-example.html title='BulkSaveChanges Examples' %} 
-{% highlight csharp %}
+```csharp
 context.Customers.AddRange(listToAdd); // add
 context.Customers.RemoveRange(listToRemove); // remove
 listToModify.ForEach(x => x.DateModified = DateTime.Now); // modify
@@ -29,7 +29,7 @@ context.BulkSaveChanges();
 
 // Easy to customize
 context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
-{% endhighlight %}
+```
 
 ## Purpose
 Using the `ChangeTracker` to detect and persist changes automatically is great! However, it leads very fast to some problems when multiple entities need to be saved.
@@ -51,33 +51,33 @@ Using the `ChangeTracker` to detect and persist changes automatically is great! 
 ### How can I specify more than one option?
 You can specify more than one option using anonymous block.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkSaveChanges(options => {
 	options.BatchSize = 100);
 	options.AllowConcurrency = false;
 });
-{% endhighlight %}
+```
 
 ### How can I specify the Batch Size?
 You can specify a custom batch size using the `BatchSize` option.
 
 Read more: [BatchSize](/batch-size)
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkSaveChanges(options => options.BatchSize = 100);
-{% endhighlight %}
+```
 
 ### How can I turn off Concurrency Check?
 You can turn off concurrency check using the `AllowConcurrency` option.
 
 Read more: [AllowConcurrency](/allow-concurrency)
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkSaveChanges(options => options.AllowConcurrency = false);
-{% endhighlight %}
+```
 {% include section-faq-end.html %}
 
 ## Related Articles

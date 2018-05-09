@@ -12,14 +12,14 @@ We are currently working on the next major version which will have even better p
 [Learn - Why turning off Entity Framework Propagation is faster](#why-turning-off-entity-framework-propagation-is-faster)
 
 ### Example - Globally
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 EntityFrameworkManager.DefaultEntityFrameworkPropagationValue = false;
-{% endhighlight %}
+```
 
 ### Example - By Instance
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 var ctx = new EntitiesContext();
 
 ctx.Customers.AddRange(listToAdd);
@@ -28,7 +28,7 @@ listToModify.ForEach(x => x.DateModified = DateTime.Now);
 
 // Easy to use
 ctx.BulkSaveChanges(false);
-{% endhighlight %}
+```
 
 ### Performance Comparisons
 

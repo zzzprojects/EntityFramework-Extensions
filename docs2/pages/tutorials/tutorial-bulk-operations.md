@@ -15,7 +15,7 @@ Bulk Operations Available:
 - [BulkSynchronize](/bulk-synchronize)
 
 {% include template-example.html title='Bulk Operations Examples' %} 
-{% highlight csharp %}
+```csharp
 // Easy to use
 context.BulkInsert(list);
 context.BulkUpdate(list);
@@ -24,7 +24,7 @@ context.BulkMerge(list);
 
 // Easy to customize
 context.BulkMerge(customers, bulk => bulk.ColumnPrimaryKeyExpression = customer => customer.Code; });
-{% endhighlight %}
+```
 
 ## Purpose
 Using the ChangeTracker to detect and persist change automatically is great! However, almost every application has some particular scenario which requires some customization and better performance.

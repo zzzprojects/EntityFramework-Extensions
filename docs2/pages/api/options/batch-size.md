@@ -5,14 +5,14 @@ permalink: batch-size
 ## Definition
 Gets or sets the number of records to use in a batch.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 // Instance
 context.BulkSaveChanges(options => options.BatchSize = 1000);
 
 // Global
 EntityFrameworkManager.BulkOperationBuilder = builder => builder.BatchSize = 1000;
-{% endhighlight %}
+```
 
 ## Purpose
 Having access to modify the `BatchSize` default value may be useful in some occasions where the performance is very affected.

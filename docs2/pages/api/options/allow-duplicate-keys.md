@@ -5,10 +5,10 @@ permalink: allow-duplicate-keys
 ## Definition
 Gets or sets if a duplicate key is possible in the source.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkMerge(list, options => options.AllowDuplicateKeys = true);
-{% endhighlight %}
+```
 
 ## Purpose
 In a rare scenario such as importing a file, a key may be used in multiple rows.

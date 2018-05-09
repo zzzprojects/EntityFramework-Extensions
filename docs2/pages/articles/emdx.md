@@ -7,8 +7,8 @@ In a rare occasion, your model might not still compatible yet with our model rea
 ## Code First
 Use the `GetModelXDocument` method to generate the Edmx to send.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public string GetModelXDocument(DbContext context)
 {
     XDocument doc;
@@ -28,7 +28,7 @@ public string GetModelXDocument(DbContext context)
 
 DbContext context = new EntityContext();
 string edmx = GetModelXDocument();
-{% endhighlight %}
+```
 
 
 ## Database First

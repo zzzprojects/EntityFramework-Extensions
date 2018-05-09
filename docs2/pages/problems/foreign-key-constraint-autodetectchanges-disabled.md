@@ -10,8 +10,8 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 And you use a code similar to this:
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 using (var ctx = new MyEntities())
 {
 	ctx.Configuration.AutoDetectChangesEnabled = false;
@@ -19,7 +19,7 @@ using (var ctx = new MyEntities())
 	ctx.Items.AddRange(items);
 	ctx.BulkSaveChanges();
 }
-{% endhighlight %}
+```
 
 ### Cause
 

@@ -16,21 +16,21 @@ permalink: licensing
 ## Setup License from config file
 The license name and key can be added directly in the app.config or web.config file in the appSettings section.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 <appSettings>
 	<add key="Z_EntityFramework_Extensions_LicenseName" value="[licenseName]"/>
 	<add key="Z_EntityFramework_Extensions_LicenseKey" value="[licenseKey]"/>
 </appSettings>
-{% endhighlight %}
+```
 
 ## Setup License from code
 The license can be added directly in the code of your application. Make sure to follow recommendations about where to add this code.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 Z.EntityFramework.Extensions.LicenseManager.AddLicense([licenseName], [licenseKey]);
-{% endhighlight %}
+```
 
 ### Recommendations
 - **Web App:** Use Application_Start in global.asax to activate your license.
@@ -42,8 +42,8 @@ Z.EntityFramework.Extensions.LicenseManager.AddLicense([licenseName], [licenseKe
 ## How can I check if my license is valid?
 You can use the **ValidateLicense** method to check if the current license is valid or not.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 // CHECK if the license if valid for the default provider (SQL Server)
 string licenseErrorMessage;
 if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErrorMessage))
@@ -57,4 +57,4 @@ if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErro
 {
    throw new Exception(licenseErrorMessage);
 }
-{% endhighlight %}
+```

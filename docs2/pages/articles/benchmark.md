@@ -46,8 +46,8 @@ Include only the method you want to benchmark.
 Here is an example of how we normally do all our benchmarks tests
 
 ### Example
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public Benchmark()
 {
     // BENCHMARK using Stopwatch
@@ -128,5 +128,5 @@ public List<string> GenerateData(int nbRecord)
 
 	return list;
 }
-{% endhighlight %}
+```
 

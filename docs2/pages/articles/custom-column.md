@@ -12,8 +12,8 @@ You can specify the column on which the operation should be performed with the *
 
 ### Example
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 // DON'T add the key if auto-generated
 ctx.BulkInsert(customers, operation => operation.ColumnInputExpression =
     customer => new {customer.Name, customer.Email});
@@ -25,7 +25,7 @@ ctx.BulkUpdate(customers, operation => operation.ColumnInputExpression =
 // ALWAYS add the key
 ctx.BulkMerge(customers, operation => operation.ColumnInputExpression =
     customer => new {customer.ID, customer.Name, customer.Email});
-{% endhighlight %}
+```
 
 ## Troubleshooting
 

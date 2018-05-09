@@ -5,8 +5,8 @@ permalink: audit
 ## UseAudit
 Gets or sets if `INSERTED` and `DELETED` data from the database should be returned as `AuditEntries`.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 List<AuditEntry> auditEntries = new List<AuditEntry>();
 
 context.BulkSaveChanges(options =>
@@ -15,15 +15,15 @@ context.BulkSaveChanges(options =>
 	options.BulkOperationExecuted = bulkOperation => auditEntries.AddRange(bulkOperation.AuditEntries);
 });
 
-{% endhighlight %}
+```
 
 ---
 
 ## AuditEntries
 Gets `INSERTED` and `DELETED` data when `UseAudit` option is enabled.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 List<AuditEntry> auditEntries = new List<AuditEntry>();
 
 context.BulkSaveChanges(options =>
@@ -40,4 +40,4 @@ foreach (var entry in auditEntries)
         var newValue = value.NewValue;
     }
 }
-{% endhighlight %}
+```

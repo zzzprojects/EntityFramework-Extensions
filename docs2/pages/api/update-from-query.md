@@ -7,8 +7,8 @@ permalink: update-from-query
 
 An `UPDATE` statement is built using the LINQ expression and directly executed in the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 // UPDATE all customers that are inactive for more than two years
 context.Customers
     .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
@@ -16,7 +16,7 @@ context.Customers
 	
 // UPDATE customers by id
 context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Actif = false});
-{% endhighlight %}
+```
 
 ## Purpose
 `Updating` entities using `SaveChanges` normally requires to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.

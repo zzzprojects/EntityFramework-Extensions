@@ -5,8 +5,8 @@ permalink: use-audit
 ## Definition
 Gets or sets if `INSERTED` and `DELETED` data from the database should be returned as `AuditEntries`.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 List<AuditEntry> auditEntries = new List<AuditEntry>();
 
 context.BulkSaveChanges(options =>
@@ -14,7 +14,7 @@ context.BulkSaveChanges(options =>
 	options.UseAudit = true;
 	options.BulkOperationExecuted = bulkOperation => auditEntries.AddRange(bulkOperation.AuditEntries);
 });
-{% endhighlight %}
+```
 
 ## Purpose
 Logging old values and new values is often useful to keep history of changes in the database or file.

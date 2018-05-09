@@ -7,14 +7,14 @@ permalink: bulk-insert
 
 All entities are considered as new rows and are `INSERTED` in the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 // Easy to use
 context.BulkInsert(list);
 
 // Easy to customize
 context.BulkInsert(list, options => options.BatchSize = 100);
-{% endhighlight %}
+```
 
 ## Purpose
 `Inserting` thousand of entities for an initial load or a file importation is a typical scenario.
@@ -38,43 +38,43 @@ context.BulkInsert(list, options => options.BatchSize = 100);
 ### How can I specify more than one option?
 You can specify more than one option using anonymous block.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkInsert(list, options => {
 	options.BatchSize = 100);
 	options.ColumnInputExpression = c => new {c.Name, c.Description});
 });
-{% endhighlight %}
+```
 
 ### How can I specify the Batch Size?
 You can specify a custom batch size using the `BatchSize` option.
 
 Read more: [BatchSize](/batch-size)
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkInsert(list, options => options.BatchSize = 100);
-{% endhighlight %}
+```
 
 ### How can I specify custom columns to Insert?
 You can specify custom columns using the `ColumnInputExpression` option.
 
 Read more: [ColumnInputExpression](/column-input-expression)
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkInsert(list, options => options.ColumnInputExpression = c => new {c.Name, c.Description});
-{% endhighlight %}
+```
 
 ### How can I include child entities (Entity Graph)?
 You can include child entities using the `IncludeGraph` option. Make sure to read about the `IncludeGraph` since this option is not as trivial as others.
 
 Read more: [IncludeGraph](/include-graph)
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkInsert(list, options => options.IncludeGraph = true);
-{% endhighlight %}
+```
 
 ### Why BulkInsert doesn't use the ChangeTracker?
 To provide the best performance possible!

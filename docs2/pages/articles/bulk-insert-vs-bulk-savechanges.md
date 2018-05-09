@@ -23,8 +23,8 @@ BulkSaveChanges as SaveChanges create an internal transaction. So, by default, t
 
 BulkInsert doesn’t create a transaction by default. If you want to save multiple lists, you will need to handle the transaction in your code.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 var transaction = context.Database.BeginTransaction();
 try
 {
@@ -36,4 +36,4 @@ catch
 {
 	transaction.Rollback();
 }
-{% endhighlight %}
+```

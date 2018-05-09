@@ -12,7 +12,7 @@ Batch Operations Available:
 - [UpdateFromQuery](update-from-query)
 
 {% include template-example.html title='Batch Operations Examples' %} 
-{% highlight csharp %}
+```csharp
 // DELETE all customers that are inactive for more than two years
 context.Customers
     .Where(x => x.LastLogin < DateTime.Now.AddYears(-2))
@@ -22,7 +22,7 @@ context.Customers
 context.Customers
     .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
     .UpdateFromQuery(x => new Customer {Actif = false});
-{% endhighlight %}
+```
 
 ## Purpose
 Updating or deleting data with SaveChanges requires to load data first which significantly reduces application performance.

@@ -5,12 +5,12 @@ permalink: ignore-on-merge-insert-expression
 ## Definition
 Gets or sets columns to ignore when the `BulkMerge` method executes the `insert` statement.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkMerge(list, options => 
         options.IgnoreOnMergeUpdateExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}
 ); 
-{% endhighlight %}
+```
 
 ## Purpose
 The `IgnoreOnMergeInsertExpression` option lets you ignore some columns that should only be `updated.

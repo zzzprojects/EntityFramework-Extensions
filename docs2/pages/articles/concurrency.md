@@ -20,8 +20,8 @@ There are three possible scenarios:
 ### Database Wins
 You keep database values.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkSaveChanges_DatabaseWins(DbContext ctx)
 {
     bool saveFailed;
@@ -44,13 +44,13 @@ public void BulkSaveChanges_DatabaseWins(DbContext ctx)
 
     } while (saveFailed); 
 }
-{% endhighlight %}
+```
 
 ### Client Wins
 You keep current entity values.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkSaveChanges_ClientWins(DbContext ctx)
 {
     bool saveFailed;
@@ -74,13 +74,13 @@ public void BulkSaveChanges_ClientWins(DbContext ctx)
 
     } while (saveFailed); 
 }
-{% endhighlight %}
+```
 
 ### Custom Resolution
 You merge properties from database and client entity.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkSaveChanges_CustomResolution(CurrentContext ctx)
         {
 public void BulkSaveChanges_CustomResolution(CurrentContext ctx)
@@ -127,7 +127,7 @@ public void BulkSaveChanges_CustomResolution(CurrentContext ctx)
 
     } while (saveFailed);
 }
-{% endhighlight %}
+```
 
 ## Solution - BulkUpdate
 When a concurrency error happens, BulkUpdate returns a **DbBulkOperationConcurrencyException** which contains all entries in error.
@@ -140,8 +140,8 @@ There are three possible scenarios:
 ### Database Wins
 You keep database values.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkUpdate_DatabaseWins<T>(CurrentContext ctx, List<T> list) where T : class
 {
     try
@@ -153,13 +153,13 @@ public void BulkUpdate_DatabaseWins<T>(CurrentContext ctx, List<T> list) where T
         // DO nothing (or log), keep database values!
     }
 }
-{% endhighlight %}
+```
 
 ### Client Wins
 You keep current entity values.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkUpdate_StoreWins<T>(CurrentContext ctx, List<T> list) where T : class
 {
     try
@@ -172,13 +172,13 @@ public void BulkUpdate_StoreWins<T>(CurrentContext ctx, List<T> list) where T : 
         ctx.BulkUpdate(list, operation => operation.AllowConcurrency = false);
     }
 }
-{% endhighlight %}
+```
 
 ### Custom Resolution
 You merge properties from database and client entity.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkUpdate_CustomResolution<T>(CurrentContext ctx, List<T> list) where T : class
 {
     try
@@ -205,4 +205,4 @@ public void BulkUpdate_CustomResolution<T>(CurrentContext ctx, List<T> list) whe
         ctx.BulkUpdate(list, operation => operation.AllowConcurrency = false);
     }
 }
-{% endhighlight %}
+```

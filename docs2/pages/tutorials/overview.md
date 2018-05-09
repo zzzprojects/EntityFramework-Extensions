@@ -12,9 +12,9 @@ The library is installed through <a href="/installing">NuGet</a>. Extension meth
 
 It easy to use, easy to customize.
 
-{% include template-example.html %} 
 
-{% highlight csharp %}
+
+```csharp
 // Easy to use
 context.BulkSaveChanges();
 context.BulkInsert(list);
@@ -25,7 +25,7 @@ context.BulkMerge(list);
 // Easy to customize
 context.BulkMerge(customers, options => 
 	options.ColumnPrimaryKeyExpression = customer => customer.Code);
-{% endhighlight %}
+```
 
 ## Purpose
 Entity Framework is reputed to be very slow when saving multiple entities! The performance issue is mainly due to the **DetectChanges** method and the number of database round-trip.
@@ -51,7 +51,7 @@ BulkSaveChanges supports everything:
 - Etc.
 
 {% include template-example.html title='BulkSaveChanges Examples' %} 
-{% highlight csharp %}
+```csharp
 context.Customers.AddRange(listToAdd); // add
 context.Customers.RemoveRange(listToRemove); // remove
 listToModify.ForEach(x => x.DateModified = DateTime.Now); // modify
@@ -61,7 +61,7 @@ context.BulkSaveChanges();
 
 // Easy to customize
 context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
-{% endhighlight %}
+```
 
 ### Performance Comparisons
 
@@ -85,7 +85,7 @@ Bulk Operations Available:
 - [BulkSynchronize](/bulk-synchronize)
 
 {% include template-example.html title='Bulk Operations Examples' %} 
-{% highlight csharp %}
+```csharp
 // Easy to use
 context.BulkInsert(list);
 context.BulkUpdate(list);
@@ -95,7 +95,7 @@ context.BulkMerge(list);
 // Easy to customize
 context.BulkMerge(customers, options => 
 	options.ColumnPrimaryKeyExpression = customer => customer.Code; });
-{% endhighlight %}
+```
 
 ### Performance Comparisons
 
@@ -118,7 +118,7 @@ Batch Operations Available:
 - [UpdateFromQuery](update-from-query)
 
 {% include template-example.html title='Batch Operations Examples' %} 
-{% highlight csharp %}
+```csharp
 // DELETE all customers that are inactive for more than two years
 context.Customers
     .Where(x => x.LastLogin < DateTime.Now.AddYears(-2))
@@ -128,7 +128,7 @@ context.Customers
 context.Customers
     .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
     .UpdateFromQuery(x => new Customer {Actif = false});
-{% endhighlight %}
+```
 
 ### Performance Comparisons
 

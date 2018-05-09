@@ -23,8 +23,8 @@ There are three possible resolutions:
 - Custom Resolution
 
 #### Database Win
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkSaveChanges_DatabaseWins(DbContext ctx)
 {
     bool saveFailed;
@@ -47,11 +47,11 @@ public void BulkSaveChanges_DatabaseWins(DbContext ctx)
 
     } while (saveFailed); 
 }
-{% endhighlight %}
+```
 
 #### Client Win
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkSaveChanges_ClientWins(DbContext ctx)
 {
     bool saveFailed;
@@ -75,11 +75,11 @@ public void BulkSaveChanges_ClientWins(DbContext ctx)
 
     } while (saveFailed); 
 }
-{% endhighlight %}
+```
 
 #### Custom Resolution
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkSaveChanges_CustomResolution(CurrentContext ctx)
 {
 
@@ -124,4 +124,4 @@ public void BulkSaveChanges_CustomResolution(CurrentContext ctx)
 
     } while (saveFailed);
 }
-{% endhighlight %}
+```

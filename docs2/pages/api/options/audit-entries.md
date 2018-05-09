@@ -5,8 +5,8 @@ permalink: audit-entries
 ## Definition
 Get `INSERTED` and `DELETED` data when `UseAudit` option is enabled.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 List<AuditEntry> auditEntries = new List<AuditEntry>();
 
 context.BulkSaveChanges(options =>
@@ -23,7 +23,7 @@ foreach (var entry in auditEntries)
         var newValue = value.NewValue;
     }
 }
-{% endhighlight %}
+```
 
 ## Purpose
 Logging old value and new value is often useful to keep a history of changes in the database or file.

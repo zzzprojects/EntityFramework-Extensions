@@ -5,14 +5,14 @@ permalink: retry-interval
 ## Definition
 Gets or sets the interval to wait before retrying an operation when a transient error occurs.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 context.BulkSaveChanges(options => {
 	options.RetryCount = 3;
 	options.RetryInterval = new TimeSpan(100);
 });
 
-{% endhighlight %}
+```
 
 ## Purpose
 A transient error is a temporary error that is likely to disappear soon. That rarely happens but they might occur!

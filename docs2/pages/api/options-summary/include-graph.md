@@ -5,18 +5,18 @@ permalink: include-graph
 The IncludeGraph options allow to INSERT/UPDATE/MERGE entities by including the child entities graph.
 By example, if you use BulkInsert using a list of Invoice with the options IncludeGraph, all invoices items will also be inserted.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 ctx.BulkInsert(invoices, options => options.IncludeGraph = true);
-{% endhighlight %}
+```
 
 ## IncludeGraphOperationBuilder
 The IncludeGraphOperationBuilder let you customize the bulk operations by entity type. 
 
 Options are not copied when using IncludeGraph
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 ctx.BulkMerge(users, options =>
 {
 	options.IncludeGraph = true;
@@ -34,13 +34,13 @@ ctx.BulkMerge(users, options =>
 		}
 	};
 });
-{% endhighlight %}
+```
 
 ### ReadOnly
 You can specify that some entities should not be inserted/updated by marked them as ReadOnly.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 ctx.BulkMerge(users, options =>
 {
 	options.IncludeGraph = true;
@@ -53,7 +53,7 @@ ctx.BulkMerge(users, options =>
 		}
 	};
 });
-{% endhighlight %}
+```
 
 
 {% include section-faq-begin.html %}
