@@ -39,8 +39,8 @@ You can specify more than one option using anonymous block.
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkSynchronize(list, options => {
-	options.BatchSize = 100);
-	options.ColumnInputExpression = c => new {c.ID, c.Name, c.Description});
+	options.BatchSize = 100;
+	options.ColumnInputExpression = c => new {c.ID, c.Name, c.Description};
 });
 {% endhighlight %}
 

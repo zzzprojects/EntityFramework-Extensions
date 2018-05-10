@@ -39,8 +39,8 @@ You can specify more than one option using anonymous block.
 
 ```csharp
 context.BulkInsert(list, options => {
-	options.BatchSize = 100);
-	options.ColumnInputExpression = c => new {c.Name, c.Description});
+	options.BatchSize = 100;
+	options.ColumnInputExpression = c => new {c.Name, c.Description};
 });
 ```
 

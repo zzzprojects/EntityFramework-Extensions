@@ -54,7 +54,7 @@ You can specify more than one option using anonymous block.
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkSaveChanges(options => {
-	options.BatchSize = 100);
+	options.BatchSize = 100;
 	options.AllowConcurrency = false;
 });
 {% endhighlight %}
