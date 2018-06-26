@@ -6,7 +6,7 @@ The context factory is required to provide a working context to the EFE library.
 If your context has a default constructor (no parameter), specifying a context factory may be optional unless your context requires some special configuration.
 
 ### EF6/EF5/EF4
-Having a default context constructor or specifying a context factory is only required with the following options:
+Having a default context constructor or specifying a context factory is only required with the following option:
 - IncludeGraph
 
 ### EF Core
