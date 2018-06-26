@@ -16,7 +16,7 @@ Most of the time, this error is caused by some methods used from `Entity Framewo
 ### Solution
 Turning off Entity Framework Propagation
 
-This solution work with around 99% of model. By turning off this options, our library doesn’t longer use several methods from Entity Framework that consume high memory such as the command generations.
+This solution work with around 99% of models. By turning off this options, our library doesn’t longer use several methods from Entity Framework that consume high memory such as the command generation.
 
 See: <a href="/improve-bulk-savechanges">Improve BulkSaveChanges</a>
 
@@ -28,9 +28,9 @@ In some exceptional scenario, using Bulk Operations such as:
 - BulkDelete
 - BulkMerge
 
-might may a better idea. They are faster and consume way less memory than BulkSaveChanges.
+may a better idea. They are faster and consume way less memory than BulkSaveChanges.
 
 ### Reduce the number of entities in the ChangeTracker
 Another way is to make sure the ChangeTracker doesn’t contain too many entities.
 
-The ChangeTracker has not been build to support millions entities.
+The ChangeTracker has not been build to support millions of entities.
