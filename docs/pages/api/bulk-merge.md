@@ -15,6 +15,7 @@ ctx.BulkMerge(list);
 // Easy to customize
 context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/FsJKnV' %}
 
 ## Purpose
 `Merging` entities using a custom key from file importation is a typical scenario.
@@ -45,6 +46,7 @@ context.BulkMerge(list, options => {
 	options.ColumnInputExpression = c => new {c.ID, c.Name, c.Description};
 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/8wVTP6' %}
 
 ### How can I specify the Batch Size?
 You can specify a custom batch size using the `BatchSize` option.
@@ -55,6 +57,7 @@ Read more: [BatchSize](/batch-size)
 {% highlight csharp %}
 context.BulkMerge(list, options => options.BatchSize = 100);
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/RJtqZq' %}
 
 ### How can I specify custom columns to Merge?
 You can specify custom columns using the `ColumnInputExpression` option.
@@ -65,6 +68,7 @@ Read more: [ColumnInputExpression](/column-input-expression)
 {% highlight csharp %}
 context.BulkMerge(list, options => options.ColumnInputExpression = c => new {c.Name, c.Description});
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/ei5SRo' %}
 
 ### How can I specify custom columns to exclude on insert or update?
 You can specify custom columns to exclude using the `IgnoreOnMergeInsertExpression` and `IgnoreOnMergeUpdateExpression` option.
