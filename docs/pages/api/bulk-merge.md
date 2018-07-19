@@ -85,8 +85,6 @@ context.BulkMerge(list, options =>
 		options.IgnoreOnMergeUpdateExpression = customer => customer.Code, customer.Col2;
 	});
 {% endhighlight %}
-{% include component-try-it.html href='https://dotnetfiddle.net/J4Utxh' %}
-
 
 ### How can I specify custom keys to use?
 You can specify custom keys using the `ColumnPrimaryKeyExpression` option.
@@ -112,6 +110,7 @@ Read more: [IncludeGraph](/include-graph)
 {% highlight csharp %}
 context.BulkMerge(list, options => options.IncludeGraph = true);
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/Rc2zlv' %}
 
 ### Why BulkMerge doesn't use the ChangeTracker?
 To provide the best performance possible!
