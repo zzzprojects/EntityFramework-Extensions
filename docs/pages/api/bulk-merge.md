@@ -112,7 +112,6 @@ context.BulkMerge(list, options => options.IncludeGraph = true);
 {% endhighlight %}
 {% include component-try-it.html href='https://dotnetfiddle.net/Rc2zlv' %}
 
-
 ### Why BulkMerge doesn't use the ChangeTracker?
 To provide the best performance possible!
 
