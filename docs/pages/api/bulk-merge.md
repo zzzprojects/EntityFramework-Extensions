@@ -85,6 +85,8 @@ context.BulkMerge(list, options =>
 		options.IgnoreOnMergeUpdateExpression = customer => customer.Code, customer.Col2;
 	});
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/J4Utxh' %}
+
 
 ### How can I specify custom keys to use?
 You can specify custom keys using the `ColumnPrimaryKeyExpression` option.
@@ -99,6 +101,7 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = cus
 // Surrogate Key
 context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/g9vjpx' %}
 
 ### How can I include child entities (Entity Graph)?
 You can include child entities using the `IncludeGraph` option. Make sure to read about the `IncludeGraph` since this option is not as trivial as others.
