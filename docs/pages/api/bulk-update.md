@@ -15,6 +15,7 @@ context.BulkUpdate(list);
 // Easy to customize
 context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/4JgSk3' %}
 
 ## Purpose
 `Updating` entities using a custom key from file importation is a typical scenario.
@@ -45,6 +46,7 @@ context.BulkUpdate(list, options => {
 	options.ColumnInputExpression = c => new {c.ID, c.Name, c.Description};
 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/qfv3Ee' %}
 
 ### How can I specify the Batch Size?
 You can specify a custom batch size using the `BatchSize` option.
@@ -55,6 +57,7 @@ Read more: [BatchSize](/batch-size)
 {% highlight csharp %}
 context.BulkUpdate(list, options => options.BatchSize = 100);
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/2821OM' %}
 
 ### How can I specify custom columns to Update?
 You can specify custom columns using the `ColumnInputExpression` option.
@@ -65,6 +68,7 @@ Read more: [ColumnInputExpression](/column-input-expression)
 {% highlight csharp %}
 context.BulkUpdate(list, options => options.ColumnInputExpression = c => new {c.Name, c.Description});
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/3siHFf' %}
 
 ### How can I specify custom keys to use?
 You can specify custom key using the `ColumnPrimaryKeyExpression` option.
@@ -79,6 +83,7 @@ context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = cu
 // Surrogate Key
 context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/jjzxC1' %}
 
 ### How can I include child entities (Entity Graph)?
 You can include child entities using the `IncludeGraph` option. Make sure to read about the `IncludeGraph` since this option is not as trivial as others.
@@ -89,6 +94,7 @@ Read more: [IncludeGraph](/include-graph)
 {% highlight csharp %}
 context.BulkUpdate(list, options => options.IncludeGraph = true);
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/02Mjoy' %}
 
 ### Why BulkUpdate doesn't use the ChangeTracker?
 To provide the best performance possible!
