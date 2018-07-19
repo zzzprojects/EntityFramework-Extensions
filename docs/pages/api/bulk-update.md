@@ -83,7 +83,7 @@ context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = cu
 // Surrogate Key
 context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
 {% endhighlight %}
-{% include component-try-it.html href='https://dotnetfiddle.net/3siHFf' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/jjzxC1' %}
 
 ### How can I include child entities (Entity Graph)?
 You can include child entities using the `IncludeGraph` option. Make sure to read about the `IncludeGraph` since this option is not as trivial as others.
@@ -94,6 +94,7 @@ Read more: [IncludeGraph](/include-graph)
 {% highlight csharp %}
 context.BulkUpdate(list, options => options.IncludeGraph = true);
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/02Mjoy' %}
 
 ### Why BulkUpdate doesn't use the ChangeTracker?
 To provide the best performance possible!
