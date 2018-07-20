@@ -16,6 +16,7 @@ context.BulkSaveChanges(options =>
 });
 
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/cIHYyb' %}
 
 ---
 
@@ -41,3 +42,4 @@ foreach (var entry in auditEntries)
     }
 }
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/WwQ7oZ' %}
