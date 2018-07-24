@@ -5,7 +5,7 @@ permalink: licensing
 ## Evaluation Period
 - You can evaluate the library for several months before purchasing it.
 - The latest version always contains a trial that expires at the **end of the month**. 
-- You can extend your trial for several months by downloading the latest version at the begining of every month.
+- You can extend your trial for several months by downloading the latest version at the beginning of every month.
 - If you want to use the library for personal use or educational purpose, it's possible by downloading the latest version once a month.
 
 ## How can I purchase the library?
