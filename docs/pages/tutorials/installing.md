@@ -6,7 +6,7 @@ permalink: installing
 
 This library is **NOT FREE**
 
-The latest version always contains a trial that expires at the end of the month. You can extend your trial for several months by downloading the latest version at the begining of every month.
+The latest version always contains a trial that expires at the end of the month. You can extend your trial for several months by downloading the latest version at the beginning of every month.
 
 ## Step 1 - NuGet Download
 
