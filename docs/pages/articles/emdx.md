@@ -27,7 +27,7 @@ public string GetModelXDocument(DbContext context)
 }
 
 DbContext context = new EntityContext();
-string edmx = GetModelXDocument();
+string edmx = GetModelXDocument(context);
 {% endhighlight %}
 
 
