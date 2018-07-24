@@ -6,7 +6,7 @@ permalink: out-of-memory
 
 You execute a method from the Entity Framework Extensions library, and the following error is thrown:
 
-{% include template-exception.html message='An exception of type `System.OutOfMemoryException` occured in...' %}
+{% include template-exception.html message='An exception of type `System.OutOfMemoryException` occurred in...' %}
 
 ## Cause
 That error is caused when the library consumes too much memory.
