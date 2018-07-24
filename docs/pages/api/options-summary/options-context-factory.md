@@ -21,11 +21,13 @@ The current DbContext is passed in a parameter in case you need to create a work
 // Using the default constructor
 EntityFrameworkManager.ContextFactory = context => new CurrentContext();
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/6BQAzg' %}
 {% include template-example.html %} 
 {% highlight csharp %}
 // Using a constructor that requires a connection string
 EntityFrameworkManager.ContextFactory = context => new CurrentContext(My.ConnectionString);
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/44eGOE' %}
 {% include template-example.html %} 
 {% highlight csharp %}
 // Using a constructor that requires optionsBuilder (EF Core) 
