@@ -9,6 +9,7 @@ For example, if you use BulkInsert using a list of Invoice with the option Inclu
 {% highlight csharp %}
 ctx.BulkInsert(invoices, options => options.IncludeGraph = true);
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/spN4T5' %}
 
 ## IncludeGraphOperationBuilder
 The IncludeGraphOperationBuilder let you customize the bulk operations by entity type. 
@@ -35,6 +36,7 @@ ctx.BulkMerge(users, options =>
 	};
 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/0uW3tw' %}
 
 ### ReadOnly
 You can specify that some entities should not be inserted/updated by marked them as ReadOnly.
@@ -53,7 +55,7 @@ ctx.BulkMerge(users, options =>
 		}
 	};
 });
-{% endhighlight %}
+{% endhighlight %} 
 
 
 {% include section-faq-begin.html %}
