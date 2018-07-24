@@ -20,10 +20,12 @@ The current DbContext is passed in a parameter in case you need to create a work
 {% highlight csharp %}
 // Using the default constructor
 EntityFrameworkManager.ContextFactory = context => new CurrentContext();
-
+{% endhighlight %}
+{% highlight csharp %}
 // Using a constructor that requires a connection string
 EntityFrameworkManager.ContextFactory = context => new CurrentContext(My.ConnectionString);
-
+{% endhighlight %}
+{% highlight csharp %}
 // Using a constructor that requires optionsBuilder (EF Core) 
 EntityFrameworkManager.ContextFactory = context =>
 {
@@ -31,7 +33,8 @@ EntityFrameworkManager.ContextFactory = context =>
 	optionsBuilder.UseSqlServer(My.ConnectionString);
 	return new EntityContext(optionsBuilder.Options);
 };
-
+{% endhighlight %}
+{% highlight csharp %}
 // Using a constructor that depends on the current context
 EntityFrameworkManager.ContextFactory = context =>
 {
