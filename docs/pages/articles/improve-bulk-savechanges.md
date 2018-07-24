@@ -7,7 +7,7 @@ BulkSaveChanges is already very fast. But you can make it even faster by simply 
 
 While the performance will be significantly increased, this option works with  99,9% of models. Unfortunately, we cannot turn this option on by default for backward compatibility until we make it work with all models
 
-We are currently working on the next major version which will have even better performances!
+We are currently working on the next major version which will have even better performance!
 
 [Learn - Why turning off Entity Framework Propagation is faster](#why-turning-off-entity-framework-propagation-is-faster)
 
