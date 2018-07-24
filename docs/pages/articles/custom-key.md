@@ -3,7 +3,7 @@ permalink: custom-key
 ---
 
 ## Problem
-You want to perform a Bulk Operations (BulkUpdate, BulkDelete, or BulkMerge) but using a different key than the one specifyied.
+You want to perform a Bulk Operations (BulkUpdate, BulkDelete, or BulkMerge) but using a different key than the one specified.
 
 By example, you want to perform a BulkUpdate on a customer list but using the customer "Code" instead of the "CustomerID" for the key.
 
