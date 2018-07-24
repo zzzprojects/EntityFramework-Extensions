@@ -13,6 +13,7 @@ context.BulkMerge(list, options =>
         options.ColumnInputExpression = entity => new {entity.ID, entity.Code}
 ); 
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/lwF8DZ' %}
 
 ## Column Output
 Gets or sets columns to map with the direction `Output`.
@@ -23,6 +24,7 @@ context.BulkMerge(list, options =>
         options.ColumnOutputExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}
 ); 
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/se3Vjk' %}
 
 ## Column InputOutput
 Gets or sets columns to map with the direction `InputOutput`.
@@ -45,6 +47,7 @@ context.BulkMerge(list, options =>
         options.ColumnPrimaryKeyExpression = entity => new { entity.Code1, entity.Code2 }
 ); 
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/L1Wvep' %}
 
 ## Ignore On Merge Insert
 Gets or sets columns to ignore when the `BulkMerge` method executes the `insert` statement.
@@ -52,7 +55,7 @@ Gets or sets columns to ignore when the `BulkMerge` method executes the `insert`
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkMerge(list, options => 
-        options.IgnoreOnMergeUpdateExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}
+        options.IgnoreOnMergeInsertExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}
 ); 
 {% endhighlight %}
 
