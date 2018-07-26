@@ -53,7 +53,7 @@ EntityFrameworkManager.ContextFactory = context =>
 	}
 };
 {% endhighlight %}
-
+{% include component-try-it.html href='https://dotnetfiddle.net/fyTeS7' %}
 ## Default Constructor
 If your context has a default constructor, you might now need to specify a context factory.
 
@@ -69,5 +69,4 @@ public class EntitiesContext : DbContext
 	// ...code...
 }
 {% endhighlight %}
-
-
+{% include component-try-it.html href='https://dotnetfiddle.net/jEPrjg' %}
