@@ -11,6 +11,7 @@ context.BulkSaveChanges(options => {
 	options.RetryCount = 3;
 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/BJJKFg' %}
 
 ---
 
@@ -25,3 +26,4 @@ context.BulkSaveChanges(options => {
 });
 
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/wy84D5' %}

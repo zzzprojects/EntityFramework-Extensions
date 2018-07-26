@@ -20,6 +20,7 @@ catch
 	transaction.Rollback();
 }
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/Igr6zU' %}
 ---
 
 ## Bulk Operations
@@ -41,3 +42,4 @@ catch
 	transaction.Rollback();
 }
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/zr1QSB' %}

@@ -20,10 +20,16 @@ The current DbContext is passed in a parameter in case you need to create a work
 {% highlight csharp %}
 // Using the default constructor
 EntityFrameworkManager.ContextFactory = context => new CurrentContext();
-
+{% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/6BQAzg' %}
+{% include template-example.html %} 
+{% highlight csharp %}
 // Using a constructor that requires a connection string
 EntityFrameworkManager.ContextFactory = context => new CurrentContext(My.ConnectionString);
-
+{% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/44eGOE' %}
+{% include template-example.html %} 
+{% highlight csharp %}
 // Using a constructor that requires optionsBuilder (EF Core) 
 EntityFrameworkManager.ContextFactory = context =>
 {
@@ -31,7 +37,9 @@ EntityFrameworkManager.ContextFactory = context =>
 	optionsBuilder.UseSqlServer(My.ConnectionString);
 	return new EntityContext(optionsBuilder.Options);
 };
-
+{% endhighlight %}
+{% include template-example.html %} 
+{% highlight csharp %}
 // Using a constructor that depends on the current context
 EntityFrameworkManager.ContextFactory = context =>
 {
@@ -45,7 +53,7 @@ EntityFrameworkManager.ContextFactory = context =>
 	}
 };
 {% endhighlight %}
-
+{% include component-try-it.html href='https://dotnetfiddle.net/fyTeS7' %}
 ## Default Constructor
 If your context has a default constructor, you might now need to specify a context factory.
 
@@ -61,5 +69,4 @@ public class EntitiesContext : DbContext
 	// ...code...
 }
 {% endhighlight %}
-
-
+{% include component-try-it.html href='https://dotnetfiddle.net/jEPrjg' %}
