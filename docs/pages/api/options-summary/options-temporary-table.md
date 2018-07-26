@@ -12,6 +12,7 @@ context.BulkSaveChanges(options =>
    options.TemporaryTableBatchByTable = 0; // unlimited
 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/YjoyLn' %}
 
 ---
 
@@ -25,7 +26,7 @@ context.BulkSaveChanges(options =>
    options.TemporaryTableInsertBatchSize = 50000;
 });
 {% endhighlight %}
-
+{% include component-try-it.html href='https://dotnetfiddle.net/0n66D0' %}
 ---
 
 ## TemporaryTableMinRecord
@@ -38,6 +39,7 @@ context.BulkSaveChanges(options =>
    options.TemporaryTableMinRecord = 25;
 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/jkIJzF' %}
 
 ---
 
@@ -51,6 +53,7 @@ context.BulkSaveChanges(options =>
    options.TemporaryTableSchemaName = "zzz";
 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/RjriRf' %}
 
 ---
 
@@ -64,7 +67,7 @@ context.BulkSaveChanges(options =>
    options.TemporaryTableUseTableLock = true;
 });
 {% endhighlight %}
-
+{% include component-try-it.html href='https://dotnetfiddle.net/z2Pg1K' %}
 
 ---
 
@@ -78,3 +81,4 @@ context.BulkSaveChanges(options =>
    options.UsePermanentTable = true;
 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/B5qNg5' %}
