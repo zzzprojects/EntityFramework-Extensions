@@ -11,6 +11,7 @@ context.BulkSaveChanges(options => {
 	options.BulkOperationExecuting = bulkOperation => { /* configuration */ };
 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/mIhWyT' %}
 
 ---
 
@@ -23,3 +24,4 @@ context.BulkSaveChanges(options => {
 	options.BulkOperationExecuted = bulkOperation => { /* configuration */ };
 });
 {% endhighlight %}
+{% include component-try-it.html href='https://dotnetfiddle.net/u3MlB7' %}
