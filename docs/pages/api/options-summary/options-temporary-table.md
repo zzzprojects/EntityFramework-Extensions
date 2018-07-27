@@ -27,6 +27,7 @@ context.BulkSaveChanges(options =>
 });
 {% endhighlight %}
 {% include component-try-it.html href='https://dotnetfiddle.net/0n66D0' %}
+
 ---
 
 ## TemporaryTableMinRecord
