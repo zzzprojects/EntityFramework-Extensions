@@ -25,6 +25,30 @@ context.BulkMerge(customers, options =>
 	options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
 
+## Installing
+Download the <a href="/download">NuGet Package</a>
+
+## Requirements
+
+### Entity Framework Version
+
+
+
+- Entity Framework Core 2.x
+- Entity Framework 6.x
+- Entity Framework 5
+- Entity Framework 4
+
+### Database Provider
+
+- SQL Server 2008+
+- SQL Azure
+- SQL Compact
+- Oracle
+- MySQL
+- PostgreSQL
+- SQLite
+
 ## Purpose
 Entity Framework is reputed to be very slow when saving multiple entities! The performance issue is mainly due to the **DetectChanges** method and the number of database round-trip.
 
