@@ -1,6 +1,6 @@
 # Articles
 
-You got some articles idea you will want we write?
+You got some articles idea you would like us to write?
 
 Contact us: <a href="mailto:info@zzzprojects.com">info@zzzprojects.com</a>
 

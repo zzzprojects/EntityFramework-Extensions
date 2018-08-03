@@ -137,7 +137,7 @@
 ## FAQ
 
 ### How can I extend my trial?
-The latest version always contains a trial that expires at the end of the month. You can extend your trial for several months by downloading the latest version at the begining of every month.
+The latest version always contains a trial that expires at the end of the month. You can extend your trial for several months by downloading the latest version at the beginning of every month.
 
 ### Why this library is not free and open source?
 `ZZZ Projects` mission is focused on adding value to the `.NET Community` and supporting a lot of `free and open source` libraries.
