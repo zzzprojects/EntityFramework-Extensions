@@ -1,6 +1,6 @@
 # Fastest Way to Insert
 
-## What’s the FASTEST way to insert in Entity Framework?
+## What's the FASTEST way to insert in Entity Framework?
 
 This question keeps getting asked a few times every week on Stack Overflow.
 Most common solutions usually involve:
