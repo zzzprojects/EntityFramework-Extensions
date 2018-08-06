@@ -3,7 +3,7 @@
 ## Definition
 Bulk operations method gives you additional flexibility by allowing to customize options such as primary key, columns, include childs entities and more.
 
-They are also faster than BulkSaveChanges since they don’t use the ChangeTracker and doesn’t call the DetectChanges method.
+They are also faster than BulkSaveChanges since they don't use the ChangeTracker and doesn't call the DetectChanges method.
 
 Bulk Operations Available:
 - [BulkInsert](/bulk-insert)
