@@ -68,7 +68,7 @@ There are multiple options available such as:
 -	Insert only entities that don't already exists
 -	Keep Identity Value
 
-Bulk Insert is faster than BulkSaveChanges. However, Bulk Insert doesn’t use the Change Tracker so identity value propagation may differ. If you need to perform multiple bulk operations with some relation, it’s recommended to use BulkSaveChanges instead.
+Bulk Insert is faster than BulkSaveChanges. However, Bulk Insert doesn't use the Change Tracker so identity value propagation may differ. If you need to perform multiple bulk operations with some relation, it’s recommended to use BulkSaveChanges instead.
 
 Tutorial: [EFE – Bulk Insert](http://entityframework-extensions.net/bulk-insert)
 
