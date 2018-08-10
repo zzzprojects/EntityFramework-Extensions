@@ -72,7 +72,7 @@ BulkSaveChanges supports everything:
 - Self-Hierarchy
 - Etc.
 
-{% include template-example.html title='BulkSaveChanges Examples' %} 
+### BulkSaveChanges Examples
 ```csharp
 context.Customers.AddRange(listToAdd); // add
 context.Customers.RemoveRange(listToRemove); // remove
@@ -106,7 +106,7 @@ Bulk Operations Available:
 - [BulkMerge](/bulk-merge) (UPSERT operation)
 - [BulkSynchronize](/bulk-synchronize)
 
-{% include template-example.html title='Bulk Operations Examples' %} 
+### Bulk Operations Examples
 ```csharp
 // Easy to use
 context.BulkInsert(list);
@@ -139,7 +139,7 @@ Batch Operations Available:
 - [DeleteFromQuery](delete-from-query)
 - [UpdateFromQuery](update-from-query)
 
-{% include template-example.html title='Batch Operations Examples' %} 
+### Batch Operations Examples 
 ```csharp
 // DELETE all customers that are inactive for more than two years
 context.Customers
