@@ -16,7 +16,7 @@ BulkSaveChanges supports everything:
 - Self-Hierarchy
 - Etc.
 
-{% include template-example.html title='BulkSaveChanges Examples' %} 
+### BulkSaveChanges Examples
 ```csharp
 context.Customers.AddRange(listToAdd); // add
 context.Customers.RemoveRange(listToRemove); // remove
