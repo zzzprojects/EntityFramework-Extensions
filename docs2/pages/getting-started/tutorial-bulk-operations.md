@@ -12,7 +12,7 @@ Bulk Operations Available:
 - [BulkMerge](/bulk-merge) (UPSERT operation)
 - [BulkSynchronize](/bulk-synchronize)
 
-{% include template-example.html title='Bulk Operations Examples' %} 
+### Bulk Operations Examples
 ```csharp
 // Easy to use
 context.BulkInsert(list);
