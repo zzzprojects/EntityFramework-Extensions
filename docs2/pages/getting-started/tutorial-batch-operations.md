@@ -9,7 +9,7 @@ Batch Operations Available:
 - [DeleteFromQuery](delete-from-query)
 - [UpdateFromQuery](update-from-query)
 
-{% include template-example.html title='Batch Operations Examples' %} 
+### Batch Operations Examples
 ```csharp
 // DELETE all customers that are inactive for more than two years
 context.Customers
