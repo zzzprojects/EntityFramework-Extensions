@@ -28,7 +28,7 @@ To solve the performance problem, you need to reduce the number of database roun
 
 With this library, only a few database round-trips will now be required when saving 5000 entities which can lead to performance improvement by 50x times and more.
 
-You can find the library documentation here: [EFE - Tutorials](http://entityframework-extensions.net/tutorials)
+You can find the library documentation here: [EFE - Tutorials](/overview)
 
 Getting started with this library could not be easier. You download it using [NuGet](https://www.nuget.org/packages/Z.EntityFramework.Extensions/){:target="_blank"}, and all bulk methods are automatically available from your context instance since methods extend the DbContext class.
 
