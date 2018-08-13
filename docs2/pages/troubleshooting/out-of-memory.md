@@ -4,7 +4,7 @@
 
 You execute a method from the Entity Framework Extensions library, and the following error is thrown:
 
-{% include template-exception.html message='An exception of type `System.OutOfMemoryException` occured in...' %}
+> An exception of type `System.OutOfMemoryException` occured in...
 
 ## Cause
 That error is caused when the library consumes too much memory.
