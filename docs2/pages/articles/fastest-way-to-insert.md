@@ -28,7 +28,7 @@ To solve the performance problem, you need to reduce the number of database roun
 
 With this library, only a few database round-trips will now be required when saving 5000 entities which can lead to performance improvement by 50x times and more.
 
-You can find the library documentation here: [EFE – Tutorials](http://entityframework-extensions.net/tutorials)
+You can find the library documentation here: [EFE - Tutorials](http://entityframework-extensions.net/tutorials)
 
 Getting started with this library could not be easier. You download it using [NuGet](https://www.nuget.org/packages/Z.EntityFramework.Extensions/){:target="_blank"}, and all bulk methods are automatically available from your context instance since methods extend the DbContext class.
 
@@ -44,7 +44,7 @@ There are multiple options available such as:
 
 This method is normally recommended over bulk methoda such as Bulk Insert since it acts like SaveChanges by using the Change Tracker and propagating the value.
 
-Tutorial: [EFE – Bulk SaveChanges](http://entityframework-extensions.net/bulk-savechanges)
+Tutorial: [EFE - Bulk SaveChanges](http://entityframework-extensions.net/bulk-savechanges)
 
 ### Example
 ```csharp
@@ -70,7 +70,7 @@ There are multiple options available such as:
 
 Bulk Insert is faster than BulkSaveChanges. However, Bulk Insert doesn't use the Change Tracker so identity value propagation may differ. If you need to perform multiple bulk operations with some relation, it's recommended to use BulkSaveChanges instead.
 
-Tutorial: [EFE – Bulk Insert](http://entityframework-extensions.net/bulk-insert)
+Tutorial: [EFE - Bulk Insert](http://entityframework-extensions.net/bulk-insert)
 
 ### Example
 ```csharp
@@ -88,7 +88,7 @@ ctx.BulkInsert(customers, options =>
 ## EF BulkUpdate
 BulkUpdate method performs an UPDATE operation.
 
-Tutorial: [EFE – Bulk Update](http://entityframework-extensions.net/bulk-update)
+Tutorial: [EFE - Bulk Update](http://entityframework-extensions.net/bulk-update)
 
 There are multiple options available such:
 
@@ -114,7 +114,7 @@ There are multiple options available such as:
 - Custom Key
 -	Disable Concurrency Check
 
-Tutorial: [EFE – Bulk Delete](http://entityframework-extensions.net/bulk-delete)
+Tutorial: [EFE - Bulk Delete](http://entityframework-extensions.net/bulk-delete)
 
 ### Example
 ```csharp
@@ -139,7 +139,7 @@ There are multiple options available such as:
 - Disabled output value for better performance
 -	Keep Identity Value
 
-Tutorial: [EFE – Bulk Merge](http://entityframework-extensions.net/bulk-merge)
+Tutorial: [EFE - Bulk Merge](http://entityframework-extensions.net/bulk-merge)
 
 ### Example
 ```csharp

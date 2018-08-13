@@ -4,7 +4,7 @@
 
 You execute a method from the Entity Framework Extensions library, and the following error is thrown:
 
-{% include template-exception.html message='ERROR_005: The monthly trial period is expired. You can extend your trial by downloading the latest version as the beginning of every month. More information can be found here: http://entityframework-extensions.net/trial' %}
+> include template-exception.html message='ERROR_005: The monthly trial period is expired. You can extend your trial by downloading the latest version as the beginning of every month. More information can be found here: http://entityframework-extensions.net/trial'
 
 ### Cause
 
@@ -16,7 +16,7 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 #### Trial Period Expired
 
-You can extend your trial by downloading the latest version: [Upgrading](http://entityframework-extensions.net/upgrading)
+You can extend your trial by downloading the latest version: [Download](http://entityframework-extensions.net/download)
 
 The latest version always contains a trial for the current month to allow companies to evaluate our library for several months.
 
