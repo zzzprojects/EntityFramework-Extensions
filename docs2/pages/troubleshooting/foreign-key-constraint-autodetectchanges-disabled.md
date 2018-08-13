@@ -4,7 +4,7 @@
 
 You execute a method from the Entity Framework Extensions library, and the following error is thrown:
 
-{% include template-exception.html message='The MERGE statement conflicted with the FOREIGN KEY constraint "[FK_Name]". The conflict occurred in database "[Database_Name]", table "[Table_Name]", column \'[Column_Name]\'.' %}
+> The MERGE statement conflicted with the FOREIGN KEY constraint "[FK_Name]". The conflict occurred in database "[Database_Name]", table "[Table_Name]", column \'[Column_Name]\'.
 
 And you use a code similar to this:
 
