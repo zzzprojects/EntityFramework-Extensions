@@ -16,7 +16,7 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 #### Trial Period Expired
 
-You can extend your trial by downloading the latest version: [Upgrading](http://entityframework-extensions.net/overview)
+You can extend your trial by downloading the latest version: [Download](http://entityframework-extensions.net/download)
 
 The latest version always contains a trial for the current month to allow companies to evaluate our library for several months.
 
