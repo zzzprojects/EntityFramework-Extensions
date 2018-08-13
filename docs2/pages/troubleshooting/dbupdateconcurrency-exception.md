@@ -6,7 +6,7 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 - Type: DbUpdateConcurrencyException
 
-{% include template-exception.html message='Store update, insert, or delete statement affected an unexpected number of rows ([row count]). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.'
+{% include template-exception.html message='Store update, insert, or delete statement affected an unexpected number of rows ([row count]). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.' %}
 
 ### Cause
 
