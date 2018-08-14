@@ -15,8 +15,6 @@ context.BulkSaveChanges(options =>
 
 ```
 
----
-
 ## AuditEntries
 Gets `INSERTED` and `DELETED` data when `UseAudit` option is enabled.
 
