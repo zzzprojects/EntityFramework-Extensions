@@ -13,8 +13,6 @@ context.BulkSaveChanges(options =>
 });
 ```
 
----
-
 ## UseLogDump
 Gets or sets if all `log` related to database event should be stored in a `LogDump` properties.
 
@@ -28,8 +26,6 @@ context.BulkSaveChanges(options =>
 	options.BulkOperationExecuted = bulkOperation => logDump = bulkOperation.LogDump;
 });
 ```
-
----
 
 ## LogDump
 Gets all `logged` database event when `UseLogDump` is enabled.
