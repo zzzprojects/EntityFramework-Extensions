@@ -10,8 +10,6 @@ context.BulkSaveChanges(options => {
 });
 ```
 
----
-
 ## RetryInterval
 Gets or sets the interval to wait before retrying an operation when a transient error occurs.
 
