@@ -28,7 +28,7 @@ The main reason that could cause this issue is disabling AutoDetectChanges and n
 
 When the AutoDetectChanges is disabled, there is no verification with related entities, and that could cause the item to be added before a new Category (Which should be added first)! Leading to the Foreign Key issue.
 
-In addition, there is no reason why this code should disable DetectChanges. Since the AddRange method is used, the “DetectChanges” method is called only once per AddRange call, so you don't suffer from a performance issue.
+In addition, there is no reason why this code should disable DetectChanges. Since the AddRange method is used, the "DetectChanges" method is called only once per AddRange call, so you don't suffer from a performance issue.
 
 ### Solution
 
