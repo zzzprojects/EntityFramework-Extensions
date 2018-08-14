@@ -13,4 +13,4 @@ For some provider, we may have missed a few types. They are added on demand.
 ### Solution
 Contact our support team with the provider && type name: info@zzzprojects.com
 
-We usually fix && test this kind of issue within 24h
+We usually fix and test this kind of issue within 24h
