@@ -19,7 +19,6 @@ catch
 }
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/Igr6zU' %}
----
 
 ## Bulk Operations
 Bulk Operations such as BulkInsert, BulkUpdate, BulkDelete doesn't use a transaction by default. This is your responsibility to handle it.
