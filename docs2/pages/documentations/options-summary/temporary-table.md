@@ -33,8 +33,6 @@ context.BulkSaveChanges(options =>
 });
 ```
 
----
-
 ## TemporaryTableSchemaName
 Gets or sets the schema name to use for the temporary table.
 
@@ -46,8 +44,6 @@ context.BulkSaveChanges(options =>
 });
 ```
 
----
-
 ## TemporaryTableUseTableLock
 Gets or sets if the temporary table must be locked when inserting records into it.
 
@@ -58,9 +54,6 @@ context.BulkSaveChanges(options =>
    options.TemporaryTableUseTableLock = true;
 });
 ```
-
-
----
 
 ## UsePermanentTable
 Gets or sets if the library should `create` and `drop` a permanent table instead of using a temporary table.
