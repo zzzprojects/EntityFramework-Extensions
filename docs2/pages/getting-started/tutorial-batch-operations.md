@@ -1,4 +1,4 @@
-# Bulk Operations
+# Batch Operations
 
 ## Definition
 Batch Operations method allows to perform `UPDATE` or `DELETE` operations directly in the database using a LINQ Query without loading entities in the context.
