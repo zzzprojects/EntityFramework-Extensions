@@ -11,8 +11,6 @@ context.BulkSaveChanges(options =>
 });
 ```
 
----
-
 ## TemporaryTableInsertBatchSize
 Gets or sets the number of records to use in a batch when inserting in a temporary table. This number is recommended to be high.
 
@@ -23,8 +21,6 @@ context.BulkSaveChanges(options =>
    options.TemporaryTableInsertBatchSize = 50000;
 });
 ```
-
----
 
 ## TemporaryTableMinRecord
 Gets or sets the minimum number of records to use a temporary table instead of using SQL derived table.
