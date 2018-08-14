@@ -16,7 +16,6 @@ BulkSaveChanges supports everything:
 - Self-Hierarchy
 - Etc.
 
-### BulkSaveChanges Examples
 ```csharp
 context.Customers.AddRange(listToAdd); // add
 context.Customers.RemoveRange(listToRemove); // remove
@@ -28,6 +27,7 @@ context.BulkSaveChanges();
 // Easy to customize
 context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/z73RVE' %}
 
 ## Purpose
 Using the `ChangeTracker` to detect and persist changes automatically is great! However, it leads very fast to some problems when multiple entities need to be saved.
@@ -56,6 +56,7 @@ context.BulkSaveChanges(options => {
 	options.AllowConcurrency = false;
 });
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/JhiKpo' %}
 
 ### How can I specify the Batch Size?
 You can specify a custom batch size using the `BatchSize` option.
@@ -66,6 +67,7 @@ Read more: [BatchSize](/batch-size)
 ```csharp
 context.BulkSaveChanges(options => options.BatchSize = 100);
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/TU8LON' %}
 
 ### How can I turn off Concurrency Check?
 You can turn off concurrency check using the `AllowConcurrency` option.

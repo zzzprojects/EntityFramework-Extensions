@@ -8,13 +8,15 @@ An `UPDATE` statement is built using the LINQ expression and directly executed i
 
 ```csharp
 // UPDATE all customers that are inactive for more than two years
+var date = DateTime.Now.AddYears(-2);
 context.Customers
-    .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
+    .Where(x => x.Actif && x.LastLogin < date)
     .UpdateFromQuery(x => new Customer {Actif = false});
 	
 // UPDATE customers by id
 context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Actif = false});
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/dJK5Vr' %}
 
 ## Purpose
 `Updating` entities using `SaveChanges` normally requires to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.

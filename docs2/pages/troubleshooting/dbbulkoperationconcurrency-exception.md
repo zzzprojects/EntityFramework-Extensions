@@ -6,7 +6,7 @@ You execute a method from the Entity Framework Extensions library, and the follo
 
 - Type: DbBulkOperationConcurrencyException
 
-> A concurrency exception has occured. Entities may have been modified or deleted since entities were loaded.
+> A concurrency exception has occurred. Entities may have been modified or deleted since entities were loaded.
 
 ### Cause
 

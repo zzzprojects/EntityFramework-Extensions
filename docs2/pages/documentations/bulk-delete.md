@@ -13,6 +13,7 @@ context.BulkDelete(list);
 // Easy to customize
 context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/j2OgnK' %}
 
 ## Purpose
 `Deleting` entities using a custom key from file importation is a typical scenario.
@@ -40,9 +41,10 @@ You can specify more than one option using anonymous block.
 ```csharp
 context.BulkDelete(list, options => {
 	options.BatchSize = 100;
-	options.ColumnInputExpression = c => new {c.ID, c.Name, c.Description};
+	options.RetryCount = 3;
 });
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/chMKYc' %}
 
 ### How can I specify the Batch Size?
 You can specify a custom batch size using the `BatchSize` option.
@@ -53,6 +55,7 @@ Read more: [BatchSize](/batch-size)
 ```csharp
 context.BulkDelete(list, options => options.BatchSize = 100);
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/hnztHx' %}
 
 ### How can I specify custom keys to use?
 You can specify custom key using the `ColumnPrimaryKeyExpression` option.
@@ -67,6 +70,7 @@ context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = cu
 // Surrogate Key
 context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/GHEwoE' %}
 
 ### How can I include child entities (Entity Graph)?
 You cannot. Due to the risk of mistakes, we preferred not to offer this option and make sure every entity you wish to `delete` is specified.
