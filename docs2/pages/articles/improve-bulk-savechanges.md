@@ -7,7 +7,7 @@ While the performance will be significantly increased, this option works with  9
 
 We are currently working on the next major version which will have even better performances!
 
-[Learn - Why turning off Entity Framework Propagation is faster](#why-turning-off-entity-framework-propagation-is-faster)
+[Why turning off Entity Framework Propagation is faster](#why-turning-off-entity-framework-propagation-is-faster)
 
 ### Example - Globally
 

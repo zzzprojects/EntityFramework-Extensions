@@ -8,8 +8,6 @@ Gets or sets if a duplicate key is possible in the source.
 context.BulkSaveChanges(options => options.AllowDuplicateKeys = true);
 ```
 
----
-
 ## AllowUpdatePrimaryKeys
 Gets or sets if the key must also be included in columns to `UPDATE`.
 

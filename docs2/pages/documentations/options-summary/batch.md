@@ -8,8 +8,6 @@ Gets or sets the number of records to use in a batch.
 context.BulkSaveChanges(options => options.BatchSize = 1000);
 ```
 
----
-
 ### BatchTimeout
 Gets or sets the maximum of time in seconds to wait for a batch before the command throws a timeout exception.
 
@@ -17,8 +15,6 @@ Gets or sets the maximum of time in seconds to wait for a batch before the comma
 ```csharp
 context.BulkSaveChanges(options => options.BatchTimeout = 180);
 ```
-
----
 
 ### BatchDelayInterval
 Gets or sets a delay in milliseconds to wait between batch.
