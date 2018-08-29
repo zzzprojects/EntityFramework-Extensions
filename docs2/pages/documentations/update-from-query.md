@@ -16,7 +16,7 @@ context.Customers
 // UPDATE customers by id
 context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Actif = false});
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/dJK5Vr' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/9hAsuQ' %}
 
 ## Purpose
 `Updating` entities using `SaveChanges` normally requires to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
