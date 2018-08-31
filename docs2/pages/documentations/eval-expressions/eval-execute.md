@@ -5,7 +5,7 @@ You can execute C# expression at runtime using the [Eval-Expression.NET](http://
 
 You can download it here: [Download](http://eval-expression.net/download)
 
-> This library can be activated with the Entity Framework Extensions license.
+> The Eval-Expression.NET library can be activated with the Entity Framework Extensions license. 
 
 You can specify parameter value to use in the expression from various way:
 
