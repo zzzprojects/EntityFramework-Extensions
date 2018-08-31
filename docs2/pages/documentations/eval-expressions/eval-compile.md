@@ -5,7 +5,7 @@ You can compile C# expression at runtime using the [Eval-Expression.NET](http://
 
 You can download it here: [Download](http://eval-expression.net/download)
 
-> This library can be activated with the Entity Framework Extensions license.
+> The Eval-Expression.NET library can be activated with the Entity Framework Extensions license. 
 
 ## Compile and return a strongly typed delegate
 You can return the delegate as a strongly typed function or action:
