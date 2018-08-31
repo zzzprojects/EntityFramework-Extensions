@@ -1,9 +1,11 @@
 # Eval.Compile
 
 ## Description
-Compile a C# expression and return a delegate.
+You can compile C# expression at runtime using the [Eval-Expression.NET](http://eval-expression.net/) library.
 
-Under the hood, the expression is parsed into tokens and then transformed into syntax node before being compiled using Expression Tree.
+You can download it here: [Download](http://eval-expression.net/download)
+
+> This library can be activated with the Entity Framework Extensions license.
 
 ## Compile and return a strongly typed delegate
 You can return the delegate as a strongly typed function or action:
