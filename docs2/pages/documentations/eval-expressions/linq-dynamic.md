@@ -5,7 +5,7 @@ You can execute query dynamically through the [Eval-Expression.NET](http://eval-
 
 You can download it here: [Download](http://eval-expression.net/download)
 
-> This library can be activated with the Entity Framework Extensions license.
+> The Eval-Expression.NET library can be activated with the Entity Framework Extensions license. 
 
 ## LINQ Dynamic - Predicate
 You can use any LINQ method that support predicate with a dynamic C# expression :
