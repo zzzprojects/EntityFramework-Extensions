@@ -1,11 +1,11 @@
 # LINQ Dynamic
 
 ## Description
-Extend the IEnumerable&lt;T&gt; and IQueryable&lt;T&gt; interface with methods to use LINQ with dynamic expressions.
+You can execute query dynamically through the [Eval-Expression.NET](http://eval-expression.net/) library.
 
-LINQ (Language Integrated Query) has been introduced in .NET 3.5 and since has been one of the most used features. ORM like Entity Framework takes advantage from this feature and allow you to write type-safe queries.
+You can download it here: [Download](http://eval-expression.net/download)
 
-The theory wants you only to use type-safe queries. However, the reality requires often you to write LINQ with dynamic query expressions.
+> This library can be activated with the Entity Framework Extensions license.
 
 ## LINQ Dynamic - Predicate
 You can use any LINQ method that support predicate with a dynamic C# expression :
