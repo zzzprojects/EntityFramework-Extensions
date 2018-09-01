@@ -4,7 +4,7 @@ The context factory is required to provide a working context to the EFE library.
 If your context has a default constructor (no parameter), specifying a context factory may be optional unless your context requires some special configuration.
 
 ### EF6/EF5/EF4
-Having a default context constructor or specifying a context factory is only required with the following options:
+Having a default context constructor or specifying a context factory is only required with the following option:
 - IncludeGraph
 
 ### EF Core
@@ -14,14 +14,19 @@ Having a default context constructor or specifying a context factory is always r
 The context factory is a function `Func<DbContext, DbContext>` that provide the current DbContext as a parameter and require to return a new DbContext.
 The current DbContext is passed in a parameter in case you need to create a working context that depends on the current context configuration or type.
 
-
 ```csharp
 // Using the default constructor
 EntityFrameworkManager.ContextFactory = context => new CurrentContext();
+```
+{% include component-try-it.html href='https://dotnetfiddle.net/6BQAzg' %}
 
+```csharp
 // Using a constructor that requires a connection string
 EntityFrameworkManager.ContextFactory = context => new CurrentContext(My.ConnectionString);
+```
+{% include component-try-it.html href='https://dotnetfiddle.net/44eGOE' %}
 
+```csharp
 // Using a constructor that requires optionsBuilder (EF Core) 
 EntityFrameworkManager.ContextFactory = context =>
 {
@@ -29,7 +34,9 @@ EntityFrameworkManager.ContextFactory = context =>
 	optionsBuilder.UseSqlServer(My.ConnectionString);
 	return new EntityContext(optionsBuilder.Options);
 };
+`
 
+```csharp
 // Using a constructor that depends on the current context
 EntityFrameworkManager.ContextFactory = context =>
 {
@@ -43,6 +50,7 @@ EntityFrameworkManager.ContextFactory = context =>
 	}
 };
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/fyTeS7' %}
 
 ## Default Constructor
 If your context has a default constructor, you might now need to specify a context factory.
@@ -59,5 +67,4 @@ public class EntitiesContext : DbContext
 	// ...code...
 }
 ```
-
-
+{% include component-try-it.html href='https://dotnetfiddle.net/jEPrjg' %}

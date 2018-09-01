@@ -14,6 +14,7 @@ context.BulkSaveChanges(options =>
 });
 
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/cIHYyb' %}
 
 ## AuditEntries
 Gets `INSERTED` and `DELETED` data when `UseAudit` option is enabled.
@@ -37,3 +38,4 @@ foreach (var entry in auditEntries)
     }
 }
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/WwQ7oZ' %}

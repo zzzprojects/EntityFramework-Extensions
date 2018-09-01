@@ -9,6 +9,7 @@ context.BulkSaveChanges(options => {
 	options.RetryCount = 3;
 });
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/BJJKFg' %}
 
 ## RetryInterval
 Gets or sets the interval to wait before retrying an operation when a transient error occurs.
@@ -21,3 +22,4 @@ context.BulkSaveChanges(options => {
 });
 
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/wy84D5' %}
