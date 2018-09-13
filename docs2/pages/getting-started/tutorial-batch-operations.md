@@ -18,8 +18,8 @@ context.Customers
  
 // UPDATE all customers that are inactive for more than two years
 context.Customers
-    .Where(x => x.Active && x.LastLogin < DateTime.Now.AddYears(-2))
-    .UpdateFromQuery(x => new Customer {Active = false});
+    .Where(x => x.IsActive && x.LastLogin < DateTime.Now.AddYears(-2))
+    .UpdateFromQuery(x => new Customer {IsActive = false});
 ```
 
 ## Purpose
