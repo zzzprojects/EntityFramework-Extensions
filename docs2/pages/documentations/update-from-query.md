@@ -10,11 +10,11 @@ An `UPDATE` statement is built using the LINQ expression and directly executed i
 // UPDATE all customers that are inactive for more than two years
 var date = DateTime.Now.AddYears(-2);
 context.Customers
-    .Where(x => x.Actif && x.LastLogin < date)
-    .UpdateFromQuery(x => new Customer {Actif = false});
+    .Where(x => x.Active && x.LastLogin < date)
+    .UpdateFromQuery(x => new Customer {Active = false});
 	
 // UPDATE customers by id
-context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Actif = false});
+context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Active = false});
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/9hAsuQ' %}
 
