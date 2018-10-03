@@ -6,7 +6,7 @@
 
 People using this library often report performance enhancement by 50x times and more!
 
-The library is installed through <a href="/installing">NuGet</a>. Extension methods are added automatically to your DbContext.
+The library is installed through <a href="/download">NuGet</a>. Extension methods are added automatically to your DbContext.
 
 It easy to use, easy to customize.
 
