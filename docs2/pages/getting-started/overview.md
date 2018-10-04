@@ -8,7 +8,7 @@ People using this library often report performance enhancement by 50x times and 
 
 The library is installed through <a href="/download">NuGet</a>. Extension methods are added automatically to your DbContext.
 
-It easy to use, easy to customize.
+It is easy to use, easy to customize.
 
 
 
