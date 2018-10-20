@@ -147,7 +147,7 @@ Bulk operations offers hundred of customization such as BatchSize, Custom Key, C
 ## PRO Version
 _PRO Version unlocked for the current month_
 
-Features                    | [PRO Version](http://entityframework-extensions.net/#pro)
+Features                    | [PRO Version](https://entityframework-extensions.net/#pro)
 --------                    | :-------------:
 Bulk SaveChanges            | Yes
 Bulk Insert                 | Yes
@@ -159,7 +159,7 @@ UpdateFromQuery             | Yes
 Commercial License          | Yes
 Royalty-Free                | Yes
 Support & Upgrades (1 year) | Yes
-Learn more about the **[PRO Version](http://entityframework-extensions.net/#pro)**
+Learn more about the **[PRO Version](https://entityframework-extensions.net/#pro)**
 
 ## Contribute
 The best way to contribute is by **spreading the word** about the library:
@@ -175,20 +175,20 @@ A **HUGE THANKS** for your help.
 ## More Projects
 
 **Entity Framework**
-- [EntityFramework Extensions](http://entityframework-extensions.net/)
-- [EntityFramework Plus](http://entityframework-plus.net)
+- [EntityFramework Extensions](https://entityframework-extensions.net/)
+- [EntityFramework Plus](https://entityframework-plus.net)
 
 **Bulk Operations**
-- [Bulk Operations](http://bulk-operations.net/)
-- [Dapper Plus](http://dapper-plus.net/)
+- [Bulk Operations](https://bulk-operations.net/)
+- [Dapper Plus](https://dapper-plus.net/)
 
 **Expression Evaluator**
-- [Eval-SQL.NET](http://eval-sql.net/)
-- [Eval-Expression.NET](http://eval-expression.net/)
+- [Eval-SQL.NET](https://eval-sql.net/)
+- [Eval-Expression.NET](https://eval-expression.net/)
 
 **Utilities**
 - [Extension Methods Library](https://github.com/zzzprojects/Z.ExtensionMethods/)
-- [Html Agility Pack](http://html-agility-pack.net/)
+- [Html Agility Pack](https://html-agility-pack.net/)
 
 **Need more info?** info@zzzprojects.com
 
