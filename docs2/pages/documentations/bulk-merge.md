@@ -83,6 +83,7 @@ context.BulkMerge(list, options =>
 		options.IgnoreOnMergeUpdateExpression = customer => customer.Code, customer.Col2;
 	});
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/8z6Yed' %}
 
 ### How can I specify custom keys to use?
 You can specify custom keys using the `ColumnPrimaryKeyExpression` option.
