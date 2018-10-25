@@ -64,7 +64,6 @@ Read more: [ColumnInputExpression](/column-input-expression)
 ```csharp
 context.BulkSynchronize(list, options => options.ColumnInputExpression = c => new {c.Name, c.Description});
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/FzA4Zd' %}
 
 ### How can I specify custom keys to use?
 You can specify custom keys using the `ColumnPrimaryKeyExpression` option.
