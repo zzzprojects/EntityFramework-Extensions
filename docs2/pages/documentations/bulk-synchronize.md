@@ -15,6 +15,7 @@ ctx.BulkSynchronize(list);
 // Easy to customize
 context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/FTUTYa' %}
 
 ## Purpose
 `Synchronizing` entities with the database is a very rare scenario, but it may happen when two databases need to be synchronized.
@@ -41,6 +42,7 @@ context.BulkSynchronize(list, options => {
 	options.ColumnInputExpression = c => new {c.ID, c.Name, c.Description};
 });
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/Ztz1qr' %}
 
 ### How can I specify the Batch Size?
 You can specify a custom batch size using the `BatchSize` option.
@@ -51,6 +53,7 @@ Read more: [BatchSize](/batch-size)
 ```csharp
 context.BulkSynchronize(list, options => options.BatchSize = 100);
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/FzA4Zd' %}
 
 ### How can I specify custom columns to Synchronize?
 You can specify custom columns using the `ColumnInputExpression` option.
@@ -61,6 +64,7 @@ Read more: [ColumnInputExpression](/column-input-expression)
 ```csharp
 context.BulkSynchronize(list, options => options.ColumnInputExpression = c => new {c.Name, c.Description});
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/FzA4Zd' %}
 
 ### How can I specify custom keys to use?
 You can specify custom keys using the `ColumnPrimaryKeyExpression` option.
