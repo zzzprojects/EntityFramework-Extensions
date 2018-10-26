@@ -35,6 +35,7 @@ context.BulkMerge(list, options =>
         options.ColumnInputOutputExpression = entity => new {entity.ID, entity.Code}
 ); 
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/40zGTH' %}
 
 ## Column Primary Key
 Gets or sets columns to use as the `key` for the operation.
@@ -56,6 +57,7 @@ context.BulkMerge(list, options =>
         options.IgnoreOnMergeInsertExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}
 ); 
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/ggtMXb' %}
 
 ## Ignore On Merge Update
 Gets or sets columns to ignore when the `BulkMerge` method executes the `update` statement.
@@ -66,3 +68,4 @@ context.BulkMerge(list, options =>
         options.IgnoreOnMergeUpdateExpression = entity => new {entity.CreatedDate, entity.CreatedUser}
 ); 
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/Z0xM1L' %}
