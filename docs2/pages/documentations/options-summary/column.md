@@ -35,6 +35,7 @@ context.BulkMerge(list, options =>
         options.ColumnInputOutputExpression = entity => new {entity.ID, entity.Code}
 ); 
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/40zGTH' %}
 
 ## Column Primary Key
 Gets or sets columns to use as the `key` for the operation.
