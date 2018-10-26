@@ -57,6 +57,7 @@ context.BulkMerge(list, options =>
         options.IgnoreOnMergeInsertExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}
 ); 
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/ggtMXb' %}
 
 ## Ignore On Merge Update
 Gets or sets columns to ignore when the `BulkMerge` method executes the `update` statement.
