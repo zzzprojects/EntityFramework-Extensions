@@ -68,3 +68,4 @@ context.BulkMerge(list, options =>
         options.IgnoreOnMergeUpdateExpression = entity => new {entity.CreatedDate, entity.CreatedUser}
 ); 
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/Z0xM1L' %}
