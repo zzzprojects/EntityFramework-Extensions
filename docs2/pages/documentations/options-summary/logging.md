@@ -12,6 +12,7 @@ context.BulkSaveChanges(options =>
 	options.Log += s => logger.AppendLine(s);
 });
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/NY0Hu2' %}
 
 ## UseLogDump
 Gets or sets if all `log` related to database event should be stored in a `LogDump` properties.
@@ -26,6 +27,7 @@ context.BulkSaveChanges(options =>
 	options.BulkOperationExecuted = bulkOperation => logDump = bulkOperation.LogDump;
 });
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/Z2klLQ' %}
 
 ## LogDump
 Gets all `logged` database event when `UseLogDump` is enabled.
@@ -40,3 +42,4 @@ context.BulkSaveChanges(options =>
 	options.BulkOperationExecuted = bulkOperation => logDump = bulkOperation.LogDump;
 });
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/v37ink' %}
