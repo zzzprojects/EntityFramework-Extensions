@@ -10,3 +10,4 @@ context.BulkSaveChanges(options =>
    options.SqlBulkCopyOptions = SqlBulkCopyOptions.Default | SqlBulkCopyOptions.TableLock;
 });
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/j4jhLe' %}
