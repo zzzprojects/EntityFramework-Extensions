@@ -54,6 +54,7 @@ ctx.BulkMerge(users, options =>
 	};
 });
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/UgwDDk' %}
 
 
 {% include section-faq-begin.html %}
