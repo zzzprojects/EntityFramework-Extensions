@@ -1,4 +1,4 @@
-# Custom Column
+# Use Custom Column
 
 ## Problem
 You want to perform a Bulk Operations (BulkInsert, BulkUpdate, BulkDelete, or BulkMerge) but only on some specific columns.

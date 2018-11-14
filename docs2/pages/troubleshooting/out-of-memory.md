@@ -1,4 +1,4 @@
-# Out of memory
+# Out of Memory
 
 ## Problem
 

@@ -42,7 +42,7 @@ There are multiple options available such as:
 - Disable Entity Framework Propagation for better performance
 - Update Modified values only
 
-This method is normally recommended over bulk methoda such as Bulk Insert since it acts like SaveChanges by using the Change Tracker and propagating the value.
+This method is normally recommended over bulk methods such as Bulk Insert since it acts like SaveChanges by using the Change Tracker and propagating the value.
 
 Tutorial: [EFE - Bulk SaveChanges](http://entityframework-extensions.net/bulk-savechanges)
 

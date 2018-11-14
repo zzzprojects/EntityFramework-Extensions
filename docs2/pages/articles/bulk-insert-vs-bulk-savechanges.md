@@ -10,7 +10,7 @@ In counterpart, Bulk methods such as BulkInsert, BulkUpdate, and BulkDelete does
 ## Should I always use BulkInsert?
 No! Even if BulkInsert is faster.
 
-BulkSaveChanges even if slower make everything easier. All you need to do is adding “Bulk” before “SaveChanges” and everything work as expected.
+BulkSaveChanges even if slower make everything easier. All you need to do is adding `Bulk` before `SaveChanges` and everything work as expected.
 
 BulkInsert require more time to implement when you have several different lists to insert. You need to create/handle a transaction in your code and specify yourself the right order to save.
 
