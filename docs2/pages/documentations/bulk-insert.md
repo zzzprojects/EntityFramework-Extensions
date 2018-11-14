@@ -22,7 +22,7 @@ context.BulkInsert(list, options => options.BatchSize = 100);
 
 `SaveChanges` requires one database round-trip for every entity to `insert`. So if you need to `insert` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
 
-`BulkInsert` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a simple`SqlBulkCopy` could be performed.
+`BulkInsert` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a simple `SqlBulkCopy` could be performed.
 
 ## Performance Comparisons
 
