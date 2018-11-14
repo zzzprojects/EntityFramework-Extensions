@@ -1,4 +1,4 @@
-# Trial Expired
+# Trial Period Expired
 
 ## Problem
 
