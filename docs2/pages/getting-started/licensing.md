@@ -49,7 +49,7 @@ if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErro
     throw new Exception(licenseErrorMessage);
 }
 
-// CHECK if the license if valid for a specific provider
+// CHECK if the license is valid for a specific provider
 string licenseErrorMessage;
 if (!Z.EntityFramework.Extensions.LicenseManager.ValidateLicense(out licenseErrorMessage, ProviderType.SqlServer))
 {
