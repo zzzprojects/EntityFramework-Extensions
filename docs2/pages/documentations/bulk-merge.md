@@ -1,123 +1,180 @@
 # Bulk Merge
 
-## Definition
-`MERGE` all entities from the database.
+## Description
 
-A merge is an `UPSERT` operation. All rows that match the entity key are considered as existing and are `UPDATED`, other rows are considered as new rows and are `INSERTED` in the database. 
-
+The EF `BulkMerge` extension method let you merge (InsertOrUpdate/Upsert) a large number of entities in your database.
 
 ```csharp
 // Easy to use
-ctx.BulkMerge(list);
+context.BulkMerge(customers);
 
 // Easy to customize
-context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
+context.BulkMerge(customers, options => options.IncludeGraph = true);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/FsJKnV' %}
+[Try it](https://dotnetfiddle.net/Aodij2)
 
-## Purpose
-`Merging` entities using a custom key from file importation is a typical scenario.
-
-Despite the `ChangeTracker` being outstanding to track what's modified, it lacks in term of scalability and flexibility.
-
-`SaveChanges` requires one database round-trip for every entity to `insert` or `update`. So if you need to `insert` or `update` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
-
-`BulkMerge` in counterpart offers great customization and requires the minimum database round-trips as possible.
-
-## Performance Comparisons
+### Performance Comparison
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
-| BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
+| SaveChanges     | 4,000 ms       | To long...     | Way way to long... |
+| BulkMerge       | 80 ms          | 110 ms         | 170 ms         |
 
-{% include section-faq-begin.html %}
-## FAQ
+[Try it](https://dotnetfiddle.net/Erk8R3)
 
-### How can I specify more than one option?
-You can specify more than one option using anonymous block.
+> HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
+### Scenarios
+The `BulkMerge` method is **fast** but also **flexible** to let you handle various scenarios in Entity Framework such as:
 
+- [Merge and keep identity value](#merge-and-keep-identity-value)
+- [Merge with custom key](#merge-with-custom-key)
+- [Merge and include/exclude properties](#merge-and-includeexclude-properties)
+- [Merge with related child entities (Include Graph)](#merge-with-related-child-entities-include-graph)
+- [Merge with future action](#merge-with-future-action)
+- [More scenarios](#more-scenarios)
 
-```csharp
-context.BulkMerge(list, options => {
-	options.BatchSize = 100;
-	options.ColumnInputExpression = c => new {c.ID, c.Name, c.Description};
-});
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/8wVTP6' %}
+### What is supported?
+- All Entity Framework versions (EF4, EF5, EF6, EF Core, [EF Classic](https://entityframework-classic.net/))
+- All Inheritances (TPC, TPH, TPT)
+- Complex Type/Owned Entity Type
+- Enum
+- Value Converter (EF Core)
+- And more!
 
-### How can I specify the Batch Size?
-You can specify a custom batch size using the `BatchSize` option.
+### Advantages
+- Easy to use
+- Flexible
+- Increase performance
+- Increase application responsiveness
+- Reduce database load
+- Reduce database round-trips
 
-Read more: [BatchSize](/batch-size)
+## Getting Started
 
-
-```csharp
-context.BulkMerge(list, options => options.BatchSize = 100);
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/RJtqZq' %}
-
-### How can I specify custom columns to Merge?
-You can specify custom columns using the `ColumnInputExpression` option.
-
-Read more: [ColumnInputExpression](/column-input-expression)
-
-
-```csharp
-context.BulkMerge(list, options => options.ColumnInputExpression = c => new {c.Name, c.Description});
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/ei5SRo' %}
-
-### How can I specify custom columns to exclude on insert or update?
-You can specify custom columns to exclude using the `IgnoreOnMergeInsertExpression` and `IgnoreOnMergeUpdateExpression` option.
-
-Read more: [IgnoreOnMergeInsertExpression](/ignore-on-merge-insert-expression)
-
-Read more: [IgnoreOnMergeUpdateExpression](/ignore-on-merge-update-expression)
-
+### Bulk Merge
+The `BulkMerge` and `BulkMergeAync` methods extend your `DbContext` to let you insert a large number of entities in your database.
 
 ```csharp
-context.BulkMerge(list, options =>
-	{
-		options.IgnoreOnMergeInsertExpression = customer => new { customer.UpdatedDate, customer.UpdatedUser };
-		options.IgnoreOnMergeUpdateExpression = customer => customer.Code, customer.Col2;
-	});
+context.BulkMerge(customers);
+
+context.BulkMergeAsync(customers, cancellationToken);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/8z6Yed' %}
+[Try it](https://dotnetfiddle.net/0Ba6ZB)
 
-### How can I specify custom keys to use?
-You can specify custom keys using the `ColumnPrimaryKeyExpression` option.
-
-Read more: [ColumnPrimaryKeyExpression](/column-primary-key-expression)
-
+### Bulk Merge with options
+The `options` parameter let you use a lambda expression to customize the way entities are inserted.
 
 ```csharp
-// Single Key
-context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
-
-// Surrogate Key
-context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
+context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code });
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/g9vjpx' %}
+[Try it](https://dotnetfiddle.net/JsHWWm)
 
-### How can I include child entities (Entity Graph)?
-You can include child entities using the `IncludeGraph` option. Make sure to read about the `IncludeGraph` since this option is not as trivial as others.
+### Why BulkMerge is faster than SaveChanges?
+Merging thousand of entities for a file importation is a typical scenario.
 
-Read more: [IncludeGraph](/include-graph)
+The `AddOrUpdate` method performs a database round-trips for every entity to check if it already exists. The `DetectChanges` change method is also called for every entity which makes this method even slower (it's like using the `Add` method instead of `AddRange`).
 
+The `SaveChanges` method performs one database round-trip for every entity to update.
+
+So if you need to merge 10,000 entities, 20,000 database round-trips will be performed + 10,000 `DetectChanges` call which is **INSANELY** slow.
+
+The `BulkMerge` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then an `MERGE` from the temporary table to the destination table is performed which is the fastest way available.
+
+## Real Life Scenarios
+
+### Merge and keep identity value
+Your entity has an identity property, but you want to force to insert a specific value instead. The `MergeKeepIdentity` option allows you to keep the identity value of your entity.
 
 ```csharp
-context.BulkMerge(list, options => options.IncludeGraph = true);
+context.BulkMerge(customers, options => options.InsertKeepIdentity = true);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/Rc2zlv' %}
+[Try it](https://dotnetfiddle.net/a1qGoh)
 
-### Why BulkMerge doesn't use the ChangeTracker?
-To provide the best performance possible!
+### Merge and include/exclude properties
+You want to merge your entities but only for specific properties.
 
-Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle scenarios with `ChangeTracker` and `BulkMerge`, scenarios without it.
-{% include section-faq-end.html %}
+- `ColumnInputExpression`: This option let you choose which properties to map.
+- `ColumnIgnoreExpression`: This option let you ignore properties that are auto-mapped.
+- `IgnoreOnMergeInsertExpression`: This option let you ignore properties only for the `INSERT` part.
+- `IgnoreOnMergeUpdateExpression`: This option let you ignore properties only for the `UPDATE` part.
 
-## Related Articles
-- [How to Benchmark?](benchmark)
-- [How to use Custom Column?](custom-column)
-- [How to use Custom Key?](custom-key)
+```csharp
+context.BulkMerge(customers, options => options.ColumnInputExpression = c => new { c.CustomerID, c.Name} );
+            
+context.BulkMerge(customers, options => options.IgnoreOnMergeUpdateExpression = c => new { c.UpdatedDate } );
+```
+[Try it](https://dotnetfiddle.net/l6NLDA)
+
+### Merge with custom key
+You want to merge entities, but you don't have the primary key. The `ColumnPrimaryKeyExpression` let you use as a key any property or combination of properties.
+
+```csharp
+context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code);    
+```
+[Try it](https://dotnetfiddle.net/cS7scF)
+
+### Merge with related child entities (Include Graph)
+You want to merge entities but also automatically merge related child entities.
+
+`IncludeGraph`: This option let you to automatically merge all entities part of the graph.
+`IncludeGraphBuilder`: This option let you customize how to merge entities for a specific type.
+
+```csharp
+context.BulkMerge(invoices, options => options.IncludeGraph = true);
+```
+[Try it](https://dotnetfiddle.net/FEXkXi)
+
+### Merge with future action
+You want to merge entities, but you want to defer the execution.
+
+By default, `BulkMerge` is an immediate operation. That mean, it's executed as soon as you call the method.
+
+`FutureAction`: This option let you defer the execution of a Bulk Merge.
+`ExecuteFutureAction`: This option trigger and execute all pending `FutureAction`.
+
+```csharp
+context.FutureAction(x => x.BulkMerge(customers));
+context.FutureAction(x => x.BulkMerge(invoices, options => options.IncludeGraph = true));
+
+// ...code...
+
+context.ExecuteFutureAction();
+```
+[Try it](https://dotnetfiddle.net/RUL0rL)
+
+### More scenarios
+Hundred of scenarios has been solved and are now supported.
+
+The best way to ask for a special request or to find out if a solution for your scenario already exists is by contacting us:
+info@zzzprojects.com
+
+## Documentation
+
+### BulkMerge
+
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `BulkMerge<T>(items)` | Bulk insert entities in your database. | [Try it](https://dotnetfiddle.net/gSzNDC) |
+| `BulkMerge<T>(items, options)` | Bulk insert entities in your database.  | [Try it](https://dotnetfiddle.net/WZBs0E) |
+| `BulkMergeAsync<T>(items)` | Bulk insert entities asynchronously in your database. | |
+| `BulkMergeAsync<T>(items, cancellationToken)` | Bulk insert entities asynchronously in your database. | |
+| `BulkMergeAsync<T>(items, options, cancellationToken)` | Bulk insert entities asynchronously in your database. | |
+
+###### Options
+More options can be found here:
+
+- [Audit](https://entityframework-extensions.net/audit)
+- [Batch](https://entityframework-extensions.net/batch)
+- [Column](https://entityframework-extensions.net/column)
+- [Context Factory](https://entityframework-extensions.net/context-factory)
+- [Execute Event](https://entityframework-extensions.net/execute-event)
+- [Identity](https://entityframework-extensions.net/identity)
+- [Include Graph](https://entityframework-extensions.net/include-graph)
+- [Key](https://entityframework-extensions.net/key)
+- [Logging](https://entityframework-extensions.net/logging)
+- [Temporary Table](https://entityframework-extensions.net/temporary-table)
+- [Transaction](https://entityframework-extensions.net/transaction)
+- [Transient Error](https://entityframework-extensions.net/transient-error)
+- [SQL Server](https://entityframework-extensions.net/sql-server)
