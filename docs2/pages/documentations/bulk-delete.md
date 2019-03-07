@@ -1,92 +1,140 @@
 # Bulk Delete
 
-## Definition
-`DELETE` all entities from the database.
+## Description
 
-All rows that match the entity key are `DELETED` from the database.
-
+The EF `BulkDelete` extension method let you delete a large number of entities in your database.
 
 ```csharp
 // Easy to use
-context.BulkDelete(list);
+context.BulkDelete(customers);
 
 // Easy to customize
-context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
+context.BulkDelete(customers, options => options.BatchSize = 100);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/j2OgnK' %}
+[Try it](https://dotnetfiddle.net/ESKZJq)
 
-## Purpose
-`Deleting` entities using a custom key from file importation is a typical scenario.
-
-Despite the `ChangeTracker` being outstanding to track what's modified, it lacks in term of scalability and flexibility.
-
-`SaveChanges` requires one database round-trip for every entity to `delete`. So if you need to `delete` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
-
-`BulkDelete` in counterpart offers great customization and requires the minimum database round-trips as possible.
-
-## Performance Comparisons
+### Performance Comparison
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
-| BulkDelete      | 45 ms          | 50 ms          | 60 ms          |
+| SaveChanges     | 1,200 ms       | 2,400 ms       | 6,000 ms       |
+| BulkDelete      | 50 ms          | 55 ms          | 75 ms         |
 
-{% include section-faq-begin.html %}
-## FAQ
+[Try it](https://dotnetfiddle.net/qYjiA9)
 
-### How can I specify more than one option?
-You can specify more than one option using anonymous block.
+> HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
+### Scenarios
+The `BulkDelete` method is **fast** but also **flexible** to let you handle various scenarios in Entity Framework such as:
+
+- [Delete with custom key](#delete-with-custom-key)
+- [Delete with future action](#delete-with-future-action)
+- [More scenarios](#more-scenarios)
+
+### What is supported?
+- All Entity Framework versions (EF4, EF5, EF6, EF Core, [EF Classic](https://entityframework-classic.net/))
+- All Inheritances (TPC, TPH, TPT)
+- Complex Type/Owned Entity Type
+- Enum
+- Value Converter (EF Core)
+- And more!
+
+### Advantages
+- Easy to use
+- Flexible
+- Increase performance
+- Increase application responsiveness
+- Reduce database load
+- Reduce database round-trips
+
+## Getting Started
+
+### Bulk Delete
+The `BulkDelete` and `BulkDeleteAync` methods extend your `DbContext` to let you delete a large number of entities in your database.
 
 ```csharp
-context.BulkDelete(list, options => {
-	options.BatchSize = 100;
-	options.RetryCount = 3;
-});
+context.BulkDelete(customers);
+
+context.BulkDeleteAsync(customers, cancellationToken);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/chMKYc' %}
+[Try it](https://dotnetfiddle.net/10nw7a)
 
-### How can I specify the Batch Size?
-You can specify a custom batch size using the `BatchSize` option.
-
-Read more: [BatchSize](/batch-size)
-
+### Bulk Delete with options
+The `options` parameter let you use a lambda expression to customize the way entities are deleted.
 
 ```csharp
-context.BulkDelete(list, options => options.BatchSize = 100);
+context.BulkDelete(customers, options => options.BatchSize = 100);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/hnztHx' %}
+[Try it](https://dotnetfiddle.net/KovTrj)
 
-### How can I specify custom keys to use?
-You can specify custom key using the `ColumnPrimaryKeyExpression` option.
+### Why BulkDelete is faster than SaveChanges?
+Deleting thousands of entities for a file importation is a typical scenario.
 
-Read more: [ColumnPrimaryKeyExpression](/column-primary-key-expression)
+The `SaveChanges` method makes it quite impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to delete. So if you need to delete 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
 
+The `BulkDelete` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then a `DELETE` from the temporary table to the destination table is performed which is the fastest way available.
+
+## Real Life Scenarios
+
+### Delete with custom key
+You want to delete entities, but you don't have the primary key. The `ColumnPrimaryKeyExpression` let you use as a key any property or combination of properties.
 
 ```csharp
-// Single Key
-context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
-
-// Surrogate Key
-context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
+context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code);    
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/GHEwoE' %}
+[Try it](https://dotnetfiddle.net/9M6bKt)
 
-### How can I include child entities (Entity Graph)?
-You cannot. Due to the risk of mistakes, we preferred not to offer this option and make sure every entity you wish to `delete` is specified.
+### Delete with future action
+You want to delete entities, but you want to defer the execution.
 
-### Why BulkDelete doesn't use the ChangeTracker?
-To provide the best performance possible!
+By default, `BulkDelete` is an immediate operation. That mean, it's executed as soon as you call the method.
 
-Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle scenarios with `ChangeTracker` and `BulkDelete`, scenarios without it.
+`FutureAction`: This option let you defer the execution of a Bulk Delete.
+`ExecuteFutureAction`: This option trigger and execute all pending `FutureAction`.
 
-### Why BulkDelete is faster than BulkSaveChanges?
-The major difference between both methods is `BulkSaveChanges` uses the `ChangeTracker` but not the `BulkDelete` method.
+```csharp
+context.FutureAction(x => x.BulkDelete(customers1));
+context.FutureAction(x => x.BulkDelete(customers2));
 
-By skipping the `ChangeTracker`, some methods like `DetectChanges` are no longer required which greatly helps to improve the performance.
-{% include section-faq-end.html %}
+// ...code...
 
-## Related Articles
+context.ExecuteFutureAction();
+```
+[Try it](https://dotnetfiddle.net/Ju3ReL)
 
-- [How to Benchmark?](benchmark)
-- [How to use Custom Key?](custom-key)
+### More scenarios
+Hundred of scenarios has been solved and are now supported.
+
+The best way to ask for a special request or to find out if a solution for your scenario already exists is by contacting us:
+info@zzzprojects.com
+
+## Documentation
+
+### BulkDelete
+
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `BulkDelete<T>(items)` | Bulk delete entities in your database. | [Try it](https://dotnetfiddle.net/4Jv1H6) |
+| `BulkDelete<T>(items, options)` | Bulk delete entities in your database.  | [Try it](https://dotnetfiddle.net/IedG1h) |
+| `BulkDelete<T>(items)` | Bulk delete entities asynchronously in your database. | |
+| `BulkDeleteAsync<T>(items, cancellationToken)` | Bulk delete entities asynchronously in your database. | |
+| `BulkDeleteAsync<T>(items, options, cancellationToken)` | Bulk delete entities asynchronously in your database. | |
+
+###### Options
+More options can be found here:
+
+- [Audit](https://entityframework-extensions.net/audit)
+- [Batch](https://entityframework-extensions.net/batch)
+- [Column](https://entityframework-extensions.net/column)
+- [Context Factory](https://entityframework-extensions.net/context-factory)
+- [Execute Event](https://entityframework-extensions.net/execute-event)
+- [Identity](https://entityframework-extensions.net/identity)
+- [Include Graph](https://entityframework-extensions.net/include-graph)
+- [Key](https://entityframework-extensions.net/key)
+- [Logging](https://entityframework-extensions.net/logging)
+- [Temporary Table](https://entityframework-extensions.net/temporary-table)
+- [Transaction](https://entityframework-extensions.net/transaction)
+- [Transient Error](https://entityframework-extensions.net/transient-error)
+- [SQL Server](https://entityframework-extensions.net/sql-server)
