@@ -102,8 +102,8 @@ context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = c 
 ### Update with related child entities (Include Graph)
 You want to update entities but also automatically insert related child entities.
 
-`IncludeGraph`: This option let you to automatically insert all entities part of the graph.
-`IncludeGraphBuilder`: This option let you customize how to insert entities for a specific type.
+- `IncludeGraph`: This option let you to automatically update all entities part of the graph.
+- `IncludeGraphBuilder`: This option let you customize how to update entities for a specific type.
 
 ```csharp
 context.BulkUpdate(invoices, options => options.IncludeGraph = true);
