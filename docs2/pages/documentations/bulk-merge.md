@@ -116,8 +116,8 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = c =
 ### Merge with related child entities (Include Graph)
 You want to merge entities but also automatically merge related child entities.
 
-`IncludeGraph`: This option let you to automatically merge all entities part of the graph.
-`IncludeGraphBuilder`: This option let you customize how to merge entities for a specific type.
+- `IncludeGraph`: This option let you to automatically merge all entities part of the graph.
+- `IncludeGraphBuilder`: This option let you customize how to merge entities for a specific type.
 
 ```csharp
 context.BulkMerge(invoices, options => options.IncludeGraph = true);
