@@ -122,8 +122,8 @@ context.BulkInsert(customers, options => {
 ### Insert with related child entities (Include Graph)
 You want to insert entities but also automatically insert related child entities.
 
-`IncludeGraph`: This option let you to automatically insert all entities part of the graph.
-`IncludeGraphBuilder`: This option let you customize how to insert entities for a specific type.
+- `IncludeGraph`: This option let you to automatically insert all entities part of the graph.
+- `IncludeGraphBuilder`: This option let you customize how to insert entities for a specific type.
 
 ```csharp
 context.BulkInsert(invoices, options => options.IncludeGraph = true);
