@@ -86,7 +86,7 @@ The `BulkMerge` in counterpart requires the minimum database round-trips as poss
 Your entity has an identity property, but you want to force to insert a specific value instead. The `MergeKeepIdentity` option allows you to keep the identity value of your entity.
 
 ```csharp
-context.BulkMerge(customers, options => options.InsertKeepIdentity = true);
+context.BulkMerge(customers, options => options.MergeKeepIdentity = true);
 ```
 [Try it](https://dotnetfiddle.net/a1qGoh)
 
