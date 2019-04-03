@@ -100,7 +100,7 @@ context.FutureAction(x => x.BulkDelete(customers2));
 
 context.ExecuteFutureAction();
 ```
-[Try it](https://dotnetfiddle.net/Ju3ReL)
+[Try it](https://dotnetfiddle.net/KovTrj)
 
 ### More scenarios
 Hundred of scenarios has been solved and are now supported.
