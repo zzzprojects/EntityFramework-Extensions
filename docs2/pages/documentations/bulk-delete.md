@@ -118,7 +118,7 @@ info@zzzprojects.com
 | :--- | :---------- | :------ |
 | `BulkDelete<T>(items)` | Bulk delete entities in your database. | [Try it](https://dotnetfiddle.net/4Jv1H6) |
 | `BulkDelete<T>(items, options)` | Bulk delete entities in your database.  | [Try it](https://dotnetfiddle.net/IedG1h) |
-| `BulkDelete<T>(items)` | Bulk delete entities asynchronously in your database. | |
+| `BulkDeleteAsync<T>(items)` | Bulk delete entities asynchronously in your database. | |
 | `BulkDeleteAsync<T>(items, cancellationToken)` | Bulk delete entities asynchronously in your database. | |
 | `BulkDeleteAsync<T>(items, options, cancellationToken)` | Bulk delete entities asynchronously in your database. | |
 
