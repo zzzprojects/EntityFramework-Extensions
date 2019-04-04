@@ -65,7 +65,7 @@ The `options` parameter let you use a lambda expression to customize the way ent
 ```csharp
 context.BulkDelete(customers, options => options.BatchSize = 100);
 ```
-[Try it](https://dotnetfiddle.net/KovTrj)
+[Try it](https://dotnetfiddle.net/ygZVAu)
 
 ### Why BulkDelete is faster than SaveChanges?
 Deleting thousands of entities for a file importation is a typical scenario.
