@@ -156,11 +156,11 @@ info@zzzprojects.com
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `BulkMerge<T>(items)` | Bulk insert entities in your database. | [Try it](https://dotnetfiddle.net/gSzNDC) |
-| `BulkMerge<T>(items, options)` | Bulk insert entities in your database.  | [Try it](https://dotnetfiddle.net/WZBs0E) |
-| `BulkMergeAsync<T>(items)` | Bulk insert entities asynchronously in your database. | |
-| `BulkMergeAsync<T>(items, cancellationToken)` | Bulk insert entities asynchronously in your database. | |
-| `BulkMergeAsync<T>(items, options, cancellationToken)` | Bulk insert entities asynchronously in your database. | |
+| `BulkMerge<T>(items)` | Bulk merge entities in your database. | [Try it](https://dotnetfiddle.net/gSzNDC) |
+| `BulkMerge<T>(items, options)` | Bulk merge entities in your database.  | [Try it](https://dotnetfiddle.net/WZBs0E) |
+| `BulkMergeAsync<T>(items)` | Bulk merge entities asynchronously in your database. | |
+| `BulkMergeAsync<T>(items, cancellationToken)` | Bulk merge entities asynchronously in your database. | |
+| `BulkMergeAsync<T>(items, options, cancellationToken)` | Bulk merge entities asynchronously in your database. | |
 
 ###### Options
 More options can be found here:
