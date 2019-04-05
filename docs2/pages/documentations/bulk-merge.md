@@ -2,7 +2,7 @@
 
 ## Description
 
-The EF `BulkMerge` extension method let you merge (InsertOrUpdate/Upsert) a large number of entities in your database.
+The EF `BulkMerge` extension method let you merge (insert or update/Upsert) a large number of entities in your database.
 
 ```csharp
 // Easy to use
@@ -52,7 +52,7 @@ The `BulkMerge` method is **fast** but also **flexible** to let you handle vario
 ## Getting Started
 
 ### Bulk Merge
-The `BulkMerge` and `BulkMergeAync` methods extend your `DbContext` to let you insert a large number of entities in your database.
+The `BulkMerge` and `BulkMergeAync` methods extend your `DbContext` to let you merge a large number of entities in your database.
 
 ```csharp
 context.BulkMerge(customers);
@@ -62,7 +62,7 @@ context.BulkMergeAsync(customers, cancellationToken);
 [Try it](https://dotnetfiddle.net/0Ba6ZB)
 
 ### Bulk Merge with options
-The `options` parameter let you use a lambda expression to customize the way entities are inserted.
+The `options` parameter let you use a lambda expression to customize the way entities are inserted or updated.
 
 ```csharp
 context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code });
