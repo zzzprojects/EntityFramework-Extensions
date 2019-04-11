@@ -26,6 +26,18 @@ The license name and key can be added directly in the app.config or web.config f
 </appSettings>
 ```
 
+## Setup License from appsettings.json file (.NET Core)
+The license name and key can be added directly in the appsettings.json.
+
+```csharp
+{
+  "Z.EntityFramework.Extensions": {
+    "LicenseName": "[licenseName]",
+    "LicenseKey": "[licenseKey]"
+  }
+}
+```
+
 ## Setup License from code
 The license can be added directly in the code of your application. Make sure to follow recommendations about where to add this code.
 
