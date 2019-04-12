@@ -21,6 +21,8 @@ Or provide a project/solution that we can run to reproduce the issue.
 
 Otherwise, make sure to include as much information as possible to help our team to reproduce the issue.
 
+_Note: More information you provide, faster we can implement a solution._
+
 ### Further technical details
 - EF version:
 - EF Extensions version:
