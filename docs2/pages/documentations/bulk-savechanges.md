@@ -1,86 +1,87 @@
 # Bulk SaveChanges
 
-## Definition
+## Description
 
-BulkSaveChanges method is the upgraded version of `SaveChanges`.
-
-All changes made in the context are persisted in the database but way faster by reducing the number of database round-trip required!
-
-BulkSaveChanges supports everything:
-
-- Association (One to One, One to Many, Many to Many, etc.)
-- Complex Type
-- Enum
-- Inheritance (TPC, TPH, TPT)
-- Navigation Property
-- Self-Hierarchy
-- Etc.
+The EF `BulkSaveChanges` extension method execute bulk operations from entries to save.
 
 ```csharp
-context.Customers.AddRange(listToAdd); // add
-context.Customers.RemoveRange(listToRemove); // remove
-listToModify.ForEach(x => x.DateModified = DateTime.Now); // modify
-
 // Easy to use
 context.BulkSaveChanges();
 
 // Easy to customize
-context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/z73RVE' %}
-
-## Purpose
-Using the `ChangeTracker` to detect and persist changes automatically is great! However, it leads very fast to some problems when multiple entities need to be saved.
-
-`SaveChanges` method makes a database round-trip for every change. So, if you need to insert 10000 entities, then 10000 database round-trips will be performed which is INSANELY slow.
-
-`BulkSaveChanges` works exactly like `SaveChanges` but reduces the number of database round-trips required to greatly help improve the performance.
-
-## Performance Comparisons
-
-| Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
-| :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
-| BulkSaveChanges | 90 ms          | 150 ms         | 350 ms         |
-
-{% include section-faq-begin.html %}
-## FAQ
-
-### How can I specify more than one option?
-You can specify more than one option using anonymous block.
-
-
-```csharp
-context.BulkSaveChanges(options => {
-	options.BatchSize = 100;
-	options.AllowConcurrency = false;
-});
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/JhiKpo' %}
-
-### How can I specify the Batch Size?
-You can specify a custom batch size using the `BatchSize` option.
-
-Read more: [BatchSize](/batch-size)
-
-
-```csharp
 context.BulkSaveChanges(options => options.BatchSize = 100);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/TU8LON' %}
+[Try it](https://dotnetfiddle.net/MP65WH)
 
-### How can I turn off Concurrency Check?
-You can turn off concurrency check using the `AllowConcurrency` option.
+### Performance Comparison
 
-Read more: [AllowConcurrency](/allow-concurrency)
+| Operations       | 1,000 Entities | 2,000 Entities | 5,000 Entities |
+| :--------------- | -------------: | -------------: | -------------: |
+| SaveChanges      | 1,200 ms       | 2,400 ms       | 6,000 ms       |
+| BatchSaveChanges | 150 ms         | 225 ms         | 500 ms         |
 
+[Try this benchmark online](https://dotnetfiddle.net/4FLmNE)
 
-```csharp
-context.BulkSaveChanges(options => options.AllowConcurrency = false);
-```
-{% include section-faq-end.html %}
+> HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
-## Related Articles
+### What is supported?
+- All Entity Framework versions (EF4, EF5, EF6, EF Core, [EF Classic](https://entityframework-classic.net/))
+- All Inheritances (TPC, TPH, TPT)
+- Complex Type/Owned Entity Type
+- Enum
+- Value Converter (EF Core)
+- And more!
 
-- [How to Benchmark?](benchmark)
-- [How to Improve Bulk SaveChanges Performances?](improve-bulk-savechanges)
+### Advantages
+- Easy to use
+- Flexible
+- Increase performance
+- Increase application responsivness
+- Reduce database load
+- Reduce database round-trips
+
+### FAQ
+
+#### Why BatchSaveChanges is faster than SaveChanges?
+The `SaveChanges` method makes it quite slow/impossible to handle scenario that requires to save a lot of entities due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to insert. So if you need to insert 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
+
+The `BulkSaveChanges` in counterpart requires the minimum database round-trips as possible. By using Bulk Operations, fewer command is executed which lead to better performance.
+
+#### When should I use BulkSaveChanges over SaveChanges?
+Whenever you have more then one entities to saves. The `BulkSaveChanges` is almost as fast as the `SaveChanges` for 1 entities, but become way faster as the number of entities to save growth.
+
+#### When should I use BulkSaveChanges over BatchSaveChanges?
+`BatchSaveChanges` become slower and slower in comparisons to `BulkSaveChanges` when the number of entities to save growth due to the `ChangeTracker`.
+
+After a few thousands of Entities, we recommend using `BulkSaveChanges` which is a more scalable solution.
+
+## Documentation
+
+### BatchSaveChanges
+
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `BulkSaveChanges()` | Saves all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/nKd0mT) |
+| `BulkSaveChanges(Action<BulkOperation> bulkOperationFactory)` | Saves all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/lJVdXR) |
+| `BulkSaveChanges(bool useEntityFrameworkPropagation)` | Saves all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/ZWNQPA) |
+| `BulkSaveChanges(bool useEntityFrameworkPropagation, Action<BulkOperation> bulkOperationFactory)` | Saves all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/Aqp0EK) |
+| `BulkSaveChangesAsync(...)` | Saves all changes asynchronously made in this context to the underlying database by executing bulk operations. | |
+
+###### Options
+More options can be found here:
+
+- [Audit](https://entityframework-extensions.net/audit)
+- [Batch](https://entityframework-extensions.net/batch)
+- [Column](https://entityframework-extensions.net/column)
+- [Context Factory](https://entityframework-extensions.net/context-factory)
+- [Execute Event](https://entityframework-extensions.net/execute-event)
+- [Identity](https://entityframework-extensions.net/identity)
+- [Include Graph](https://entityframework-extensions.net/include-graph)
+- [Key](https://entityframework-extensions.net/key)
+- [Logging](https://entityframework-extensions.net/logging)
+- [Temporary Table](https://entityframework-extensions.net/temporary-table)
+- [Transaction](https://entityframework-extensions.net/transaction)
+- [Transient Error](https://entityframework-extensions.net/transient-error)
+- [SQL Server](https://entityframework-extensions.net/sql-server)
