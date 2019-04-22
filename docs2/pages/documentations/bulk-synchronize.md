@@ -54,7 +54,7 @@ context.BulkSynchronizeAsync(customers, cancellationToken);
 [Try it](https://dotnetfiddle.net/yPs4WF)
 
 ### Bulk Synchronize with options
-The `options` parameter let you use a lambda expression to customize the way entities are inserted.
+The `options` parameter let you use a lambda expression to customize the way entities are synchronized.
 
 ```csharp
 context.BulkSynchronize(customers, options => options.BatchSize = 100);
@@ -76,7 +76,7 @@ context.BulkSynchronize(customers, options => options.SynchronizeKeepIdentity = 
 [Try it](https://dotnetfiddle.net/crxeJ3)
 
 ### Synchronize and include/exclude properties
-You want to insert your entities but only for specific properties.
+You want to synchronize your entities but only for specific properties.
 
 - `ColumnInputExpression`: This option let you choose which properties to map.
 - `IgnoreOnSynchronizeInsertExpression`: This option let you ignore when inserting properties that are auto-mapped.
@@ -124,7 +124,7 @@ info@zzzprojects.com
 
 ## Documentation
 
-### BulkInsert
+### BulkSynchronize
 
 ###### Methods
 

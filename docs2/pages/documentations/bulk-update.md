@@ -2,7 +2,7 @@
 
 ## Description
 
-The EF `BulkUpdate` extension method let you delete a large number of entities in your database.
+The EF `BulkUpdate` extension method let you update a large number of entities in your database.
 
 ```csharp
 // Easy to use
@@ -52,7 +52,7 @@ The `BulkUpdate` method is **fast** but also **flexible** to let you handle vari
 ## Getting Started
 
 ### Bulk Update
-The `BulkUpdate` and `BulkUpdateAync` methods extend your `DbContext` to let you insert a large number of entities in your database.
+The `BulkUpdate` and `BulkUpdateAync` methods extend your `DbContext` to let you update a large number of entities in your database.
 
 ```csharp
 context.BulkUpdate(customers);
@@ -62,7 +62,7 @@ context.BulUpdateAsync(customers, cancellationToken);
 [Try it](https://dotnetfiddle.net/81oBov)
 
 ### Bulk Update with options
-The `options` parameter let you use a lambda expression to customize the way entities are inserted.
+The `options` parameter let you use a lambda expression to customize the way entities are updated.
 
 ```csharp
 context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code });
@@ -81,12 +81,9 @@ The `BulkUpdate` in counterpart requires the minimum database round-trips as pos
 ### Update and include/exclude properties
 You want to update your entities but only for specific properties.
 
-- `ColumnInputExpression`: This option let you choose which properties to map.
 - `IgnoreOnUpdateExpression`: This option let you ignore properties that are auto-mapped.
 
-```csharp
-context.BulkUpdate(customers, options => options.ColumnInputExpression = c => new { c.CustomerID, c.Name} );
-            
+```csharp            
 context.BulkUpdate(customers, options => options.IgnoreOnUpdateExpression = c => new { c.ColumnToIgnore } );
 ```
 [Try it](https://dotnetfiddle.net/R43wS0)
@@ -136,7 +133,7 @@ info@zzzprojects.com
 
 ## Documentation
 
-### BulkInsert
+### BulkUpdate
 
 ###### Methods
 
