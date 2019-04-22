@@ -81,12 +81,9 @@ The `BulkUpdate` in counterpart requires the minimum database round-trips as pos
 ### Update and include/exclude properties
 You want to update your entities but only for specific properties.
 
-- `ColumnInputExpression`: This option let you choose which properties to map.
 - `IgnoreOnUpdateExpression`: This option let you ignore properties that are auto-mapped.
 
-```csharp
-context.BulkUpdate(customers, options => options.ColumnInputExpression = c => new { c.CustomerID, c.Name} );
-            
+```csharp            
 context.BulkUpdate(customers, options => options.IgnoreOnUpdateExpression = c => new { c.ColumnToIgnore } );
 ```
 [Try it](https://dotnetfiddle.net/R43wS0)
