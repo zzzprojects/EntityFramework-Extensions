@@ -19,10 +19,10 @@ using (var context = new EntityContext())
 }
 ```
 
+{% include component-try-it.html href='https://dotnetfiddle.net/y5snLt' %}
+
 A synchronize is a mirror operation from the data source to the database. All rows that match the entity key are `UPDATED`, non-matching rows that exist from the source are `INSERTED`, non-matching rows that exist in the database are `DELETED`.
 
  - It updates the record of **Carson** as it is already in the database 
  - It inserts the **Alexander** record because it is not available in the database.
- - It will also delete any other customers available in the database of Type "1" which are not available in the source (`customers` list).  
-
-{% include component-try-it.html href='https://dotnetfiddle.net/y5snLt' %}
+ - It will also delete any other customers available in the database of Type "1" which are not available in the source (`customers` list). 
