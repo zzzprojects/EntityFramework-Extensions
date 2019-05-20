@@ -18,9 +18,8 @@ using (var context = new EntityContext())
 }
 ```
 
+{% include component-try-it.html href='https://dotnetfiddle.net/bCXqPB' %}
+
  - It updates all the columns of existing records.
  - I will insert data of new records in all the columns except for the `Description` column because `Description` property is specified in `IgnoreOnSynchronizeInsertExpression`. 
  - It will also delete all those records which are in the source (`customers` list)
-
-{% include component-try-it.html href='https://dotnetfiddle.net/bCXqPB' %}
-
