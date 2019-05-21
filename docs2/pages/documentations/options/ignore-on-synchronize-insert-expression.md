@@ -21,9 +21,8 @@ using (var context = new EntityContext())
 }
 ```
 
+{% include component-try-it.html href='https://dotnetfiddle.net/bCXqPB' %}
+
  - It updates all the columns of existing records.
  - I will insert data of new records in all the columns except for the `ModifiedDate` column because `ModifiedDate` property is specified in `IgnoreOnSynchronizeInsertExpression`. 
  - It will also delete non-matching rows that exist in the database.
-
-{% include component-try-it.html href='https://dotnetfiddle.net/bCXqPB' %}
-
