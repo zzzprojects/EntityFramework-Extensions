@@ -2,7 +2,7 @@
 
 The `IgnoreOnSynchronizeUpdateExpression` allows you to ignore some columns when the `BulkSynchronize` method executes the `UPDATE` statement and these columns will only be used in `INSERT` statement.
 
-The following example ignores the `Description` property when updating the existing records, and it will be considered in insertion only.
+The following example ignores the `CreatedDate` property when updating the existing records, and it will be considered in insertion only.
 
 ```csharp
 using (var context = new EntityContext())
