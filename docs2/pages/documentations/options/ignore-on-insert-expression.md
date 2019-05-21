@@ -20,6 +20,6 @@ using (var context = new EntityContext())
 }
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/bCXqPB' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/RljtrO' %}
 
  - I will insert data in all the columns except for the `ModifiedDate` column because `ModifiedDate` property is specified in `IgnoreOnSynchronizeInsertExpression`. 
