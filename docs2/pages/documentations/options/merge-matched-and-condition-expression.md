@@ -1,8 +1,8 @@
 # MergeMatchedAndConditionExpression
 
-The `MergeMatchedAndConditionExpression` allows you to perform only the `UPDATE` in the `BulkMerge` if all properties are equal to the database value. 
+The `MergeMatchedAndConditionExpression` allows you to perform only the `UPDATE` in the `BulkMerge` if all property is equal to the database value. 
 
-The following example updates all those records in which `CreatedDate`  value is equal to the database value.
+The following example updates all those records in which `CreatedDate` value is equal to the database value.
 
 ```csharp
 using (var context = new EntityContext())
@@ -20,4 +20,4 @@ using (var context = new EntityContext())
 
 {% include component-try-it.html href='https://dotnetfiddle.net/U8vgGS' %}
 
- - It will update all the records except for the last record because the `CreatedDate` property is updated for the last record.
+ - It will update all the records except for the last record because the `CreatedDate` property is updated only for the last record.
