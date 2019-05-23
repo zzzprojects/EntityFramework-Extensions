@@ -3,7 +3,7 @@
 The `IgnoreOnMergeMatchedAndConditionExpression` is the inverse of `MergeMatchedAndConditionExpression`.
 
  -  The `MergeMatchedAndConditionExpression` allows you to perform only the `UPDATE` in the `BulkMerge` if all properties are equal to the database value. 
- -  So by default, all columns all included in `IgnoreOnMergeMatchedAndConditionExpression` but not the one you choose to ignore.
+ -  So by default, all columns are included in `IgnoreOnMergeMatchedAndConditionExpression` but not the one you choose to ignore.
 
 The following example updates all those records by ignoring the specified properties if their value is equal to the database or not.
 
