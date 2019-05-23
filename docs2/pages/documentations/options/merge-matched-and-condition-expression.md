@@ -1,6 +1,6 @@
 # MergeMatchedAndConditionExpression
 
-The `MergeMatchedAndConditionExpression` allows you to perform only the `UPDATE` in the `BulkMerge` if all property is equal to the database value. 
+The `MergeMatchedAndConditionExpression` allows you to perform only the `UPDATE` in the `BulkMerge` if the specified property value is equal to the database value. 
 
 The following example updates all those records in which `CreatedDate` value is equal to the database value.
 
