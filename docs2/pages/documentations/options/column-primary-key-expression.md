@@ -1,16 +1,17 @@
 # ColumnPrimaryKeyExpression
 
-## Definition
-Gets or sets columns to use as the `key` for the operation.
+The `ColumnPrimaryKeyExpression` allows you to choose a specific property or properties as a key to perform the bulk operations.
 
+The following example uses `Login` and `Password` properties as a key to perform `BulkMerge`.
 
 ```csharp
-context.BulkMerge(list, options => 
-        options.ColumnPrimaryKeyExpression = entity => new { entity.Code1, entity.Code2 }
-); 
+using (var context = new EntityContext())
+{
+    context.BulkMerge(list, 
+        options => options.ColumnPrimaryKeyExpression = customer => new { customer.Login, customer.Password }
+    );
+}
 ```
+{% include component-try-it.html href='https://dotnetfiddle.net/L1Wvep' %}
 
-## Purpose
-The `ColumnPrimaryKeyExpression` option lets you choose a specific key to use to perform the bulk operations.
-
-By example, when importing a file, you may not have access to the `ID` but a unique `Code` instead.
+It will update those records for which the `Login` and `Password` already exists in the database and all the new records will be inserted to the database. 
