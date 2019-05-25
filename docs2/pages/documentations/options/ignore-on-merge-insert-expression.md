@@ -5,9 +5,13 @@ The `IgnoreOnMergeInsertExpression` allows you to ignore some columns when the `
 The following example ignores the `Description` property in insertion and will be considered when updating the records.
 
 ```csharp
-context.BulkMerge(list, options => 
+using (var context = new EntityContext())
 {
-        options.IgnoreOnMergeInsertExpression = customer => new {customer.CustomerID,  customer.Description};
-}); 
+    context.BulkMerge(list, options => 
+    {
+        context.BulkMerge(list, 
+            options => options.ColumnPrimaryKeyExpression = customer => new { customer.Login, customer.Password });
+    }
+}
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/ggtMXb' %}
