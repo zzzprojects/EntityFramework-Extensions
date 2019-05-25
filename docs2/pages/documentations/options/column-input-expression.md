@@ -20,10 +20,13 @@ using (var context = new EntityContext())
 {
     List<Customer> list = context.Customers.ToList();
     list.Add(new Customer() { Name ="Customer_C", Description = "Description", IsActive = true });
-			
+            
     context.BulkMerge(list, options => 
         options.ColumnInputExpression = c => new {c.CustomerID, c.Name, c.IsActive }
     );
 }
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/NlNP7s' %}
+
+ - It will insert data to `Name` and `IsActive` columns as specified in `ColumnInputExpression`.
+ - The data in `Description` property is ignored during bulk operation.
