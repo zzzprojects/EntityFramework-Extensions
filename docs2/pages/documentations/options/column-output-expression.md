@@ -8,10 +8,13 @@ The following example uses `IsActive` property in the `ColumnInputExpression` an
  - In the `ColumnOutputExpression`, `Name` and `IsActive` properties are specified so it will update the specified properties from the database to the list.
 
 ```csharp
-context.BulkInsert(list, options => {
-        options.ColumnOutputExpression = c => new { c.Name, c.IsActive };
-        options.ColumnInputExpression = c => new { c.IsActive };
-}); 
+using (var context = new EntityContext())
+{
+    context.BulkInsert(list, options => {
+				    options.ColumnOutputExpression = c => new { c.Name, c.IsActive };
+				    options.ColumnInputExpression = c => new { c.IsActive };
+			 });
+} 
 ```
 
  - Now as result you will see the `Name` property is `null`, that is because we have inserted data only for `IsActive`, and the `Name` field remains null in the database.
