@@ -11,9 +11,9 @@ The following example uses `IsActive` property in the `ColumnInputExpression` an
 using (var context = new EntityContext())
 {
     context.BulkInsert(list, options => {
-				    options.ColumnOutputExpression = c => new { c.Name, c.IsActive };
-				    options.ColumnInputExpression = c => new { c.IsActive };
-			 });
+        options.ColumnOutputExpression = c => new { c.Name, c.IsActive };
+        options.ColumnInputExpression = c => new { c.IsActive };
+    });
 } 
 ```
 
