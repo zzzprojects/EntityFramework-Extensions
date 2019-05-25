@@ -57,7 +57,7 @@ context.BulkMerge(list,
 
 - It will merge data for `CustomerID`, `Description` and `IsActive` fields and all other properties will remain `NULL` in the database.
 - It will also update the list by updating only the specified properties from the database.
--  
+
 {% include component-try-it.html href='https://dotnetfiddle.net/40zGTH' %}
 
 ## Column Primary Key
