@@ -1,16 +1,13 @@
 # IgnoreOnMergeUpdateExpression
 
-## Definition
-Gets or sets columns to ignore when the `BulkMerge` method executes the `insert` statement.
+The `IgnoreOnMergeInsertExpression` allows you to ignore some columns when the `BulkMerge` method executes the `insert` statement and these columns will only be used in `update` statement.
 
+The following example ignores the `Description` property in insertion and will be considered when updating the records.
 
 ```csharp
 context.BulkMerge(list, options => 
-        options.IgnoreOnMergeUpdateExpression = entity => new {entity.ModifiedDate, entity.ModifiedUser}
-); 
+{
+        options.IgnoreOnMergeInsertExpression = customer => new {customer.CustomerID,  customer.Description};
+}); 
 ```
-
-## Purpose
-The `IgnoreOnMergeInsertExpression` option lets you ignore some columns that should only be `updated.
-
-By example, when to `update` the ModifiedData and ModifiedUser but not `insert` value.
+{% include component-try-it.html href='https://dotnetfiddle.net/ggtMXb' %}
