@@ -11,12 +11,24 @@ The following example updates all those records in which the `CreatedDate` prope
 using (var context = new EntityContext())
 {
     var customers = context.Customers.ToList();
-    customers.ForEach(x => { x.Name += "_Updated"; x.Description += "_Updated"; x.ModifiedDate = DateTime.Now; x.IsActive = false; });
+    customers.ForEach(x => 
+    { 
+        x.Name += "_Updated"; 
+        x.Description += "_Updated"; 
+        x.ModifiedDate = DateTime.Now; 
+        x.IsActive = false; 
+    });
     customers.Last().CreatedDate = DateTime.Now;
 
     context.BulkSynchronize(customers, options => 
     {
-        options.IgnoreOnSynchronizeMatchedAndConditionExpression = c => new {c.Name, c.Description, c.ModifiedDate, c.IsActive };
+        options.IgnoreOnSynchronizeMatchedAndConditionExpression = c => new 
+        {
+            c.Name, 
+            c.Description, 
+            c.ModifiedDate, 
+            c.IsActive 
+        };
     });
 }
 ```
