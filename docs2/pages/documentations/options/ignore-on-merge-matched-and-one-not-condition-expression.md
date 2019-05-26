@@ -16,7 +16,13 @@ using (var context = new EntityContext())
 
     context.BulkMerge(customers, options => 
     {
-        options.IgnoreOnMergeMatchedAndOneNotConditionExpression = c => new {c.Name, c.Description, c.CreatedDate, c.IsActive };
+        options.IgnoreOnMergeMatchedAndOneNotConditionExpression = c => new 
+        {
+            c.Name, 
+            c.Description, 
+            c.CreatedDate, 
+            c.IsActive 
+        };
     });
 }
 ```
