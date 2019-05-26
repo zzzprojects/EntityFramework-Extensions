@@ -12,7 +12,11 @@ using (var context = new EntityContext())
     list.ForEach(x => { x.IsActive = false; x.Name += "_NotMerge"; x.Description += "_Merge"; });
 			
     context.BulkMerge(list, options => 
-        options.ColumnInputOutputExpression = c => new {c.CustomerID, c.Description, c.IsActive}
+        options.ColumnInputOutputExpression = c => new 
+	{
+	    c.CustomerID, 
+	    c.Description, 
+	    c.IsActive}
      );	
 }
 ```
