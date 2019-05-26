@@ -16,7 +16,13 @@ using (var context = new EntityContext())
 
     context.BulkUpdate(customers, options => 
     {
-        options.IgnoreOnUpdateMatchedAndOneNotConditionExpression = c => new {c.Name, c.Description, c.CreatedDate, c.IsActive };
+        options.IgnoreOnUpdateMatchedAndOneNotConditionExpression = c => new 
+        {
+            c.Name, 
+            c.Description, 
+            c.CreatedDate, 
+            c.IsActive 
+        };
     });
 }
 ```
