@@ -9,11 +9,23 @@ The following example ignores the `Name` and `IsActive` properties while updatin
 using (var context = new EntityContext())
 {
     var list = context.Customers.ToList();
-    list.ForEach(x => { x.IsActive = false; x.Name += "_NotMerge"; x.Description += "_Merge"; x.IsActive = false; });
+    list.ForEach(x => 
+    { 
+        x.IsActive = false; 
+	x.Name += "_NotMerge"; 
+	x.Description += "_Merge"; 
+	x.IsActive = false; 
+    });
 			
     context.BulkMerge(list, options => 
     {
-        options.IgnoreOnMergeUpdateExpression = customer => new {customer.CustomerID, customer.IsActive, customer.Name};
+        options.IgnoreOnMergeUpdateExpression = 
+	    customer => new 
+	    {
+	        customer.CustomerID, 
+		customer.IsActive, 
+		customer.Name
+	    };
     });
 }
 ```
