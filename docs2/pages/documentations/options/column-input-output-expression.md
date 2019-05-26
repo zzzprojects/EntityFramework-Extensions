@@ -16,8 +16,9 @@ using (var context = new EntityContext())
 	{
 	    c.CustomerID, 
 	    c.Description, 
-	    c.IsActive}
-     );	
+	    c.IsActive
+	}
+    );	
 }
 ```
 
