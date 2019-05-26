@@ -8,11 +8,22 @@ The following example ignores the `CreatedDate` property when bulk update operat
 using (var context = new EntityContext())
 {	
     var customers = context.Customers.ToList();
-    customers.ForEach(x => { x.Name += "_Updated"; x.Description += "_Updated"; x.CreatedDate = DateTime.Now; x.ModifiedDate = DateTime.Now; x.IsActive = false; });
+    customers.ForEach(x => 
+    { 
+        x.Name += "_Updated"; 
+        x.Description += "_Updated"; 
+        x.CreatedDate = DateTime.Now; 
+        x.ModifiedDate = DateTime.Now; 
+        x.IsActive = false; 
+    });
 
     context.BulkUpdate(customers, options => 
     {
-        options.IgnoreOnUpdateExpression = customer => new {customer.CustomerID,  customer.CreatedDate};
+        options.IgnoreOnUpdateExpression = customer => new 
+        {
+            customer.CustomerID,  
+            customer.CreatedDate
+         };
     });
 }
 ```
