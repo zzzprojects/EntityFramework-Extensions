@@ -7,35 +7,32 @@ The following example ignores the `ModifiedDate` property in insertion and will 
 ```csharp
 using (var context = new EntityContext())
 {
-	var customers = context.Customers.Take(2).ToList();
-	customers.ForEach(x => 
-	{ 
-	    x.Name += "_Updated"; 
-	    x.Description += "_Updated"; 
-	    x.ModifiedDate = DateTime.Now; 
-	    x.IsActive = false; 
-	});
+    var customers = context.Customers.Take(2).ToList();
+    customers.ForEach(x => 
+    { 
+        x.Name += "_Updated"; 
+        x.Description += "_Updated"; 
+        x.ModifiedDate = DateTime.Now; 
+        x.IsActive = false; 
+    });
 	
-	customers.Add(new Customer() 
-	{ 
-	    Name = "Alexander", 
-	    Description = "Description of Alexander", 
-	    CreatedDate = DateTime.Now, 
-	    ModifiedDate = DateTime.Now, 
-	    IsActive = true 
-	});
+    customers.Add(new Customer() 
+    { 
+        Name = "Alexander", 
+        Description = "Description of Alexander", 
+        CreatedDate = DateTime.Now, 
+        ModifiedDate = DateTime.Now, 
+        IsActive = true 
+    });
 
-	context.BulkSynchronize(customers, options => 
-	{
-	    options.IgnoreOnSynchronizeInsertExpression = customer => new 
-	    {
-	        customer.CustomerID,  
-		customer.ModifiedDate
-            };
-	});
-	
-	FiddleHelper.WriteTable("After BulkSynchronize",context.Customers.ToList());
-					  
+    context.BulkSynchronize(customers, options => 
+    {
+        options.IgnoreOnSynchronizeInsertExpression = customer => new 
+        {
+            customer.CustomerID,  
+            customer.ModifiedDate
+        };
+    });					  
 }
 ```
 
