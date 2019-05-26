@@ -9,9 +9,12 @@ using (var context = new EntityContext())
 {
     context.BulkMerge(list, options => 
     {
-        context.BulkMerge(list, 
-            options => options.ColumnPrimaryKeyExpression = customer => new { customer.Login, customer.Password });
-    }
+        options.IgnoreOnMergeInsertExpression = customer => new 
+        {
+            customer.CustomerID,  
+            customer.Description
+        };
+    });
 }
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/ggtMXb' %}
