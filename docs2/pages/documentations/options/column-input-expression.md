@@ -7,7 +7,13 @@ The following example inserts data to the database by specifying `Name` and `IsA
 ```csharp
 using (var context = new EntityContext())
 {
-    context.BulkInsert(list, options => options.ColumnInputExpression = c => new { c.Name, c.IsActive });
+    context.BulkInsert(list, 
+        options => options.ColumnInputExpression = c => new 
+        { 
+            c.Name, 
+            c.IsActive 
+        }
+    );
 }
 ```
 
@@ -22,7 +28,12 @@ using (var context = new EntityContext())
     list.Add(new Customer() { Name ="Customer_C", Description = "Description", IsActive = true });
             
     context.BulkMerge(list, options => 
-        options.ColumnInputExpression = c => new {c.CustomerID, c.Name, c.IsActive }
+        options.ColumnInputExpression = c => new 
+        {
+            c.CustomerID, 
+            c.Name, 
+            c.IsActive 
+        }
     );
 }
 ```
