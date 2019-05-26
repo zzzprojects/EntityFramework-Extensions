@@ -8,7 +8,11 @@ The following example uses `Login` and `Password` properties as a key to perform
 using (var context = new EntityContext())
 {
     context.BulkMerge(list, 
-        options => options.ColumnPrimaryKeyExpression = customer => new { customer.Login, customer.Password }
+        options => options.ColumnPrimaryKeyExpression = customer => new 
+        { 
+            customer.Login, 
+            customer.Password 
+        }
     );
 }
 ```
