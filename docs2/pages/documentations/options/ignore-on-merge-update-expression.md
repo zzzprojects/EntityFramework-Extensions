@@ -19,13 +19,12 @@ using (var context = new EntityContext())
 			
     context.BulkMerge(list, options => 
     {
-        options.IgnoreOnMergeUpdateExpression = 
-	    customer => new 
-	    {
-	        customer.CustomerID, 
-		customer.IsActive, 
-		customer.Name
-	    };
+        options.IgnoreOnMergeUpdateExpression = customer => new 
+	{
+	    customer.CustomerID, 
+	    customer.IsActive, 
+	    customer.Name
+	};
     });
 }
 ```
