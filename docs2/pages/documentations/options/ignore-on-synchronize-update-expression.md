@@ -7,32 +7,32 @@ The following example ignores the `CreatedDate` property when updating the exist
 ```csharp
 using (var context = new EntityContext())
 {
-	var customers = context.Customers.Take(2).ToList();
-	customers.ForEach(x => 
-	{ 
-	    x.Name += "_Updated"; 
-	    x.Description += "_Updated"; 
-	    x.ModifiedDate = DateTime.Now; 
-	    x.IsActive = false; 
-	});
+    var customers = context.Customers.Take(2).ToList();
+    customers.ForEach(x => 
+    { 
+        x.Name += "_Updated"; 
+        x.Description += "_Updated"; 
+        x.ModifiedDate = DateTime.Now; 
+        x.IsActive = false; 
+    });
 	
-	customers.Add(new Customer() 
-	{ 
-	    Name = "Alexander", 
-	    Description = "Description of Alexander", 
-	    CreatedDate = DateTime.Now, 
-	    ModifiedDate = DateTime.Now, 
-	    IsActive = true 
-	});
+    customers.Add(new Customer() 
+    { 
+        Name = "Alexander", 
+        Description = "Description of Alexander", 
+        CreatedDate = DateTime.Now, 
+        ModifiedDate = DateTime.Now, 
+        IsActive = true 
+    });
 
-	context.BulkSynchronize(customers, options => 
-	{
-	    options.IgnoreOnSynchronizeUpdateExpression = customer => new 
-	    {
-	        customer.CustomerID,  
-		customer.CreatedDate
-            };
-	});
+    context.BulkSynchronize(customers, options => 
+    {
+        options.IgnoreOnSynchronizeUpdateExpression = customer => new 
+        {
+            customer.CustomerID,  
+	    customer.CreatedDate
+        };
+    });
 }
 ```
 
