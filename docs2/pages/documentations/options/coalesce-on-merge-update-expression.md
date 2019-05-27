@@ -1,6 +1,6 @@
 # CoalesceOnMergeUpdateExpression
 
-The `CoalesceOnMergeUpdateExpression` allows you to not update any column if the specified value is `null` and it is not null in the database.
+The `CoalesceOnMergeUpdateExpression` allows you to not update any column in if the specified value is `null` and its database value is not null when `BulkMerge` method is executed.
 
 The following example will update only those columns in which the specified value is not null.
 
