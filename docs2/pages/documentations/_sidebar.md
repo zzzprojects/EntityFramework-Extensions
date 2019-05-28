@@ -1,0 +1,11 @@
+- Bulk Operations
+   - [Bulk SaveChanges](bulk-savechanges.md)
+   - [Batch SaveChanges](batch-savechanges.md)
+   - [Bulk Insert](bulk-insert.md)
+   - [Bulk Update](bulk-update.md)
+   - [Bulk Delete](bulk-delete.md)
+   - [Bulk Merge](bulk-merge.md)
+   - [Bulk Synchronize](bulk-synchronize.md)
+- Batch Operations
+   - [Delete from Query](delete-from-query.md)
+   - [Update from Query](update-from-query.md)
