@@ -1,18 +1,26 @@
 # ColumnInputOutputExpression
 
-## Definition
-Gets or sets columns to map with the direction `InputOutput`.
+The `ColumnInputOutputExpression` allows you to choose specific properties in which you want to perform the bulk operations with the direction `InputOutput`.
 
-The key is required for operations such as `BulkUpdate` and `BulkMerge`.
-
+The key is required for operation such as `BulkUpdate` and `BulkMerge`. The following example uses `CustomerID`, `Description`, `IsActive` properties in the `ColumnInputOutputExpression`. 
 
 ```csharp
-context.BulkMerge(list, options => 
-        options.ColumnInputOutputExpression = entity => new {entity.ID, entity.Code}
-); 
+using (var context = new EntityContext())
+{
+    list = context.Customers.ToList();
+    list.Add(new Customer() { Name ="Customer_C", Description = "Description"});
+    list.ForEach(x => { x.IsActive = false; x.Name += "_NotMerge"; x.Description += "_Merge"; });
+			
+    context.BulkMerge(list, options => 
+        options.ColumnInputOutputExpression = c => new 
+	{
+	    c.CustomerID, 
+	    c.Description, 
+	    c.IsActive
+	}
+    );	
+}
 ```
 
-## Purpose
-The `ColumnInputOutputExpression` option lets you choose specific properties in which you want to perform the bulk operations.
-
-By example, when importing a file, you may have not data on all properties.
+- It will merge data for `CustomerID`, `Description` and `IsActive` fields and all other properties will remain `NULL` in the database.
+- It will also update the list by updating only the specified properties from the database.

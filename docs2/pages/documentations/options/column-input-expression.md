@@ -1,18 +1,43 @@
 # ColumnInputExpression
 
-## Definition
-Gets or sets columns to map with the direction `Input`.
+The `ColumnInputExpression` allows you to choose specific properties of an entity in which you want to perform the bulk operations.
 
-The key is required for operations such as `BulkUpdate` and `BulkMerge`.
-
+The following example inserts data to the database by specifying `Name` and `IsActive` properties using the `BulkInsert` operation.
 
 ```csharp
-context.BulkMerge(list, options => 
-        options.ColumnInputExpression = entity => new {entity.ID, entity.Code}
-); 
+using (var context = new EntityContext())
+{
+    context.BulkInsert(list, 
+        options => options.ColumnInputExpression = c => new 
+        { 
+            c.Name, 
+            c.IsActive 
+        }
+    );
+}
 ```
 
-## Purpose
-The `ColumnInputExpression` option lets you choose specific properties in which you want to perform the bulk operations.
+{% include component-try-it.html href='https://dotnetfiddle.net/lwF8DZ' %}
 
-By example, when importing a file, you may not have data on all properties.
+The key is required for operation such as `BulkUpdate` and `BulkMerge`.
+
+```csharp
+using (var context = new EntityContext())
+{
+    List<Customer> list = context.Customers.ToList();
+    list.Add(new Customer() { Name ="Customer_C", Description = "Description", IsActive = true });
+            
+    context.BulkMerge(list, options => 
+        options.ColumnInputExpression = c => new 
+        {
+            c.CustomerID, 
+            c.Name, 
+            c.IsActive 
+        }
+    );
+}
+```
+{% include component-try-it.html href='https://dotnetfiddle.net/NlNP7s' %}
+
+ - It will insert data to `Name` and `IsActive` columns as specified in `ColumnInputExpression`.
+ - The data in `Description` property is ignored during bulk operation.
