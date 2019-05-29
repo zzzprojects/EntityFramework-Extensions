@@ -9,3 +9,4 @@
 - Batch Operations
    - [Delete from Query](delete-from-query.md)
    - [Update from Query](update-from-query.md)
+- [Command Interception in EF Core](command-interception-in-ef-core.md)
