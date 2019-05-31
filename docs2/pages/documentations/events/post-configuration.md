@@ -1,6 +1,6 @@
 # PostConfiguration
 
-The `PostConfiguration` event is executed raised just before a bulk method is called, such as, `BulkInsert`, `BulkUpdate`, `BulkDelete`, `BulkMerge`, `BulkSynchronize` etc. 
+The `PostConfiguration` event is raised just before a bulk method is called, such as, `BulkInsert`, `BulkUpdate`, `BulkDelete`, `BulkMerge`, `BulkSynchronize` etc. 
 
 The following sets the `Log` property in the `PostConfiguration` event.
  
