@@ -1,3 +1,7 @@
+---
+Permalink: command-interception-in-ef-core
+---
+
 # What is Command Interception
 
 The high-level goal for the interception feature is to allow external code to observe and potentially intercept EF operations. 
