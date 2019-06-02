@@ -36,48 +36,51 @@ public class EFCommandInterceptor : DbCommandInterceptor
     public override void NonQueryExecuted(DbCommand command, DbCommandInterceptionContext<int> interceptionContext)
     {
         base.NonQueryExecuted(command, interceptionContext);
-        LogInfo("EFCommandInterceptor.NonQueryExecuted", command.CommandText);
+        LogInfo("EFCommandInterceptor.NonQueryExecuted", interceptionContext.Result.ToString(), command.CommandText);
     }
 
     public override void NonQueryExecuting(DbCommand command, DbCommandInterceptionContext<int> interceptionContext)
     {
         base.NonQueryExecuting(command, interceptionContext);
-        LogInfo("EFCommandInterceptor.NonQueryExecuting", command.CommandText);
+        LogInfo("EFCommandInterceptor.NonQueryExecuting", interceptionContext.CommandEventData.ToString(), command.CommandText);
     }
 
     public override void ReaderExecuted(DbCommand command, DbCommandInterceptionContext<DbDataReader> interceptionContext)
     {
         base.ReaderExecuted(command, interceptionContext);
-        LogInfo("EFCommandInterceptor.ReaderExecuted", command.CommandText);
+        LogInfo("EFCommandInterceptor.ReaderExecuted", interceptionContext.Result.ToString(), command.CommandText);
     }
 
     public override void ReaderExecuting(DbCommand command, DbCommandInterceptionContext<DbDataReader> interceptionContext)
     {
-        var context = interceptionContext.DbContext;
         base.ReaderExecuting(command, interceptionContext);
-        LogInfo("EFCommandInterceptor.ReaderExecuting", command.CommandText);
+        LogInfo("EFCommandInterceptor.ReaderExecuting", interceptionContext.CommandEventData.ToString(), command.CommandText);
     }
 
     public override void ScalarExecuted(DbCommand command, DbCommandInterceptionContext<object> interceptionContext)
     {
         base.ScalarExecuted(command, interceptionContext);
-        LogInfo("EFCommandInterceptor.ScalarExecuted", command.CommandText);
+        LogInfo("EFCommandInterceptor.ScalarExecuted", interceptionContext.Result.ToString(), command.CommandText);
     }
 
     public override void ScalarExecuting(DbCommand command, DbCommandInterceptionContext<object> interceptionContext)
     {
         base.ScalarExecuting(command, interceptionContext);
-        LogInfo("EFCommandInterceptor.ScalarExecuting", command.CommandText);
+        LogInfo("EFCommandInterceptor.ScalarExecuting", interceptionContext.CommandEventData.ToString(), command.CommandText);
     }
 
-    private void LogInfo(string command, string commandText)
+    private void LogInfo(string method, string command, string commandText)
     {
-        Console.WriteLine("Intercepted on: {0} :- {1} ", command, commandText);
+        Console.WriteLine("Intercepted on: {0} \n {1} \n {2}", method, command, commandText);
     }
 }
 ```
 
-This code writes commands and queries on the Console Window.
+This code writes commands and queries on the Console Window. The `DbCommandInterceptionContext` currently have the 3 followings properties: 
+
+ - DbContext
+ - Result (populated only on "Executed" event) 
+ - CommandEventData which contains all informations about this event.
 
 ## Register Interceptor
 
@@ -135,7 +138,15 @@ static void Main(string[] args)
 Let's run your application in debug mode, and you will see all the commands on the console window.
 
 ```csharp
-Intercepted on: EFCommandInterceptor.ReaderExecuting :- SET NOCOUNT ON;
+Intercepted on: EFCommandInterceptor.ReaderExecuting
+ Executing DbCommand [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([IsActive], [Name])
+VALUES (@p0, @p1);
+SELECT [CustomerID]
+FROM [Customers]
+WHERE @@ROWCOUNT = 1 AND [CustomerID] = scope_identity();
+ SET NOCOUNT ON;
 INSERT INTO [Customers] ([IsActive], [Name])
 VALUES (@p0, @p1);
 SELECT [CustomerID]
@@ -143,7 +154,9 @@ FROM [Customers]
 WHERE @@ROWCOUNT = 1 AND [CustomerID] = scope_identity();
 
 
-Intercepted on: EFCommandInterceptor.ReaderExecuted :- SET NOCOUNT ON;
+Intercepted on: EFCommandInterceptor.ReaderExecuted
+ System.Data.SqlClient.SqlDataReader
+ SET NOCOUNT ON;
 INSERT INTO [Customers] ([IsActive], [Name])
 VALUES (@p0, @p1);
 SELECT [CustomerID]
@@ -151,7 +164,15 @@ FROM [Customers]
 WHERE @@ROWCOUNT = 1 AND [CustomerID] = scope_identity();
 
 
-Intercepted on: EFCommandInterceptor.ReaderExecuting :- SET NOCOUNT ON;
+Intercepted on: EFCommandInterceptor.ReaderExecuting
+ Executing DbCommand [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([IsActive], [Name])
+VALUES (@p0, @p1);
+SELECT [CustomerID]
+FROM [Customers]
+WHERE @@ROWCOUNT = 1 AND [CustomerID] = scope_identity();
+ SET NOCOUNT ON;
 INSERT INTO [Customers] ([IsActive], [Name])
 VALUES (@p0, @p1);
 SELECT [CustomerID]
@@ -159,7 +180,9 @@ FROM [Customers]
 WHERE @@ROWCOUNT = 1 AND [CustomerID] = scope_identity();
 
 
-Intercepted on: EFCommandInterceptor.ReaderExecuted :- SET NOCOUNT ON;
+Intercepted on: EFCommandInterceptor.ReaderExecuted
+ System.Data.SqlClient.SqlDataReader
+ SET NOCOUNT ON;
 INSERT INTO [Customers] ([IsActive], [Name])
 VALUES (@p0, @p1);
 SELECT [CustomerID]
@@ -167,7 +190,15 @@ FROM [Customers]
 WHERE @@ROWCOUNT = 1 AND [CustomerID] = scope_identity();
 
 
-Intercepted on: EFCommandInterceptor.ReaderExecuting :- SET NOCOUNT ON;
+Intercepted on: EFCommandInterceptor.ReaderExecuting
+ Executing DbCommand [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([IsActive], [Name])
+VALUES (@p0, @p1);
+SELECT [CustomerID]
+FROM [Customers]
+WHERE @@ROWCOUNT = 1 AND [CustomerID] = scope_identity();
+ SET NOCOUNT ON;
 INSERT INTO [Customers] ([IsActive], [Name])
 VALUES (@p0, @p1);
 SELECT [CustomerID]
@@ -175,7 +206,9 @@ FROM [Customers]
 WHERE @@ROWCOUNT = 1 AND [CustomerID] = scope_identity();
 
 
-Intercepted on: EFCommandInterceptor.ReaderExecuted :- SET NOCOUNT ON;
+Intercepted on: EFCommandInterceptor.ReaderExecuted
+ System.Data.SqlClient.SqlDataReader
+ SET NOCOUNT ON;
 INSERT INTO [Customers] ([IsActive], [Name])
 VALUES (@p0, @p1);
 SELECT [CustomerID]
@@ -183,9 +216,15 @@ FROM [Customers]
 WHERE @@ROWCOUNT = 1 AND [CustomerID] = scope_identity();
 
 
-Intercepted on: EFCommandInterceptor.ReaderExecuting :- SELECT [c].[CustomerID], [c].[IsActive], [c].[Name]
+Intercepted on: EFCommandInterceptor.ReaderExecuting
+ Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CustomerID], [c].[IsActive], [c].[Name]
 FROM [Customers] AS [c]
-Intercepted on: EFCommandInterceptor.ReaderExecuted :- SELECT [c].[CustomerID], [c].[IsActive], [c].[Name]
+ SELECT [c].[CustomerID], [c].[IsActive], [c].[Name]
+FROM [Customers] AS [c]
+Intercepted on: EFCommandInterceptor.ReaderExecuted
+ System.Data.SqlClient.SqlDataReader
+ SELECT [c].[CustomerID], [c].[IsActive], [c].[Name]
 FROM [Customers] AS [c]
 ```
 
