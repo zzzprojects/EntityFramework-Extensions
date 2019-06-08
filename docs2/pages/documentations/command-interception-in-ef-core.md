@@ -46,7 +46,7 @@ public class EFCommandInterceptor : DbCommandInterceptor
     public override void NonQueryExecuting(DbCommand command, DbCommandInterceptionContext<int> interceptionContext)
     {
         base.NonQueryExecuting(command, interceptionContext);
-        LogInfo("EFCommandInterceptor.NonQueryExecuting", interceptionContext.CommandEventData.ToString(), command.CommandText);
+        LogInfo("EFCommandInterceptor.NonQueryExecuting", interceptionContext.EventData.ToString(), command.CommandText);
     }
 
     public override void ReaderExecuted(DbCommand command, DbCommandInterceptionContext<DbDataReader> interceptionContext)
@@ -58,7 +58,7 @@ public class EFCommandInterceptor : DbCommandInterceptor
     public override void ReaderExecuting(DbCommand command, DbCommandInterceptionContext<DbDataReader> interceptionContext)
     {
         base.ReaderExecuting(command, interceptionContext);
-        LogInfo("EFCommandInterceptor.ReaderExecuting", interceptionContext.CommandEventData.ToString(), command.CommandText);
+        LogInfo("EFCommandInterceptor.ReaderExecuting", interceptionContext.EventData.ToString(), command.CommandText);
     }
 
     public override void ScalarExecuted(DbCommand command, DbCommandInterceptionContext<object> interceptionContext)
@@ -70,12 +70,35 @@ public class EFCommandInterceptor : DbCommandInterceptor
     public override void ScalarExecuting(DbCommand command, DbCommandInterceptionContext<object> interceptionContext)
     {
         base.ScalarExecuting(command, interceptionContext);
-        LogInfo("EFCommandInterceptor.ScalarExecuting", interceptionContext.CommandEventData.ToString(), command.CommandText);
+        LogInfo("EFCommandInterceptor.ScalarExecuting", interceptionContext.EventData.ToString(), command.CommandText);
+    }
+
+    public override void NonQueryError(DbCommand command, DbCommandInterceptionContext<int> interceptionContext, Exception exception)
+    {
+        base.NonQueryError(command, interceptionContext, exception);
+        LogInfo("EFCommandInterceptor.NonQueryError", interceptionContext.EventData.ToString(), command.CommandText, exception.Message);
+    }
+
+    public override void ReaderError(DbCommand command, DbCommandInterceptionContext<DbDataReader> interceptionContext, Exception exception)
+    {
+        base.ReaderError(command, interceptionContext, exception);
+        LogInfo("EFCommandInterceptor.NonQueryError", interceptionContext.EventData.ToString(), command.CommandText, exception.Message);
+    }
+
+    public override void ScalarError(DbCommand command, DbCommandInterceptionContext<object> interceptionContext, Exception exception)
+    {
+        base.ScalarError(command, interceptionContext, exception);
+        LogInfo("EFCommandInterceptor.NonQueryError", interceptionContext.EventData.ToString(), command.CommandText, exception.Message);
     }
 
     private void LogInfo(string method, string command, string commandText)
     {
         Console.WriteLine("Intercepted on: {0} \n {1} \n {2}", method, command, commandText);
+    }
+
+    private void LogInfo(string method, string command, string commandText, string exception)
+    {
+        Console.WriteLine("Intercepted on: {0} \n {1} \n {2} \n {3}", method, command, commandText, exception);
     }
 }
 ```
@@ -84,19 +107,28 @@ This code writes commands and queries on the Console Window. The `DbCommandInter
 
  - DbContext
  - Result (populated only on "Executed" event) 
- - CommandEventData which contains all informations about this event.
+ - EventData which contains all informations about this event.
 
 ## Register Interceptor
 
 Once a class that implements the interception has been created it can be registered using the `DbInterception` class as shown below. 
 
 ```csharp
-DbInterception.Add(CommandInterceptor);
+DbInterception.Add(new EFCommandInterceptor());
 ```
+
+You can add interceptors using the `DbInterception.Add` method anywhere in your code such as, `Application_Start` method or in the `DbConfiguration` class, etc.
+
+ - Be careful not to execute `DbInterception.Add` for the same interceptor more than once, otherwise, you will get additional interceptor instances. 
+ - For example, if you add the logging interceptor twice, you will see two logs for every SQL query.
+ - In this example, we will register the interceptor in the `main` method.
 
 You can also bind the interceptor to the context if you want to have information about context, but this step is optional.
 
 ```csharp
+
+public static EFCommandInterceptor CommandInterceptor = new EFCommandInterceptor();
+
 public class CurrentContext : DbContext
 {
     public CurrentContext()
