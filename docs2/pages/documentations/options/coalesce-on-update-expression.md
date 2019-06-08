@@ -1,6 +1,6 @@
 # CoalesceOnUpdateExpression
 
-The `CoalesceOnUpdateExpression` allows you to not update any column in if the specified value is `null` and its database value is not null when `BulkMerge` method is executed.
+The `CoalesceOnUpdateExpression` allows you to not update any column in if the specified value is `null` and its database value is not null when `BulkUpdate` method is executed.
 
 The following example will update only those columns in which the specified value is not null.
 
@@ -10,7 +10,7 @@ using (var context = new EntityContext())
     var list = context.Customers.ToList();
     list.ForEach(x => { x.Name += "_Updated"; x.Description = null; x.IsActive = false;});
     
-    context.BulkMerge(list, options => 
+    context.BulkUpdate(list, options => 
     {
         options.CoalesceOnUpdateExpression = c => new {c.CustomerID, c.Description};
     });                  
