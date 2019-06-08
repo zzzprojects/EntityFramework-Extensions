@@ -103,7 +103,7 @@ public class EFCommandInterceptor : DbCommandInterceptor
 }
 ```
 
-This code writes commands and queries on the Console Window. The `DbCommandInterceptionContext` currently have the 3 followings properties: 
+This code writes commands and queries on the Console Window. The `DbCommandInterceptionContext` currently have the followings properties: 
 
  - DbContext
  - Result (populated only on "Executed" event) 
