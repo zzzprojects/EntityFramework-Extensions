@@ -8,6 +8,9 @@
 - Bulk Options
    - [Audit](options-summary/audit.md)
    - [Batch](options-summary/batch.md)
+      - [BatchSize](options/batch-size.md)
+      - [BatchTimeout](options/batch-timeout.md)
+      - [BatchDelayInterval](options/batch-delay-interval.md) 
    - [Column](options-summary/column.md)
       - [CoalesceDestinationOnMergeUpdateExpression](options/coalesce-destination-on-merge-update-expression.md)                         
       - [CoalesceDestinationOnUpdateExpression](options/coalesce-destination-on-update-expression.md)                                   
