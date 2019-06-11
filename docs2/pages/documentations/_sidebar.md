@@ -56,6 +56,7 @@
 - Utilities
    - [EF Core - DbCommandInterceptor](command-interception-in-ef-core.md)
    - [EF Core - DbConnectionInterceptor](connection-interception-in-ef-core.md)
+   - [EF Core - DbTransactionInterceptor](transaction-interception-in-ef-core.md)
    - [ToSelfHierarchyList](utilities/to-self-hierarchy-list.md)
 - C# Eval Expression
    - [LINQ Dynamic](eval-expressions/linq-dynamic.md)
