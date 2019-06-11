@@ -129,7 +129,7 @@ static void Main(string[] args)
 }
 ```
 
-Let's run your application in debug mode, and you will see all the commands on the console window.
+Let's run your application in debug mode, and you will see all the information related to connection on the console window.
 
 ```csharp
 Intercepted on: EFConnectionInterceptor.Opening:
