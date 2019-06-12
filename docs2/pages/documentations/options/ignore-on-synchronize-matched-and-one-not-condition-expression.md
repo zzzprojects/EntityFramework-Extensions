@@ -1,4 +1,4 @@
-# IgnoreOnSynchronizeMatchedAndOneNotConditionExpression
+# Ignore OnSynchronizeMatched AndOneNotCondition Expression
 
 The `IgnoreOnSynchronizeMatchedAndOneNotConditionExpression` is the inverse of `SynchronizeMatchedAndNotConditionExpression` 
 
