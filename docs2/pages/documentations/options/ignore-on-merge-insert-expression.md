@@ -1,4 +1,4 @@
-# IgnoreOnMergeInsertExpression
+# Ignore OnMergeInsert Expression
 
 The `IgnoreOnMergeInsertExpression` allows you to ignore some columns when the `BulkMerge` method executes the `insert` statement and these columns will only be used in `update` statement.
 
