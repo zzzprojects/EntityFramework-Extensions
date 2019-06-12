@@ -1,4 +1,4 @@
-# CoalesceOnUpdateExpression
+# Coalesce OnUpdate Expression
 
 The `CoalesceOnUpdateExpression` allows you to not update any column in if the specified value is `null` and its database value is not null when `BulkUpdate` method is executed.
 
