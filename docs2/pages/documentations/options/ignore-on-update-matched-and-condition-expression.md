@@ -1,4 +1,4 @@
-# IgnoreOnUpdateMatchedAndConditionExpression
+# Ignore OnUpdateMatched AndCondition Expression
 
 The `IgnoreOnUpdateMatchedAndConditionExpression` is the inverse of `UpdateMatchedAndConditionExpression`.
 
