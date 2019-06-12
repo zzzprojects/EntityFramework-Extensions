@@ -1,4 +1,4 @@
-# ColumnInputExpression
+# Column Input Expression
 
 The `ColumnInputExpression` allows you to choose specific properties of an entity in which you want to perform the bulk operations.
 
