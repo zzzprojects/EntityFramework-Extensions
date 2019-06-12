@@ -1,4 +1,4 @@
-# IgnoreOnInsertExpression
+# Ignore OnInsert Expression
 
 The `IgnoreOnInsertExpression` allows you to ignore some columns when the `BulkInsert` method is executed.
 
