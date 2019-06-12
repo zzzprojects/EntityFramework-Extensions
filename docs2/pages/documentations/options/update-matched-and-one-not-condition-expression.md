@@ -1,4 +1,4 @@
-# UpdateMatchedAndOneNotConditionExpression
+# UpdateMatched AndOneNotCondition Expression
 
 The `UpdateMatchedAndOneNotConditionExpression` allows you to perform the bulk update operation if the specified property value is not equal to the database value. 
 
