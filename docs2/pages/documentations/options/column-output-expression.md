@@ -1,4 +1,4 @@
-# ColumnOutputExpression
+# Column Output Expression
 
 The `ColumnOutputExpression` allows you to choose specific properties in which you want to retrieve data from the database.
 
