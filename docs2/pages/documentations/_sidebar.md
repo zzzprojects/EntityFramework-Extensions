@@ -15,7 +15,7 @@
       - [Coalesce Destination OnMergeUpdate Expression](options/coalesce-destination-on-merge-update-expression.md)
       - [Coalesce Destination OnUpdate Expression](options/coalesce-destination-on-update-expression.md)
       - [Coalesce OnMergeUpdate Expression](options/coalesce-on-merge-update-expression.md)
-      - [Coalesce OnUpdate Expression](options/coalesce-on-merge-update-expression.md)
+      - [Coalesce OnUpdate Expression](options/coalesce-on-update-expression.md)
       - [Column Input Expression](options/column-input-expression.md)
       - [Column Output Expression](options/column-output-expression.md)
       - [Column InputOutput Expression](options/column-input-output-expression.md)
