@@ -1,4 +1,4 @@
-# ColumnPrimaryKeyExpression
+# Column PrimaryKey Expression
 
 The `ColumnPrimaryKeyExpression` allows you to choose a specific property or properties as a key to perform the bulk operations.
 

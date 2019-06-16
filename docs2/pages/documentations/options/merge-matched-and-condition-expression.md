@@ -1,4 +1,4 @@
-# MergeMatchedAndConditionExpression
+# MergeMatched AndCondition Expression
 
 The `MergeMatchedAndConditionExpression` allows you to perform only the `UPDATE` in the `BulkMerge` if the specified property value is equal to the database value. 
 

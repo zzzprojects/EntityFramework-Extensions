@@ -1,4 +1,4 @@
-# IgnoreOnSynchronizeInsertExpression
+# Ignore OnSynchronizeInsert Expression
 
 The `IgnoreOnSynchronizeInsertExpression` allows you to ignore some columns when the `BulkSynchronize` method executes the `insert` statement and these columns will only be used in `update` statement.
 

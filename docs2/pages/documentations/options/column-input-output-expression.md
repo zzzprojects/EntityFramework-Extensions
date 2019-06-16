@@ -1,4 +1,4 @@
-# ColumnInputOutputExpression
+# Column InputOutput Expression
 
 The `ColumnInputOutputExpression` allows you to choose specific properties in which you want to perform the bulk operations with the direction `InputOutput`.
 

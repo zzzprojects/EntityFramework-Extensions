@@ -1,4 +1,4 @@
-# CoalesceDestinationOnUpdateExpression
+# Coalesce Destination OnUpdate Expression
 
 The `CoalesceDestinationOnUpdateExpression` is the inverse of `CoalesceOnUpdateExpression`, it allows you to update the new value if the database value is null otherwise keep the database value when `BulkUpdate` method is executed.
 

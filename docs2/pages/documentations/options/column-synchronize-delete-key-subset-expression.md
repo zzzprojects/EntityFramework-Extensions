@@ -1,4 +1,4 @@
-# ColumnSynchronizeDeleteKeySubsetExpression
+# Column Synchronize DeleteKey Subset Expression
 
 The `ColumnSynchronizeDeleteKeySubsetExpression` allows you to synchronize (insert/update/delete) only a part of the tables by specifying a key.
 

@@ -1,4 +1,4 @@
-# IgnoreOnUpdateExpression
+# Ignore OnUpdate Expression
 
 The `IgnoreOnUpdateExpression` allows you to ignore some columns when the `BulkUpdate` method is executed.
 

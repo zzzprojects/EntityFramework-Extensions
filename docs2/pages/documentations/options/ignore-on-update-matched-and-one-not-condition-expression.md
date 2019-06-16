@@ -1,4 +1,4 @@
-# IgnoreOnUpdateMatchedAndOneNotConditionExpression
+# Ignore OnUpdateMatched AndOneNotCondition Expression
 
 The `IgnoreOnUpdateMatchedAndOneNotConditionExpression` is the inverse of `MergeMatchedAndNotConditionExpression` 
 

@@ -1,4 +1,4 @@
-# UpdateMatchedAndConditionExpression
+# UpdateMatched AndCondition Expression
 
 The `UpdateMatchedAndConditionExpression` allows you to perform the bulk update operation if the specified property value is equal to the database value. 
 
