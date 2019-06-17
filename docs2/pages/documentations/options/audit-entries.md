@@ -2,7 +2,7 @@
 
 ## Definition
 
-The 'BulkOperation.AuditEntries' property which is of type `List<AuditEntry>` gets `UPDATED`, `INSERTED` and `DELETED` data from the database when `UseAudit` is enabled.
+The `BulkOperation.AuditEntries` property which is of type `List<AuditEntry>` gets `UPDATED`, `INSERTED` and `DELETED` data from the database when `UseAudit` is enabled.
 
 The following example assigns `AuditEntries` to local `List<AuditEntry>` variable `auditEntries` when the `BulkOperationExecuted` event is executed. 
 
