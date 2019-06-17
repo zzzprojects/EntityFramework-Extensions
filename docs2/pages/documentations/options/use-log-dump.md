@@ -1,7 +1,7 @@
 # UseLogDump
 
 ## Definition
-The 'BulkOperation.UseLogDump' property sets if all log related to database events should be stored in a `LogDump` properties or not. 
+The 'BulkOperation.UseLogDump' property sets if all log related to database events should be stored in a `LogDump` property or not. 
 
 The following example sets `UseLogDump` to `true` and assigns `LogDump` to local `StringBuilder` variable `logDump` when the `BulkOperationExecuted` event is executed. 
 
