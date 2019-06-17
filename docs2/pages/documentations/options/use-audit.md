@@ -2,7 +2,7 @@
 
 ## Definition
 
-The 'BulkOperation.UseAudit' property sets if `UPDATED`, `INSERTED` and `DELETED` data from the database should be returned as `AuditEntries`.
+The `BulkOperation.UseAudit` property sets if `UPDATED`, `INSERTED` and `DELETED` data from the database should be returned as `AuditEntries`.
 
 The following example sets `UseAudit` to `true` and assigns `AuditEntries` to local `List<AuditEntry>` variable `auditEntries` when the `BulkOperationExecuted` event is executed. 
 
