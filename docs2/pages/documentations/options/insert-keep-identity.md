@@ -4,7 +4,7 @@
 
 The `BulkOperation.InsertKeepIdentity` sets if the source identity value should be preserved on `Insert`. When not specified, identity values are assigned by the destination.
 
-In the following example, the `InsertKeepIdentity` is enabled and the specified value for `IdentityInt` column will be stored in the database instead of the database generated values. 
+In the following example, the `InsertKeepIdentity` is enabled and the specified value for `IdentityInt` column will be stored in the database instead of the database generated values on `INSERT` operation. 
 ```csharp
 List<Customer> list =  new List<Customer>() 
 {
