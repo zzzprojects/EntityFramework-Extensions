@@ -18,6 +18,10 @@ var affectedRows = context.BatchSaveChanges();
 | SaveChanges      | 1,200 ms       | 2,400 ms       | 6,000 ms       |
 | BatchSaveChanges | 75 ms          | 150 ms         | 500 ms         |
 
+[Try this benchmark online](https://dotnetfiddle.net/qCVyzm)
+
+> HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
+
 ### FAQ
 
 #### What is supported?
