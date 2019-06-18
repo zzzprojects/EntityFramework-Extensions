@@ -2,6 +2,6 @@
 
 | Name                               | Description                                                           |
 |:-----------------------------------|:----------------------------------------------------------------------|
-|[InsertKeepIdentity](../options/insert-keep-identity.md)  | Gets or sets the number of records to use in a batch.                 |
-|[MergeKeepIdentity](../options/merge-keep-identity.md)  | Gets or sets the maximum of time in seconds to wait for a batch before the command throws a timeout exception. |
-|[SynchronizeKeepIdentity](../options/synchronize-keep-identity.md)  | Gets or sets a delay in milliseconds to wait between batches.|
+|[InsertKeepIdentity](../options/insert-keep-identity.md)  | Gets or sets if the source identity value should be preserved on `Insert`. When not specified, identity values are assigned by the destination. |
+|[MergeKeepIdentity](../options/merge-keep-identity.md)  | Gets or sets if the source identity value should be preserved on `Merge`. When not specified, identity values are assigned by the destination. |
+|[SynchronizeKeepIdentity](../options/synchronize-keep-identity.md)  | if the source identity value should be preserved on `Synchronize`. When not specified, identity values are assigned by the destination.|
