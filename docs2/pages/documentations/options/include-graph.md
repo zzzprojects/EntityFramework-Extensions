@@ -27,8 +27,6 @@ List<Invoice> list = new List<Invoice>()
     }
 };
 
-
-// IncludeGraph: The IncludeGraph option allows to INSERT/UPDATE/MERGE entities by including the child entities graph.
 using (var context = new EntityContext())
 {
     context.BulkInsert(list, options => options.IncludeGraph = true);
