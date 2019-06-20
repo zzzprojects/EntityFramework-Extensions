@@ -4,7 +4,7 @@
 
 Batch timeout is the number of seconds for the operation to complete before it times out.
 
-The `BatchTimeout` gets or sets the maximum of time in seconds to wait for a batch before the command throws a timeout exception. The following example modifies the timeout to 180 seconds when bulk saving data.
+The `BatchTimeout` gets or sets the maximum time in seconds to wait for a batch before the command throws a timeout exception. The following example modifies the timeout to 180 seconds when bulk saving data.
 
 ```csharp
 context.BulkSaveChanges(options => options.BatchTimeout = 180);

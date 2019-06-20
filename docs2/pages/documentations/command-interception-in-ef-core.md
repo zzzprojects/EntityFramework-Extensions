@@ -7,13 +7,13 @@ Permalink: command-interception-in-ef-core
 The high-level goal for the interception feature is to allow external code to observe and potentially intercept EF operations. 
 
  - Anytime Entity Framework sends a command to the database this command can be intercepted by application code.
- - Using this approach you can capture a lot more information transiently without having to untidy your code.
+ - Using this approach, you can capture a lot more information transiently without having to untidy your code.
  - EF6 provides a dedicated logging API that can make it easier to do logging. 
  - In this article, we will cover how to use the Entity Framework's interception feature directly for logging.
 
 ## Command Interception In EF Core
 
-Right now, Entity Framework Core still does not have all of the features provided in Entity Framework 6 including the command interception. To use command interception in EF Core, you can use [Entity Framework Extensions](https://entityframework-extensions.net/) which provides `DbCommandInterceptor`.
+Right now, Entity Framework Core still does not have all the features provided in Entity Framework 6 including the command interception. To use command interception in EF Core, you can use [Entity Framework Extensions](https://entityframework-extensions.net/) which provides `DbCommandInterceptor`.
 
 To get this feature in your EF Core, install the [Z.EntityFramework.Extensions.EFCore](https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/) NuGet package or run the following command in **Package Manager Console**.
 
@@ -26,7 +26,7 @@ The DbCommandInteceptor in EF Core is very similar to EF6.
  - You will need to create a class that implements DbCommandInterceptor.
  - You will also need to override the virtual methods that you want to intercept 
  - All methods are available with the same signatures. 
- - It can do pretty much everything as it can do in EF6. 
+ - It can do pretty much everything as it can in EF6. 
 
 ## Create Interceptor
 
@@ -103,11 +103,11 @@ public class EFCommandInterceptor : DbCommandInterceptor
 }
 ```
 
-This code writes commands and queries on the Console Window. The `DbCommandInterceptionContext` currently have the followings properties: 
+This code writes commands and queries on the Console Window. The `DbCommandInterceptionContext` currently have the following properties: 
 
  - DbContext
  - Result (populated only on "Executed" event) 
- - EventData which contains all informations about this event.
+ - EventData which contains all information about this event.
 
 ## Register Interceptor
 
@@ -268,4 +268,4 @@ FROM [Customers] AS [c]
 
  - Unlike EF6, you cannot change the result. However, you can still access DbDataReader and read the result.
  - If the connection is not unique by context, the interceptor will always return the context that was the last bind for this shared connection.
- - Connection are usually unique by context, otherwise, it will have some concurrency issue with open/close the connection.
+ - Connection is usually unique by context, otherwise, it will have some concurrency issue with opening/closing the connection.

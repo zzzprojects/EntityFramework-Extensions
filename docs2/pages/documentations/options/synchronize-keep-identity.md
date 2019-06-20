@@ -20,4 +20,4 @@ using (var context = new EntityContext())
 ## Purpose
 The `SynchronizeKeepIdentity` option let you keep the source identity value when `synchronizing`.
 
-By example, when importing a file, you may want to keep the value specified.
+For example, when importing a file, you may want to keep the value specified.

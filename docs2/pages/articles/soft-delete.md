@@ -17,7 +17,7 @@ using (var ctx = new CurrentContext())
 ```
 
 ### Solution
-You can use the **EntityFrameworkManager.PreBulkSaveChanges** property to change state & value from entities prior to the BulkSaveChanges execution
+You can use the **EntityFrameworkManager.PreBulkSaveChanges** property to change state & value from entities prior to the BulkSaveChanges execution.
 
 ### Example
 

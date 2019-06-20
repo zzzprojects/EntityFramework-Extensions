@@ -70,15 +70,15 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = c =
 [Try it](https://dotnetfiddle.net/JsHWWm)
 
 ### Why BulkMerge is faster than SaveChanges?
-Merging thousand of entities for a file importation is a typical scenario.
+Merging thousands of entities for a file importation is a typical scenario.
 
-The `AddOrUpdate` method performs a database round-trips for every entity to check if it already exists. The `DetectChanges` change method is also called for every entity which makes this method even slower (it's like using the `Add` method instead of `AddRange`).
+The `AddOrUpdate` method performs a database round-trip for every entity to check if it already exists. The `DetectChanges` change method is also called for every entity which makes this method even slower (it's like using the `Add` method instead of `AddRange`).
 
 The `SaveChanges` method performs one database round-trip for every entity to update.
 
-So if you need to merge 10,000 entities, 20,000 database round-trips will be performed + 10,000 `DetectChanges` call which is **INSANELY** slow.
+So if you need to merge 10,000 entities, 20,000 database round-trips will be performed + 10,000 `DetectChanges` calls which is **INSANELY** slow.
 
-The `BulkMerge` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then an `MERGE` from the temporary table to the destination table is performed which is the fastest way available.
+The `BulkMerge` in counterpart requires the minimum database round-trips as possible. For example, under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then a `MERGE` from the temporary table to the destination table is performed which is the fastest way available.
 
 ## Real Life Scenarios
 
@@ -93,8 +93,8 @@ context.BulkMerge(customers, options => options.MergeKeepIdentity = true);
 ### Merge and include/exclude properties
 You want to merge your entities but only for specific properties.
 
-- `ColumnInputExpression`: This option let you choose which properties to map.
-- `ColumnIgnoreExpression`: This option let you ignore properties that are auto-mapped.
+- `ColumnInputExpression`: This option lets you choose which properties to map.
+- `ColumnIgnoreExpression`: This option lets you ignore properties that are auto-mapped.
 - `IgnoreOnMergeInsertExpression`: This option let you ignore properties only for the `INSERT` part.
 - `IgnoreOnMergeUpdateExpression`: This option let you ignore properties only for the `UPDATE` part.
 
@@ -116,8 +116,8 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = c =
 ### Merge with related child entities (Include Graph)
 You want to merge entities but also automatically merge related child entities.
 
-- `IncludeGraph`: This option let you to automatically merge all entities part of the graph.
-- `IncludeGraphBuilder`: This option let you customize how to merge entities for a specific type.
+- `IncludeGraph`: This option lets you to automatically merge all entities part of the graph.
+- `IncludeGraphBuilder`: This option lets you customize how to merge entities for a specific type.
 
 ```csharp
 context.BulkMerge(invoices, options => options.IncludeGraph = true);
@@ -129,7 +129,7 @@ You want to merge entities, but you want to defer the execution.
 
 By default, `BulkMerge` is an immediate operation. That mean, it's executed as soon as you call the method.
 
-`FutureAction`: This option let you defer the execution of a Bulk Merge.
+`FutureAction`: This option lets you defer the execution of a Bulk Merge.
 `ExecuteFutureAction`: This option trigger and execute all pending `FutureAction`.
 
 ```csharp
@@ -143,7 +143,7 @@ context.ExecuteFutureAction();
 [Try it](https://dotnetfiddle.net/RUL0rL)
 
 ### More scenarios
-Hundred of scenarios has been solved and are now supported.
+Hundreds of scenarios have been solved and are now supported.
 
 The best way to ask for a special request or to find out if a solution for your scenario already exists is by contacting us:
 info@zzzprojects.com

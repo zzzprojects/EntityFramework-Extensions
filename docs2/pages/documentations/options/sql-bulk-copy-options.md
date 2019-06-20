@@ -12,4 +12,4 @@ context.BulkSaveChanges(options =>
 ```
 
 ## Purpose
-Modifying the SqlBulkCopyOptions to include by example `TableLock` may increase significantly the performance.
+Modifying the SqlBulkCopyOptions to include for example `TableLock` may increase significantly the performance.

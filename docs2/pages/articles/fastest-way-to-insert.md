@@ -13,7 +13,8 @@ Most common solutions usually involve:
 - Disabling Proxy
 
 Some of these solutions are good, some lead to side impacts and none of them fix the main issue: One database round-trip is made for every entity you save!
-So if you have 5000 entities to insert, 5000 databases round trips will be executed which is **INSANELY** slow.
+
+So, if you have 5000 entities to insert, 5000 database round-trips will be executed which is **INSANELY** slow.
 
 A very common mistake is believing the AddRange method perform a Bulk Insert. Using the AddRange method greatly improve the performance because it calls the DetectChanges method only once after all entities are added to the change tracker. However, the SaveChanges method will still make one database round-trip per entity.
 
@@ -90,7 +91,7 @@ BulkUpdate method performs an UPDATE operation.
 
 Tutorial: [EFE - Bulk Update](http://entityframework-extensions.net/bulk-update)
 
-There are multiple options available such:
+There are multiple options available such as:
 
 - Custom Column
 - Custom Key
@@ -128,7 +129,7 @@ ctx.BulkDelete(list, options =>
 ```
 
 ## EF BulkMerge
-BulkMerge method performs an UPSERT operation and outputs the identity value. Existing entities matching the key are updated, and newly entities are inserted.
+BulkMerge method performs an UPSERT operation and outputs the identity value. Existing entities matching the key are updated, and new entities are inserted.
 
 There are multiple options available such as:
 
@@ -157,11 +158,11 @@ ctx.BulkMerge(list, options =>
 ```
 
 ## Conclusion
-Entity Framework Extensions is well tested with over 10k unit tests and currently used by thousands of company all around the world. Without a doubt, it is the ultimate library to improve your performance with Entity Framework.
+Entity Framework Extensions is well tested with over 10k unit tests and currently used by thousands of companies all around the world. Without a doubt, it is the ultimate library to improve your performance with Entity Framework.
 
 On the negative side, this library is not free.
 
-ZZZ Projects gives back value to the .NET community by supporting some other free libraries, tutorials and sponsoring project such as:
+ZZZ Projects gives back value to the .NET community by supporting some other free libraries, tutorials and sponsoring projects such as:
 
 - [Entity Framework Plus](http://entityframework-plus.net/){:target="_blank"}
 - [Html Agility Pack](http://html-agility-pack.net/){:target="_blank"}

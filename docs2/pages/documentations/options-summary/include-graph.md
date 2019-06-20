@@ -1,6 +1,6 @@
 # Include Graph
 
-The `BulkOperation.IncludeGraph` option allows you to `INSERT/UPDATE/MERGE` entities by including the child entities graph. 
+The `BulkOperation.IncludeGraph` option allow you to `INSERT/UPDATE/MERGE` entities by including the child entities graph. 
 
 In the following example, the `IncludeGraph` is enabled and the list of `Invoice` is added to the database using `BulkInsert`.
 
@@ -66,7 +66,7 @@ ctx.BulkMerge(users, options =>
 
 ### ReadOnly
 
-You can specify that some entities should not be inserted/updated by marked them as ReadOnly.
+You can specify that some entities should not be inserted/updated by marking them as ReadOnly.
 
 
 ```csharp
@@ -90,7 +90,7 @@ ctx.BulkMerge(users, options =>
 ## FAQ
 
 ### Why do I receive an error that asks me to specify a context factory?
-To retrieve the current entities graph, our library requires a working context to use some Entity Framework feature without impacting the current context.
+To retrieve the current entities graph, our library requires a working context to use some Entity Framework features without impacting the current context.
 The context factory is optional if your context has a default constructor.
 
 Read more: [Context Factory](context-factory)
@@ -101,6 +101,6 @@ To retrieve all information, we need to detach temporary proxy type from the cur
 There is currently no known issue about this technic, but we prefer to force people to understand that some unsafe code is currently done under the hood by our library.
 
 ### Why is IncludeGraph not compatible with BulkDelete?
-For security purpose, we prefer to force people to delete their entities. We currently have no plan to support it.
+For security purposes, we prefer to force people to delete their entities. We currently have no plans to support it.
 
 {% include section-faq-end.html %}

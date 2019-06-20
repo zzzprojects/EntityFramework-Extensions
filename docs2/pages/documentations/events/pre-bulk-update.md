@@ -1,6 +1,6 @@
 # PreBulkUpdate
 
-The `PreBulkUpdate` event is raised as soon the `BulkUpdate` method is called and no configuration or anything else is done before. It allows you to set some global configuration for BulkUpdate. 
+The `PreBulkUpdate` event is raised as soon as the `BulkUpdate` method is called and no configuration or anything else is done before. It allows you to set some global configuration for BulkUpdate. 
 
 The following example sets the `ModifiedDate` property of a `Customer`.
 

@@ -62,7 +62,7 @@ context.BulUpdateAsync(customers, cancellationToken);
 [Try it](https://dotnetfiddle.net/81oBov)
 
 ### Bulk Update with options
-The `options` parameter let you use a lambda expression to customize the way entities are updated.
+The `options` parameter lets you use a lambda expression to customize the way entities are updated.
 
 ```csharp
 context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code });
@@ -70,18 +70,18 @@ context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = c 
 [Try it](https://dotnetfiddle.net/yw6M79)
 
 ### Why BulkUpdate is faster than SaveChanges?
-Updating thousand of entities for a file importation is a typical scenario.
+Updating thousands of entities for a file importation is a typical scenario.
 
-The `SaveChanges` method makes it quite impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to update. So if you need to update 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
+The `SaveChanges` method makes it quite impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to update. So, if you need to update 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
 
-The `BulkUpdate` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then an `UPDATE` from the temporary table to the destination table is performed which is the fastest way available.
+The `BulkUpdate` in counterpart requires the minimum database round-trips as possible. For example under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then an `UPDATE` from the temporary table to the destination table is performed which is the fastest way available.
 
 ## Real Life Scenarios
 
 ### Update and include/exclude properties
 You want to update your entities but only for specific properties.
 
-- `IgnoreOnUpdateExpression`: This option let you ignore properties that are auto-mapped.
+- `IgnoreOnUpdateExpression`: This option lets you ignore properties that are auto-mapped.
 
 ```csharp            
 context.BulkUpdate(customers, options => options.IgnoreOnUpdateExpression = c => new { c.ColumnToIgnore } );
@@ -99,8 +99,8 @@ context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = c 
 ### Update with related child entities (Include Graph)
 You want to update entities but also automatically insert related child entities.
 
-- `IncludeGraph`: This option let you to automatically update all entities part of the graph.
-- `IncludeGraphBuilder`: This option let you customize how to update entities for a specific type.
+- `IncludeGraph`: This option lets you to automatically update all entities part of the graph.
+- `IncludeGraphBuilder`: This option lets you customize how to update entities for a specific type.
 
 ```csharp
 context.BulkUpdate(invoices, options => options.IncludeGraph = true);
@@ -112,7 +112,7 @@ You want to update entities, but you want to defer the execution.
 
 By default, `BulkUpdate` is an immediate operation. That mean, it's executed as soon as you call the method.
 
-`FutureAction`: This option let you defer the execution of a Bulk Update.
+`FutureAction`: This option lets you defer the execution of a Bulk Update.
 `ExecuteFutureAction`: This option trigger and execute all pending `FutureAction`.
 
 ```csharp
@@ -126,7 +126,7 @@ context.ExecuteFutureAction();
 [Try it](https://dotnetfiddle.net/YnV5Fs)
 
 ### More scenarios
-Hundred of scenarios has been solved and are now supported.
+Hundreds of scenarios have been solved and are now supported.
 
 The best way to ask for a special request or to find out if a solution for your scenario already exists is by contacting us:
 info@zzzprojects.com

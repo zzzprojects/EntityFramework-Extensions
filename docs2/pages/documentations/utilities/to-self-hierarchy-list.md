@@ -60,7 +60,7 @@ var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 [Try it](https://dotnetfiddle.net/k3v62H)
 
 ### Include boss, but with custom mapping
-If your entity doesn't has navigation property toward boss or employee, it's impossible to use the join expression.
+If your entity doesn't have navigation property toward boss or employee, it's impossible to use the join expression.
 
 The `ColumnMappings` option let you specify yourself the mapping. Careful, the column name and not the property name must be used.
 
@@ -74,9 +74,9 @@ var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 [Try it](https://dotnetfiddle.net/8f8bRZ)
 
 ### Include boss, but with an inverse navigation
-If your entity has only a reference to a list of employee and no navigation property toward the boss, it's impossible to use the `JoinExpression` to include the boss.
+If your entity has only a reference to a list of employees and no navigation property toward the boss, it's impossible to use the `JoinExpression` to include the boss.
 
-The `InverseMapping` option let you specify a join expression toward employee but to inverse it. So instead to retrieve their employees, you will retrieve the boss.
+The `InverseMapping` option let you specify a join expression toward employee but to inverse it. So, instead of retrieving their employees, you will retrieve the boss.
 
 ```csharp
 var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
@@ -114,4 +114,4 @@ var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 - Support EF6 only
 - Support SQL Server only
 
-_EF Core support is under development_
+_EF Core support is under development._

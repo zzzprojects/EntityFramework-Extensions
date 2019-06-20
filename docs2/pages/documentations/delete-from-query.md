@@ -16,7 +16,7 @@ context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
 {% include component-try-it.html href='https://dotnetfiddle.net/0my0fe' %}
 
 ## Purpose
-`Deleting` entities using `SaveChanges` normally requires to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
+`Deleting` entities using `SaveChanges` normally requires loading them first in the `ChangeTracker`. These additional round-trips are often not necessary.
 
 `DeleteFromQuery` gives you access to directly execute a `DELETE` statement in the database and provide a **HUGE** performance improvement.
 

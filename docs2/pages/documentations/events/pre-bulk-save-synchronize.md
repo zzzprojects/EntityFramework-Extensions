@@ -1,6 +1,6 @@
 # PreBulkSynchronize
 
-The `PreBulkSynchronize` event is raised as soon the `BulkSynchronize` method is called and no configuration or anything else is done before. It allows you to set some global configuration for `BulkSynchronize`. 
+The `PreBulkSynchronize` event is raised as soon as the `BulkSynchronize` method is called and no configuration or anything else is done before. It allows you to set some global configuration for `BulkSynchronize`. 
 
 The following example sets the `CreatedDate` for new customers and `ModifiedDate` property for existing customers.
 

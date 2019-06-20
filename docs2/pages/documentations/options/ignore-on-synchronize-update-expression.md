@@ -39,5 +39,5 @@ using (var context = new EntityContext())
 {% include component-try-it.html href='https://dotnetfiddle.net/ebEAZa' %}
 
  - It updates all the columns of an existing records except for the `CreatedDate` column because `CreatedDate` property is specified in `IgnoreOnSynchronizeUpdateExpression`. 
- - I will insert non-matching rows that exist in the source (`customers` list).
+ - It will insert non-matching rows that exist in the source (`customers` list).
  - It will also delete non-matching rows that exist in the database.

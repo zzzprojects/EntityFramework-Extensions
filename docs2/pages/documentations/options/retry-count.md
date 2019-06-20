@@ -13,7 +13,7 @@ context.BulkSaveChanges(options => {
 ## Purpose
 A transient error is a temporary error that is likely to disappear soon. That rarely happens but they might occur!
 
-These options allow to reduce a bulk operations fail by making them retry when a transient error occurs.
+These options allow to reduce a bulk operation fail by making them retry when a transient error occurs.
 
 ## FAQ
 

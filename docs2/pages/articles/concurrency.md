@@ -3,7 +3,7 @@
 ## Problem
 Your model have concurrency entity and you must resolve optimistic concurrency using a pattern.
 
-Concurrency exceptions normally happen on:
+Concurrency exceptions normally happens on:
 - BulkSaveChanges
 - BulkUpdate
 

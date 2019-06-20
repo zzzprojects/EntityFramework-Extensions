@@ -17,8 +17,8 @@ using (var context = new EntityContext())
 } 
 ```
 
- - Now as result you will see the `Name` property is `null`, that is because we have inserted data only for `IsActive`, and the `Name` field remains null in the database.
- - When the list was updated from the database, it replaces the value of `Name` and `IsActive` from the database and `Name` is `NULL` to the database.
+ - Now as a result, you will see the `Name` property is `null`, that is because we have inserted data only for `IsActive`, and the `Name` field remains null in the database.
+ - When the list was updated from the database, it replace the value of `Name` and `IsActive` from the database and `Name` is `NULL` to the database.
  - The `Description` property is unchanged because it is not updated from the database.
 
 {% include component-try-it.html href='https://dotnetfiddle.net/se3Vjk' %}

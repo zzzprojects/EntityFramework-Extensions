@@ -76,11 +76,11 @@ context.BulkInsert(customers, options => {
 [Try it](https://dotnetfiddle.net/9rUgry)
 
 ### Why BulkInsert is faster than SaveChanges?
-Inserting thousand of entities for an initial load or a file importation is a typical scenario.
+Inserting thousands of entities for an initial load or a file importation is a typical scenario.
 
 The `SaveChanges` method makes it quite slow/impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to insert. So if you need to insert 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
 
-The `BulkInsert` in counterpart requires the minimum database round-trips as possible. By example, under the hood for SQL Server, a `SqlBulkCopy` is performed to insert 10,000 entities which is the fastest way available.
+The `BulkInsert` in counterpart requires the minimum database round-trips as possible. For example, under the hood for SQL Server, a `SqlBulkCopy` is performed to insert 10,000 entities which is the fastest way available.
 
 ## Real Life Scenarios
 
@@ -122,8 +122,8 @@ context.BulkInsert(customers, options => {
 ### Insert with related child entities (Include Graph)
 You want to insert entities but also automatically insert related child entities.
 
-- `IncludeGraph`: This option let you to automatically insert all entities part of the graph.
-- `IncludeGraphBuilder`: This option let you customize how to insert entities for a specific type.
+- `IncludeGraph`: This option lets you to automatically insert all entities part of the graph.
+- `IncludeGraphBuilder`: This option lets you customize how to insert entities for a specific type.
 
 ```csharp
 context.BulkInsert(invoices, options => options.IncludeGraph = true);
@@ -161,7 +161,7 @@ context.BulkInsert(customers, options => options.AutoMapOutputDirection = false)
 [Try it](https://dotnetfiddle.net/Ld0l03)
 
 ### More scenarios
-Hundred of scenarios has been solved and are now supported.
+Hundreds of scenarios have been solved and are now supported.
 
 The best way to ask for a special request or to find out if a solution for your scenario already exists is by contacting us:
 info@zzzprojects.com

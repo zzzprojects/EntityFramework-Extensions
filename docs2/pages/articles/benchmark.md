@@ -33,7 +33,7 @@ The Add method was taking 99,9% of the total time while BulkSaveChanges only 0,1
 | BulKSaveChanges | 40 ms        | 90ms           | 400 ms     |
 
 
-The Add method doesn't affect much the performance when adding 100 entities, but if you make your test with 10,000 entities:
+The Add method doesn't affect the performance when adding 100 entities, but if you make your test with 10,000 entities:
  - Add: 99.6%
  - BulkSaveChanges: 0,4%
 

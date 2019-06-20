@@ -8,7 +8,7 @@ You can download it here: [Download](http://eval-expression.net/download)
 > The Eval-Expression.NET library can be activated with the Entity Framework Extensions license. 
 
 ## LINQ Dynamic - Predicate
-You can use any LINQ method that support predicate with a dynamic C# expression :
+You can use any LINQ method that support predicate with a dynamic C# expression:
 
 - Deferred
    - SkipWhile
@@ -45,7 +45,7 @@ You can use any ordering and selecting method with a dynamic C# expression:
  - ThenByDescendingDynamic
  - ThenByDynamic
 
-> The **"Dynamic"** suffix is required for not overriding the default behavior (ordering or selecting by a string is valid).
+> The **"Dynamic"** suffix is required to not override the default behavior (ordering or selecting by a string is valid).
 
 ### Example
 ```csharp

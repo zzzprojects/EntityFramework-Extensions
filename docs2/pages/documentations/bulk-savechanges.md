@@ -43,17 +43,17 @@ context.BulkSaveChanges(options => options.BatchSize = 100);
 ### FAQ
 
 #### Why BatchSaveChanges is faster than SaveChanges?
-The `SaveChanges` method makes it quite slow/impossible to handle scenario that requires to save a lot of entities due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to insert. So if you need to insert 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
+The `SaveChanges` method makes it quite slow/impossible to handle a scenario that requires to save a lot of entities due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to insert. So, if you need to insert 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
 
-The `BulkSaveChanges` in counterpart requires the minimum database round-trips as possible. By using Bulk Operations, fewer command is executed which lead to better performance.
+The `BulkSaveChanges` in counterpart requires the minimum database round-trips as possible. By using Bulk Operations, fewer commands are executed which lead to better performance.
 
 #### When should I use BulkSaveChanges over SaveChanges?
-Whenever you have more then one entities to saves. The `BulkSaveChanges` is almost as fast as the `SaveChanges` for 1 entities, but become way faster as the number of entities to save growth.
+Whenever you have more than one entity to save. The `BulkSaveChanges` is almost as fast as the `SaveChanges` for one entity, but becomes way faster as the number of entities to save grows.
 
 #### When should I use BulkSaveChanges over BatchSaveChanges?
-`BatchSaveChanges` become slower and slower in comparisons to `BulkSaveChanges` when the number of entities to save growth due to the `ChangeTracker`.
+`BatchSaveChanges` become slower and slower in comparisons to `BulkSaveChanges` when the number of entities to save grows due to the `ChangeTracker`.
 
-After a few thousands of Entities, we recommend using `BulkSaveChanges` which is a more scalable solution.
+After a few thousands of entities, we recommend using `BulkSaveChanges` which is a more scalable solution.
 
 ## Documentation
 
@@ -63,11 +63,11 @@ After a few thousands of Entities, we recommend using `BulkSaveChanges` which is
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `BulkSaveChanges()` | Saves all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/nKd0mT) |
-| `BulkSaveChanges(Action<BulkOperation> bulkOperationFactory)` | Saves all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/lJVdXR) |
-| `BulkSaveChanges(bool useEntityFrameworkPropagation)` | Saves all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/ZWNQPA) |
-| `BulkSaveChanges(bool useEntityFrameworkPropagation, Action<BulkOperation> bulkOperationFactory)` | Saves all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/Aqp0EK) |
-| `BulkSaveChangesAsync(...)` | Saves all changes asynchronously made in this context to the underlying database by executing bulk operations. | |
+| `BulkSaveChanges()` | Save all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/nKd0mT) |
+| `BulkSaveChanges(Action<BulkOperation> bulkOperationFactory)` | Save all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/lJVdXR) |
+| `BulkSaveChanges(bool useEntityFrameworkPropagation)` | Save all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/ZWNQPA) |
+| `BulkSaveChanges(bool useEntityFrameworkPropagation, Action<BulkOperation> bulkOperationFactory)` | Save all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/Aqp0EK) |
+| `BulkSaveChangesAsync(...)` | Save all changes asynchronously made in this context to the underlying database by executing bulk operations. | |
 
 ###### Options
 More options can be found here:

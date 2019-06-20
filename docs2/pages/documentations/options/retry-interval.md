@@ -15,14 +15,14 @@ context.BulkSaveChanges(options => {
 ## Purpose
 A transient error is a temporary error that is likely to disappear soon. That rarely happens but they might occur!
 
-These options allow to reduce a bulk operations fail by making them retry when a transient error occurs.
+These options allow to reduce a bulk operation fail by making them retry when a transient error occurs.
 
 ## FAQ
 
-### What are transient error codes supported?
+### What are transient errors?
 You can find a list of transient errors here: [Transient fault error codes](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-develop-error-messages#transient-fault-error-codes)
 
-Which includes the most common error such as:
+Which includes the most common errors such as:
 - Cannot open database
 - The service is currently busy
 - Database is not currently available

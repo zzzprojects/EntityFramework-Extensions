@@ -1,9 +1,9 @@
 # Use Custom Key
 
 ## Problem
-You want to perform a Bulk Operations (BulkUpdate, BulkDelete, or BulkMerge) but using a different key than the one specified.
+You want to perform a Bulk Operation (BulkUpdate, BulkDelete, or BulkMerge) but using a different key than the one specified.
 
-By example, you want to perform a BulkUpdate on a customer list but using the customer "Code" instead of the "CustomerID" for the key.
+For example, you want to perform a BulkUpdate on a customer list but using the customer "Code" instead of the "CustomerID" for the key.
 
 ## Solution
 You can specify the column to use for the key with the **ColumnPrimaryKeyExpression** options.
@@ -25,7 +25,7 @@ ctx.BulkUpdate(customers, operation => operation.ColumnPrimaryKeyExpression =
 
 ### Duplicate Key
 You receive the following error:
->  An error occurred because the primary key specified is not unique, you can set the property 'AllowDuplicateKeys' to true to allow duplicate keys
+>  An error occurred because the primary key specified is not unique, you can set the property 'AllowDuplicateKeys' to true to allow duplicate keys.
 
 This error happens because the key is used in more than one row in the source
 
@@ -39,7 +39,7 @@ This error happens because the key is used in more than one row in the source
 
 The code "001" is here more than once with a different name.
 
-You can allow duplicate key with the **AllowDuplicateKeys** options
+You can allow duplicate key with the **AllowDuplicateKeys** options.
 
 
 ```csharp

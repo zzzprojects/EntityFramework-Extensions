@@ -1,12 +1,12 @@
 # Use Custom Column
 
 ## Problem
-You want to perform a Bulk Operations (BulkInsert, BulkUpdate, BulkDelete, or BulkMerge) but only on some specific columns.
+You want to perform a Bulk Operation (BulkInsert, BulkUpdate, BulkDelete, or BulkMerge) but only on some specific columns.
 
-By example, you want to perform a BulkUpdate on a customer list but only UPDATE the name and email property.
+For example, you want to perform a BulkUpdate on a customer list but only UPDATE the name and email properties.
 
 ## Solution
-You can specify the column on which the operation should be performed with the **ColumnInputExpression** options
+You can specify the column on which the operation should be performed with the **ColumnInputExpression** options.
 
 ### Example
 

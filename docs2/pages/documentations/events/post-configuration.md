@@ -19,4 +19,4 @@ using (var context = new EntityContext())
 
 {% include component-try-it.html href='https://dotnetfiddle.net/8q6BdX' %}
 
-In the `PostConfiguration` event, the Log property is set and so that it logs the database commands and queried performed in that `BulkInsert` method.
+In the `PostConfiguration` event, the Log property is set and to log the database commands and queries performed in that `BulkInsert` method.

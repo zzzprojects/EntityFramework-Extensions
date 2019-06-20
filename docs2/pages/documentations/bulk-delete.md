@@ -72,7 +72,7 @@ Deleting thousands of entities for a file importation is a typical scenario.
 
 The `SaveChanges` method makes it quite impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to delete. So if you need to delete 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
 
-The `BulkDelete` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then a `DELETE` from the temporary table to the destination table is performed which is the fastest way available.
+The `BulkDelete` in counterpart requires the minimum database round-trips as possible. For example under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then a `DELETE` from the temporary table to the destination table is performed which is the fastest way available.
 
 ## Real Life Scenarios
 
@@ -103,7 +103,7 @@ context.ExecuteFutureAction();
 [Try it](https://dotnetfiddle.net/KovTrj)
 
 ### More scenarios
-Hundred of scenarios has been solved and are now supported.
+Hundreds of scenarios have been solved and are now supported.
 
 The best way to ask for a special request or to find out if a solution for your scenario already exists is by contacting us:
 info@zzzprojects.com

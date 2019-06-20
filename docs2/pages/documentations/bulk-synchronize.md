@@ -78,9 +78,9 @@ context.BulkSynchronize(customers, options => options.SynchronizeKeepIdentity = 
 ### Synchronize and include/exclude properties
 You want to synchronize your entities but only for specific properties.
 
-- `ColumnInputExpression`: This option let you choose which properties to map.
-- `IgnoreOnSynchronizeInsertExpression`: This option let you ignore when inserting properties that are auto-mapped.
-- `IgnoreOnSynchronizeUpdateExpression`: This option let you ignore when updating properties that are auto-mapped.
+- `ColumnInputExpression`: This option lets you choose which properties to map.
+- `IgnoreOnSynchronizeInsertExpression`: This option lets you ignore when inserting properties that are auto-mapped.
+- `IgnoreOnSynchronizeUpdateExpression`: This option lets you ignore when updating properties that are auto-mapped.
 
 ```csharp
 context.BulkSynchronize(customizeToSynchronize, options => {
@@ -101,9 +101,9 @@ context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression
 ### Synchronize with future action
 You want to synchronize entities, but you want to defer the execution.
 
-By default, `BulkSynchronize` is an immediate operation. That mean, it's executed as soon as you call the method.
+By default, `BulkSynchronize` is an immediate operation. That means, it's executed as soon as you call the method.
 
-`FutureAction`: This option let you defer the execution of a Bulk Synchronize.
+`FutureAction`: This option lets you defer the execution of a Bulk Synchronize.
 `ExecuteFutureAction`: This option trigger and execute all pending `FutureAction`.
 
 ```csharp
@@ -117,7 +117,7 @@ context.ExecuteFutureAction();
 [Try it](https://dotnetfiddle.net/78FeXe)
 
 ### More scenarios
-Hundred of scenarios has been solved and are now supported.
+Hundreds of scenarios have been solved and are now supported.
 
 The best way to ask for a special request or to find out if a solution for your scenario already exists is by contacting us:
 info@zzzprojects.com

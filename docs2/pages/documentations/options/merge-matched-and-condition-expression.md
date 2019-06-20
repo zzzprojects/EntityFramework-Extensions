@@ -27,4 +27,4 @@ using (var context = new EntityContext())
 
 {% include component-try-it.html href='https://dotnetfiddle.net/U8vgGS' %}
 
- - It will update all the records except for the last record because the `CreatedDate` property is updated only for the last record.
+ - It will update all records except for the last one because the `CreatedDate` property is updated.

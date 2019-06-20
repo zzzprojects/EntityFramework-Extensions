@@ -62,10 +62,10 @@ public class EFConnectionInterceptor : DbConnectionInterceptor
 }
 ```
 
-This code writes connection information on the Console Window. The `DbConnectionInterceptionContext` currently have the followings properties: 
+This code writes connection information on the Console Window. The `DbConnectionInterceptionContext` currently have the following properties: 
 
  - DbContext
- - EventData which contains all informations about this event.
+ - EventData which contains all information about this event.
 
 ## Register Interceptor
 

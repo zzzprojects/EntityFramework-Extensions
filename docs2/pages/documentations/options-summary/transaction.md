@@ -1,7 +1,7 @@
 # Transaction
 
 ## BulkSaveChanges
-As SaveChanges, BulkSaveChanges already save all entities within an internal transaction. So by default, there is nothing to do.
+As SaveChanges, BulkSaveChanges already save all entities within an internal transaction. So, there is nothing to do.
 
 However, if you start a transaction within Entity Framework, BulkSaveChanges will honor it and will use this transaction instead of creating an internal transaction.
 
@@ -21,7 +21,7 @@ catch
 {% include component-try-it.html href='https://dotnetfiddle.net/Igr6zU' %}
 
 ## Bulk Operations
-Bulk Operations such as BulkInsert, BulkUpdate, BulkDelete doesn't use a transaction by default. This is your responsibility to handle it.
+Bulk Operations such as BulkInsert, BulkUpdate, BulkDelete doesn't use a transaction by default. This is your responsibility to handle.
 
 If you start a transaction within Entity Framework, Bulk Operations will honor it.
 

@@ -18,4 +18,4 @@ using (var context = new EntityContext())
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/L1Wvep' %}
 
-It will update those records for which the `Login` and `Password` already exists in the database and all the new records will be inserted to the database. 
+It will update those records for which the `Login` and `Password` already exist in the database and all the new records will be inserted to the database. 
