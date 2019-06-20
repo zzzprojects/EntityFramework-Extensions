@@ -1,19 +1,47 @@
 # Include Graph
 
-The IncludeGraph option allow to INSERT/UPDATE/MERGE entities by including the child entities graph.
-For example, if you use BulkInsert using a list of Invoice with the option IncludeGraph, all invoices items will also be inserted.
+The `BulkOperation.IncludeGraph` option allows you to `INSERT/UPDATE/MERGE` entities by including the child entities graph. 
 
+In the following example, the `IncludeGraph` is enabled and the list of `Invoice` is added to the database using `BulkInsert`.
 
 ```csharp
-ctx.BulkInsert(invoices, options => options.IncludeGraph = true);
+List<Invoice> list = new List<Invoice>()
+{
+    new Invoice()
+    {
+        Description = "Invoice_A",
+        InvoiceItems = new List<InvoiceItem>()
+        {
+            new InvoiceItem() { Description = "Invoice_A_InvoiceItem_A" } ,
+            new InvoiceItem() { Description = "Invoice_A_InvoiceItem_B" }
+        }
+    },
+    new Invoice()
+    {
+        Description = "Invoice_B",
+        InvoiceItems = new List<InvoiceItem>()
+        {
+            new InvoiceItem() { Description = "Invoice_B_InvoiceItem_A" } ,
+            new InvoiceItem() { Description = "Invoice_B_InvoiceItem_B" }
+        }
+    }
+};
+
+using (var context = new EntityContext())
+{
+    context.BulkInsert(list, options => options.IncludeGraph = true);
+}
+
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/spN4T5' %}
 
+ - It will insert a list of invoices including all the invoices items for each invoice.
+
 ## IncludeGraphOperationBuilder
-The IncludeGraphOperationBuilder let you customize the bulk operations by entity type. 
+The IncludeGraphOperationBuilder let you customize the bulk operations by entity type. Options are not copied when using `IncludeGraph`.
 
-Options are not copied when using IncludeGraph
 
+The following example uses `Name` property as a key for both `User` and `Role` entities using `IncludeGraphOperationBuilder` to perform `BulkMerge`.
 
 ```csharp
 ctx.BulkMerge(users, options =>
@@ -37,6 +65,7 @@ ctx.BulkMerge(users, options =>
 {% include component-try-it.html href='https://dotnetfiddle.net/0uW3tw' %}
 
 ### ReadOnly
+
 You can specify that some entities should not be inserted/updated by marked them as ReadOnly.
 
 
@@ -51,7 +80,7 @@ ctx.BulkMerge(users, options =>
 			var bulk = (BulkOperation<User>) operation;
 			bulk.IsReadOnly = true;
 		}
-	};
+	};Muha
 });
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/UgwDDk' %}

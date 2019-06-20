@@ -2,7 +2,7 @@
 
 ## Definition
 
-The 'BulkOperation.LogDump' property which is of type `StringBuilder` log all the information related to database events when `UseLogDump` is enabled.
+The `BulkOperation.LogDump` property which is of type `StringBuilder` log all the information related to database events when `UseLogDump` is enabled.
 
 The following example assigns `LogDump` to local `StringBuilder` variable `logDump` when the `BulkOperationExecuted` event is executed. 
 

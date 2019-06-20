@@ -1,41 +1,7 @@
 # Audit
 
-## UseAudit
-Gets or sets if `INSERTED` and `DELETED` data from the database should be returned as `AuditEntries`.
+| Name                               | Description                                                           |
+|:-----------------------------------|:----------------------------------------------------------------------|
+|[UseAudit](../options/use-audit.md)  | Gets or sets if `UPDATED`, `INSERTED` and DELETED data from the database should be returned as AuditEntries. |
+|[AuditEntries](../options/audit-entries.md)  | Gets `UPDATED`, `INSERTED` and `DELETED` data when `UseAudit` option is enabled. |
 
-
-```csharp
-List<AuditEntry> auditEntries = new List<AuditEntry>();
-
-context.BulkSaveChanges(options =>
-{
-	options.UseAudit = true;
-	options.BulkOperationExecuted = bulkOperation => auditEntries.AddRange(bulkOperation.AuditEntries);
-});
-
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/cIHYyb' %}
-
-## AuditEntries
-Gets `INSERTED` and `DELETED` data when `UseAudit` option is enabled.
-
-
-```csharp
-List<AuditEntry> auditEntries = new List<AuditEntry>();
-
-context.BulkSaveChanges(options =>
-{
-	options.UseAudit = true;
-	options.BulkOperationExecuted = bulkOperation => auditEntries.AddRange(bulkOperation.AuditEntries);
-});
-
-foreach (var entry in auditEntries)
-{
-    foreach (var value in entry.Values)
-    {
-        var oldValue = value.OldValue;
-        var newValue = value.NewValue;
-    }
-}
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/WwQ7oZ' %}
