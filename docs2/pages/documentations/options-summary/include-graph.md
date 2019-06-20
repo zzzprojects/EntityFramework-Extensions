@@ -38,10 +38,10 @@ using (var context = new EntityContext())
  - It will insert a list of invoices including all the invoices items for each invoice.
 
 ## IncludeGraphOperationBuilder
-The IncludeGraphOperationBuilder let you customize the bulk operations by entity type. 
+The IncludeGraphOperationBuilder let you customize the bulk operations by entity type. Options are not copied when using `IncludeGraph`.
 
-Options are not copied when using IncludeGraph
 
+The following example uses `Name` property as a key for both `User` and `Role` entities using `IncludeGraphOperationBuilder` to perform `BulkMerge`.
 
 ```csharp
 ctx.BulkMerge(users, options =>
@@ -65,6 +65,7 @@ ctx.BulkMerge(users, options =>
 {% include component-try-it.html href='https://dotnetfiddle.net/0uW3tw' %}
 
 ### ReadOnly
+
 You can specify that some entities should not be inserted/updated by marked them as ReadOnly.
 
 
@@ -79,7 +80,7 @@ ctx.BulkMerge(users, options =>
 			var bulk = (BulkOperation<User>) operation;
 			bulk.IsReadOnly = true;
 		}
-	};
+	};Muha
 });
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/UgwDDk' %}
