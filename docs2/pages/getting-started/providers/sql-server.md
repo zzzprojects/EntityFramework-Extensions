@@ -109,7 +109,7 @@ This code creates a `DbSet` property for each entity set. In Entity Framework te
 
 ## Setup Database
 
-The name of the connection string is passed into the constructor of context class.
+The name of the connection string is passed into the constructor of the context class.
 
 ```csharp
 public BookStore() : base("BookStoreContext")
