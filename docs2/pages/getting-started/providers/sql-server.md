@@ -51,16 +51,6 @@ Note that often if the EF provider is installed from NuGet, then the NuGet packa
  - The **invariantName** in this registration is the same invariant name used to identify an ADO.NET provider. The invariant name `System.Data.SqlClient`  is for SQL Server.
  - The **type** in this registration is the assembly-qualified name of the provider type that derives from `System.Data.Entity.Core.Common.DbProviderServices`. For example, the string `System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer` here is used for SQL Server. 
 
-### Connectionn String
-
-In this tutorial, we will be using `LocalDB`, so let's open the application Web.config file and add a connectionStrings element.
-
-```csharp
-<connectionStrings>
-  <add name="BookStoreContext" connectionString="Data Source=(localdb)\ProjectsV13;Initial Catalog=BookStoreDb;Integrated Security=True;" providerName="System.Data.SqlClient"/>
-</connectionStrings>
-```
-
  You are now ready to start your application.
  
  ## Create Data Model
@@ -101,7 +91,7 @@ The database context class provides the main functionality to coordinate Entity 
  - In your code, you specify which entities are included in the data model. 
  - You can also customize certain Entity Framework behavior. 
 
-So let's add a new **BookStore.cs** class.
+So let's add a new `BookStore` class which will inherit the `DbContext` class.
 
 ```csharp
 public class BookStore : DbContext
