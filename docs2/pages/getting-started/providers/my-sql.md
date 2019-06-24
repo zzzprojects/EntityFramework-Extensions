@@ -54,8 +54,8 @@ Let's open the `App.config` file.
 
 Note that often if the EF provider is installed from NuGet, then the NuGet package will automatically add this registration to the config file.
 
- - The **invariantName** in this registration is the same invariant name used to identify an ADO.NET provider. The invariant name `System.Data.SqlClient`  is for SQL Server.
- - The **type** in this registration is the assembly-qualified name of the provider type that derives from `System.Data.Entity.Core.Common.DbProviderServices`. For example, the string `System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer` here is used for SQL Server. 
+ - The **invariantName** in this registration is the same invariant name used to identify an ADO.NET provider. The invariant name `MySql.Data.MySqlClient`  is for MySql.
+ - The **type** in this registration is the assembly-qualified name of the provider type that derives from `MySql.Data.MySqlClient.MySqlProviderServices`. For example, the string `MySql.Data.MySqlClient.MySqlProviderServices, MySql.Data.Entity.EF6, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d` here is used for MySql. 
 
 ## Configuration
 
