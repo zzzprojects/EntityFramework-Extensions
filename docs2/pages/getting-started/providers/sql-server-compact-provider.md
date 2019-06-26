@@ -4,10 +4,10 @@ Microsoft SQL Server Compact (SQL CE) is a compact relational database produced 
 
  - It includes both 32-bit and 64-bit native support.
  - SQL CE targets occasionally connected applications and applications with an embedded database.
- 
-Let's create a new application using the **Console App (.NET Framework)** template and install [Z.EntityFramework.Extensions](https://www.nuget.org/packages/Z.EntityFramework.Extensions/). 
 
 ## Install EFE
+
+Let's create a new application using the **Console App (.NET Framework)** template and install [Z.EntityFramework.Extensions](https://www.nuget.org/packages/Z.EntityFramework.Extensions/). 
 
 **Entity Framework Extensions (EFE)** library is available as a nuget package and you can install it using **Nuget Package Manager**.
 
@@ -90,14 +90,13 @@ public class Author
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public DateTime BirthDate { get; set; }
-    public virtual ICollection<Book> Books { get; set; }
+    public List<Book> Books { get; set; }
 }
 
 public class Book
 {
-    public int Id { get; set; }
+    public int BookId { get; set; }
     public string Title { get; set; }
-    public int AuthorId { get; set; }
     public Author Author { get; set; }
 }
 ```
@@ -163,35 +162,50 @@ using (var context = new BookStore())
 
     var authors = new List<Author>
     {
-        new Author { FirstName="Carson", LastName="Alexander", BirthDate = DateTime.Parse("1985-09-01")},
-        new Author { FirstName="Meredith", LastName="Alonso", BirthDate = DateTime.Parse("1970-09-01")},
-        new Author { FirstName="Arturo", LastName="Anand", BirthDate = DateTime.Parse("1963-09-01")},
-        new Author { FirstName="Gytis", LastName="Barzdukas", BirthDate = DateTime.Parse("1988-09-01")},
-        new Author { FirstName="Yan", LastName="Li", BirthDate = DateTime.Parse("2000-09-01")},
+        new Author
+        {
+            FirstName ="Carson",
+            LastName ="Alexander",
+            BirthDate = DateTime.Parse("1985-09-01"),
+            Books = new List<Book>()
+            {
+                new Book { Title = "Introduction to Machine Learning"},
+                new Book { Title = "Advanced Topics in Machine Learning"},
+                new Book { Title = "Introduction to Computing"}
+            }
+        },
+        new Author
+        {
+            FirstName ="Meredith",
+            LastName ="Alonso",
+            BirthDate = DateTime.Parse("1970-09-01"),
+            Books = new List<Book>()
+            {
+                new Book { Title = "Introduction to Microeconomics"}
+            }
+        },
+        new Author
+        {
+            FirstName ="Arturo",
+            LastName ="Anand",
+            BirthDate = DateTime.Parse("1963-09-01"),
+            Books = new List<Book>()
+            {
+                new Book { Title = "Calculus I"},
+                new Book { Title = "Calculus II"}
+            }
+        }
     };
 
-    context.BulkInsert(authors);
-
-    var books = new List<Book>
-    {
-        new Book { Title = "Introduction to Machine Learning", AuthorId = 1 },
-        new Book { Title = "Advanced Topics in Machine Learning", AuthorId = 1 },
-        new Book { Title = "Introduction to Computing", AuthorId = 1 },
-        new Book { Title = "Introduction to Microeconomics", AuthorId = 2 },
-        new Book { Title = "Calculus I", AuthorId = 3 },
-        new Book { Title = "Calculus II", AuthorId = 3 },
-        new Book { Title = "Trigonometry Basics", AuthorId = 4 },
-        new Book { Title = "Special Topics in Trigonometry", AuthorId = 4 },
-        new Book { Title = "Advanced Topics in Mathematics", AuthorId = 4 },
-        new Book { Title = "Introduction to AI", AuthorId = 4 },
-    };
-
-    context.BulkInsert(books);
+    //IncludeGraph allow you to INSERT/UPDATE/MERGE entities by including the child entities graph.
+    context.BulkInsert(authors, options => options.IncludeGraph = true );
 }
 
 using (var context = new BookStore())
 {
-    var list = context.Authors.ToList();
+    var list = context.Authors
+        .Include(a => a.Books)
+        .ToList();
 
     foreach (var author in list)
     {
