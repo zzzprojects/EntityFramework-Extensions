@@ -1,4 +1,4 @@
-# MySql
+# MySql Provider
 
 MySQL is an open-source relational database management system (RDBMS) and is known for its quick processing, proven reliability, ease and flexibility of use.
 
