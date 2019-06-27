@@ -6,7 +6,7 @@
 - Customizations
    - [Use Custom Column](custom-column.md)
    - [Use Custom Key](custom-key.md)
-   - [Soft Delete](soft-deletes.md)
+   - [Soft Delete](soft-delete.md)
    - [Concurrency](concurrency.md)
 - Misc
    - [Edmx](edmx.md)
