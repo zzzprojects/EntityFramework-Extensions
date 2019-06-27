@@ -1,4 +1,4 @@
-# SQL Server
+# SQL Server Provider
 
 Microsoft SQL Server is a relational database management system (RDBMS) that supports a wide variety of transaction processing, business intelligence and analytics applications in corporate IT environments.
 
