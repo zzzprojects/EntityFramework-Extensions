@@ -1,9 +1,9 @@
-# MySql Provider
+# SQL Server Compact Provider
 
-MySQL is an open-source relational database management system (RDBMS) and is known for its quick processing, proven reliability, ease and flexibility of use.
+Microsoft SQL Server Compact (SQL CE) is a compact relational database produced by Microsoft for applications that run on mobile devices and desktops.
 
- - It is a database system used on the web and is ideal for both small and large applications.
- - It is an essential part of almost every open source PHP application.
+ - It includes both 32-bit and 64-bit native support.
+ - SQL CE targets occasionally connected applications and applications with an embedded database.
 
 ## Install EFE
 
@@ -19,16 +19,16 @@ PM> Install-Package Z.EntityFramework.Extensions
 
 You can also install EFE by right-clicking on your project in Solution Explorer and select **Manage Nuget Packages...**. 
 
-<img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/docs2/images/my-sql-1.png">
+<img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/docs2/images/sql-compact-1.png">
 
 Search for **Z.EntityFramework.Extensions** and install the latest version by pressing the install button. 
 
 ## Register EF Provider
 
-EF providers can be registered using either code-based configuration or in the application's config file. Install the [MySql.Data.Entity](https://www.nuget.org/packages/MySql.Data.Entity/) NuGet package to add this reference automatically within `app.config` or `web.config` file during the installation.
+EF providers can be registered using either code-based configuration or in the application's config file. Install the [EntityFramework.SqlServerCompact](https://www.nuget.org/packages/EntityFramework.SqlServerCompact/) NuGet package to add this reference automatically within `app.config` or `web.config` file during the installation.
 
 ```csharp
-PM> Install-Package MySql.Data.Entity
+PM> Install-Package EntityFramework.SqlServerCompact
 ```
 
 Let's open the `App.config` file.
@@ -38,43 +38,41 @@ Let's open the `App.config` file.
 <configuration>
   <configSections>
     <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
-  <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 --></configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+  </configSections>
   <startup>
     <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
   </startup>
   <entityFramework>
-    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlCeConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="System.Data.SqlServerCe.4.0" />
+      </parameters>
+    </defaultConnectionFactory>
     <providers>
       <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
-      <provider invariantName="MySql.Data.MySqlClient" type="MySql.Data.MySqlClient.MySqlProviderServices, MySql.Data.Entity.EF6, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"/>
+      <provider invariantName="System.Data.SqlServerCe.4.0" type="System.Data.Entity.SqlServerCompact.SqlCeProviderServices, EntityFramework.SqlServerCompact" />
     </providers>
   </entityFramework>
+  <system.data>
+    <DbProviderFactories>
+      <remove invariant="System.Data.SqlServerCe.4.0" />
+      <add name="Microsoft SQL Server Compact Data Provider 4.0" 
+           invariant="System.Data.SqlServerCe.4.0" 
+           description=".NET Framework Data Provider for Microsoft SQL Server Compact" 
+           type="System.Data.SqlServerCe.SqlCeProviderFactory, System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    </DbProviderFactories>
+  </system.data>
 </configuration>
 ```
 
 Note that often if the EF provider is installed from NuGet, then the NuGet package will automatically add this registration to the config file.
 
- - The **invariantName** in this registration is the same invariant name used to identify an ADO.NET provider. The invariant name `MySql.Data.MySqlClient`  is for MySql.
- - The **type** in this registration is the assembly-qualified name of the provider type that derives from `MySql.Data.MySqlClient.MySqlProviderServices`. For example, the string `MySql.Data.MySqlClient.MySqlProviderServices, MySql.Data.Entity.EF6, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d` here is used for MySql. 
+ - The **invariantName** in this registration is the same invariant name used to identify an ADO.NET provider. The invariant name `System.Data.SqlServerCe.4.0`  is for SQL Server Compact 4.0.
+ - The **type** in this registration is the assembly-qualified name of the provider type that derives from `System.Data.Entity.SqlServerCompact.SqlCeProviderServices`. For example, the string `System.Data.Entity.SqlServerCompactSqlServerCompact.SqlCeProviderServices.SqlCeProviderServices, EntityFramework.SqlServerCompact` here is used for SQL Server Compact 4.0. 
 
-## Configuration
-
-Set the new `DbConfiguration` class for MySQL. This step is optional but highly recommended because it adds all the dependency resolvers for MySQL classes and this can be done in three ways. 
-
- 1. Add the `DbConfigurationTypeAttribute` on the context class.
-
-```csharp
-[DbConfigurationType(typeof(MySqlEFConfiguration))]
-```
- 
- 2. Call `DbConfiguration.SetConfiguration(new MySqlEFConfiguration())` at the application start up.
-
- 3. You can also set the `DbConfiguration` type in the configuration file.
-
-```csharp
-<entityFramework codeConfigurationType="MySql.Data.Entity.MySqlEFConfiguration, MySql.Data.Entity.EF6">
-```
-You are now ready to start your application.
+ You are now ready to start your application.
  
  ## Create Data Model
  
@@ -116,7 +114,6 @@ The database context class provides the main functionality to coordinate Entity 
 So let's add a new `BookStore` class which will inherit the `DbContext` class.
 
 ```csharp
-//[DbConfigurationType(typeof(MySqlEFConfiguration))]
 public class BookStore : DbContext
 {
     public BookStore() : base("BookStoreContext")
@@ -139,15 +136,22 @@ public BookStore() : base("BookStoreContext")
 {
 }
 ```
+
+If you don't specify a connection string or the name of one explicitly, Entity Framework assumes that the connection string name is the same as the class name. The default connection string name in this example would then be `BookStore`.
+
+### Connectionn String
+
 So let's open the application `App.config` file and add a connectionStrings element.
 
 ```csharp
 <connectionStrings>
-  <add name="BookStoreContext" connectionString="server=localhost;database=BookStoreDb;uid=root;password=;" providerName="MySql.Data.MySqlClient"/>
+  <add name="BookStoreContext"
+       connectionString="Data Source=D:\BookStoreDb.sdf;"
+       providerName="System.Data.SqlServerCe.4.0"/>
 </connectionStrings>
 ```
 
-The above connection string specifies that Entity Framework will use a `localhost` database named `BookStoreDb`. 
+The above connection string specifies that Entity Framework will use a database named `BookStoreDb.sdf`. 
 
 Now, we are done with the required classes, so let's add some authors and books records to the database and then retrieve it.
 
