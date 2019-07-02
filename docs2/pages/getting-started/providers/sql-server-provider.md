@@ -1,6 +1,6 @@
 # SQL Server Provider
 
-Microsoft SQL Server is a relational database management system (RDBMS) that supports a wide variety of transaction processing, business intelligence and analytics applications in corporate IT environments.
+Microsoft SQL Server is a relational database management system (RDBMS) that supports a wide variety of transaction processing, business intelligence and analytic applications in corporate IT environments.
 
  - It is the default database provider which is available when you install [Entity Framework Extensions](https://entityframework-extensions.net/download)
  - It allows Entity Framework to be used with Microsoft SQL Server (including SQL Azure).
@@ -89,7 +89,7 @@ The database context class provides the main functionality to coordinate Entity 
 
  - You create this class by deriving from the `System.Data.Entity.DbContext` class. 
  - In your code, you specify which entities are included in the data model. 
- - You can also customize certain Entity Framework behavior. 
+ - You can also customize certain Entity Framework behaviors. 
 
 So let's add a new `BookStore` class which will inherit the `DbContext` class.
 
@@ -131,7 +131,7 @@ In this article, we will be using `LocalDB`, so let's open the application `App.
 
 The above connection string specifies that Entity Framework will use a `LocalDB` database named `BookStoreDb.mdf`. 
 
-Now, we are done with the required classes, so let's add some authors and books records to the database and then retrieve it.
+Now, we are done with the required classes, so let's add some authors and book records to the database and then retrieve it.
 
 ```csharp
 using (var context = new BookStore())
@@ -148,7 +148,7 @@ using (var context = new BookStore())
             Books = new List<Book>()
             {
                 new Book { Title = "Introduction to Machine Learning"},
-                new Book { Title = "Advanced Topics in Machine Learning"},
+                new Book { Title = "Advanced Topics on Machine Learning"},
                 new Book { Title = "Introduction to Computing"}
             }
         },
