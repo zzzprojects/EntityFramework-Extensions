@@ -97,14 +97,14 @@ public class EntityContext : DbContext
 
 This code creates a `DbSet` property for each entity set. In Entity Framework terminology, an entity set typically corresponds to a database table, and an entity corresponds to a row in the table.
 
-To use Effort, you need to create a transient connection and use it for your context:
+Now, we are done with the required classes, to use Effort, you need to create a transient connection and use it for your context:
 
 ```csharp
 DbConnection connection = Effort.DbConnectionFactory.CreateTransient();
 var context = new EntityContext(connection));
 ```
 
-Now, we are done with the required classes, so let's add some authors and books records to the database and then retrieve it.
+So let's add some authors and books records to the database and then retrieve it.
 
 ```csharp
 DbConnection connection = Effort.DbConnectionFactory.CreateTransient();
