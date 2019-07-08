@@ -109,7 +109,7 @@ The database context class provides the main functionality to coordinate Entity 
 
  - You create this class by deriving from the `System.Data.Entity.DbContext` class. 
  - In your code, you specify which entities are included in the data model. 
- - You can also customize certain Entity Framework behavior. 
+ - You can also customize certain Entity Framework behaviors. 
 
 So let's add a new `BookStore` class which will inherit the `DbContext` class.
 
@@ -141,7 +141,7 @@ If you don't specify a connection string or the name of one explicitly, Entity F
 
 ### Connectionn String
 
-So let's open the application `App.config` file and add a connectionStrings element.
+So, let's open the application `App.config` file and add a connectionStrings element.
 
 ```csharp
 <connectionStrings>
@@ -153,7 +153,7 @@ So let's open the application `App.config` file and add a connectionStrings elem
 
 The above connection string specifies that Entity Framework will use a database named `BookStoreDb.sdf`. 
 
-Now, we are done with the required classes, so let's add some authors and books records to the database and then retrieve it.
+Now, we are done with the required classes, so let's add some authors and book records to the database and then retrieve it.
 
 ```csharp
 using (var context = new BookStore())
@@ -170,7 +170,7 @@ using (var context = new BookStore())
             Books = new List<Book>()
             {
                 new Book { Title = "Introduction to Machine Learning"},
-                new Book { Title = "Advanced Topics in Machine Learning"},
+                new Book { Title = "Advanced Topics on Machine Learning"},
                 new Book { Title = "Introduction to Computing"}
             }
         },

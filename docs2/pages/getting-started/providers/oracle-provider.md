@@ -184,7 +184,7 @@ In this example, we are using Oracle Express, so we need to change the service n
 </oracle.manageddataaccess.client>
 ```
 
-Now, we are done with the required classes, so let's add some authors and books records to the database and then retrieve it.
+Now, we are done with the required classes, so let's add some authors and book records to the database and then retrieve it.
 
 ```csharp
 using (var context = new BookStore())
@@ -201,7 +201,7 @@ using (var context = new BookStore())
             Books = new List<Book>()
             {
                 new Book { Title = "Introduction to Machine Learning"},
-                new Book { Title = "Advanced Topics in Machine Learning"},
+                new Book { Title = "Advanced Topics on Machine Learning"},
                 new Book { Title = "Introduction to Computing"}
             }
         },

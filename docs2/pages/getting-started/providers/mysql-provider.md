@@ -1,6 +1,6 @@
 # MySql Provider
 
-MySQL is an open-source relational database management system (RDBMS) and is known for its quick processing, proven reliability, ease and flexibility of use.
+MySQL is an open-source relational database management system (RDBMS) and it is known for its quick processing, proven reliability, ease and flexibility of use.
 
  - It is a database system used on the web and is ideal for both small and large applications.
  - It is an essential part of almost every open source PHP application.
