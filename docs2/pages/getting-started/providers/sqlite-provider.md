@@ -3,7 +3,7 @@
 SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
 
  - It is the most widely deployed SQL database engine and the source code for SQLite is in the public domain.
- - It is a database, which does not need to configure it in your system like other databases.
+ - It is a database, which does not need to be configured in your system like other databases.
 
 ## Install EFE
 
@@ -93,7 +93,7 @@ CREATE TABLE "Books" (
  
  <img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/docs2/images/sqlite-2.png">
  
- Click on the highlighted button to create `Authors` and `Books` tables. It is not Code First because we have to create database ourselves but we want to illustrate how Entity Framework for SQLite works. 
+ Click on the highlighted button to create `Authors` and `Books` tables. It is not Code First because we have to create the database ourselves but we want to illustrate how Entity Framework for SQLite works. 
  
  ## Create Data Model
  
@@ -132,9 +132,9 @@ The database context class provides the main functionality to coordinate Entity 
 
  - You create this class by deriving from the `System.Data.Entity.DbContext` class. 
  - In your code, you specify which entities are included in the data model. 
- - You can also customize certain Entity Framework behavior. 
+ - You can also customize certain Entity Framework behaviors. 
 
-So let's add a new `BookStore` class which will inherit the `DbContext` class.
+So, let's add a new `BookStore` class which will inherit the `DbContext` class.
 
 ```csharp
 public class BookStore : DbContext
