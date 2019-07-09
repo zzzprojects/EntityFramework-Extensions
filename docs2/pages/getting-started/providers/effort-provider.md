@@ -75,9 +75,9 @@ The database context class provides the main functionality to coordinate Entity 
 
  - You create this class by deriving from the `System.Data.Entity.DbContext` class. 
  - In your code, you specify which entities are included in the data model. 
- - You can also customize certain Entity Framework behavior. 
+ - You can also customize certain Entity Framework behaviors. 
 
-So let's add a new `EntityContext` class which will inherit the `DbContext` class.
+So, let's add a new `EntityContext` class which will inherit the `DbContext` class.
 
 ```csharp
 public class EntityContext : DbContext
@@ -104,7 +104,7 @@ DbConnection connection = Effort.DbConnectionFactory.CreateTransient();
 var context = new EntityContext(connection));
 ```
 
-So let's add some authors and books records to the database and then retrieve it.
+So, let's add some authors and books records to the database and then retrieve it.
 
 ```csharp
 DbConnection connection = Effort.DbConnectionFactory.CreateTransient();
