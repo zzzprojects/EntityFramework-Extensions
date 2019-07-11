@@ -154,7 +154,7 @@ using (var context = new EntityContext(connection))
         }
     };
 
-    context.BulkInsert(authors);
+    context.BulkInsert(authors, options => options.IncludeGraph = true);
 }
 
 using (var context = new EntityContext())
