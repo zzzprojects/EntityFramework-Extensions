@@ -155,6 +155,22 @@ Now we need to configure our PostgreSQL database, so let's open the application 
 
 The `providerName` attribute in the connection string definition pointing to the PostgreSQL provider (Npgsql).
 
+## Create Database using Migration
+
+Now to create a database using migrations from your model, run the following command in **Package Manager Console.**
+
+```csharp
+Add-Migration Initial
+```
+
+This command scaffold a migration to create the initial set of tables for your model. When it is executed successfully, then run the following command.
+
+```csharp
+Update-Database
+```
+
+This command applies the new migration to the database and creates the database before applying migrations.
+
 Now, we are done with the required classes, so let's add some authors and books records to the database and then retrieve it.
 
 ```csharp
