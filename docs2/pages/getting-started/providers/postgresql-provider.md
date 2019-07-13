@@ -1,6 +1,6 @@
 # PostgreSQL Provider
 
-PostgreSQL is a general purpose and object-relational database management system, the most advanced open source database system. 
+PostgreSQL is a general-purpose and object-relational database management system, the most advanced open-source database system. 
 
  - PostgreSQL has been proven to be highly scalable both in the sheer quantity of data it can manage and in the number of concurrent users it can accommodate. 
  - It allows you to add custom functions developed using different programming languages such as C/C++, Java, etc.
