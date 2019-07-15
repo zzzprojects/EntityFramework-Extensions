@@ -5,3 +5,16 @@
    - [Bulk SaveChanges](tutorial-bulk-savechanges.md)
    - [Bulk Operations](tutorial-bulk-operations.md)
    - [Batch Operations](tutorial-batch-operations.md)
+- Providers
+   - EF6
+      - [SQL Server](/providers/ef6/sql-server-provider.md)
+      - [SQL Server Compact](/providers/ef6/sql-server-compact-provider.md)
+      - [MySQL](/providers/ef6/my-sql-provider.md)
+      - [SQLite](/providers/ef6/sqlite-provider.md)
+      - [Oracle](/providers/ef6/oracle-provider.md)
+      - [PostgreSQL](/providers/ef6/postgresql-provider.md)
+      - [Effort](/providers/ef6/effort-provider.md)
+   - EF6
+      - [SQL Server](/providers/ef6/sql-server-provider.md)
+      - [MySQL](/providers/ef6/my-sql-provider.md)
+      - [PostgreSQL](/providers/ef6/postgresql-provider.md)
