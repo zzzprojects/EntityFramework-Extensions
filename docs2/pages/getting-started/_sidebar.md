@@ -15,6 +15,6 @@
       - [PostgreSQL](providers/ef6/postgresql-provider.md)
       - [Effort](providers/ef6/effort-provider.md)
    - EF6
-      - [SQL Server](providers/ef6/sql-server-provider.md)
-      - [MySQL](providers/ef6/my-sql-provider.md)
-      - [PostgreSQL](providers/ef6/postgresql-provider.md)
+      - [SQL Server](providers/efcore/sql-server-provider.md)
+      - [MySQL](providers/efcore/mysql-provider.md)
+      - [PostgreSQL](providers/efcore/postgresql-provider.md)
