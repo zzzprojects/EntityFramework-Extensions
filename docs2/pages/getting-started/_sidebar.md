@@ -7,7 +7,7 @@
    - [Batch Operations](tutorial-batch-operations.md)
 - Providers
    - EF6
-      - [SQL Server](/providers/ef6/sql-server-provider.md)
+      - [SQL Server](providers/ef6/sql-server-provider.md)
       - [SQL Server Compact](/providers/ef6/sql-server-compact-provider.md)
       - [MySQL](/providers/ef6/my-sql-provider.md)
       - [SQLite](/providers/ef6/sqlite-provider.md)
