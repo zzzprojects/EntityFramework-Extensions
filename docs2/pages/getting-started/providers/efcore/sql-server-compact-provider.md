@@ -1,9 +1,9 @@
-# MySql Provider
+# SQL Server Compact Provider
 
-MySQL is an open-source relational database management system (RDBMS) and it is known for its quick processing, proven reliability, ease and flexibility of use.
+Microsoft SQL Server Compact (SQL CE) is a compact relational database produced by Microsoft for applications that run on mobile devices and desktops.
 
- - It is a database system used on the web and is ideal for both small and large applications.
- - It is an essential part of almost every open source PHP application.
+ - It includes both 32-bit and 64-bit native support.
+ - SQL CE targets occasionally connected applications and applications with an embedded database.
 
 ## Install EFE Core
 
@@ -19,7 +19,7 @@ PM> Install-Package Z.EntityFramework.Extensions.EFCore
 
 You can also install EFE by right-clicking on your project in Solution Explorer and select **Manage Nuget Packages...**. 
 
-<img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/docs2/images/efcore-my-sql-1.png">
+<img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/docs2/images/efcore-sql-compact-1.png">
 
 Search for **Z.EntityFramework.Extensions** and install the latest version by pressing the install button. It will also install [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/), it doesn't have additional logic that won't apply to all scenarios.
 
@@ -27,10 +27,10 @@ For example, EF Core will need to know what database or datastore you plan on wo
 
 ## Register EF Core Provider
 
-For MySql, we need to install [MySql.Data.EntityFrameworkCore](https://www.nuget.org/packages/MySql.Data.EntityFrameworkCore) and will get all the packages required for EF Core.
+For SQL Server Compact, we need to install [EntityFrameworkCore.SqlServerCompact40](https://www.nuget.org/packages/EntityFrameworkCore.SqlServerCompact40) and will get all the packages required for EF Core.
 
 ```csharp
-PM> Install-Package MySql.Data.EntityFrameworkCore
+PM> Install-Package EntityFrameworkCore.SqlServerCompact40
 ```
 
 Now you are ready to start your application.
@@ -80,7 +80,7 @@ public class BookStore : DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseMySQL(@"server=localhost;database=BookStoreDb2;uid=root;password=;");
+        optionsBuilder.UseSqlCe(@"Data Source=D:\BookStoreDb.sdf;");
     }
         
     public DbSet<Author> Authors { get; set; }
@@ -90,7 +90,7 @@ public class BookStore : DbContext
 In EF Core, the DbContext has a virtual method called `OnConfiguring` which will get called internally by EF Core. 
 
  - It will pass in an `optionsBuilder` instance which can be used to configure options for the `DbContext`.
- - The `optionsBuilder` has `UseMySQL` method which expects a connection string as a parameter. 
+ - The `optionsBuilder` has `UseSqlCe` method which expects a connection string as a parameter. 
 
 ## Create Database
 
@@ -130,7 +130,7 @@ using (var context = new BookStore())
             Books = new List<Book>()
             {
                 new Book { Title = "Introduction to Machine Learning"},
-                new Book { Title = "Advanced Topics in Machine Learning"},
+                new Book { Title = "Advanced Topics on Machine Learning"},
                 new Book { Title = "Introduction to Computing"}
             }
         },

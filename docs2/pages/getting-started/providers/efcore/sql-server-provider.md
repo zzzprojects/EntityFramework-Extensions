@@ -71,7 +71,7 @@ The database context class provides the main functionality to coordinate Entity 
 
  - You create this class by deriving from the `System.Data.Entity.DbContext` class. 
  - In your code, you specify which entities are included in the data model. 
- - You can also customize certain Entity Framework behavior. 
+ - You can also customize certain Entity Framework behaviors. 
 
 So let's add a new `BookStore` class which will inherit the `DbContext` class.
 
@@ -130,7 +130,7 @@ using (var context = new BookStore())
             Books = new List<Book>()
             {
                 new Book { Title = "Introduction to Machine Learning"},
-                new Book { Title = "Advanced Topics in Machine Learning"},
+                new Book { Title = "Advanced Topics on Machine Learning"},
                 new Book { Title = "Introduction to Computing"}
             }
         },
