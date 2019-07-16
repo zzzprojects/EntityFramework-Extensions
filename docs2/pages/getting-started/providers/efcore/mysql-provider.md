@@ -1,6 +1,6 @@
 # MySql Provider
 
-MySQL is an open-source relational database management system (RDBMS) and is known for its quick processing, proven reliability, ease and flexibility of use.
+MySQL is an open-source relational database management system (RDBMS) and it is known for its quick processing, proven reliability, ease and flexibility of use.
 
  - It is a database system used on the web and is ideal for both small and large applications.
  - It is an essential part of almost every open source PHP application.
@@ -71,7 +71,7 @@ The database context class provides the main functionality to coordinate Entity 
 
  - You create this class by deriving from the `System.Data.Entity.DbContext` class. 
  - In your code, you specify which entities are included in the data model. 
- - You can also customize certain Entity Framework behavior. 
+ - You can also customize certain Entity Framework behaviors. 
 
 So let's add a new `BookStore` class which will inherit the `DbContext` class.
 
