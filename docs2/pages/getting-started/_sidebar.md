@@ -18,4 +18,5 @@
       - [SQL Server](providers/efcore/efcore-sql-server-provider.md)
       - [SQL Server Compact](providers/efcore/efcore-sql-server-compact-provider.md)
       - [MySQL](providers/efcore/efcore-mysql-provider.md)
+      - [SQLite](providers/efcore/efcore-sqlite-provider.md)
       - [PostgreSQL](providers/efcore/efcore-postgresql-provider.md)
