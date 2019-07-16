@@ -27,7 +27,7 @@ For example, EF Core will need to know what database or datastore you plan on wo
 
 ## Register EF Core Provider
 
-For SQLite we need to install [Microsoft.EntityFrameworkCore.Sqlite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite) and will get all the packages required for EF Core.
+For SQLite, we need to install [Microsoft.EntityFrameworkCore.Sqlite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite) and will get all the packages required for EF Core.
 
 ```csharp
 PM> Install-Package Microsoft.EntityFrameworkCore.Sqlite
