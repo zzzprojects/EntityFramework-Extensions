@@ -20,3 +20,4 @@
       - [MySQL](providers/efcore/efcore-mysql-provider.md)
       - [SQLite](providers/efcore/efcore-sqlite-provider.md)
       - [PostgreSQL](providers/efcore/efcore-postgresql-provider.md)
+      - [InMemory](providers/efcore/efcore-inmemory-provider.md)
