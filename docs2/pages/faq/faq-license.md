@@ -5,7 +5,7 @@
 ### What's a developer seat?
 A developer seat is a developer working for your company and developing code directly with our product.
 
-You don't have to purchase developer seat for front-end developer or back-end developer which doesn't use our product API.
+You don't have to purchase a developer seat for front-end developer or back-end developer which doesn't use our product API.
 
 Since you buy developer seats, you can develop an unlimited amount of projects within your company.
 
@@ -33,17 +33,17 @@ You can still download and use any version released before the support & upgrade
 You will need to renew your license to use version released after the support & upgrade expiration date.
 
 ### How do I renew my License?
-We usually start to send renewal mails two months before the support & upgrade expiry date.
+We usually start to send renewal emails one month before the support & upgrade expiry date.
 
 If you didn't receive such email, you could contact us directly: info@zzzprojects.com
 
 ### Can I have a renewal discount?
-We provide a 25% discount to early renewal. Anyone renewing before the support & upgrade expiration date automatically gets a renewal discount.
+We provide a 25% discount to early renewals. Anyone renewing before the support & upgrade expiration date automatically gets a renewal discount.
 
 ### I'm too late for early renewal discount! What can I do?
 If you are few days late, we still provide early renewal discount.
 
-However, if you have few months late, you will need to purchase the library again.
+However, if you are a few months late, you will need to purchase the library again.
 
 The best way to find out if you still have access to early renewal discount is by contacting us: info@zzzprojects.com
 
@@ -51,7 +51,7 @@ The best way to find out if you still have access to early renewal discount is b
 Renewing your support & upgrade gives the following benefits:
 
 - Major version releases and new product features
-- Fast support by mail
+- Fast support by email
 - Protection against price increases during the maintenance term
 
 ## Royalty Free
