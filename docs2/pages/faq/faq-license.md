@@ -64,9 +64,7 @@ That means, you paid for developer seat, but customers using your product don't 
 ### Is Entity Framework Extensions Royalty Free?
 Yes, the product is royalty free.
 
-This mean, you can develop a project and install it on thousands of clients.
-
-You paid for developer seat within your company.
+This means, you can develop a project and install it on thousands of client machines if you paid for developer seat within your company.
 
 Some standard royalty free limitations:
 
