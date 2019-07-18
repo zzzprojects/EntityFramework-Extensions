@@ -25,7 +25,7 @@ NO PURCHASE NECESSARY. SEE BELOW FOR FULL CONTEST DETAILS. PARTICIPATION IN THIS
 5. On the 15 of each month until the end of the contest in Montreal, Quebec, at approximately 10:00 a.m. ET, one (1) eligible entrant will be selected by random draw from all eligible entries received during the Contest Period.  The odds of winning depend on the number of eligible entries received.  
  
 6. Before being declared a winner: The selected winner will be contacted by email and notified that they won.  The selected winner must reply by private message within 30 business days of notification. 
-If a selected winner cannot be contacted by email within 30 calendar days of selection or there is a return of any prior notification as undeliverable, he/she will be disqualified and will forfeit the prize, ZZZprojects would draw another winner the same way.    
+If a selected winner cannot be contacted by email within 30 calendar days of selection or there is a return of any prior notification as undeliverable, he/she will be disqualified and will forfeit the prize, ZZZ Projects would draw another winner the same way.    
 All winners will be posted in this page.
  
 ### PRIZES 
@@ -36,9 +36,9 @@ If the winner already bought a license, he/she receives a new license for the fo
 ### GENERAL 
 8. By entering the Contest, each participant agrees to abide by these Contest Rules. This Contest is subject to all applicable laws.  Void where prohibited by law. 
 
-9. ZZZprojects reserves the right to cancel, suspend, withdraw or amend this Contest in any way, without prior notice or obligation, in the event of an error, technical problem, computer virus, bugs, tampering, unauthorized intervention, fraud, technical failure or any other cause beyond our reasonable control that interferes with the proper conduct of this Contest as contemplated by these Contest Rules.  
+9. ZZZ Projects reserves the right to cancel, suspend, withdraw or amend this Contest in any way, without prior notice or obligation, in the event of an error, technical problem, computer virus, bugs, tampering, unauthorized intervention, fraud, technical failure or any other cause beyond our reasonable control that interferes with the proper conduct of this Contest as contemplated by these Contest Rules.  
 
-10. All Entries are subject to verification at any time and for any reason. ZZZprojects reserves the right, in its sole and absolute discretion, to require proof of identity and/or eligibility.
+10. All Entries are subject to verification at any time and for any reason. ZZZ Projects reserves the right, in its sole and absolute discretion, to require proof of identity and/or eligibility.
 
 11. Any attempt or suspected attempt to use robotic, automatic, programmed, or otherwise, illicit means to enter the Contest, or any other methods not authorized by these Contest Rules shall be deemed as tampering and may disqualify you from entering, participating, winning prizes and preclude you from participating in future contests and promotions.
 12. Your email address will only be used for follow-ups to entrant inquiries limited to the administration of the contest and not in any subsequent electronic marketing without consent. 
