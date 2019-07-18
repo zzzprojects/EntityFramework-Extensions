@@ -3,7 +3,7 @@ THIS CONTEST IS OPEN TO anyone worldwide who downloaded a trial for entity frame
 NO PURCHASE NECESSARY. SEE BELOW FOR FULL CONTEST DETAILS. PARTICIPATION IN THIS CONTEST CONSTITUTES YOUR FULL AND UNCONDITIONAL ACCEPTANCE OF, AND AGREEMENT TO BE LEGALLY BOUND BY, THESE CONTEST RULES.   
  
 CONTEST PERIOD 
-1) The Contest begins on Monday, July 15, 2019 at 12:00 a.m. Eastern Time (“ET”) and the winner is drawn on the 15 of each month until the end of the contest period (undefined). 
+1) The Contest begins on Monday, July 15, 2019 at 12:00 a.m. Eastern Time ("ET") and the winner is drawn on the 15 of each month until the end of the contest period (undefined). 
  
 ELIGIBILITY 
 2) The Contest is open to people who have reached the age of majority in their province or territory of residence at the time of entry, except employees and its affiliated companies or agents. 
