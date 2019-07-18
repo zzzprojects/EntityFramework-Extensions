@@ -26,7 +26,7 @@ NO PURCHASE NECESSARY. SEE BELOW FOR FULL CONTEST DETAILS. PARTICIPATION IN THIS
  
 6. Before being declared a winner: The selected winner will be contacted by email and notified that they won.  The selected winner must reply by private message within 30 business days of notification. 
 If a selected winner cannot be contacted by email within 30 calendar days of selection or there is a return of any prior notification as undeliverable, he/she will be disqualified and will forfeit the prize, ZZZ Projects would draw another winner the same way.    
-All winners will be posted in this page.
+All winners will be posted on this page.
  
 ### PRIZES 
 7. Grand Prize: There will be one (1) grand prize per month available to be won, consisting of a Free Entity Framework Extensions License including Support & updates for a year (value of approximately 799$) until the end of the contest. 
