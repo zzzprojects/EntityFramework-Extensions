@@ -1,4 +1,4 @@
-## Entity Framework Contest
+## Entity Framework Extensions - Contest Rules
 
 THIS CONTEST IS OPEN TO anyone worldwide who downloaded a trial for entity framework extensions.
  
