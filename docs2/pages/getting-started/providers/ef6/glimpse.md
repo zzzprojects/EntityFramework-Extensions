@@ -1,6 +1,6 @@
 # Glimpse
 
-Glimpse is a web debugging and diagnostics tool used to gain a better understanding of whats happening inside of your ASP.NET web application.
+Glimpse is a web debugging and diagnostics tool used to gain a better understanding of what's happening inside of your ASP.NET web application.
 
  - It allows you to drill down into your app when you need to find out what's going on at the server. 
  - Glimpse provides so much valuable information we recommend you use it throughout your development cycle, including your Azure test environment.
@@ -34,7 +34,7 @@ PM> Install-Package Glimpse.EF6
 
 ## Enable Glimpse
 
-By default, glimpse is turned-off and to turn it on, run your application and go to the `http://localhost:<port #>/glimpse.axd` and click the **Turn Glimpse On** button.
+By default, a glimpse is turned-off and to turn it on, run your application and go to the `http://localhost:<port #>/glimpse.axd` and click the **Turn Glimpse On** button.
 
 <img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/docs2/images/glimpse-2.png">
 
@@ -95,7 +95,7 @@ This code creates a `DbSet` property for each entity set. In Entity Framework te
 
 ## Setup Database
 
-The name of the connection string is passed into the constructor of context class.
+The name of the connection string is passed into the constructor of the context class.
 
 ```csharp
 public BookStore() : base("BookStoreContext")
@@ -124,7 +124,7 @@ The default behavior is to create a database only if it doesn't exist and throw 
  - In this example, we will specify that the database should be dropped and re-created whenever the model changes.
  - Dropping the database causes the loss of all your data. 
  - In a development environment, it is okay to drop and recreate the database, but in production, you generally don't want to lose all your data every time you need to change the database schema. 
- - You can write a Seed method that Entity Framework automatically calls after creating the database in order to populate it with test data.
+ - You can write a Seed method that Entity Framework automatically calls after creating the database to populate it with test data.
 
 In the DAL folder, add a new class `BookStoreInitializer` and replace the following code, which causes a database to be created when needed and loads test data into the new database.
 
