@@ -14,6 +14,7 @@
       - [Oracle](providers/ef6/oracle-provider.md)
       - [PostgreSQL](providers/ef6/postgresql-provider.md)
       - [Effort](providers/ef6/effort-provider.md)
+      - [Glimpse](providers/ef6/glimpse.md)
    - EF Core
       - [SQL Server](providers/efcore/efcore-sql-server-provider.md)
       - [SQL Server Compact](providers/efcore/efcore-sql-server-compact-provider.md)
