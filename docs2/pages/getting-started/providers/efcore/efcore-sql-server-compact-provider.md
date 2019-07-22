@@ -3,7 +3,7 @@
 Microsoft SQL Server Compact (SQL CE) is a compact relational database produced by Microsoft for applications that run on mobile devices and desktops.
 
  - It includes both 32-bit and 64-bit native support.
- - SQL CE targets occasionally connect applications and applications with an embedded database.
+ - SQL CE targets occasionally connected applications, and applications with an embedded database.
 
 ## Install EFE Core
 
