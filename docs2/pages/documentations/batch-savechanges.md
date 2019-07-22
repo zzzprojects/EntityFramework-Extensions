@@ -22,16 +22,16 @@ var affectedRows = context.BatchSaveChanges();
 
 > HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
-### Limited Time Offer
-For a limited time, the **BatchSaveChanges** is offer in a standalone version for only 79$
-
-[Buy now](http://test-entityframework-extensions.net:25393/pricing-limited)
-
 ### What is supported?
 - Entity Framework 6
 - SQL Server/Azure
 
 _EF Core and more provider support is under development_
+
+## Limited Time Offer
+For a limited time, the **BatchSaveChanges** is offer in a standalone version for only 79$
+
+[Buy now](http://test-entityframework-extensions.net:25393/pricing-limited)
 
 ## Getting Started
 
