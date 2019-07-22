@@ -31,7 +31,7 @@ _EF Core and more provider support is under development_
 ## Limited Time Offer
 For a limited time, the **BatchSaveChanges** is offer in a standalone version for only 79$
 
-[Buy now](http://test-entityframework-extensions.net:25393/pricing-limited)
+[Buy now](/pricing-limited)
 
 ## Getting Started
 
