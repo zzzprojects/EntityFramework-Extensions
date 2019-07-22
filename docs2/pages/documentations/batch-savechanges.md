@@ -1,5 +1,10 @@
 # Batch SaveChanges
 
+## Limited Time Offer
+For a limited time, the **BatchSaveChanges** is offer in a standalone version for only 79$
+
+[Buy now](/pricing-limited)
+
 ## Description
 
 The Entity Framework `BatchSaveChanges` method is the fastest way to save a few or hundreds of entities.
@@ -27,11 +32,6 @@ var affectedRows = context.BatchSaveChanges();
 - SQL Server/Azure
 
 _EF Core and more provider support is under development_
-
-## Limited Time Offer
-For a limited time, the **BatchSaveChanges** is offer in a standalone version for only 79$
-
-[Buy now](/pricing-limited)
 
 ## Getting Started
 
