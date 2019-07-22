@@ -1,5 +1,6 @@
-- Bulk Operations
+- Main Features
    - [Bulk SaveChanges](bulk-savechanges.md)
+   - [Batch SaveChanges](batch-savechanges.md)
    - [Bulk Insert](bulk-insert.md)
    - [Bulk Update](bulk-update.md)
    - [Bulk Delete](bulk-delete.md)
@@ -53,7 +54,6 @@
    - [Transient Error](options-summary/transient-error.md)
    - [SQL Server](options-summary/sql-server.md)
 - Batch Operations
-   - [Batch SaveChanges](batch-savechanges.md)
    - [Delete from Query](delete-from-query.md)
    - [Update from Query](update-from-query.md)
 - Utilities
