@@ -22,6 +22,11 @@ var affectedRows = context.BatchSaveChanges();
 
 > HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
+## Limited Time Offer
+For a limited time, the **BatchSaveChanges** is offer in a standalone version for only 79$
+
+[Buy now](http://test-entityframework-extensions.net:25393/pricing-limited)
+
 ### What is supported?
 - Entity Framework 6
 - SQL Server/Azure
@@ -90,8 +95,3 @@ However, the **BulkSaveChanges** is a more scalable method. So it becomes faster
 | `BatchSaveChanges()` | Saves all changes made in this context to the underlying database by combining sql command generated. | [Try it](https://dotnetfiddle.net/kCl8oB) |
 | `BatchSaveChangesAsync()` | Saves all changes asynchronously made in this context to the underlying database by combining sql command generated. | |
 | `BatchSaveChangesAsync(cancellationToken)` | Saves all changes asynchronously made in this context to the underlying database by combining sql command generated. | |
-
-## Limited Time Offer
-For a limited time, the **BatchSaveChanges** is offer in a standalone version for only 79$
-
-[Buy now](http://test-entityframework-extensions.net:25393/pricing-limited)
