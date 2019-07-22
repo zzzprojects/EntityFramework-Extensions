@@ -11,7 +11,7 @@ NO PURCHASE NECESSARY. SEE BELOW FOR FULL CONTEST DETAILS. PARTICIPATION IN THIS
 ### HOW TO ENTER 
 3. NO PURCHASE NECESSARY.  To participate in this Contest, you must:  
  
-   - a.	download and try our Entity Framework Extensions Library.    
+   - a.	Download and try our Entity Framework Extensions Library.    
  
    - b.	Answer an email sent by info@zzzprojects.com two weeks later, asking for your feedback. 
    
