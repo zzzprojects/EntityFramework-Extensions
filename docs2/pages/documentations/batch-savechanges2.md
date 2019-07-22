@@ -63,8 +63,8 @@ The `SaveChanges` method makes 1 database round-trip for every **1** entities to
 The `BatchSaveChanges` method makes 1 database round-trip for every **25** entities to save (Default Value).
 
 So if you need to save **100** entities:
-- The `SaveChanges` method will execute sql **100** commands
-- The `BatchSaveChanges` method will do **4** commands
+- The `SaveChanges` method will execute **100** sql commands
+- The `BatchSaveChanges` method will execute **4** sql commands
 
 The same sql in the same order as `SaveChanges` is used but batched in fewer command to increase the performance.
 
@@ -77,7 +77,7 @@ We recommend always to use BatchSaveChanges.
 ### What is the difference between BatchSaveChanges and BulkSaveChanges?
 For a few hundreds of entities or less, the **BatchSaveChanges** offer better performance then **BulkSaveChanges**.
 
-However, the **BulkSaveChanges** is more scalable. So the method becomes faster than **BatchSaveChanges** when you start to save thousands of entities.
+However, the **BulkSaveChanges** is a more scalable method. So it becomes faster than **BatchSaveChanges** when you start to save thousands of entities.
 
 ## Documentation
 
