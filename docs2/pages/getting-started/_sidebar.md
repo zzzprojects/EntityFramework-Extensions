@@ -24,3 +24,4 @@
       - [InMemory](providers/efcore/efcore-inmemory-provider.md)
       - [Pomelo.EntityFrameworkCore.MySql](providers/efcore/efcore-pomelo-mysql-provider.md)
       - [DevArt MySql](providers/efcore/efcore-devart-mysql-provider.md)
+      - [DevArt Oracle](providers/efcore/efcore-devart-oracle-provider.md)
