@@ -33,7 +33,7 @@ For MySql, we need to install [MySql.Data.EntityFrameworkCore](https://www.nuget
 PM> Install-Package MySql.Data.EntityFrameworkCore
 ```
 
-Now you are ready to start your application.
+Now, you are ready to start your application.
  
  ## Create Data Model
  
@@ -73,7 +73,7 @@ The database context class provides the main functionality to coordinate Entity 
  - In your code, you specify which entities are included in the data model. 
  - You can also customize certain Entity Framework behaviors. 
 
-So let's add a new `BookStore` class which will inherit the `DbContext` class.
+So, let's add a new `BookStore` class which will inherit the `DbContext` class.
 
 ```csharp
 public class BookStore : DbContext
@@ -94,7 +94,7 @@ In EF Core, the DbContext has a virtual method called `OnConfiguring` which will
 
 ## Create Database
 
-Now to create a database using migrations from your model, install the following packages
+Now, to create a database using migrations from your model, install the following packages
 
 ```csharp
 PM> Install-Package Microsoft.EntityFrameworkCore.Tools
@@ -115,7 +115,7 @@ Update-Database
 
 This command applies the new migration to the database and creates the database before applying migrations.
 
-Now, we are done with the required classes and database creation, let's add some authors and books records to the database and then retrieve it.
+Now, we are done with the required classes and database creation, let's add some authors and book records to the database and then retrieve them.
 
 ```csharp
 using (var context = new BookStore())
@@ -157,7 +157,7 @@ using (var context = new BookStore())
         }
     };
 
-    //IncludeGraph allow you to INSERT/UPDATE/MERGE entities by including the child entities graph.
+    //IncludeGraph allows you to INSERT/UPDATE/MERGE entities by including the child entities graph.
     context.BulkInsert(authors, options => options.IncludeGraph = true );
 }
 

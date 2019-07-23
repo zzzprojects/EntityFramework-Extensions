@@ -1,6 +1,6 @@
 # SQL Server Provider
 
-Microsoft SQL Server is a relational database management system (RDBMS) that supports a wide variety of transaction processing, business intelligence and analytics applications in corporate IT environments.
+Microsoft SQL Server is a relational database management system (RDBMS) that supports a wide variety of transaction processing, business intelligence and analytic applications in corporate IT environments.
 
  - It is the default database provider which is available when you install [Entity Framework Extensions](https://entityframework-extensions.net/download)
  - It allows Entity Framework Core to be used with Microsoft SQL Server (including SQL Azure).
@@ -33,7 +33,7 @@ For SQL Server LocalDB, which is installed with Visual Studio, we need to instal
 PM> Install-Package Microsoft.EntityFrameworkCore.SqlServer
 ```
 
-Now you are ready to start your application.
+Now, you are ready to start your application.
  
  ## Create Data Model
  
@@ -94,7 +94,7 @@ In EF Core, the DbContext has a virtual method called `OnConfiguring` which will
 
 ## Create Database
 
-Now to create a database using migrations from your model, install the following packages
+Now, to create a database using migrations from your model, install the following packages
 
 ```csharp
 PM> Install-Package Microsoft.EntityFrameworkCore.Tools
@@ -115,7 +115,7 @@ Update-Database
 
 This command applies the new migration to the database and creates the database before applying migrations.
 
-Now, we are done with the required classes and database creation, let's add some authors and books records to the database and then retrieve it.
+Now, we are done with the required classes and database creation, let's add some authors and book records to the database and then retrieve them.
 
 ```csharp
 using (var context = new BookStore())
