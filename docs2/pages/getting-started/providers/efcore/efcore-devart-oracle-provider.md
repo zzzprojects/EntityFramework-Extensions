@@ -1,9 +1,9 @@
-# DevArt MySQL Provider
+# DevArt Oracle Provider
 
-The dotConnect for MySQL is an enhanced ORM-enabled data provider for MySQL that builds on the ADO.NET technology to present a complete solution for developing MySQL-based database applications. 
+The dotConnect for Oracle is a high-performance ORM enabled data provider for Oracle that builds on ADO.NET technology to present a complete solution for developing Oracle-based database applications. 
 
- - It introduces new approaches for designing application architecture, boosts productivity, and leverages database applications.
- - It offers both high-performance connectivity to the MySQL database and many innovative development tools and technologies.
+ - It introduces new approaches for designing application architecture, boosts productivity, and facilitates the development of database applications.
+ - It also supports a wide range of Oracle-specific features, such as Advanced Queuing, Alerts, etc.
 
 ## Install EFE Core
 
@@ -19,7 +19,7 @@ PM> Install-Package Z.EntityFramework.Extensions.EFCore
 
 You can also install EFE by right-clicking on your project in Solution Explorer and select **Manage Nuget Packages...**. 
 
-<img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/docs2/images/efcore-devart-mysql-1.png">
+<img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/docs2/images/efcore-devart-oracle-1.png">
 
 Search for **Z.EntityFramework.Extensions** and install the latest version by pressing the install button. It will also install [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/), it doesn't have additional logic that won't apply to all scenarios.
 
@@ -27,12 +27,12 @@ For example, EF Core will need to know what database or datastore you plan on wo
 
 ## Register EF Core Provider
 
-For DevArt MySql, first, we need to install [dotConnect for MySQL Professional Trial](https://www.devart.com/dotconnect/mysql/download.html) to start your 30 days trial period.
+For DevArt Oracle, first, we need to install [dotConnect for Oracle Professional Trial](https://www.devart.com/dotconnect/oracle/download.html) to start your 30 days trial period.
 
-Once the installation is completed then install [Devart.Data.MySql.EFCore](https://www.nuget.org/packages/Devart.Data.MySql.EFCore) in your project using **Package Manager Console** window. It will get all the packages required for EF Core.
+Once the installation is completed then install [Devart.Data.Oracle.EFCore](https://www.nuget.org/packages/Devart.Data.Oracle.EFCore) in your project using **Package Manager Console** window. It will get all the packages required for EF Core.
 
 ```csharp
-PM> Install-Package Devart.Data.MySql.EFCore
+PM> Install-Package Devart.Data.Oracle.EFCore
 ```
 
 Now you are ready to start your application.
@@ -82,7 +82,7 @@ public class BookStore : DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseMySql(@"server=localhost;database=BookStoreDb;uid=root;password=;");
+        optionsBuilder.UseOracle("User Id=SYSTEM;Password=mw;Data Source=XE");
     }
         
     public DbSet<Author> Authors { get; set; }
@@ -92,7 +92,7 @@ public class BookStore : DbContext
 In EF Core, the DbContext has a virtual method called `OnConfiguring` which will get called internally by EF Core. 
 
  - It will pass in an `optionsBuilder` instance which can be used to configure options for the `DbContext`.
- - The `optionsBuilder` has `UseMySql` method which expects a connection string as a parameter. 
+ - The `optionsBuilder` has `UseOracle` method which expects a connection string as a parameter. 
 
 ## Create Database
 
