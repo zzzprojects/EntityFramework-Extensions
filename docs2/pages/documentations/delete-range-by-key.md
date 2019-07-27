@@ -5,19 +5,19 @@ The `DeleteRangeByKey` is a `DbSet<TEntity>` extension method that deletes multi
  - It is a direct operation and doesn't require to call SaveChanges.
  - The entity must exist in the database before this method is called.
  
- ```csharp
+```csharp
 var keys = customers.Take(2).Select(x => new { x.CustomerID });
 context.Customers.DeleteRangeByKey(keys);
             
 var customersToDelete = context.Customers.ToList().Take(2);
 context.Customers.DeleteRangeByKey(customersToDelete);
- ```
+```
  
- [Try it](https://dotnetfiddle.net/ONTPIs)
+[Try it](https://dotnetfiddle.net/ONTPIs)
  
- In this example, the first two customers are deleted by specifying their keys and then two customers are deleted by specifying the entities itself. 
+In this example, the first two customers are deleted by specifying their keys and then two customers are deleted by specifying the entities itself from the database. 
  
- ## Documentation
+## Documentation
 
 ### Methods
 
