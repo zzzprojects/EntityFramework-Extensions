@@ -1,6 +1,6 @@
 # Effort Provider
 
-Effort (Entity Framework Fake ObjectContext Realization Tool) is the official In Memory provider for Entity Framework Classic. 
+Effort (Entity Framework Fake ObjectContext Realization Tool) is the official In-Memory provider for Entity Framework Classic. 
 
  - It creates a fake or mock database that allows you to test the Business Logic Layer (BLL) without worrying about your Data Access Layer (DAL).
  - It is an ADO.NET provider that executes all the data operations on a lightweight in-process main memory database instead of a traditional external database.
@@ -75,9 +75,9 @@ The database context class provides the main functionality to coordinate Entity 
 
  - You create this class by deriving from the `System.Data.Entity.DbContext` class. 
  - In your code, you specify which entities are included in the data model. 
- - You can also customize certain Entity Framework behaviors. 
+ - You can also customize certain Entity Framework behavior. 
 
-So, let's add a new `EntityContext` class which will inherit the `DbContext` class.
+So let's add a new `EntityContext` class which will inherit the `DbContext` class.
 
 ```csharp
 public class EntityContext : DbContext
@@ -97,17 +97,21 @@ public class EntityContext : DbContext
 
 This code creates a `DbSet` property for each entity set. In Entity Framework terminology, an entity set typically corresponds to a database table, and an entity corresponds to a row in the table.
 
-Now, we are done with the required classes, to use Effort, you need to create a transient connection and use it for your context:
+Now, we are done with the required classes, to use Effort, you need to create a transient connection and use it for our context. 
 
 ```csharp
 DbConnection connection = Effort.DbConnectionFactory.CreateTransient();
+Z.EntityFramework.Extensions.EntityFrameworkManager.ContextFactory = context => new EntityContext(connection);
 var context = new EntityContext(connection));
 ```
 
-So, let's add some authors and books records to the database and then retrieve it.
+We are using a special connection, so we also need to let [Z.EntityFramework.Extensions](https://entityframework-extensions.net) library also know how to create a context by setting the `EntityFrameworkManager.ContextFactory`. 
+
+Now let's add some authors and books records to the database and then retrieve it.
 
 ```csharp
 DbConnection connection = Effort.DbConnectionFactory.CreateTransient();
+Z.EntityFramework.Extensions.EntityFrameworkManager.ContextFactory = context => new EntityContext(connection);
 
 using (var context = new EntityContext(connection))
 {
@@ -120,31 +124,53 @@ using (var context = new EntityContext(connection))
             FirstName ="Carson",
             LastName ="Alexander",
             BirthDate = DateTime.Parse("1985-09-01"),
+            Books = new List<Book>()
+            {
+                new Book { Title = "Introduction to Machine Learning"},
+                new Book { Title = "Advanced Topics in Machine Learning"}
+                new Book { Title = "Introduction to Computing"}
+            }
         },
         new Author
         {
             FirstName ="Meredith",
             LastName ="Alonso",
             BirthDate = DateTime.Parse("1970-09-01"),
+            Books = new List<Book>()
+            {
+                new Book { Title = "Introduction to Microeconomics"}
+            }
         },
         new Author
         {
             FirstName ="Arturo",
             LastName ="Anand",
             BirthDate = DateTime.Parse("1963-09-01"),
+            Books = new List<Book>()
+            {
+                new Book { Title = "Calculus I"},
+                new Book { Title = "Calculus II"}
+            }
         }
     };
 
-    context.BulkInsert(authors);
+    context.BulkInsert(authors, options => options.IncludeGraph = true);
 }
 
-using (var context = new EntityContext(connection))
+using (var context = new EntityContext())
 {
-    var list = context.Authors.ToList();
+    var list = context.Authors
+        .Include(a => a.Books)
+        .ToList();
 
     foreach (var author in list)
     {
         Console.WriteLine(author.FirstName + " " + author.LastName);
+
+        foreach (var book in author.Books)
+        {
+            Console.WriteLine("\t" + book.Title);
+        }
     }
 }
 ```
