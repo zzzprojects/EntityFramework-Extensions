@@ -43,6 +43,7 @@ var customerDTO = context.Customers
 			
 context.Customers.DeleteByKey(customerDTO);
 ```
+
 [Try it](https://dotnetfiddle.net/EOgw9V)
 
 ## Documentation
