@@ -107,7 +107,7 @@ var context = new EntityContext(connection));
 
 We are using a special connection, so we also need to let [Z.EntityFramework.Extensions](https://entityframework-extensions.net) library also know how to create a context by setting the `EntityFrameworkManager.ContextFactory`. 
 
-Now let's add some authors and books records to the database and then retrieve it.
+Now, let's add some authors and books records to the database and then retrieve it.
 
 ```csharp
 DbConnection connection = Effort.DbConnectionFactory.CreateTransient();
