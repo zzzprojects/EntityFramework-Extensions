@@ -6,6 +6,8 @@
    - [Bulk Delete](bulk-delete.md)
    - [Bulk Merge](bulk-merge.md)
    - [Bulk Synchronize](bulk-synchronize.md)
+   - [Delete ByKey](delete-by-key.md)
+   - [Delete Range ByKey](delete-range-by-key.md)
 - Bulk Options
    - [Audit](options-summary/audit.md)
    - [Batch](options-summary/batch.md)
