@@ -33,7 +33,7 @@ For SQL Server Compact, we need to install [EntityFrameworkCore.SqlServerCompact
 PM> Install-Package EntityFrameworkCore.SqlServerCompact40
 ```
 
-Now you are ready to start your application.
+Now, you are ready to start your application.
  
  ## Create Data Model
  
@@ -94,7 +94,7 @@ In EF Core, the DbContext has a virtual method called `OnConfiguring` which will
 
 ## Create Database
 
-Now to create a database using migrations from your model, install the following packages
+Now, to create a database using migrations from your model, install the following packages
 
 ```csharp
 PM> Install-Package Microsoft.EntityFrameworkCore.Tools
@@ -157,7 +157,7 @@ using (var context = new BookStore())
         }
     };
 
-    //IncludeGraph allow you to INSERT/UPDATE/MERGE entities by including the child entities graph.
+    //IncludeGraph allows you to INSERT/UPDATE/MERGE entities by including the child entities graph.
     context.BulkInsert(authors, options => options.IncludeGraph = true );
 }
 
