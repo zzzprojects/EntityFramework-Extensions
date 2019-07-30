@@ -20,7 +20,7 @@ You can also install EFE by right-clicking on your project in Solution Explorer 
 
 Search for **Z.EntityFramework.Extensions** and install the latest version by pressing the install button. It will also install [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/), it doesn't have additional logic that won't apply to all scenarios.
 
-For example, EF Core will need to know what database or datastore you plan on working with and those providers are in individual packages.
+For example, EF Core will need to know what database or datastore you plan on working with and who those providers are in individual packages.
 
 ## Register EF Core Provider
 
@@ -70,7 +70,7 @@ The database context class provides the main functionality to coordinate Entity 
  - In your code, you specify which entities are included in the data model. 
  - You can also customize certain Entity Framework behaviors. 
 
-So let's add a new `BookStore` class which will inherit the `DbContext` class.
+So, let's add a new `BookStore` class which will inherit the `DbContext` class.
 
 ```csharp
 public class BookStore : DbContext
@@ -91,7 +91,7 @@ In EF Core, the DbContext has a virtual method called `OnConfiguring` which will
 
 ## Create Database
 
-Now to create a database using migrations from your model, install the following packages
+Now, to create a database using migrations from your model, install the following packages
 
 ```csharp
 PM> Install-Package Microsoft.EntityFrameworkCore.Tools
@@ -154,7 +154,7 @@ using (var context = new BookStore())
         }
     };
 
-    //IncludeGraph allow you to INSERT/UPDATE/MERGE entities by including the child entities graph.
+    //IncludeGraph allows you to INSERT/UPDATE/MERGE entities by including the child entities graph.
     context.BulkInsert(authors, options => options.IncludeGraph = true );
 }
 
