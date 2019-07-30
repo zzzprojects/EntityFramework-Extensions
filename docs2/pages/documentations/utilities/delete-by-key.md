@@ -35,11 +35,11 @@ You can also specify the DTO object to delete an entity.
 ```csharp
 var customerDTO = context.Customers
     .Select(c => new CustomerDTO
-	{
-		CustomerID = c.CustomerID,
-		Name = c.Name
-	})
-	.FirstOrDefault();
+    {
+        CustomerID = c.CustomerID,
+        Name = c.Name
+    })
+    .FirstOrDefault();
 			
 context.Customers.DeleteByKey(customerDTO);
 ```
