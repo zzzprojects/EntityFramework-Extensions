@@ -19,7 +19,7 @@ context.BulkSaveChanges(options =>
 {% include component-try-it.html href='https://dotnetfiddle.net/cIHYyb' %}
 
 ## Purpose
-Logging old values and new values are often useful to keep a history of changes in the database or file.
+Logging old and new values is often useful to keep a history of changes in the database or file.
 
 ## FAQ
 
