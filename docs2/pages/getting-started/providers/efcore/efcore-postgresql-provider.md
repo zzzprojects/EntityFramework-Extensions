@@ -34,7 +34,7 @@ For PostgreSQL, we need to install [Npgsql.EntityFrameworkCore.PostgreSQL](https
 PM> Install-Package Npgsql.EntityFrameworkCore.PostgreSQL
 ```
 
-Now you are ready to start your application.
+Now, you are ready to start your application.
  
  ## Create Data Model
  
