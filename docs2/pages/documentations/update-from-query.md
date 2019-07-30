@@ -18,7 +18,7 @@ context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/9hAsuQ' %}
 
-> DANGER: DO NOT use with EF Core if Client Evaluation is enabled (See limitation)
+> DANGER: DO NOT use with EF Core if Client Evaluation is enabled (See [Limitation](#limitation))
 
 ## Purpose
 `Updating` entities using `SaveChanges` normally requires loading them first in the `ChangeTracker`. These additional round-trips are often not necessary.
