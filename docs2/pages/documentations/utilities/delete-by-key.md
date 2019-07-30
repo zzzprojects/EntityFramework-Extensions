@@ -29,20 +29,3 @@ In this example, the first customer is deleted by specifying it key and then ano
 | `DeleteByKeyAsync<TEntity>(params object[] keyValues)` | Deletes an entity by key in your database. | |
 | `DeleteByKeyAsync<TEntity, T>(CancellationToken cancellationToken, T entityOrKeyValue)` | Deletes an entity by key in your database. | |
 | `DeleteByKeyAsync<TEntity>(CancellationToken cancellationToken, params object[] keyValues)` | Deletes an entity by key in your database. | |
-
-### Options
-More options can be found here:
-
-- [Audit](https://entityframework-extensions.net/audit)
-- [Batch](https://entityframework-extensions.net/batch)
-- [Column](https://entityframework-extensions.net/column)
-- [Context Factory](https://entityframework-extensions.net/context-factory)
-- [Execute Event](https://entityframework-extensions.net/execute-event)
-- [Identity](https://entityframework-extensions.net/identity)
-- [Include Graph](https://entityframework-extensions.net/include-graph)
-- [Key](https://entityframework-extensions.net/key)
-- [Logging](https://entityframework-extensions.net/logging)
-- [Temporary Table](https://entityframework-extensions.net/temporary-table)
-- [Transaction](https://entityframework-extensions.net/transaction)
-- [Transient Error](https://entityframework-extensions.net/transient-error)
-- [SQL Server](https://entityframework-extensions.net/sql-server)

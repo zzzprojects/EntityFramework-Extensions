@@ -4,8 +4,7 @@
 
 The `BulkOperation.AuditEntries` property which is of type `List<AuditEntry>` gets `UPDATED`, `INSERTED` and `DELETED` data from the database when `UseAudit` is enabled.
 
-The following example assigns `AuditEntries` to local `List<AuditEntry>` variable `auditEntries` when the `BulkOperationExecuted` event is executed. 
-
+The following example sets `UseAudit` to `true` and assigns the list of `AuditEntries` to populate.
 
 ```csharp
 List<AuditEntry> auditEntries = new List<AuditEntry>();
@@ -13,10 +12,7 @@ List<AuditEntry> auditEntries = new List<AuditEntry>();
 context.BulkSaveChanges(options =>
 {
     options.UseAudit = true;
-    options.BulkOperationExecuted = bulkOperation => 
-    {
-        auditEntries.AddRange(bulkOperation.AuditEntries);
-    };
+    options.AuditEntries = auditEntries;
 });
 
 foreach (var entry in auditEntries)

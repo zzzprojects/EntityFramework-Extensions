@@ -26,20 +26,3 @@ In this example, the first two customers are deleted by specifying their keys an
 | `DeleteRangeByKey<TEntity, T>(IEnumerable<T> entities)` | Deletes multiple entities by key in your database. | [Try it](https://dotnetfiddle.net/ONTPIs) |
 | `DeleteRangeByKeyAsync<TEntity, T>(IEnumerable<T> entities)` | Deletes multiple entities by key in your database.  | |
 | `DeleteRangeByKeyAsync<TEntity, T>(CancellationToken cancellationToken, IEnumerable<T> entities)` | Deletes multiple entities by key in your database. | |
-
-### Options
-More options can be found here:
-
-- [Audit](https://entityframework-extensions.net/audit)
-- [Batch](https://entityframework-extensions.net/batch)
-- [Column](https://entityframework-extensions.net/column)
-- [Context Factory](https://entityframework-extensions.net/context-factory)
-- [Execute Event](https://entityframework-extensions.net/execute-event)
-- [Identity](https://entityframework-extensions.net/identity)
-- [Include Graph](https://entityframework-extensions.net/include-graph)
-- [Key](https://entityframework-extensions.net/key)
-- [Logging](https://entityframework-extensions.net/logging)
-- [Temporary Table](https://entityframework-extensions.net/temporary-table)
-- [Transaction](https://entityframework-extensions.net/transaction)
-- [Transient Error](https://entityframework-extensions.net/transient-error)
-- [SQL Server](https://entityframework-extensions.net/sql-server)
