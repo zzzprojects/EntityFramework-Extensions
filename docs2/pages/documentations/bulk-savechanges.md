@@ -11,7 +11,7 @@ context.BulkSaveChanges();
 // Easy to customize
 context.BulkSaveChanges(options => options.BatchSize = 100);
 ```
-[Try it](https://dotnetfiddle.net/MP65WH)
+[Try it in EF6](https://dotnetfiddle.net/MP65WH)       [Try it in EF Core](https://dotnetfiddle.net/4nbecz)
 
 ### Performance Comparison
 
