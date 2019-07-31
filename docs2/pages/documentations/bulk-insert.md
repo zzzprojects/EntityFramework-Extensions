@@ -11,7 +11,7 @@ context.BulkInsert(customers);
 // Easy to customize
 context.BulkInsert(invoices, options => options.IncludeGraph = true);
 ```
-[Try it](https://dotnetfiddle.net/bNektu)
+[Try it in EF6](https://dotnetfiddle.net/bNektu) | [Try it in EF Core](https://dotnetfiddle.net/2eVfFT)
 
 ### Performance Comparison
 
