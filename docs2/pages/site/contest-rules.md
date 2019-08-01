@@ -11,9 +11,11 @@ NO PURCHASE NECESSARY. SEE BELOW FOR FULL CONTEST DETAILS. PARTICIPATION IN THIS
 ### HOW TO ENTER 
 3. NO PURCHASE NECESSARY.  To participate in this Contest, you must:  
  
-   - a.	Download and try our Entity Framework Extensions Library.    
- 
-   - b.	Answer an email sent by info@zzzprojects.com two weeks later, asking for your feedback. 
+   - a.	Download and try our Entity Framework Extensions Library. 
+   
+   - b. Fill out the contest form.
+   
+   - c.	Answer an email sent from info@zzzprojects.com two weeks later, asking for your feedback. 
    
 4. You will receive one (1) Entry in the Contest when you give us feedback as described in Section 3 and, above and in accordance with these Rules.  LIMIT (1) ENTRY PER PERSON/COMPANY DURING THE CONTEST PERIOD, your participation will be entered automatically every month following your first entry until the end of the contest or until you win. You can only win once, if you win a license your name is withdrawn from the other contestants for the following monthly draws. 
  If it is discovered that you attempted to enter more than once during the Contest Period, then all your Entries will be void.  Use of any automated system to submit Entries is prohibited and will result in disqualification.  
@@ -24,7 +26,7 @@ NO PURCHASE NECESSARY. SEE BELOW FOR FULL CONTEST DETAILS. PARTICIPATION IN THIS
  
 6. Before being declared a winner: The selected winner will be contacted by email and notified that they won.  The selected winner must reply by private message within 30 business days of notification. 
 If a selected winner cannot be contacted by email within 30 calendar days of selection or there is a return of any prior notification as undeliverable, he/she will be disqualified and will forfeit the prize, ZZZ Projects would draw another winner the same way.    
-All winners will be posted on this page.
+Winners names and website URLs will be posted on this page 
  
 ### PRIZES 
 7. Grand Prize: There will be one (1) grand prize per month available to be won, consisting of a Free Entity Framework Extensions License including Support & updates for a year (value of approximately 799$) until the end of the contest. 
@@ -39,4 +41,5 @@ If the winner already bought a license, he/she receives a new license for the fo
 10. All Entries are subject to verification at any time and for any reason. ZZZ Projects reserves the right, in its sole and absolute discretion, to require proof of identity and/or eligibility.
 
 11. Any attempt or suspected attempt to use robotic, automatic, programmed, or otherwise, illicit means to enter the Contest, or any other methods not authorized by these Contest Rules shall be deemed as tampering and may disqualify you from entering, participating, winning prizes and preclude you from participating in future contests and promotions.
+
 12. Your email address will only be used for follow-ups to entrant inquiries limited to the administration of the contest and not in any subsequent electronic marketing without consent. 
