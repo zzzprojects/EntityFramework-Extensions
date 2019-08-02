@@ -15,7 +15,7 @@ context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
 ```
 {% include component-try-it.html href='https://dotnetfiddle.net/0my0fe' %}
 
-> DANGER: DO NOT use with EF Core if Client Evaluation is enabled (See [Limitation](#limitation))
+> DANGER: DO NOT use with EF Core if Client Evaluation is enabled (See [Limitations](#limitation))
 
 ## Purpose
 `Deleting` entities using `SaveChanges` normally requires loading them first in the `ChangeTracker`. These additional round-trips are often not necessary.

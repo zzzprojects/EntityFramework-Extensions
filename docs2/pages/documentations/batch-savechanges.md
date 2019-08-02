@@ -1,7 +1,7 @@
 # Batch SaveChanges
 
 ## Limited Time Offer
-For a limited time, the **BatchSaveChanges** is offer in a standalone version for only 79$
+For a limited time, the **BatchSaveChanges** is offered in a standalone version for only 79$.
 
 [Buy now](/pricing-limited)
 
@@ -9,7 +9,7 @@ For a limited time, the **BatchSaveChanges** is offer in a standalone version fo
 
 The Entity Framework `BatchSaveChanges` method is the fastest way to save a few or hundreds of entities.
 
-The same sql in the same order as `SaveChanges` is used but batched in fewer command to increase the performance.
+The same sql in the same order as `SaveChanges` is used but batched in fewer commands to increase the performance.
 
 ```csharp
 var affectedRows = context.BatchSaveChanges();
@@ -64,26 +64,26 @@ public class EntityContext : DbContext
 ## FAQ
 
 ### Why BatchSaveChanges is faster than SaveChanges?
-The `SaveChanges` method makes 1 database round-trip for every **1** entities to save.
+The `SaveChanges` method makes 1 database round-trip for every **1** entitiy to save.
 
 The `BatchSaveChanges` method makes 1 database round-trip for every **25** entities to save (Default Value).
 
-So if you need to save **100** entities:
-- The `SaveChanges` method will execute **100** sql commands
-- The `BatchSaveChanges` method will execute **4** sql commands
+So, if you need to save **100** entities:
+- The `SaveChanges` method will execute **100** sql commands.
+- The `BatchSaveChanges` method will execute **4** sql commands.
 
-The same sql in the same order as `SaveChanges` is used but batched in fewer command to increase the performance.
+The same sql in the same order as `SaveChanges` is used but batched in fewer commands to increase the performance.
 
 ### Is BatchSaveChanges as fast as SaveChanges with one entity?
 
-Under the hood, `BatchSaveChanges` use `SaveChanges` to save **1** entity (so as fast!), but will outperform it by batching command in all other cases.
+Under the hood, `BatchSaveChanges` use `SaveChanges` to save **1** entity (so, as fast!), but will outperform it by batching commands in all other cases.
 
-We recommend always to use BatchSaveChanges.
+We always recommend to use BatchSaveChanges.
 
 ### What is the difference between BatchSaveChanges and BulkSaveChanges?
-For a few hundreds of entities or less, the **BatchSaveChanges** offer better performance then **BulkSaveChanges**.
+For a few hundreds of entities or less, the **BatchSaveChanges** offers better performance then **BulkSaveChanges**.
 
-However, the **BulkSaveChanges** is a more scalable method. So it becomes faster than **BatchSaveChanges** when you start to save thousands of entities.
+However, the **BulkSaveChanges** is a more scalable method. So, it becomes faster than **BatchSaveChanges** when you start to save thousands of entities.
 
 ## Documentation
 
