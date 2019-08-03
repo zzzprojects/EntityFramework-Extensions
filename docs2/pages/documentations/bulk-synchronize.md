@@ -63,7 +63,7 @@ context.BulkSynchronize(customers, options => {
     options.ColumnPrimaryKeyExpression = customer => customer.Code;
 });
 ```
-[Try it](https://dotnetfiddle.net/FX3Quf)
+[Try it in EF6](https://dotnetfiddle.net/FX3Quf) | [Try it in EF Core](https://dotnetfiddle.net/edudfD)
 
 ## Real Life Scenarios
 
