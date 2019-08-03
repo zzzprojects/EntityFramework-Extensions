@@ -15,7 +15,7 @@ context.BulkSynchronize(customers, options => {
     options.ColumnPrimaryKeyExpression = customer => customer.Code;
 });
 ```
-[Try it](https://dotnetfiddle.net/nZedku)
+[Try it in EF6](https://dotnetfiddle.net/nZedku) | [Try it in EF Core](https://dotnetfiddle.net/v4KQSX)
 
 ### Scenarios
 The `BulkSynchronize` method is **fast** but also **flexible** to let you handle various scenarios in Entity Framework such as:
@@ -51,7 +51,7 @@ context.BulkSynchronize(customers);
 
 context.BulkSynchronizeAsync(customers, cancellationToken);
 ```
-[Try it](https://dotnetfiddle.net/yPs4WF)
+[Try it in EF6](https://dotnetfiddle.net/yPs4WF) | [Try it in EF Core](https://dotnetfiddle.net/la3HQL)
 
 ### Bulk Synchronize with options
 The `options` parameter let you use a lambda expression to customize the way entities are synchronized.
