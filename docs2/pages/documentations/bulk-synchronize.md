@@ -73,7 +73,7 @@ Your entity has an identity property, but you want to force to insert a specific
 ```csharp
 context.BulkSynchronize(customers, options => options.SynchronizeKeepIdentity = true);
 ```
-[Try it](https://dotnetfiddle.net/crxeJ3)
+[Try it in EF6](https://dotnetfiddle.net/crxeJ3) | [Try it in EF Core](https://dotnetfiddle.net/PQ2DDi)
 
 ### Synchronize and include/exclude properties
 You want to synchronize your entities but only for specific properties.
@@ -88,7 +88,7 @@ context.BulkSynchronize(customizeToSynchronize, options => {
     options.IgnoreOnSynchronizeUpdateExpression = c => c.CreatedDate;
 });
 ```
-[Try it](https://dotnetfiddle.net/mOlppr)
+[Try it in EF6](https://dotnetfiddle.net/mOlppr) | [Try it in EF Core](https://dotnetfiddle.net/Dk60YN)
 
 ### Synchronize with custom key
 You want to synchronize entities, but you don't have the primary key. The `ColumnPrimaryKeyExpression` let you use as a key any property or combination of properties.
@@ -96,7 +96,7 @@ You want to synchronize entities, but you don't have the primary key. The `Colum
 ```csharp
 context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code);    
 ```
-[Try it](https://dotnetfiddle.net/PYjmAJ)
+[Try it in EF6](https://dotnetfiddle.net/PYjmAJ) | [Try it in EF Core](https://dotnetfiddle.net/oigfK6)
 
 ### Synchronize with future action
 You want to synchronize entities, but you want to defer the execution.
@@ -114,7 +114,7 @@ context.FutureAction(x => x.BulkSynchronize(invoices));
 
 context.ExecuteFutureAction();
 ```
-[Try it](https://dotnetfiddle.net/78FeXe)
+[Try it in EF6](https://dotnetfiddle.net/78FeXe) | [Try it in EF Core](https://dotnetfiddle.net/KmXE3m)
 
 ### More scenarios
 Hundreds of scenarios have been solved and are now supported.
