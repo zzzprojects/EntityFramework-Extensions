@@ -116,8 +116,8 @@ info@zzzprojects.com
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `BulkDelete<T>(items)` | Bulk delete entities in your database. | [Try it](https://dotnetfiddle.net/4Jv1H6) |
-| `BulkDelete<T>(items, options)` | Bulk delete entities in your database.  | [Try it](https://dotnetfiddle.net/IedG1h) |
+| `BulkDelete<T>(items)` | Bulk delete entities in your database. | [EF6](https://dotnetfiddle.net/4Jv1H6) / [EFCore](https://dotnetfiddle.net/gwc9hl)|
+| `BulkDelete<T>(items, options)` | Bulk delete entities in your database.  | [EF6](https://dotnetfiddle.net/IedG1h) / [EFCore](https://dotnetfiddle.net/Qek2MJ) |
 | `BulkDeleteAsync<T>(items)` | Bulk delete entities asynchronously in your database. | |
 | `BulkDeleteAsync<T>(items, cancellationToken)` | Bulk delete entities asynchronously in your database. | |
 | `BulkDeleteAsync<T>(items, options, cancellationToken)` | Bulk delete entities asynchronously in your database. | |
