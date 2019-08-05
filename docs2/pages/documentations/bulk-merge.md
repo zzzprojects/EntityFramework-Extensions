@@ -156,8 +156,8 @@ info@zzzprojects.com
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `BulkMerge<T>(items)` | Bulk merge entities in your database. | [Try it](https://dotnetfiddle.net/gSzNDC) |
-| `BulkMerge<T>(items, options)` | Bulk merge entities in your database.  | [Try it](https://dotnetfiddle.net/WZBs0E) |
+| `BulkMerge<T>(items)` | Bulk merge entities in your database. | [EF6](https://dotnetfiddle.net/gSzNDC) / [EFCore](https://dotnetfiddle.net/fLB6rt)|
+| `BulkMerge<T>(items, options)` | Bulk merge entities in your database.  | [EF6](https://dotnetfiddle.net/WZBs0E) / [EFCore](https://dotnetfiddle.net/NjrdKg)|
 | `BulkMergeAsync<T>(items)` | Bulk merge entities asynchronously in your database. | |
 | `BulkMergeAsync<T>(items, cancellationToken)` | Bulk merge entities asynchronously in your database. | |
 | `BulkMergeAsync<T>(items, options, cancellationToken)` | Bulk merge entities asynchronously in your database. | |
