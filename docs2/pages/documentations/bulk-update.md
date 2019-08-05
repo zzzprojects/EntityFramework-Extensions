@@ -20,7 +20,7 @@ context.BulkUpdate(customers, options => options.IncludeGraph = true);
 | SaveChanges     | 1,200 ms       | 2,400 ms       | 6,000 ms       |
 | BulkUpdate      | 80 ms          | 110 ms         | 170 ms         |
 
-[Try it](https://dotnetfiddle.net/xVwYDE)
+[Try it in EF6](https://dotnetfiddle.net/xVwYDE) | [Try it in EF Core](https://dotnetfiddle.net/iJrRAn)
 
 > HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
