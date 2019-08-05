@@ -27,7 +27,7 @@ foreach (var entry in auditEntries)
 {% include component-try-it.html href='https://dotnetfiddle.net/WwQ7oZ' %}
 
 ## Purpose
-Logging old values and a new values is often useful to keep a history of changes in the database or file.
+Logging old and new values is often useful to keep a history of changes in the database or file.
 
 ## FAQ
 

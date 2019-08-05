@@ -35,7 +35,7 @@ For InMemory, we need to install [Microsoft.EntityFrameworkCore.InMemory](https:
 PM> Install-Package Microsoft.EntityFrameworkCore.InMemory
 ```
 
-Now you are ready to start your application.
+Now, you are ready to start your application.
  
 ## Create Data Model
  
@@ -75,7 +75,7 @@ The database context class provides the main functionality to coordinate Entity 
  - In your code, you specify which entities are included in the data model. 
  - You can also customize certain Entity Framework behaviors. 
 
-So let's add a new `BookStore` class which will inherit the `DbContext` class.
+So, let's add a new `BookStore` class which will inherit the `DbContext` class.
 
 ```csharp
 public class BookStore : DbContext
@@ -136,7 +136,7 @@ using (var context = new BookStore())
         }
     };
 
-    //IncludeGraph allow you to INSERT/UPDATE/MERGE entities by including the child entities graph.
+    //IncludeGraph allows you to INSERT/UPDATE/MERGE entities by including the child entities graph.
     context.BulkInsert(authors, options => options.IncludeGraph = true );
 }
 

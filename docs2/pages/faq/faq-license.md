@@ -10,7 +10,7 @@ You don't have to purchase a developer seat for front-end developer or back-end 
 Since you buy developer seats, you can develop an unlimited amount of projects within your company.
 
 ### What's the cost for additional developer seats?
-The cost for additional developer seats is usually extremely low. We want to make sure our library is accessible for small and large company.
+The cost for additional developer seats is usually extremely low. We want to make sure our library is accessible for small and large companies.
 
 ### Are developer seats transferable?
 Yes, a developer seat can be transferred to any employee within your company.
@@ -56,7 +56,7 @@ Renewing your support & upgrade gives the following benefits:
 
 ## Royalty Free
 
-### Can I install Entity Framework Extensions on Client Machine?
+### Can I install Entity Framework Extensions on Client Machines?
 Yes, the product is royalty free.
 
 That means, you paid for developer seat, but customers using your product don't have to pay us.

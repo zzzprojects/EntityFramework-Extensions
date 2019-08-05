@@ -11,7 +11,7 @@ context.BulkSaveChanges();
 // Easy to customize
 context.BulkSaveChanges(options => options.BatchSize = 100);
 ```
-[Try it](https://dotnetfiddle.net/MP65WH)
+[Try it in EF6](https://dotnetfiddle.net/MP65WH) | [Try it in EF Core](https://dotnetfiddle.net/4nbecz)
 
 ### Performance Comparison
 
@@ -20,7 +20,7 @@ context.BulkSaveChanges(options => options.BatchSize = 100);
 | SaveChanges      | 1,200 ms       | 2,400 ms       | 6,000 ms       |
 | BatchSaveChanges | 150 ms         | 225 ms         | 500 ms         |
 
-[Try this benchmark online](https://dotnetfiddle.net/4FLmNE)
+[Try it in EF6](https://dotnetfiddle.net/4FLmNE) | [Try it in EF Core](https://dotnetfiddle.net/Oshg3S)
 
 > HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
@@ -63,10 +63,10 @@ After a few thousands of entities, we recommend using `BulkSaveChanges` which is
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `BulkSaveChanges()` | Save all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/nKd0mT) |
-| `BulkSaveChanges(Action<BulkOperation> bulkOperationFactory)` | Save all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/lJVdXR) |
-| `BulkSaveChanges(bool useEntityFrameworkPropagation)` | Save all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/ZWNQPA) |
-| `BulkSaveChanges(bool useEntityFrameworkPropagation, Action<BulkOperation> bulkOperationFactory)` | Save all changes made in this context to the underlying database by executing bulk operations. | [Try it](https://dotnetfiddle.net/Aqp0EK) |
+| `BulkSaveChanges()` | Save all changes made in this context to the underlying database by executing bulk operations. | [EF6](https://dotnetfiddle.net/nKd0mT) / [EFCore](https://dotnetfiddle.net/s0NxkN)|
+| `BulkSaveChanges(Action<BulkOperation> bulkOperationFactory)` | Save all changes made in this context to the underlying database by executing bulk operations. | [EF6](https://dotnetfiddle.net/lJVdXR) / [EFCore](https://dotnetfiddle.net/yd4iaz)|
+| `BulkSaveChanges(bool useEntityFrameworkPropagation)` | Save all changes made in this context to the underlying database by executing bulk operations. | [EF6](https://dotnetfiddle.net/ZWNQPA) / [EFCore](https://dotnetfiddle.net/rQS1u5)|
+| `BulkSaveChanges(bool useEntityFrameworkPropagation, Action<BulkOperation> bulkOperationFactory)` | Save all changes made in this context to the underlying database by executing bulk operations. | [EF6](https://dotnetfiddle.net/Aqp0EK) / [EFCore](https://dotnetfiddle.net/FJ4dYY)|
 | `BulkSaveChangesAsync(...)` | Save all changes asynchronously made in this context to the underlying database by executing bulk operations. | |
 
 ###### Options
