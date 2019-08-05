@@ -11,7 +11,7 @@ context.BulkMerge(customers);
 // Easy to customize
 context.BulkMerge(customers, options => options.IncludeGraph = true);
 ```
-[Try it](https://dotnetfiddle.net/Aodij2)
+[Try it in EF6](https://dotnetfiddle.net/Aodij2) | [Try it in EF Core](https://dotnetfiddle.net/v08Jzy)
 
 ### Performance Comparison
 
@@ -59,7 +59,7 @@ context.BulkMerge(customers);
 
 context.BulkMergeAsync(customers, cancellationToken);
 ```
-[Try it](https://dotnetfiddle.net/0Ba6ZB)
+[Try it in EF6](https://dotnetfiddle.net/0Ba6ZB) | [Try it in EF Core](https://dotnetfiddle.net/GqKIoc)
 
 ### Bulk Merge with options
 The `options` parameter let you use a lambda expression to customize the way entities are inserted or updated.
@@ -67,7 +67,7 @@ The `options` parameter let you use a lambda expression to customize the way ent
 ```csharp
 context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code });
 ```
-[Try it](https://dotnetfiddle.net/JsHWWm)
+[Try it in EF6](https://dotnetfiddle.net/JsHWWm) | [Try it in EF Core](https://dotnetfiddle.net/Lzbh2H)
 
 ### Why BulkMerge is faster than SaveChanges?
 Merging thousands of entities for a file importation is a typical scenario.
@@ -88,7 +88,7 @@ Your entity has an identity property, but you want to force to insert a specific
 ```csharp
 context.BulkMerge(customers, options => options.MergeKeepIdentity = true);
 ```
-[Try it](https://dotnetfiddle.net/a1qGoh)
+[Try it in EF6](https://dotnetfiddle.net/a1qGoh) | [Try it in EF Core](https://dotnetfiddle.net/mflJdW)
 
 ### Merge and include/exclude properties
 You want to merge your entities but only for specific properties.
@@ -103,7 +103,7 @@ context.BulkMerge(customers, options => options.ColumnInputExpression = c => new
             
 context.BulkMerge(customers, options => options.IgnoreOnMergeUpdateExpression = c => new { c.UpdatedDate } );
 ```
-[Try it](https://dotnetfiddle.net/l6NLDA)
+[Try it in EF6](https://dotnetfiddle.net/l6NLDA) | [Try it in EF Core](https://dotnetfiddle.net/mogvhA)
 
 ### Merge with custom key
 You want to merge entities, but you don't have the primary key. The `ColumnPrimaryKeyExpression` let you use as a key any property or combination of properties.
@@ -111,7 +111,7 @@ You want to merge entities, but you don't have the primary key. The `ColumnPrima
 ```csharp
 context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code);    
 ```
-[Try it](https://dotnetfiddle.net/cS7scF)
+[Try it in EF6](https://dotnetfiddle.net/cS7scF) | [Try it in EF Core](https://dotnetfiddle.net/LqM4UJ)
 
 ### Merge with related child entities (Include Graph)
 You want to merge entities but also automatically merge related child entities.
@@ -122,7 +122,7 @@ You want to merge entities but also automatically merge related child entities.
 ```csharp
 context.BulkMerge(invoices, options => options.IncludeGraph = true);
 ```
-[Try it](https://dotnetfiddle.net/FEXkXi)
+[Try it in EF6](https://dotnetfiddle.net/FEXkXi) | [Try it in EF Core](https://dotnetfiddle.net/imc0r5)
 
 ### Merge with future action
 You want to merge entities, but you want to defer the execution.
@@ -140,7 +140,7 @@ context.FutureAction(x => x.BulkMerge(invoices, options => options.IncludeGraph 
 
 context.ExecuteFutureAction();
 ```
-[Try it](https://dotnetfiddle.net/RUL0rL)
+[Try it in EF6](https://dotnetfiddle.net/RUL0rL) | [Try it in EF Core](https://dotnetfiddle.net/CmZ8v3)
 
 ### More scenarios
 Hundreds of scenarios have been solved and are now supported.
@@ -156,8 +156,8 @@ info@zzzprojects.com
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `BulkMerge<T>(items)` | Bulk merge entities in your database. | [Try it](https://dotnetfiddle.net/gSzNDC) |
-| `BulkMerge<T>(items, options)` | Bulk merge entities in your database.  | [Try it](https://dotnetfiddle.net/WZBs0E) |
+| `BulkMerge<T>(items)` | Bulk merge entities in your database. | [EF6](https://dotnetfiddle.net/gSzNDC) / [EFCore](https://dotnetfiddle.net/fLB6rt)|
+| `BulkMerge<T>(items, options)` | Bulk merge entities in your database.  | [EF6](https://dotnetfiddle.net/WZBs0E) / [EFCore](https://dotnetfiddle.net/NjrdKg)|
 | `BulkMergeAsync<T>(items)` | Bulk merge entities asynchronously in your database. | |
 | `BulkMergeAsync<T>(items, cancellationToken)` | Bulk merge entities asynchronously in your database. | |
 | `BulkMergeAsync<T>(items, options, cancellationToken)` | Bulk merge entities asynchronously in your database. | |

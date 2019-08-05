@@ -11,7 +11,7 @@ context.BulkUpdate(customers);
 // Easy to customize
 context.BulkUpdate(customers, options => options.IncludeGraph = true);
 ```
-[Try it](https://dotnetfiddle.net/5wBlVh)
+[Try it in EF6](https://dotnetfiddle.net/5wBlVh) | [Try it in EF Core](https://dotnetfiddle.net/Cwn8NC)
 
 ### Performance Comparison
 
@@ -20,7 +20,7 @@ context.BulkUpdate(customers, options => options.IncludeGraph = true);
 | SaveChanges     | 1,200 ms       | 2,400 ms       | 6,000 ms       |
 | BulkUpdate      | 80 ms          | 110 ms         | 170 ms         |
 
-[Try it](https://dotnetfiddle.net/xVwYDE)
+[Try it in EF6](https://dotnetfiddle.net/xVwYDE) | [Try it in EF Core](https://dotnetfiddle.net/iJrRAn)
 
 > HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
@@ -59,7 +59,7 @@ context.BulkUpdate(customers);
 
 context.BulUpdateAsync(customers, cancellationToken);
 ```
-[Try it](https://dotnetfiddle.net/81oBov)
+[Try it in EF6](https://dotnetfiddle.net/81oBov) | [Try it in EF Core](https://dotnetfiddle.net/zmsc2T)
 
 ### Bulk Update with options
 The `options` parameter lets you use a lambda expression to customize the way entities are updated.
@@ -67,7 +67,7 @@ The `options` parameter lets you use a lambda expression to customize the way en
 ```csharp
 context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code });
 ```
-[Try it](https://dotnetfiddle.net/yw6M79)
+[Try it in EF6](https://dotnetfiddle.net/yw6M79) | [Try it in EF Core](https://dotnetfiddle.net/BW6WIy)
 
 ### Why BulkUpdate is faster than SaveChanges?
 Updating thousands of entities for a file importation is a typical scenario.
@@ -86,7 +86,7 @@ You want to update your entities but only for specific properties.
 ```csharp            
 context.BulkUpdate(customers, options => options.IgnoreOnUpdateExpression = c => new { c.ColumnToIgnore } );
 ```
-[Try it](https://dotnetfiddle.net/R43wS0)
+[Try it in EF6](https://dotnetfiddle.net/R43wS0) | [Try it in EF Core](https://dotnetfiddle.net/Enr2KP)
 
 ### Update with custom key
 You want to update entities, but you don't have the primary key. The `ColumnPrimaryKeyExpression` let you use as a key any property or combination of properties.
@@ -94,7 +94,7 @@ You want to update entities, but you don't have the primary key. The `ColumnPrim
 ```csharp
 context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = c => c.Code);    
 ```
-[Try it](https://dotnetfiddle.net/La7vr8)
+[Try it in EF6](https://dotnetfiddle.net/La7vr8) | [Try it in EF Core](https://dotnetfiddle.net/YasxiY)
 
 ### Update with related child entities (Include Graph)
 You want to update entities but also automatically insert related child entities.
@@ -105,7 +105,7 @@ You want to update entities but also automatically insert related child entities
 ```csharp
 context.BulkUpdate(invoices, options => options.IncludeGraph = true);
 ```
-[Try it](https://dotnetfiddle.net/PAVo4c)
+[Try it in EF6](https://dotnetfiddle.net/PAVo4c) | [Try it in EF Core](https://dotnetfiddle.net/Iciz2K)
 
 ### Update with future action
 You want to update entities, but you want to defer the execution.
@@ -123,7 +123,7 @@ context.FutureAction(x => x.BulkUpdate(invoices, options => options.IncludeGraph
 
 context.ExecuteFutureAction();
 ```
-[Try it](https://dotnetfiddle.net/YnV5Fs)
+[Try it in EF6](https://dotnetfiddle.net/YnV5Fs) | [Try it in EF Core](https://dotnetfiddle.net/i9pMsP)
 
 ### More scenarios
 Hundreds of scenarios have been solved and are now supported.
@@ -139,8 +139,8 @@ info@zzzprojects.com
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `BulkUpdate<T>(items)` | Bulk update entities in your database. | [Try it](https://dotnetfiddle.net/XbT4Ad) |
-| `BulkUpdate<T>(items, options)` | Bulk update entities in your database.  | [Try it](https://dotnetfiddle.net/6E5DYO) |
+| `BulkUpdate<T>(items)` | Bulk update entities in your database. | [EF6](https://dotnetfiddle.net/XbT4Ad) / [EFCore](https://dotnetfiddle.net/1SMtjq)|
+| `BulkUpdate<T>(items, options)` | Bulk update entities in your database.  | [EF6](https://dotnetfiddle.net/6E5DYO) / [EFCore](https://dotnetfiddle.net/WhC2bb)|
 | `BulkUpdateAsync<T>(items)` | Bulk update entities asynchronously in your database. | |
 | `BulkUpdateAsync<T>(items, cancellationToken)` | Bulk update entities asynchronously in your database. | |
 | `BulkUpdateAsync<T>(items, options, cancellationToken)` | Bulk update entities asynchronously in your database. | |
