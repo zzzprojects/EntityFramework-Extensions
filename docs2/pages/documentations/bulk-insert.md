@@ -20,7 +20,7 @@ context.BulkInsert(invoices, options => options.IncludeGraph = true);
 | SaveChanges     | 1,200 ms       | 2,400 ms       | 6,000 ms       |
 | BulkInsert      | 50 ms          | 55 ms          | 75 ms          |
 
-[Try this benchmark online](https://dotnetfiddle.net/pSpD10)
+[Try it in EF6](https://dotnetfiddle.net/pSpD10) | [Try it in EF Core](https://dotnetfiddle.net/ttbri7)
 
 > HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
