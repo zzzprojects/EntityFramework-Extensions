@@ -174,8 +174,8 @@ info@zzzprojects.com
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `BulkInsert<T>(items)` | Bulk insert entities in your database. | [Try it](https://dotnetfiddle.net/ShIYXu) |
-| `BulkInsert<T>(items, options)` | Bulk insert entities in your database.  | [Try it](https://dotnetfiddle.net/NBVSTZ) |
+| `BulkInsert<T>(items)` | Bulk insert entities in your database. | [EF6](https://dotnetfiddle.net/ShIYXu) / [EFCore](https://dotnetfiddle.net/n0p2IF)|
+| `BulkInsert<T>(items, options)` | Bulk insert entities in your database.  | [EF6](https://dotnetfiddle.net/NBVSTZ) / [EFCore](https://dotnetfiddle.net/09b2zo)|
 | `BulkInsertAsync<T>(items)` | Bulk insert entities asynchronously in your database. | |
 | `BulkInsertAsync<T>(items, cancellationToken)` | Bulk insert entities asynchronously in your database. | |
 | `BulkInsertAsync<T>(items, options, cancellationToken)` | Bulk insert entities asynchronously in your database. | |
