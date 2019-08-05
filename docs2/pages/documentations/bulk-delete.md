@@ -20,7 +20,7 @@ context.BulkDelete(customers, options => options.BatchSize = 100);
 | SaveChanges     | 1,200 ms       | 2,400 ms       | 6,000 ms       |
 | BulkDelete      | 50 ms          | 55 ms          | 75 ms         |
 
-[Try it](https://dotnetfiddle.net/qYjiA9)
+[Try it in EF6](https://dotnetfiddle.net/qYjiA9) | [Try it in EF Core](https://dotnetfiddle.net/9r3vLC)
 
 > HINT: A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
