@@ -1,6 +1,6 @@
 - Main Features
-   - [Bulk SaveChanges](bulk-savechanges.md)
    - [Batch SaveChanges](batch-savechanges.md)
+   - [Bulk SaveChanges](bulk-savechanges.md)
    - [Bulk Insert](bulk-insert.md)
    - [Bulk Update](bulk-update.md)
    - [Bulk Delete](bulk-delete.md)

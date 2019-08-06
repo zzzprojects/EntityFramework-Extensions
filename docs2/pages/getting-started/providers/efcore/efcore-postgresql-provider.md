@@ -24,7 +24,7 @@ You can also install EFE by right-clicking on your project in Solution Explorer 
 
 Search for **Z.EntityFramework.Extensions** and install the latest version by pressing the install button. It will also install [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/), it doesn't have additional logic that won't apply to all scenarios.
 
-For example, EF Core will need to know what database or datastore you plan on working with and those providers are in individual packages.
+For example, EF Core will need to know what database or datastore you plan on working with and who those providers are in individual packages.
 
 ## Register EF Core Provider
 
@@ -34,7 +34,7 @@ For PostgreSQL, we need to install [Npgsql.EntityFrameworkCore.PostgreSQL](https
 PM> Install-Package Npgsql.EntityFrameworkCore.PostgreSQL
 ```
 
-Now you are ready to start your application.
+Now, you are ready to start your application.
  
  ## Create Data Model
  

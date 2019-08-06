@@ -110,7 +110,7 @@ The database context class provides the main functionality to coordinate Entity 
  - In your code, you specify which entities are included in the data model. 
  - You can also customize certain Entity Framework behavior. 
 
-So let's add a new `BookStore` class which will inherit the `DbContext` class.
+So, let's add a new `BookStore` class which will inherit the `DbContext` class.
 
 ```csharp
 public class BookStore : DbContext
@@ -145,7 +145,7 @@ If you don't specify a connection string or the name of one explicitly, Entity F
 
 ### Connectionn String
 
-Now we need to configure our PostgreSQL database, so let's open the application `App.config` file and add a connectionStrings element.
+Now, we need to configure our PostgreSQL database, so let's open the application `App.config` file and add a connectionStrings element.
 
 ```csharp
 <connectionStrings>
@@ -157,7 +157,7 @@ The `providerName` attribute in the connection string definition pointing to the
 
 ## Create Database using Migration
 
-Now to create a database using migrations from your model, run the following command in **Package Manager Console.**
+Now, to create a database using migrations from your model, run the following command in **Package Manager Console.**
 
 ```csharp
 Add-Migration Initial

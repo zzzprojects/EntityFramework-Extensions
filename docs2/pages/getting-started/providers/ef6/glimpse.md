@@ -75,9 +75,9 @@ The database context class provides the main functionality to coordinate Entity 
 
  - You create this class by deriving from the `System.Data.Entity.DbContext` class. 
  - In your code, you specify which entities are included in the data model. 
- - You can also customize certain Entity Framework behavior. 
+ - You can also customize certain Entity Framework behaviors. 
 
-So let's create a folder DAL (Data Access Layer) in your project and create a new class file named **BookStore.cs**, and replace the following code.
+So, let's create a folder DAL (Data Access Layer) in your project and create a new class file named **BookStore.cs**, and replace the following code.
 
 ```csharp
 public class BookStore : DbContext
