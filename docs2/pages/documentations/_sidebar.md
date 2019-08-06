@@ -65,7 +65,7 @@
    - [Pre Bulk Insert](events/pre-bulk-insert.md)
    - [Pre Bulk Merge](events/pre-bulk-merge.md)
    - [Pre Bulk SaveChanges](events/pre-bulk-save-changes.md)
-   - [Pre Bulk SaveSynchronize](events/pre-bulk-save-synchronize.md.md)
+   - [Pre Bulk SaveSynchronize](events/pre-bulk-save-synchronize.md)
    - [Pre Bulk Update](events/pre-bulk-update.md)
 - Utilities
    - [Delete ByKey](utilities/delete-by-key.md)
