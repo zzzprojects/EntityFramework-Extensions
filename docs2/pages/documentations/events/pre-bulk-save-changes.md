@@ -11,8 +11,6 @@ EntityFrameworkManager.PreBulkSaveChanges = ctx =>
 
     foreach (var change in modifiedEntities)
     {
-        var objectStateEntry = ((IObjectContextAdapter)ctx).ObjectContext.ObjectStateManager.GetObjectStateEntry(change.Entity);
-
         if (objectStateEntry.State == EntityState.Added)
         {
             change.CurrentValues["CreatedDate"] = DateTime.Now;
