@@ -16,6 +16,6 @@ using (var context = new EntityContext())
     );
 }
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/L1Wvep' %}
+[Try it in EF6](https://dotnetfiddle.net/L1Wvep) | [Try it in EF Core](https://dotnetfiddle.net/FZFpec)
 
 It will update those records for which the `Login` and `Password` already exist in the database and all the new records will be inserted to the database. 
