@@ -9,7 +9,8 @@ The `BatchDelayInterval` gets or sets a delay in milliseconds to wait between ba
 ```csharp
 context.BulkInsert(list, options => options.BatchDelayInterval = 100);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/65v3k3' %}
+
+[Try it in EF6](https://dotnetfiddle.net/65v3k3) | [Try it in EF Core](https://dotnetfiddle.net/lil9tq)
 
 You can also set batch size globally using `EntityFrameworkManager.BulkOperationBuilder`.
 
