@@ -22,5 +22,7 @@ using (var context = new EntityContext())
 }
 ```
 
+[Try it in EF6](https://dotnetfiddle.net/3js97I) | [Try it in EF Core](https://dotnetfiddle.net/wAEaSb)
+
 - It will merge data for `CustomerID`, `Description` and `IsActive` fields and all other properties will remain `NULL` in the database.
 - It will also update the list by updating only the specified properties from the database.
