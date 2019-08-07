@@ -21,4 +21,4 @@ using (var context = new EntityContext())
  - When the list was updated from the database, it replace the value of `Name` and `IsActive` from the database and `Name` is `NULL` to the database.
  - The `Description` property is unchanged because it is not updated from the database.
 
-{% include component-try-it.html href='https://dotnetfiddle.net/se3Vjk' %}
+[Try it in EF6](https://dotnetfiddle.net/se3Vjk) | [Try it in EF Core](https://dotnetfiddle.net/m2GVIU)
