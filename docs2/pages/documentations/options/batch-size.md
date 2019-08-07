@@ -9,7 +9,7 @@ The `BatchSize` property gets or sets the number of records to use in a batch. T
 ```csharp
 context.BulkSaveChanges(options => options.BatchSize = 1000);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/BThvHs' %}
+[Try it in EF6](https://dotnetfiddle.net/BThvHs) | [Try it in EF Core](https://dotnetfiddle.net/qonEbL)
 
  - A batch is complete when `BatchSize` rows have been processed or there are no more rows to send to the destination data source.
  - The default value is zero which indicates that each operation is a single batch.
