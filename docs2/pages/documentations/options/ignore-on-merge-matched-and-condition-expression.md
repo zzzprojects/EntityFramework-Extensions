@@ -33,6 +33,6 @@ using (var context = new EntityContext())
 }
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/ooQW8i' %}
+[Try it in EF6](https://dotnetfiddle.net/ooQW8i) | [Try it in EF Core](https://dotnetfiddle.net/67SGs7)
 
  - It will update all records except for the last one because the `CreatedDate` property is updated for the last record.
