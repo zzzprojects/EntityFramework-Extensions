@@ -9,7 +9,7 @@ The `BatchTimeout` gets or sets the maximum time in seconds to wait for a batch 
 ```csharp
 context.BulkSaveChanges(options => options.BatchTimeout = 180);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/HDmeWa' %}
+[Try it in EF6](https://dotnetfiddle.net/HDmeWa) | [Try it in EF Core](https://dotnetfiddle.net/Uvvffx)
 
 You can also set batch size globally using `EntityFrameworkManager.BulkOperationBuilder`.
 
