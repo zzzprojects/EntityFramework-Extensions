@@ -17,4 +17,4 @@ using (var context = new EntityContext())
     });
 }
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/ggtMXb' %}
+[Try it in EF6](https://dotnetfiddle.net/ggtMXb) | [Try it in EF Core](https://dotnetfiddle.net/SFCCCZ)
