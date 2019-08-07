@@ -17,7 +17,7 @@ using (var context = new EntityContext())
 }
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/lwF8DZ' %}
+[Try it in EF6](https://dotnetfiddle.net/lwF8DZ) | [Try it in EF Core](https://dotnetfiddle.net/5wiH5w)
 
 The key is required for operation such as `BulkUpdate` and `BulkMerge`.
 
@@ -37,7 +37,7 @@ using (var context = new EntityContext())
     );
 }
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/NlNP7s' %}
+[Try it in EF6](https://dotnetfiddle.net/NlNP7s) | [Try it in EF Core](https://dotnetfiddle.net/ZIHjEx)
 
  - It will insert data to `Name` and `IsActive` columns as specified in `ColumnInputExpression`.
  - The data in `Description` property is ignored during bulk operation.
