@@ -17,8 +17,9 @@ using (var context = new EntityContext())
 } 
 ```
 
+[Try it in EF6](https://dotnetfiddle.net/se3Vjk) | [Try it in EF Core](https://dotnetfiddle.net/m2GVIU)
+
  - Now as a result, you will see the `Name` property is `null`, that is because we have inserted data only for `IsActive`, and the `Name` field remains null in the database.
  - When the list was updated from the database, it replace the value of `Name` and `IsActive` from the database and `Name` is `NULL` to the database.
  - The `Description` property is unchanged because it is not updated from the database.
 
-[Try it in EF6](https://dotnetfiddle.net/se3Vjk) | [Try it in EF Core](https://dotnetfiddle.net/m2GVIU)
