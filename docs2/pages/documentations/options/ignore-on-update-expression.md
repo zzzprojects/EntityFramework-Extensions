@@ -28,6 +28,6 @@ using (var context = new EntityContext())
 }
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/rKFA73' %}
+[Try it in EF6](https://dotnetfiddle.net/rKFA73) | [Try it in EF Core](https://dotnetfiddle.net/JdDCHB)
 
  - It will update data in all the columns except for the `CreatedDate` column because `CreatedDate` property is specified in `IgnoreOnUpdateExpression`. 
