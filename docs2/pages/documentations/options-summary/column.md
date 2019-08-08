@@ -24,7 +24,6 @@
 |[IgnoreOnUpdateExpression](../options/ignore-on-update-expression.md)                                                                 | It allows you to ignore some columns when the `BulkUpdate` method is executed.                                                                                                            |
 |[IgnoreOnUpdateMatchedAndConditionExpression](../options/ignore-on-update-matched-and-condition-expression.md)                        | Inverse of `UpdateMatchedAndConditionExpression` which allows to perform the bulk update operation if the specified property value is not equal to the database value.                 |
 |[IgnoreOnUpdateMatchedAndOneNotConditionExpression](../options/ignore-on-update-matched-and-one-not-condition-expression.md)          | Inverse of `MergeMatchedAndNotConditionExpression` which allows you to perform the bulk update operation if the specified property value is not equal to the database value.           |
-|[MergeMatchedAndConditionExpression](../options/merge-matched-and-condition-expression.md)                                            | It allows you to perform only the `UPDATE` in the `BulkMerge` if the specified property value is equal to the database value. |
 
 # Merge Matched
 
