@@ -1,6 +1,6 @@
 - Main Features
-   - [Bulk SaveChanges](bulk-savechanges.md)
    - [Batch SaveChanges](batch-savechanges.md)
+   - [Bulk SaveChanges](bulk-savechanges.md)
    - [Bulk Insert](bulk-insert.md)
    - [Bulk Update](bulk-update.md)
    - [Bulk Delete](bulk-delete.md)
@@ -57,10 +57,12 @@
    - [Delete from Query](delete-from-query.md)
    - [Update from Query](update-from-query.md)
 - Utilities
+   - [Delete ByKey](utilities/delete-by-key.md)
+   - [Delete Range ByKey](utilities/delete-range-by-key.md)
+   - [ToSelfHierarchyList](utilities/to-self-hierarchy-list.md)
    - [EF Core - DbCommandInterceptor](command-interception-in-ef-core.md)
    - [EF Core - DbConnectionInterceptor](connection-interception-in-ef-core.md)
    - [EF Core - DbTransactionInterceptor](transaction-interception-in-ef-core.md)
-   - [ToSelfHierarchyList](utilities/to-self-hierarchy-list.md)
 - C# Eval Expression
    - [LINQ Dynamic](eval-expressions/linq-dynamic.md)
    - [Eval.Compile](eval-expressions/eval-compile.md)

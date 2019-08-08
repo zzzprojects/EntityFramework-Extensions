@@ -17,11 +17,12 @@ var affectedRows = context.BatchSaveChanges();
 [Try it](https://dotnetfiddle.net/hHLUnp)
 
 ### Performance Comparison
+_On average, people report a performance improvement of 500%._
 
-| Operations       | 100 Entities | 200 Entities | 500 Entities |
+| Operations       | 50 Entities  | 200 Entities | 500 Entities |
 | :--------------- | -----------: | -----------: | -----------: |
-| SaveChanges      | 125 ms       | 250 ms       | 600 ms       |
-| BatchSaveChanges | 30 ms        | 50 ms        | 125 ms       |
+| SaveChanges      | 65 ms        | 250 ms       | 600 ms       |
+| BatchSaveChanges | 25 ms        | 50 ms        | 125 ms       |
 
 [Try this benchmark online](https://dotnetfiddle.net/qCVyzm)
 

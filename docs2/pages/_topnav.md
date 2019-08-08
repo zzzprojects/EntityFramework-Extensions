@@ -1,6 +1,6 @@
 - [Getting Started](getting-started/overview.md)
 - Documentation
-	- [Documentation](documentations/bulk-savechanges.md)
+	- [Documentation](documentations/batch-savechanges.md)
 	- [Articles](articles/bulk-insert-vs-bulk-savechanges.md)
 	- [Troubleshooting](troubleshooting/trial-period-expired-exception.md)
 	- [Release Notes](https://github.com/zzzprojects/EntityFramework-Extensions/releases)
