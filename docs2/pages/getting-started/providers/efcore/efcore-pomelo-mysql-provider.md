@@ -104,7 +104,7 @@ Once these packages are installed, run the following command in **Package Manage
 Add-Migration Initial
 ```
 
-This command scaffold a migration to create the initial set of tables for your model. When it is executed successfully, then run the following command.
+This command scaffold a migration to create the initial set of tables for your model. When it is executed successfully, run the following command.
 
 ```csharp
 Update-Database
@@ -112,7 +112,7 @@ Update-Database
 
 This command applies the new migration to the database and creates the database before applying migrations.
 
-Now, we are done with the required classes and database creation, let's add some authors and books records to the database and then retrieve it.
+Now, we are done with the required classes and database creation, let's add some authors and book records to the database and then retrieve them.
 
 ```csharp
 using (var context = new BookStore())
