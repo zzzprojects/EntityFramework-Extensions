@@ -18,7 +18,7 @@ using (var context = new EntityContext())
 }
 ```
 
-[Try it in EF6](https://dotnetfiddle.net/ypce0Y) | [Try it in EF Core](https://dotnetfiddle.net/NUwq90)
+[Try it in EF6](https://dotnetfiddle.net/ypce0Y) | [Try it in EF Core](https://dotnetfiddle.net/noelqT)
 
  - It will update all the records except for the last record.
  - The `ModifiedDate` property is only updated for the first two records and not for the last record.
