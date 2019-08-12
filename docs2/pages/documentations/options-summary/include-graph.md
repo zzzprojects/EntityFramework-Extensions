@@ -33,7 +33,7 @@ using (var context = new EntityContext())
 }
 
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/spN4T5' %}
+[Try it in EF6](https://dotnetfiddle.net/spN4T5) | [Try it in EF Core](https://dotnetfiddle.net/967y9H)
 
  - It will insert a list of invoices including all the invoices items for each invoice.
 
@@ -62,7 +62,7 @@ ctx.BulkMerge(users, options =>
 	};
 });
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/0uW3tw' %}
+[Try it in EF6](https://dotnetfiddle.net/0uW3tw) | [Try it in EF Core](https://dotnetfiddle.net/qcjjP0)
 
 ### ReadOnly
 
@@ -83,7 +83,7 @@ ctx.BulkMerge(users, options =>
 	};Muha
 });
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/UgwDDk' %}
+[Try it in EF6](https://dotnetfiddle.net/UgwDDk) | [Try it in EF Core](https://dotnetfiddle.net/LQnvGP)
 
 
 {% include section-faq-begin.html %}
