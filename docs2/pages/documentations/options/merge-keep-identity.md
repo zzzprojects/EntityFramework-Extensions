@@ -16,7 +16,7 @@ using (var context = new EntityContext())
     context.BulkMerge(list, options => options.MergeKeepIdentity = true);
 }
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/I00rLw' %}
+[Try it in EF6](https://dotnetfiddle.net/I00rLw) | [Try it in EF Core](https://dotnetfiddle.net/MZuywh)
 
  - The `IdentityInt` column for existing records will not be updated, only for the new records, it will preserve the specified value.
 
