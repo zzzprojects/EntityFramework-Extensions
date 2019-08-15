@@ -24,6 +24,6 @@ EntityFrameworkManager.PreBulkSynchronize = (ctx, obj) =>
 };
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/3nTyrH' %}
+[Try it in EF6](https://dotnetfiddle.net/EbuRR2) | [Try it in EF Core](https://dotnetfiddle.net/GTBAYt)
 
 In the `PreBulkSynchronize` event, the `CreatedDate` for new customers and `ModifiedDate` property for existing customers is set to `DateTime.Now` before the data is synchronized to the database.

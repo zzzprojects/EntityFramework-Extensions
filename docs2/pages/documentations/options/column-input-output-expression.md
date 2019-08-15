@@ -7,20 +7,21 @@ The key is required for operation such as `BulkUpdate` and `BulkMerge`. The foll
 ```csharp
 using (var context = new EntityContext())
 {
-    list = context.Customers.ToList();
-    list.Add(new Customer() { Name ="Customer_C", Description = "Description"});
-    list.ForEach(x => { x.IsActive = false; x.Name += "_NotMerge"; x.Description += "_Merge"; });
+    List<Customer> list =  new List<Customer>() { new Customer() { Name ="Customer_A", Description = "Description" , IsActive = false }, 
+    new Customer()  { Name ="Customer_B", Description = "Description", IsActive = true },
+    new Customer() { Name ="Customer_C", Description = "Description" , IsActive = true }};
 			
     context.BulkMerge(list, options => 
         options.ColumnInputOutputExpression = c => new 
 	{
-	    c.CustomerID, 
 	    c.Description, 
 	    c.IsActive
 	}
     );	
 }
 ```
+
+[Try it in EF6](https://dotnetfiddle.net/3js97I) | [Try it in EF Core](https://dotnetfiddle.net/wAEaSb)
 
 - It will merge data for `CustomerID`, `Description` and `IsActive` fields and all other properties will remain `NULL` in the database.
 - It will also update the list by updating only the specified properties from the database.

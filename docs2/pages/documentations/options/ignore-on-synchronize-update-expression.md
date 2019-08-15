@@ -36,7 +36,7 @@ using (var context = new EntityContext())
 }
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/ebEAZa' %}
+[Try it in EF6](https://dotnetfiddle.net/ebEAZa) | [Try it in EF Core](https://dotnetfiddle.net/kXoLcy)
 
  - It updates all the columns of an existing records except for the `CreatedDate` column because `CreatedDate` property is specified in `IgnoreOnSynchronizeUpdateExpression`. 
  - It will insert non-matching rows that exist in the source (`customers` list).

@@ -18,7 +18,7 @@ context.BulkSaveChanges(options =>
 });
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/Z2klLQ' %}
+[Try it in EF6](https://dotnetfiddle.net/Z2klLQ) | [Try it in EF Core](https://dotnetfiddle.net/jIz1br)
 
 ## Purpose
 Getting database `log` can often be useful for debugging and see what has been executed under the hood by the library.

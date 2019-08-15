@@ -18,7 +18,7 @@ using (var context = new EntityContext())
     context.BulkInsert(list, options => options.InsertKeepIdentity = true);
 }
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/ZWLodr' %}
+[Try it in EF6](https://dotnetfiddle.net/ZWLodr) | [Try it in EF Core](https://dotnetfiddle.net/klcb9Y)
 
 ## Purpose
 The `InsertKeepIdentity` option let you keep the source identity value when `inserting`.

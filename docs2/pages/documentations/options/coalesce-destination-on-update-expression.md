@@ -17,7 +17,7 @@ using (var context = new EntityContext())
 }
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/oJgbnd' %}
+[Try it in EF6](https://dotnetfiddle.net/oJgbnd) | [Try it in EF Core](https://dotnetfiddle.net/DVfHF4)
 
  - It will update the value in the `Description` column because the database value is null.
  - The value for `Name` is not null so it will not update the `Name` column.

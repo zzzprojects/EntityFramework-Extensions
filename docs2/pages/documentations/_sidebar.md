@@ -56,11 +56,22 @@
 - Batch Operations
    - [Delete from Query](delete-from-query.md)
    - [Update from Query](update-from-query.md)
+- Events
+   - [Bulk Operation Executed](events/bulk-operation-executed.md)
+   - [Bulk Operation Executing](events/bulk-operation-executing.md)
+   - [Post Configuration](events/post-configuration.md)
+   - [Pre Batch SaveChanges](events/pre-batch-save-changes.md)
+   - [Pre Bulk Delete](events/pre-bulk-delete.md)
+   - [Pre Bulk Insert](events/pre-bulk-insert.md)
+   - [Pre Bulk Merge](events/pre-bulk-merge.md)
+   - [Pre Bulk SaveChanges](events/pre-bulk-save-changes.md)
+   - [Pre Bulk SaveSynchronize](events/pre-bulk-save-synchronize.md)
+   - [Pre Bulk Update](events/pre-bulk-update.md)
 - Utilities
    - [Delete ByKey](utilities/delete-by-key.md)
    - [Delete Range ByKey](utilities/delete-range-by-key.md)
    - [ToSelfHierarchyList](utilities/to-self-hierarchy-list.md)
-   - [EF Core - DbCommandInterceptor](command-interception-in-ef-core.md)
+   - [EF PostConfigurationCore - DbCommandInterceptor](command-interception-in-ef-core.md)
    - [EF Core - DbConnectionInterceptor](connection-interception-in-ef-core.md)
    - [EF Core - DbTransactionInterceptor](transaction-interception-in-ef-core.md)
 - C# Eval Expression
