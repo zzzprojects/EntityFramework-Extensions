@@ -16,7 +16,7 @@ context.Customers
 // UPDATE customers by id
 context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {IsActive = false});
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/9hAsuQ' %}
+[Try it in EF6](https://dotnetfiddle.net/9hAsuQ) | [Try it in EF Core](https://dotnetfiddle.net/ASfpQe)
 
 > DANGER: DO NOT use with EF Core if Client Evaluation is enabled (See [Limitations](#limitation))
 
