@@ -23,19 +23,19 @@ You can also install EFE by right-clicking on your project in Solution Explorer 
 
 Search for **Z.EntityFramework.Extensions** and install the latest version by pressing the install button. It will also install [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/), it doesn't have additional logic that won't apply to all scenarios.
 
-For example, EF Core will need to know what database or datastore you plan on working with and those providers are in individual packages.
+For example, EF Core will need to know what database or datastore you plan on working with and who those providers are in individual packages.
 
 ## Register EF Core Provider
 
 For DevArt MySql, first, we need to install [dotConnect for MySQL Professional Trial](https://www.devart.com/dotconnect/mysql/download.html) to start your 30 days trial period.
 
-Once the installation is completed then install [Devart.Data.MySql.EFCore](https://www.nuget.org/packages/Devart.Data.MySql.EFCore) in your project using **Package Manager Console** window. It will get all the packages required for EF Core.
+Once the installation is completed, install [Devart.Data.MySql.EFCore](https://www.nuget.org/packages/Devart.Data.MySql.EFCore) in your project using **Package Manager Console** window. It will get all the packages required for EF Core.
 
 ```csharp
 PM> Install-Package Devart.Data.MySql.EFCore
 ```
 
-Now you are ready to start your application.
+Now, you are ready to start your application.
  
 ## Create Data Model
  
@@ -109,7 +109,7 @@ Once these packages are installed, run the following command in **Package Manage
 Add-Migration Initial
 ```
 
-This command scaffold a migration to create the initial set of tables for your model. When it is executed successfully, then run the following command.
+This command scaffold a migration to create the initial set of tables for your model. When it is executed successfully, run the following command.
 
 ```csharp
 Update-Database
@@ -117,7 +117,7 @@ Update-Database
 
 This command applies the new migration to the database and creates the database before applying migrations.
 
-Now, we are done with the required classes and database creation, let's add some authors and books records to the database and then retrieve it.
+Now, we are done with the required classes and database creation, let's add some authors and book records to the database and then retrieve them.
 
 ```csharp
 using (var context = new BookStore())
@@ -159,7 +159,7 @@ using (var context = new BookStore())
         }
     };
 
-    //IncludeGraph allow you to INSERT/UPDATE/MERGE entities by including the child entities graph.
+    //IncludeGraph allows you to INSERT/UPDATE/MERGE entities by including the child entities graph.
     context.BulkInsert(authors, options => options.IncludeGraph = true );
 }
 

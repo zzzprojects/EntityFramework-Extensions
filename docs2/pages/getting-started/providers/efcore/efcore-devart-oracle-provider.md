@@ -35,7 +35,7 @@ Once the installation is completed then install [Devart.Data.Oracle.EFCore](http
 PM> Install-Package Devart.Data.Oracle.EFCore
 ```
 
-Now you are ready to start your application.
+Now, you are ready to start your application.
  
 ## Create Data Model
  
@@ -117,7 +117,7 @@ Update-Database
 
 This command applies the new migration to the database and creates the database before applying migrations.
 
-Now, we are done with the required classes and database creation, let's add some authors and books records to the database and then retrieve it.
+Now, we are done with the required classes and database creation, let's add some authors and book records to the database and then retrieve them.
 
 ```csharp
 using (var context = new BookStore())
@@ -159,7 +159,7 @@ using (var context = new BookStore())
         }
     };
 
-    //IncludeGraph allow you to INSERT/UPDATE/MERGE entities by including the child entities graph.
+    //IncludeGraph allows you to INSERT/UPDATE/MERGE entities by including the child entities graph.
     context.BulkInsert(authors, options => options.IncludeGraph = true );
 }
 

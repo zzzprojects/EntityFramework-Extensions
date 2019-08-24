@@ -74,7 +74,7 @@ Updating thousands of entities for a file importation is a typical scenario.
 
 The `SaveChanges` method makes it quite impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to update. So, if you need to update 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
 
-The `BulkUpdate` in counterpart requires the minimum database round-trips as possible. For example under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then an `UPDATE` from the temporary table to the destination table is performed which is the fastest way available.
+The `BulkUpdate` in counterpart requires the minimum database round-trips possible. For example, under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then an `UPDATE` from the temporary table to the destination table is performed which is the fastest way available.
 
 ## Real Life Scenarios
 
@@ -99,7 +99,7 @@ context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = c 
 ### Update with related child entities (Include Graph)
 You want to update entities but also automatically insert related child entities.
 
-- `IncludeGraph`: This option lets you to automatically update all entities part of the graph.
+- `IncludeGraph`: This option lets you automatically update all entities part of the graph.
 - `IncludeGraphBuilder`: This option lets you customize how to update entities for a specific type.
 
 ```csharp

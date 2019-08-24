@@ -76,9 +76,9 @@ The `AddOrUpdate` method performs a database round-trip for every entity to chec
 
 The `SaveChanges` method performs one database round-trip for every entity to update.
 
-So if you need to merge 10,000 entities, 20,000 database round-trips will be performed + 10,000 `DetectChanges` calls which is **INSANELY** slow.
+So, if you need to merge 10,000 entities, 20,000 database round-trips will be performed + 10,000 `DetectChanges` calls which is **INSANELY** slow.
 
-The `BulkMerge` in counterpart requires the minimum database round-trips as possible. For example, under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then a `MERGE` from the temporary table to the destination table is performed which is the fastest way available.
+The `BulkMerge` in counterpart requires the minimum number of database round-trips possible. For example, under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then a `MERGE` from the temporary table to the destination table is performed which is the fastest way available.
 
 ## Real Life Scenarios
 
@@ -116,7 +116,7 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = c =
 ### Merge with related child entities (Include Graph)
 You want to merge entities but also automatically merge related child entities.
 
-- `IncludeGraph`: This option lets you to automatically merge all entities part of the graph.
+- `IncludeGraph`: This option lets you automatically merge all entities part of the graph.
 - `IncludeGraphBuilder`: This option lets you customize how to merge entities for a specific type.
 
 ```csharp

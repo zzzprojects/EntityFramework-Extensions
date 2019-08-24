@@ -53,7 +53,7 @@ You can always contact us directly:
 - If your question is not suited for the Issue Tracker
 - If your message contains private information
 
-### I need a feature your library is  lacking. Can I recommend it?
+### I need a special feature in your library. Can I recommend it?
 If your project requests a feature we haven’t thought of, please let us know using our [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues){:target="_blank"}
 
 We will develop and implement it as soon as possible, sometimes the same day. You could also contact us directly:
@@ -62,7 +62,7 @@ We will develop and implement it as soon as possible, sometimes the same day. Yo
 - If your question is not suited for the Issue Tracker
 - If your message contains private information
 
-### I'm not fluent in English! How can we communicate?
+### I am not good in English! How can we communicate?
 
 We prefer to keep all communications in either:
 - English

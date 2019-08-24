@@ -78,9 +78,9 @@ context.BulkInsert(customers, options => {
 ### Why BulkInsert is faster than SaveChanges?
 Inserting thousands of entities for an initial load or a file importation is a typical scenario.
 
-The `SaveChanges` method makes it quite slow/impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to insert. So if you need to insert 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
+The `SaveChanges` method makes it quite slow/impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to insert. So, if you need to insert 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
 
-The `BulkInsert` in counterpart requires the minimum database round-trips as possible. For example, under the hood for SQL Server, a `SqlBulkCopy` is performed to insert 10,000 entities which is the fastest way available.
+The `BulkInsert` in counterpart requires the minimum number of database round-trips possible. For example, under the hood for SQL Server, a `SqlBulkCopy` is performed to insert 10,000 entities which is the fastest way available.
 
 ## Real Life Scenarios
 
@@ -105,10 +105,10 @@ context.BulkInsert(customers, options => options.IgnoreOnInsertExpression = c =>
 ```
 [Try it in EF6](https://dotnetfiddle.net/TUyT7A) | [Try it in EF Core](https://dotnetfiddle.net/B32EVO)
 
-### Insert only if the entity not already exists
+### Insert only if the entity does not already exists
 You want to insert entities but only those that don't already exist in the database.
 
-- `InsertIfNotExists`: This option let you insert only entity that doesn't already exists.
+- `InsertIfNotExists`: This option let you insert only entities that doesn't already exists.
 - `PrimaryKeyExpression`: This option let you customize the key to use to check if the entity already exists or not.
 
 ```csharp
@@ -133,7 +133,7 @@ context.BulkInsert(invoices, options => options.IncludeGraph = true);
 ### Insert with future action
 You want to insert entities, but you want to defer the execution.
 
-By default, `BulkInsert` is an immediate operation. That mean, it's executed as soon as you call the method.
+By default, `BulkInsert` is an immediate operation. That means, it's executed as soon as you call the method.
 
 `FutureAction`: This option let you defer the execution of a Bulk Insert.
 `ExecuteFutureAction`: This option trigger and execute all pending `FutureAction`.
