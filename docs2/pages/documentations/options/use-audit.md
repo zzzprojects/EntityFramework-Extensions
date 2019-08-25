@@ -16,7 +16,7 @@ context.BulkSaveChanges(options =>
 });
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/cIHYyb' %}
+[Try it in EF6](https://dotnetfiddle.net/cIHYyb) | [Try it in EF Core](https://dotnetfiddle.net/WcLZPP)
 
 ## Purpose
 Logging old and new values is often useful to keep a history of changes in the database or file.

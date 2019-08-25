@@ -24,6 +24,6 @@ EntityFrameworkManager.PreBulkMerge = (ctx, obj) =>
 };
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/YsLVnQ' %}
+[Try it in EF6](https://dotnetfiddle.net/YsLVnQ) | [Try it in EF Core](https://dotnetfiddle.net/SK2Prc)
 
 In the `PreBulkMerge` event, the `CreatedDate` for new customers and `ModifiedDate` property for existing customers is set to `DateTime.Now` before the data is merged into the database.

@@ -28,4 +28,4 @@ using (var context = new EntityContext())
     });
 }
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/Z0xM1L' %}
+[Try it in EF6](https://dotnetfiddle.net/Z0xM1L) | [Try it in EF Core](https://dotnetfiddle.net/Spifzy)

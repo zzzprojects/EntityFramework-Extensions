@@ -5,7 +5,6 @@ The `ColumnSynchronizeDeleteKeySubsetExpression` allows you to synchronize (inse
 The following example synchronizes customers of `Type` equal to "1" by specifying the customer name as a key. 
 
 ```csharp
-
 var customers = new List<Customer>();
 customers.Add(new Customer() { Name = "Carson", Type = 1, Description = "Updated_Description of Carson", IsActive = false });
 customers.Add(new Customer() { Name = "Alexander", Type = 1, Description = "Description of Alexander", IsActive = false });
@@ -19,7 +18,7 @@ using (var context = new EntityContext())
 }
 ```
 
-{% include component-try-it.html href='https://dotnetfiddle.net/y5snLt' %}
+[Try it in EF6](https://dotnetfiddle.net/y5snLt) | [Try it in EF Core](https://dotnetfiddle.net/clr84M)
 
 A synchronize is a mirror operation from the data source to the database. All rows that match the entity key are `UPDATED`, non-matching rows that exist from the source are `INSERTED`, non-matching rows that exist in the database are `DELETED`.
 

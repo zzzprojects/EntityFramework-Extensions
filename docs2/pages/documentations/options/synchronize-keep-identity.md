@@ -15,7 +15,7 @@ using (var context = new EntityContext())
     context.BulkMerge(list, options => options.SynchronizeKeepidentity = true);
 }
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/JBYGfz' %}
+[Try it in EF6](https://dotnetfiddle.net/JBYGfz) | [Try it in EF Core](https://dotnetfiddle.net/z3gbGG)
 
 ## Purpose
 The `SynchronizeKeepIdentity` option let you keep the source identity value when `synchronizing`.

@@ -20,7 +20,7 @@ using (var context = new EntityContext())
     });
 }
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/tvZXih' %}
+[Try it in EF6](https://dotnetfiddle.net/tvZXih) | [Try it in EF Core](https://dotnetfiddle.net/DoD5hE)
 
  - It will update the record of "Customer_A" because it already exists in the database.
  - The data for "Customer_B" is inserted to the database as a new record.
