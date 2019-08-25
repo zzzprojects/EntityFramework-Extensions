@@ -33,7 +33,7 @@
 {:.show}
 Contact us directly: info@zzzprojects.com
 
-Whether you need more personal help to get started or you just wanted to give us your opinion on the library, we love to hear from you!
+Whether you need more personal help to get started or only want to give us your opinion on the library, we love to hear from you!
 
 You can also find some answers on:
 - [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues){:target="_blank"}
@@ -47,20 +47,16 @@ Make sure to include:
 - Entity Framework Extensions Version
 - Database Provider
 
-You can always contact us directly:
+You can always contact us directly if:
 
-- If you want a more personal answer
-- If your question is not suited for the Issue Tracker
-- If your message contains private information
+- You want a more personal answer
+- Your question is not suited for the Issue Tracker
+- Your message contains private information
 
 ### I need a special feature in your library. Can I recommend it?
 If your project requests a feature we haven’t thought of, please let us know using our [Issues Tracker](https://github.com/zzzprojects/EntityFramework-Extensions/issues){:target="_blank"}
 
-We will develop and implement it as soon as possible, sometimes the same day. You could also contact us directly:
-
-- If you want a more personal answer
-- If your question is not suited for the Issue Tracker
-- If your message contains private information
+We will develop and implement it as soon as possible, sometimes the same day. 
 
 ### I am not good in English! How can we communicate?
 
@@ -68,7 +64,7 @@ We prefer to keep all communications in either:
 - English
 - French
 
-But thanks for Google Translate, we can understand each other worldwide:
+But thanks to Google Translate, we can understand each other worldwide:
 - Chinese
 - Spanish
 - Hindi
