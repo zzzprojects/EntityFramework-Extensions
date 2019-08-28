@@ -45,7 +45,7 @@ context.BulkSaveChanges(options => options.BatchSize = 100);
 #### Why BatchSaveChanges is faster than SaveChanges?
 The `SaveChanges` method makes it quite slow/impossible to handle a scenario that requires to save a lot of entities due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to insert. So, if you need to insert 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
 
-The `BulkSaveChanges` in counterpart requires the minimum database round-trips as possible. By using Bulk Operations, fewer commands are executed which lead to better performance.
+The `BulkSaveChanges` in counterpart requires the minimum number of database round-trips possible. By using Bulk Operations, fewer commands are executed which lead to better performance.
 
 #### When should I use BulkSaveChanges over SaveChanges?
 Whenever you have more than one entity to save. The `BulkSaveChanges` is almost as fast as the `SaveChanges` for one entity, but becomes way faster as the number of entities to save grows.

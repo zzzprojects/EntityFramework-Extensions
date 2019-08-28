@@ -18,8 +18,6 @@ context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {
 ```
 [Try it in EF6](https://dotnetfiddle.net/9hAsuQ) | [Try it in EF Core](https://dotnetfiddle.net/ASfpQe)
 
-> DANGER: DO NOT use with EF Core if Client Evaluation is enabled (See [Limitations](#limitation))
-
 ## Purpose
 `Updating` entities using `SaveChanges` normally requires loading them first in the `ChangeTracker`. These additional round-trips are often not necessary.
 
@@ -49,4 +47,4 @@ Other operations normally require one or multiple database round-trips which mak
 
 In other words, even if you put a filter, all rows tables could be potentially updated if the filter is made on the client-side.
 
-We always recommend to [disable the client evaluation](https://docs.microsoft.com/en-us/ef/core/querying/client-eval#optional-behavior-throw-an-exception-for-client-evaluation) to avoid performance issue in your application.
+We always recommend to [disable the client evaluation](https://docs.microsoft.com/en-us/ef/core/querying/client-eval#optional-behavior-throw-an-exception-for-client-evaluation) to avoid performance issues in your application.

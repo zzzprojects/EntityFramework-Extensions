@@ -70,9 +70,9 @@ context.BulkDelete(customers, options => options.BatchSize = 100);
 ### Why BulkDelete is faster than SaveChanges?
 Deleting thousands of entities for a file importation is a typical scenario.
 
-The `SaveChanges` method makes it quite impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to delete. So if you need to delete 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
+The `SaveChanges` method makes it quite impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` performs one database round-trip for every entity to delete. So, if you need to delete 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
 
-The `BulkDelete` in counterpart requires the minimum database round-trips as possible. For example under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then a `DELETE` from the temporary table to the destination table is performed which is the fastest way available.
+The `BulkDelete` in counterpart requires the minimum number of database round-trips possible. For example, under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then a `DELETE` from the temporary table to the destination table is performed which is the fastest way available.
 
 ## Real Life Scenarios
 
@@ -87,7 +87,7 @@ context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = c 
 ### Delete with future action
 You want to delete entities, but you want to defer the execution.
 
-By default, `BulkDelete` is an immediate operation. That mean, it's executed as soon as you call the method.
+By default, `BulkDelete` is an immediate operation. That means, it's executed as soon as you call the method.
 
 `FutureAction`: This option let you defer the execution of a Bulk Delete.
 `ExecuteFutureAction`: This option trigger and execute all pending `FutureAction`.

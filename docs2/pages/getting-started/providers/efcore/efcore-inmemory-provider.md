@@ -25,7 +25,7 @@ You can also install EFE by right-clicking on your project in Solution Explorer 
 
 Search for **Z.EntityFramework.Extensions** and install the latest version by pressing the install button. It will also install [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Z.EntityFramework.Extensions.EFCore/), it doesn't have additional logic that won't apply to all scenarios.
 
-For example, EF Core will need to know what database or datastore you plan on working with and those providers are in individual packages.
+For example, EF Core will need to know what database or datastore you plan on working with and who those providers are in individual packages.
 
 ## Register EF Core Provider
 
@@ -94,7 +94,7 @@ In EF Core, the DbContext has a virtual method called `OnConfiguring` which will
  - It will pass in an `optionsBuilder` instance which can be used to configure options for the `DbContext`.
  - The `optionsBuilder` has `UseInMemoryDatabase` method which expects a connection string as a parameter. 
 
-Now, we are done with the required classes, let's add some authors and books records to the `InMemory` database and then retrieve it.
+Now, we are done with the required classes, let's add some authors and books records to the `InMemory` database and then retrieve them.
 
 ```csharp
 using (var context = new BookStore())
