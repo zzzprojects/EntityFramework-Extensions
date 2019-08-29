@@ -15,6 +15,7 @@
       - [PostgreSQL](providers/ef6/postgresql-provider.md)
       - [Effort](providers/ef6/effort-provider.md)
       - [Glimpse](providers/ef6/glimpse.md)
+      - [Entity Framework Profiler](providers/ef6/ef-profiler.md)
    - EF Core
       - [SQL Server](providers/efcore/efcore-sql-server-provider.md)
       - [SQL Server Compact](providers/efcore/efcore-sql-server-compact-provider.md)
@@ -26,3 +27,4 @@
       - [Pomelo MySql](providers/efcore/efcore-pomelo-mysql-provider.md)
       - [DevArt MySql](providers/efcore/efcore-devart-mysql-provider.md)
       - [DevArt Oracle](providers/efcore/efcore-devart-oracle-provider.md)
+      - [Entity Framework Profiler](providers/efcore/efcore-profiler.md)
