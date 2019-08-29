@@ -18,7 +18,7 @@ context.BulkSaveChanges(options => options.BatchSize = 100);
 | Operations       | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :--------------- | -------------: | -------------: | -------------: |
 | SaveChanges      | 1,200 ms       | 2,400 ms       | 6,000 ms       |
-| BatchSaveChanges | 150 ms         | 225 ms         | 500 ms         |
+| BulkSaveChanges  | 150 ms         | 225 ms         | 500 ms         |
 
 [Try it in EF6](https://dotnetfiddle.net/4FLmNE) | [Try it in EF Core](https://dotnetfiddle.net/Oshg3S)
 
