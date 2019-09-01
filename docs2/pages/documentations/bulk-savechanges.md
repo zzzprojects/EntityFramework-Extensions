@@ -70,7 +70,7 @@ After a few thousands of entities, we recommend using `BulkSaveChanges` which is
 | `BulkSaveChangesAsync()` | Save all changes asynchronously made in this context to the underlying database by executing bulk operations. | [EF6](https://dotnetfiddle.net/7kVnBm) / [EFCore](https://dotnetfiddle.net/ZZmHPK) |
 | `BulkSaveChangesAsync(Action<BulkOperation> bulkOperationFactory)` | Save all changes asynchronously made in this context to the underlying database by executing bulk operations. | [EF6](https://dotnetfiddle.net/57KsGn) / [EFCore](https://dotnetfiddle.net/1oaxd1) |
 | `BulkSaveChangesAsync(bool useEntityFrameworkPropagation)` | Save all changes asynchronously made in this context to the underlying database by executing bulk operations. | [EF6](https://dotnetfiddle.net/uT7k8i) |
-| `BulkSaveChangesAsync(bool useEntityFrameworkPropagation, Action<BulkOperation> bulkOperationFactory)` | Save all changes asynchronously made in this context to the underlying database by executing bulk operations. | [EF6](https://dotnetfiddle.net/Aqp0EK) / [EFCore](https://dotnetfiddle.net/Nzyi7N)|
+| `BulkSaveChangesAsync(bool useEntityFrameworkPropagation, Action<BulkOperation> bulkOperationFactory)` | Save all changes asynchronously made in this context to the underlying database by executing bulk operations. | [EF6](https://dotnetfiddle.net/Nzyi7N) |
 
 ###### Options
 More options can be found here:
