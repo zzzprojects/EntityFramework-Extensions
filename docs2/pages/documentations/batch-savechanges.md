@@ -95,4 +95,4 @@ However, the **BulkSaveChanges** is a more scalable method. So, it becomes faste
 | :--- | :---------- | :------ |
 | `BatchSaveChanges()` | Saves all changes made in this context to the underlying database by combining sql command generated. | [Try it](https://dotnetfiddle.net/kCl8oB) |
 | `BatchSaveChangesAsync()` | Saves all changes asynchronously made in this context to the underlying database by combining sql command generated. | [Try it](https://dotnetfiddle.net/RF1oec) |
-| `BatchSaveChangesAsync(cancellationToken)` | Saves all changes asynchronously made in this context to the underlying database by combining sql command generated. | |
+| `BatchSaveChangesAsync(cancellationToken)` | Saves all changes asynchronously made in this context to the underlying database by combining sql command generated. | [EF6](https://dotnetfiddle.net/gYTj7w) |
