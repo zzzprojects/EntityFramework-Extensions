@@ -118,9 +118,9 @@ info@zzzprojects.com
 | :--- | :---------- | :------ |
 | `BulkDelete<T>(items)` | Bulk delete entities in your database. | [EF6](https://dotnetfiddle.net/4Jv1H6) / [EFCore](https://dotnetfiddle.net/gwc9hl)|
 | `BulkDelete<T>(items, options)` | Bulk delete entities in your database.  | [EF6](https://dotnetfiddle.net/IedG1h) / [EFCore](https://dotnetfiddle.net/Qek2MJ) |
-| `BulkDeleteAsync<T>(items)` | Bulk delete entities asynchronously in your database. | |
-| `BulkDeleteAsync<T>(items, cancellationToken)` | Bulk delete entities asynchronously in your database. | |
-| `BulkDeleteAsync<T>(items, options, cancellationToken)` | Bulk delete entities asynchronously in your database. | |
+| `BulkDeleteAsync<T>(items)` | Bulk delete entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/n5OhXL) / [EFCore](https://dotnetfiddle.net/MJLo2d) |
+| `BulkDeleteAsync<T>(items, cancellationToken)` | Bulk delete entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/RfSB6I) / [EFCore](https://dotnetfiddle.net/rRL627) |
+| `BulkDeleteAsync<T>(items, options, cancellationToken)` | Bulk delete entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/r1Hkw7) / [EFCore](https://dotnetfiddle.net/SZ54Px) |
 
 ###### Options
 More options can be found here:
