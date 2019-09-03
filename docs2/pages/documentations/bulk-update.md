@@ -141,9 +141,9 @@ info@zzzprojects.com
 | :--- | :---------- | :------ |
 | `BulkUpdate<T>(items)` | Bulk update entities in your database. | [EF6](https://dotnetfiddle.net/XbT4Ad) / [EFCore](https://dotnetfiddle.net/1SMtjq)|
 | `BulkUpdate<T>(items, options)` | Bulk update entities in your database.  | [EF6](https://dotnetfiddle.net/6E5DYO) / [EFCore](https://dotnetfiddle.net/WhC2bb)|
-| `BulkUpdateAsync<T>(items)` | Bulk update entities asynchronously in your database. | |
-| `BulkUpdateAsync<T>(items, cancellationToken)` | Bulk update entities asynchronously in your database. | |
-| `BulkUpdateAsync<T>(items, options, cancellationToken)` | Bulk update entities asynchronously in your database. | |
+| `BulkUpdateAsync<T>(items)` | Bulk update entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/cBxxbk) / [EFCore](https://dotnetfiddle.net/eBWBNB)|
+| `BulkUpdateAsync<T>(items, cancellationToken)` | Bulk update entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/NhqEoQ) / [EFCore](https://dotnetfiddle.net/MvnU6c) |
+| `BulkUpdateAsync<T>(items, options, cancellationToken)` | Bulk update entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/9PH8Ov) / [EFCore](https://dotnetfiddle.net/FncPU4) |
 
 ###### Options
 More options can be found here:
