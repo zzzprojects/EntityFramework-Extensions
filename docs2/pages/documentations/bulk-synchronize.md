@@ -132,9 +132,9 @@ info@zzzprojects.com
 | :--- | :---------- | :------ |
 | `BulkSynchronize<T>(items)` | Bulk synchronize entities in your database. | [EF6](https://dotnetfiddle.net/rYYc4V) / [EFCore](https://dotnetfiddle.net/JVsPRj) |
 | `BulkSynchronize<T>(items, options)` | Bulk synchronize entities in your database.  | [EF6](https://dotnetfiddle.net/D1GBYP) / [EFCore](https://dotnetfiddle.net/JAmTXP)|
-| `BulkSynchronizeAsync<T>(items)` | Bulk synchronize entities asynchronously in your database. | |
-| `BulkSynchronizeAsync<T>(items, cancellationToken)` | Bulk synchronize entities asynchronously in your database. | |
-| `BulkSynchronizeAsync<T>(items, options, cancellationToken)` | Bulk synchronize entities asynchronously in your database. | |
+| `BulkSynchronizeAsync<T>(items)` | Bulk synchronize entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/HgNKzC) / [EFCore](https://dotnetfiddle.net/inDFrg) |
+| `BulkSynchronizeAsync<T>(items, cancellationToken)` | Bulk synchronize entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/3orhU0) / [EFCore](https://dotnetfiddle.net/yFqG3w) |
+| `BulkSynchronizeAsync<T>(items, options, cancellationToken)` | Bulk synchronize entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/URkFs9) / [EFCore](https://dotnetfiddle.net/aVddfS) |
 
 ###### Options
 More options can be found here:
