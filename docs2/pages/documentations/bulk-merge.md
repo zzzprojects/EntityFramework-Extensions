@@ -158,9 +158,9 @@ info@zzzprojects.com
 | :--- | :---------- | :------ |
 | `BulkMerge<T>(items)` | Bulk merge entities in your database. | [EF6](https://dotnetfiddle.net/gSzNDC) / [EFCore](https://dotnetfiddle.net/fLB6rt)|
 | `BulkMerge<T>(items, options)` | Bulk merge entities in your database.  | [EF6](https://dotnetfiddle.net/WZBs0E) / [EFCore](https://dotnetfiddle.net/NjrdKg)|
-| `BulkMergeAsync<T>(items)` | Bulk merge entities asynchronously in your database. | |
-| `BulkMergeAsync<T>(items, cancellationToken)` | Bulk merge entities asynchronously in your database. | |
-| `BulkMergeAsync<T>(items, options, cancellationToken)` | Bulk merge entities asynchronously in your database. | |
+| `BulkMergeAsync<T>(items)` | Bulk merge entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/PXCsCp) / [EFCore](https://dotnetfiddle.net/wFA1C9) |
+| `BulkMergeAsync<T>(items, cancellationToken)` | Bulk merge entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/WZTGVc) / [EFCore](https://dotnetfiddle.net/sKHwNu) |
+| `BulkMergeAsync<T>(items, options, cancellationToken)` | Bulk merge entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/oQjJsY) / [EFCore](https://dotnetfiddle.net/tG7rCT) |
 
 ###### Options
 More options can be found here:
