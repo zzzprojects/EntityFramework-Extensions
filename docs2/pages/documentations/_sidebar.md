@@ -49,7 +49,7 @@
       - [Log](options/log.md)
       - [LogDump](options/log-dump.md)
       - [UseLogDump](options/use-log-dump.md)      
-   - [Temproary Table](options-summary/temporary-table.md)
+   - [Temporary Table](options-summary/temporary-table.md)
    - [Transaction](options-summary/transaction.md)
    - [Transient Error](options-summary/transient-error.md)
    - [SQL Server](options-summary/sql-server.md)
