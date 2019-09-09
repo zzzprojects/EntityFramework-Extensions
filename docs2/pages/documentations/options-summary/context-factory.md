@@ -34,7 +34,7 @@ EntityFrameworkManager.ContextFactory = context =>
 	optionsBuilder.UseSqlServer(My.ConnectionString);
 	return new EntityContext(optionsBuilder.Options);
 };
-`
+```
 
 ```csharp
 // Using a constructor that depends on the current context
