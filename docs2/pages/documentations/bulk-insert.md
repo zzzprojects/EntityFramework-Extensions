@@ -176,9 +176,10 @@ info@zzzprojects.com
 | :--- | :---------- | :------ |
 | `BulkInsert<T>(items)` | Bulk insert entities in your database. | [EF6](https://dotnetfiddle.net/ShIYXu) / [EFCore](https://dotnetfiddle.net/n0p2IF)|
 | `BulkInsert<T>(items, options)` | Bulk insert entities in your database.  | [EF6](https://dotnetfiddle.net/NBVSTZ) / [EFCore](https://dotnetfiddle.net/09b2zo)|
-| `BulkInsertAsync<T>(items)` | Bulk insert entities asynchronously in your database. | |
-| `BulkInsertAsync<T>(items, cancellationToken)` | Bulk insert entities asynchronously in your database. | |
-| `BulkInsertAsync<T>(items, options, cancellationToken)` | Bulk insert entities asynchronously in your database. | |
+| `BulkInsertAsync<T>(items)` | Bulk insert entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/v7621p) / [EFCore](https://dotnetfiddle.net/uYPaIS)|
+| `BulkInsertAsync<T>(items, options)` | Bulk insert entities asynchronously in your database.  | [EF6](https://dotnetfiddle.net/wuFZDZ) / [EFCore](https://dotnetfiddle.net/eWkJco)|
+| `BulkInsertAsync<T>(items, cancellationToken)` | Bulk insert entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/qrDSny) / [EFCore](https://dotnetfiddle.net/4iW0p6) |
+| `BulkInsertAsync<T>(items, options, cancellationToken)` | Bulk insert entities asynchronously in your database. | [EF6](https://dotnetfiddle.net/iPmJw9) / [EFCore](https://dotnetfiddle.net/VkmKH2)|
 
 ###### Options
 More options can be found here:
