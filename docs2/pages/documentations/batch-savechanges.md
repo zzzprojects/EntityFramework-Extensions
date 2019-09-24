@@ -1,9 +1,13 @@
 # Batch SaveChanges
 
+---
+
 ## Limited Time Offer
 For a limited time, the **BatchSaveChanges** is offered in a standalone version for only 79$.
 
 [Buy now](/pricing-limited)
+
+---
 
 ## Description
 
