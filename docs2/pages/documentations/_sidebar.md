@@ -39,7 +39,7 @@
       - [Coalesce Destination OnMergeUpdate Expression](options/coalesce-destination-on-merge-update-expression.md)
       - [Coalesce Destination OnUpdate Expression](options/coalesce-destination-on-update-expression.md)
       - [Coalesce OnMergeUpdate Expression](options/coalesce-on-merge-update-expression.md)
-      - [Coalesce OnUpdate Expression](options/coalesce-on-merge-update-expression.md)
+      - [Coalesce OnUpdate Expression](options/coalesce-on-update-expression.md)
    - [Context Factory](options-summary/context-factory.md)
    - [Execute Event](options-summary/execute-event.md)
    - [Identity](options-summary/identity.md)
