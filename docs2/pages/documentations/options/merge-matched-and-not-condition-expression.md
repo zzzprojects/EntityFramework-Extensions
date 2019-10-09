@@ -1,6 +1,6 @@
 # MergeMatched AndNotCondition Expression
 
-The `MergeMatchedAndNotConditionExpression` allows you to perform only the `UPDATE` in the `BulkMerge` if the specified property value is not equal to the database value. 
+The `MergeMatchedAndOneNotConditionExpression` allows you to perform only the `UPDATE` in the `BulkMerge` if the specified property value is not equal to the database value. 
 
 The following example updates all those records in which `ModifiedDate` value is not equal to the database value.
 
