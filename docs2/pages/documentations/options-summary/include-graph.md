@@ -80,7 +80,7 @@ ctx.BulkMerge(users, options =>
 			var bulk = (BulkOperation<User>) operation;
 			bulk.IsReadOnly = true;
 		}
-	};Muha
+	};
 });
 ```
 [Try it in EF6](https://dotnetfiddle.net/UgwDDk) | [Try it in EF Core](https://dotnetfiddle.net/LQnvGP)
