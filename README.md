@@ -1,6 +1,12 @@
-# Improve Entity Framework performance with Bulk SaveChanges and Bulk Operations
+# What's Entity Framework Extensions? 
 
-Solve Entity Framework performance issue when saving with high performance bulk operations and hundred of flexibles feature.
+Entity Framework Extensions is a library that dramatically improves EF performances by using bulk and batch operations.
+
+People using this library often report performance enhancement by 50x times and more!
+
+## Improve Entity Framework performance with Bulk SaveChanges and Bulk Operations
+
+Solve Entity Framework performance issue when saving with high performance bulk operations and hundreds of flexibles feature.
  - BulkSaveChanges
  - BulkInsert
  - BulkUpdate
@@ -81,7 +87,7 @@ PM> Install-Package Z.EntityFramework.Extensions.EF5
 
 _* PRO Version unlocked for the current month_
 
-Stay updated with latest changes
+Stay updated with the latest changes:
 
 <a href="https://twitter.com/zzzprojects" target="_blank"><img src="http://www.zzzprojects.com/images/twitter_follow.png" alt="Twitter Follow" height="24" /></a>
 <a href="https://www.facebook.com/zzzprojects/" target="_blank"><img src="http://www.zzzprojects.com/images/facebook_like.png" alt="Facebook Like" height="24" /></a>
@@ -89,10 +95,10 @@ Stay updated with latest changes
 ## BulkSaveChanges
 
 ##### Problem
-You need to save hundreds or thousands of entities but you are not satisfied with Entity Framework performance.
+You need to save hundreds or thousands of entities, but you are not satisfied with Entity Framework performance.
 
 ##### Solution
-BulkSaveChanges is exactly like SaveChanges but perform way faster. It’s easy to use, you only need to replace “SaveChanges” by “BulkSaveChanges” and you are done!
+BulkSaveChanges is exactly like SaveChanges but performs way faster. It’s easy to use, you only need to replace “SaveChanges” by “BulkSaveChanges”, and you are done!
 
 ```
 // Upgrade SaveChanges performance with BulkSaveChanges
@@ -111,10 +117,10 @@ BulkSaveChanges is as fast as SaveChanges with one entity and quickly become **1
 
 ## Bulk Operations
 ##### Problem
-You need even more performance then BulkSaveChanges, save detached entities or save entities in a specific order.
+You need even more performance than BulkSaveChanges, save detached entities or save entities in a specific order.
 
 ##### Solution
-Use bulk operations such as bulk insert, update, delete and merge which perform operation on specified entities and bypass the change tracker to increase performance.
+Use bulk operations such as bulk insert, update, delete and merge which perform operations on specified entities and bypass the change tracker to increase performance.
 
 ```csharp
 // Perform specific bulk operations on entities
@@ -125,11 +131,11 @@ context.BulkMerge(customers);
 ```
 
 ##### Maintainability
-Bulk Operation use directly the Entity Framework Model. Even if you change column name or change inheritance (TPC, TPH, TPT), Bulk operation will continue to work as expected.
+Bulk Operation uses directly the Entity Framework Model. Even if you change column name or change inheritance (TPC, TPH, TPT), Bulk operation will continue to work as expected.
 
 ## Custom Key
 ##### Problem
-You need to perform an update, delete or merge using a specific custom key like the custom code.
+You need to perform an update, delete, or merge using a specific custom key like the custom code.
 
 ##### Solution
 Specify your own key by customizing the operation.
@@ -142,7 +148,7 @@ context.BulkMerge(customers, operation => {
 ```
 
 ##### Flexibility
-Bulk operations offers hundred of customization such as BatchSize, Custom Key, Custom Mapping, etc.
+Bulk operations offer hundreds of customization such as BatchSize, Custom Key, Custom Mapping, etc.
 
 ## PRO Version
 _PRO Version unlocked for the current month_
