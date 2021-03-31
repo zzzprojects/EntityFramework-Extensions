@@ -187,6 +187,6 @@ A **HUGE THANKS** for your help.
 - [SQL Eval Function](https://eval-sql.net/)
 - [LINQ To SQL Plus](https://linqtosql-plus.net/)
 - and much more! 
-To view all our free and paid librariries visit our [website](https://zzzprojects.com/).
+To view all our free and paid projects visit our [website](https://zzzprojects.com/).
 
 Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
