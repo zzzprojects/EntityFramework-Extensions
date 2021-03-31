@@ -131,7 +131,7 @@ context.BulkMerge(customers);
 ```
 
 ##### Maintainability
-Bulk Operation uses directly the Entity Framework Model. Even if you change column name or change inheritance (TPC, TPH, TPT), Bulk operation will continue to work as expected.
+Bulk Operation directly uses the Entity Framework Model. Even if you change column name or change inheritance (TPC, TPH, TPT), Bulk Operation will continue to work as expected.
 
 ## Custom Key
 ##### Problem
