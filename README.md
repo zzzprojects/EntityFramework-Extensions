@@ -186,4 +186,4 @@ A **HUGE THANKS** for your help.
 
 To view all our free and paid projects visit our [website](https://zzzprojects.com/).
 
-Contact our outstanding **[customer support](https://entityframework-extensions.net/contact-us)** for any. We usually answer within the next business day, hour, or minutes!
+Contact our outstanding **[customer support](https://entityframework-extensions.net/contact-us)** for any request. We usually answer within the next business day, hour, or minutes!
