@@ -87,11 +87,6 @@ PM> Install-Package Z.EntityFramework.Extensions.EF5
 
 _* PRO Version unlocked for the current month_
 
-Stay updated with the latest changes:
-
-<a href="https://twitter.com/zzzprojects" target="_blank"><img src="http://www.zzzprojects.com/images/twitter_follow.png" alt="Twitter Follow" height="24" /></a>
-<a href="https://www.facebook.com/zzzprojects/" target="_blank"><img src="http://www.zzzprojects.com/images/facebook_like.png" alt="Facebook Like" height="24" /></a>
-
 ## BulkSaveChanges
 
 ##### Problem
@@ -184,6 +179,6 @@ A **HUGE THANKS** for your help.
 - [C# Eval Expression](https://eval-expression.net/)
 - and much more! 
 
-To view all our free and paid projects visit our [website](https://zzzprojects.com/).
+To view all our free and paid projects, visit our [website](https://zzzprojects.com/).
 
 Contact our outstanding **[customer support](https://entityframework-extensions.net/contact-us)** for any request. We usually answer within the next day, hour, or minutes!
