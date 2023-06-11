@@ -12,7 +12,7 @@ Stack trace:
 ### Fiddle or Project (Optional)
 If you are able, 
 
-Provide a Fiddle that reproduces the issue: https://dotnetfiddle.net/Uqe9sf
+Provide a Fiddle that reproduces the issue: https://dotnetfiddle.net/jQ4moW
 
 Or provide a project/solution that we can run to reproduce the issue.
 - Make sure the project compile
