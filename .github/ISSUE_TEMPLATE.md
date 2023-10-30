@@ -24,6 +24,8 @@ Otherwise, make sure to include as much information as possible to help our team
 _Note: More information you provide, faster we can implement a solution._
 
 ### Further technical details
-- EF version:
-- EF Extensions version:
-- Database Provider:
+
+- EF version: [EF Core v7.0.13]
+- EF Extensions version: [EFE Core v7.100.0.0]
+- Database Server version: [SQL Server 2002]
+- Database Provider version (NuGet): [Microsoft.Data.SqlClient v5.1.2]
