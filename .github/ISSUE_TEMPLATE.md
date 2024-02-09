@@ -27,5 +27,5 @@ _Note: More information you provide, faster we can implement a solution._
 
 - EF version: [EF Core v7.0.13]
 - EF Extensions version: [EFE Core v7.100.0.0]
-- Database Server version: [SQL Server 2002]
+- Database Server version: [SQL Server 2022]
 - Database Provider version (NuGet): [Microsoft.Data.SqlClient v5.1.2]
