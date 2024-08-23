@@ -2749,7 +2749,7 @@ namespace EntityFrameworkExtensionsCoreNamespace
          
         public static List<T> BulkRead<T, TChild>(this IQueryable<T> query, Expression<Func<T, TChild>> selector, IEnumerable list, Expression<Func<TChild, object>> keyExpression) where T : class where TChild : class
         {
-            return EntityFrameworkExtensionsCoreAlias.BulkReadExtensions.BulkRead<T, TChild>(query, selector, list);
+            return EntityFrameworkExtensionsCoreAlias.BulkReadExtensions.BulkRead<T, TChild>(query, selector, list, keyExpression);
         }
          
         public static List<T> BulkRead<T, TChild>(this IQueryable<T> query, Expression<Func<T, IEnumerable<TChild>>> selector, IEnumerable list, Expression<Func<TChild, object>> keyExpression) where T : class where TChild : class
