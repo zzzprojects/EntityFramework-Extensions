@@ -127,6 +127,9 @@ You need even more performance than BulkSaveChanges, save detached entities or s
 Use bulk operations such as bulk insert, update, delete and merge which perform operations on specified entities and bypass the change tracker to increase performance.
 
 ```csharp
+// @nuget: Z.EntityFramework.Extensions.EFCore
+using Z.EntityFramework.Extensions;
+
 // Perform specific bulk operations on entities
 context.BulkDelete(customers);
 context.BulkInsert(customers);
