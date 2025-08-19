@@ -16,6 +16,9 @@ Solve Entity Framework performance issue when saving with high performance bulk 
  - UpdateFromQuery
 
 ```csharp
+// @nuget: Z.EntityFramework.Extensions.EFCore
+using Z.EntityFramework.Extensions;
+
 var context = new CustomerContext();
 // ... context code ...
 
@@ -96,6 +99,9 @@ You need to save hundreds or thousands of entities, but you are not satisfied wi
 BulkSaveChanges is exactly like SaveChanges but performs way faster. It’s easy to use, you only need to replace “SaveChanges” by “BulkSaveChanges”, and you are done!
 
 ```
+// @nuget: Z.EntityFramework.Extensions.EFCore
+using Z.EntityFramework.Extensions;
+
 // Upgrade SaveChanges performance with BulkSaveChanges
 var context = new CustomerContext();
 // ... context code ...
@@ -136,6 +142,9 @@ You need to perform an update, delete, or merge using a specific custom key like
 Specify your own key by customizing the operation.
 
 ```csharp
+// @nuget: Z.EntityFramework.Extensions.EFCore
+using Z.EntityFramework.Extensions;
+
 // Use flexible features such as specifying the primary key
 context.BulkMerge(customers, operation => {
    operation.ColumnPrimaryKeyExpression = customer => customer.Code;
