@@ -30,6 +30,9 @@ context.BulkSaveChanges(operation => operation.BatchSize = 1000);
 ```
 
 ```csharp
+// @nuget: Z.EntityFramework.Extensions.EFCore
+using Z.EntityFramework.Extensions;
+
 // Perform specific bulk operations
 context.BulkDelete(customers);
 context.BulkInsert(customers);
