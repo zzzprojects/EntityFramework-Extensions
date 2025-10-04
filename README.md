@@ -48,7 +48,7 @@ context.BulkMerge(customers, operation => {
 
 We provide extensive benchmarks to demonstrate the performance improvements of **Entity Framework Extensions** compared to EF Core.
 
-You can browse them either **by database provider** or **by operation**:
+You can explore results either **by database provider** or **by operation**:
 
 ### 🔹 Benchmarks by Provider
 - [EF Core – SQL Server](benchmark-result/efcore-sqlserver.md)  
@@ -68,26 +68,14 @@ You can browse them either **by database provider** or **by operation**:
 
 📌 Each page includes detailed charts (execution time and memory usage) generated with **BenchmarkDotNet** across multiple scenarios.  
 
-##### Scalable
-SQL Server - Benchmarks
+---
 
-| Operations         | 100 Rows | 1,000 Rows | 10,000 Rows |
-| ------------------ | -------: | ---------: | ----------: |
-|**BulkSaveChanges** | 20 ms    | 200 ms     | 2,000 ms    |
-|**BulkInsert**      | 2 ms     | 6 ms       | 25 ms       |
-|**BulkUpdate**      | 27 ms    | 50 ms      | 80 ms       |
-|**BulkDelete**      | 25 ms    | 45 ms      | 70 ms       |
-|**BulkMerge**       | 30 ms    | 65 ms      | 160 ms      |
+### Example Benchmark
 
-##### Extensible
-Support Multiple SQL Providers:
-- SQL Server 2008+
-- SQL Azure
-- SQL Compact
-- MySQL
-- SQLite
-- PostgreSQL
-- Oracle
+Below is an example of a **Bulk Insert** benchmark on **SQL Server**.  
+Entity Framework Extensions executes the same operation **many times faster** while also using significantly less memory.
+
+![Benchmark EFCore vs EFE – SQL Server - Bulk Insert](https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/images/benchmark-efcore-vs-efe-sqlserver-bulk-insert.png)
 
 ## Download
 
