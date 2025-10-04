@@ -44,6 +44,30 @@ context.BulkMerge(customers, operation => {
 });
 ```
 
+## 📊 Benchmark Results
+
+We provide extensive benchmarks to demonstrate the performance improvements of **Entity Framework Extensions** compared to EF Core.
+
+You can browse them either **by database provider** or **by operation**:
+
+### 🔹 Benchmarks by Provider
+- [EF Core – SQL Server](benchmark-result/efcore-sqlserver.md)  
+- [EF Core – PostgreSQL](benchmark-result/efcore-postgresql.md)  
+- [EF Core – MySQL](benchmark-result/efcore-mysql.md)  
+- [EF Core – MariaDB](benchmark-result/efcore-mariadb.md)  
+- [EF Core – Oracle](benchmark-result/efcore-oracle.md)  
+- [EF Core – SQLite](benchmark-result/efcore-sqlite.md)  
+
+### 🔹 Benchmarks by Operation
+- [Bulk Insert](benchmark-result/efcore-bulk-insert.md)  
+- [Bulk Update](benchmark-result/efcore-bulk-update.md)  
+- [Bulk Delete](benchmark-result/efcore-bulk-delete.md)  
+- [Bulk Merge](benchmark-result/efcore-bulk-merge.md)  
+- [Bulk SaveChanges](benchmark-result/efcore-bulk-savechanges.md)  
+- [Bulk Synchronize](benchmark-result/efcore-bulk-synchronize.md)  
+
+📌 Each page includes detailed charts (execution time and memory usage) generated with **BenchmarkDotNet** across multiple scenarios.  
+
 ##### Scalable
 SQL Server - Benchmarks
 
