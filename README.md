@@ -50,21 +50,21 @@ We provide extensive benchmarks to demonstrate the performance improvements of *
 
 You can explore results either **by database provider** or **by operation**:
 
-### 🔹 Benchmarks by Provider
-- [EF Core vs EF Extensions – SQL Server](benchmark-result/efcore-sqlserver.md)  
-- [EF Core vs EF Extensions – PostgreSQL](benchmark-result/efcore-postgresql.md)  
-- [EF Core vs EF Extensions – MySQL](benchmark-result/efcore-mysql.md)  
-- [EF Core vs EF Extensions – MariaDB](benchmark-result/efcore-mariadb.md)  
-- [EF Core vs EF Extensions – Oracle](benchmark-result/efcore-oracle.md)  
-- [EF Core vs EF Extensions – SQLite](benchmark-result/efcore-sqlite.md)  
+### 🔹 Benchmarks by Provider (EF Core vs EF Extensions)
+- [SQL Server](benchmark-result/efcore-sqlserver.md)  
+- [PostgreSQL](benchmark-result/efcore-postgresql.md)  
+- [MySQL](benchmark-result/efcore-mysql.md)  
+- [MariaDB](benchmark-result/efcore-mariadb.md)  
+- [Oracle](benchmark-result/efcore-oracle.md)  
+- [SQLite](benchmark-result/efcore-sqlite.md)  
 
-### 🔹 Benchmarks by Operation
-- [Bulk Insert – EF Core vs EF Extensions](benchmark-result/efcore-bulk-insert.md)  
-- [Bulk Update – EF Core vs EF Extensions](benchmark-result/efcore-bulk-update.md)  
-- [Bulk Delete – EF Core vs EF Extensions](benchmark-result/efcore-bulk-delete.md)  
-- [Bulk Merge – EF Core vs EF Extensions](benchmark-result/efcore-bulk-merge.md)  
-- [Bulk SaveChanges – EF Core vs EF Extensions](benchmark-result/efcore-bulk-savechanges.md)  
-- [Bulk Synchronize – EF Core vs EF Extensions](benchmark-result/efcore-bulk-synchronize.md)  
+### 🔹 Benchmarks by Operation (EF Core vs EF Extensions)
+- [Bulk Insert](benchmark-result/efcore-bulk-insert.md)  
+- [Bulk Update](benchmark-result/efcore-bulk-update.md)  
+- [Bulk Delete](benchmark-result/efcore-bulk-delete.md)  
+- [Bulk Merge](benchmark-result/efcore-bulk-merge.md)  
+- [Bulk SaveChanges](benchmark-result/efcore-bulk-savechanges.md)  
+- [Bulk Synchronize](benchmark-result/efcore-bulk-synchronize.md)  
 
 📌 Each page includes detailed charts (execution time and memory usage) generated with **BenchmarkDotNet** across multiple scenarios.  
 
@@ -75,7 +75,7 @@ You can explore results either **by database provider** or **by operation**:
 Below is an example of a **Bulk Insert** benchmark on **SQL Server**, comparing **EF Core SaveChanges** vs **Entity Framework Extensions BulkInsert**.  
 Entity Framework Extensions executes the same operation **many times faster** while also using significantly less memory.
 
-![Benchmark EF Core vs EF Extensions – SQL Server - Bulk Insert](https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/images/benchmark-efcore-vs-efe-sqlserver-bulk-insert.png)
+![Benchmark EF Core vs EF Extensions – SQL Server - Bulk Insert](https://raw.githubusercontent.com/zzzprojects/EntityFramework-Extensions/master/images/benchmark-efcore-)
 
 ## Download
 
