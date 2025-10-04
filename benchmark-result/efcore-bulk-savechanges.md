@@ -17,7 +17,6 @@
 
 **Description:**  
 This chart shows Bulk SaveChanges benchmarks on **SQL Server**, including plain SaveChanges and SaveChanges with graph.  
-Entity Framework Extensions is dramatically faster and uses far less memory than EF Core.  
 
 ---
 
@@ -27,7 +26,6 @@ Entity Framework Extensions is dramatically faster and uses far less memory than
 
 **Description:**  
 This chart shows Bulk SaveChanges benchmarks on **PostgreSQL**, including plain SaveChanges and SaveChanges with graph.  
-Entity Framework Extensions is significantly faster than EF Core, while memory usage gains depend on dataset size.  
 
 ---
 
@@ -37,7 +35,6 @@ Entity Framework Extensions is significantly faster than EF Core, while memory u
 
 **Description:**  
 This chart shows Bulk SaveChanges benchmarks on **MySQL**, including plain SaveChanges and SaveChanges with graph.  
-Entity Framework Extensions outperforms EF Core with major speed improvements and generally lower memory usage.  
 
 ---
 
@@ -47,7 +44,6 @@ Entity Framework Extensions outperforms EF Core with major speed improvements an
 
 **Description:**  
 This chart shows Bulk SaveChanges benchmarks on **MariaDB**, including plain SaveChanges and SaveChanges with graph.  
-Entity Framework Extensions consistently executes faster and usually requires less memory than EF Core.  
 
 ---
 
@@ -57,7 +53,6 @@ Entity Framework Extensions consistently executes faster and usually requires le
 
 **Description:**  
 This chart shows Bulk SaveChanges benchmarks on **Oracle**, including plain SaveChanges and SaveChanges with graph.  
-Entity Framework Extensions provides substantial performance improvements, though memory gains are less consistent compared to other providers.  
 
 ---
 
@@ -67,7 +62,6 @@ Entity Framework Extensions provides substantial performance improvements, thoug
 
 **Description:**  
 This chart shows Bulk SaveChanges benchmarks on **SQLite**, including plain SaveChanges and SaveChanges with graph.  
-Entity Framework Extensions is much faster than EF Core, with moderate memory improvements.  
 
 ---
 
@@ -76,7 +70,6 @@ Entity Framework Extensions is much faster than EF Core, with moderate memory im
 Across all providers, **Bulk SaveChanges with Entity Framework Extensions** consistently outperforms EF Core:  
 
 * **Performance:** EF Extensions cuts SaveChanges execution time dramatically, especially when handling large entity graphs.  
-* **Memory Usage:** In most providers, EF Extensions uses less memory, though some (like Oracle and SQLite) show results closer to EF Core.  
 * **Scalability:** By batching changes efficiently, Bulk SaveChanges reduces overhead and boosts performance for high-volume applications.  
 
 For applications where **SaveChanges performance** is a bottleneck, EF Extensions provides reliable speed and scalability across every major database provider.  
